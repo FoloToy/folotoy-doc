@@ -1,12 +1,8 @@
-# My-ChatGPT-Toy
-<p align="center">
-  <a href="https://folotoy.com" target="_blank">
-    <img width="128" src="" alt="FoloToy">
-  </a>
-</p>
+# FoloToy - A ChatGPT Toy
+
 
 <p align="center">
-这是一个简单的语音对话玩具改造项目，选择了孩子的故事机玩具进行改造，目的是任何人可以自己动手快速打造出个性化的AI语音交互玩具，创造更多可能。并因此推出了衍生的改造硬件套件
+这是一个语音对话玩具改造项目，选择了孩子的故事机玩具进行改造，目的是任何人可以自己动手快速打造出个性化的 AI 语音交互玩具，创造更多可能。
 </p>
 
 </p>
@@ -21,7 +17,7 @@
 
 - YouTube
 
-  - [电路板替换教程]()
+  - [电路板替换教程](https://youtu.be/hR7V1izzeZw)
   - [服务器程序安装教程 ](https://www.youtube.com/watch?v=AKHzjdfIoTM)
 
 - B 站
