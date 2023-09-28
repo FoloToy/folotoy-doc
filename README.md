@@ -1,7 +1,7 @@
 # My-ChatGPT-Toy
 <p align="center">
-  <a href="https://www.hohotu.com" target="_blank">
-    <img width="128" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/hohotu_icon.png" alt="my-ai-robot">
+  <a href="https://folotoy.com" target="_blank">
+    <img width="128" src="" alt="FoloToy">
   </a>
 </p>
 
@@ -16,13 +16,17 @@
 * [相关视频](#相关视频)
 * [适配玩具](#适配玩具)
 * [交流社区](#交流社区)
-* [联系我](#联系我)
 
 ## 相关视频
 
-  - [ChatGPT火火兔硬改指南](https://www.bilibili.com/video/BV1wh4y1w7ZJ)
-  - [ChatGPT火火兔改造教程之电路板替换](https://www.bilibili.com/video/BV1C14y1R7bu)
-  - [ChatGPT火火兔服务器程序安装教程 ](https://www.bilibili.com/video/BV1bp4y1w7ER)
+- YouTube
+
+  - [电路板替换教程]()
+  - [服务器程序安装教程 ](https://www.youtube.com/watch?v=AKHzjdfIoTM)
+
+- B 站
+  - [电路板替换教程](https://www.bilibili.com/video/BV1C14y1R7bu)
+  - [服务器程序安装教程 ](https://www.bilibili.com/video/BV1bp4y1w7ER)
 
 ## 相关资源
 
@@ -41,19 +45,19 @@
 
 - 火火兔G6版本（必须是MicroUSB接口的G6/G6C，早期MiniUSB接口暂不支持）
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000519.png" alt="hohotu-robot">
+<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000519.png" alt="folotoy-robot">
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927085208.png" alt="hohotu-robot">
+<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927085208.png" alt="folotoy-robot">
 
 以上型号对比图片来自火火兔官网：http://www.alilo.com.cn/#/pages/products/detail?type=1&name=G6
 
 - 火火兔F6/F6s版本
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000812.png" alt="hohotu-robot">
+<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000812.png" alt="folotoy-robot">
 
 - 米兔C1故事机
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000636.png" alt="hohotu-robot">
+<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000636.png" alt="folotoy-robot">
 
 ## 社区交流
 
@@ -62,18 +66,13 @@
 [https://t.me/fofotuai](https://t.me/fofotuai)
 
 
-<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234745.png" alt="hohotu-robot">
+<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234745.png" alt="folotoy-robot">
 
 ### 微信
 
-<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234513.png" alt="hohotu-robot">
+<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234513.png" alt="folotoy-robot">
 
 
-### 联系我
-
-https://twitter.com/GuoXinghuaX
-
-https://space.bilibili.com/495999206
 
 
 
