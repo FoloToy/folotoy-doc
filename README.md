@@ -66,10 +66,7 @@
 
 ### 微信
 
-<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234513.png" alt="folotoy-robot">
-
-
-
+<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004073940.png" alt="folotoy-robot">
 
 
 
