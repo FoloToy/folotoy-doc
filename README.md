@@ -25,7 +25,7 @@ This is a project to transform a voice conversation toy, choosing a children's s
   - [Circuit Board Replacement Tutorial](https://youtu.be/hR7V1izzeZw)
   - [Server Program Installation Tutorial](https://www.youtube.com/watch?v=AKHzjdfIoTM)
 
-- Bilibili (B站)
+- Bilibili
 
   - [Circuit Board Replacement Tutorial](https://www.bilibili.com/video/BV1184y1S7pV)
   - [Server Program Installation Tutorial - Windows](https://www.bilibili.com/video/BV1YN411t74A)
