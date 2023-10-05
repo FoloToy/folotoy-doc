@@ -31,15 +31,11 @@
 
 ## 资源集合
 
-- 服务器部署指南：https://github.com/FoloToy/folotoy-server-self-hosting
-
-- WiFi配网指南：https://github.com/FoloToy/folotoy-tool/wiki/%E9%85%8D%E7%BD%91%E8%AF%B4%E6%98%8E
-
-- 固件下载指南：https://github.com/FoloToy/folotoy-tool/wiki/%E5%88%B7%E6%9C%BA%E8%AF%B4%E6%98%8E
-
-- 固件下载工具：https://tool.folotoy.com/index
-
-- 交流社区：https://t.me/fofotuai
+- [服务器部署指南](https://github.com/FoloToy/folotoy-server-self-hosting)
+- [WiFi配网指南](https://github.com/FoloToy/folotoy-tool/wiki/%E9%85%8D%E7%BD%91%E8%AF%B4%E6%98%8E)
+- [固件下载指南](https://github.com/FoloToy/folotoy-tool/wiki/%E5%88%B7%E6%9C%BA%E8%AF%B4%E6%98%8E)
+- [刷机工具](https://tool.folotoy.com/index)
+- [交流社区](https://t.me/fofotuai)
 
 
 ## 硬件改造
@@ -54,18 +50,18 @@
  - 适配火火兔F6（计划10月上旬发布）
  - 适配米兔故事机C1（10月上旬发布）
 
-B站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
+B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004191909.png" alt="folotoy-robot">
 
 ### 火火兔整机（适合希望到手即用的用户）
 
-- 基于原厂最新 G6 版火火兔魔改主机1个
+- 基于原厂全新 G6 版火火兔魔改主机 1 个
 - 蓝色、粉色两个版本可选
-- 火火兔原厂定制的空白硅胶按键1套
+- 火火兔原厂定制的空白硅胶按键 1 套
 - 对话体验包：首次使用后三个月内 1000 次多角色对话（3.5版本），角色和音色可自行定义（此功能将在10月份逐步上线后兑现，目前收到货后可使用自建服务器或者我们提供体验服务器）
 
-B站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
+B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004185705.png" alt="folotoy-robot">
 
@@ -74,7 +70,7 @@ B站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 目前改造套件适配以下版本的故事机，每种套件对应的玩具型号不同：
 
-- 火火兔G6版本（必须是MicroUSB接口的G6/G6C，早期MiniUSB接口暂不支持，改造成本低，建议用户首选此版本）
+- 火火兔 G6 版本（必须是 MicroUSB 接口的 G6/G6C，不支持早期 MiniUSB 接口，改造成本低，推荐用户首选此版本）
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000519.png" alt="folotoy-robot">
 
@@ -82,11 +78,11 @@ B站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 以上型号对比图片来自火火兔官网：http://www.alilo.com.cn/#/pages/products/detail?type=1&name=G6
 
-- 火火兔F6/F6s版本
+- 火火兔 F6/F6s 版本
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000812.png" alt="folotoy-robot">
 
-- 米兔C1故事机(拆机需要专业工具，改造难度较大)
+- 米兔 C1 故事机(拆机需要专业工具，改造难度较大)
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000636.png" alt="folotoy-robot">
 
@@ -95,11 +91,11 @@ B站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 改造需要替换掉玩具原来的电路板，因此按键也有了新的定义
 
-### 火火兔G6按键功能
+### 火火兔 G6 按键功能
 
 对话：和玩具开始对话时，需要**按住**中间的按键，当结束对话时，松开按键
 
-角色切换：图示标注1~7数字的按键为角色切换按键，对应到角色配置文件的1~7
+角色切换：图示标注 1-7 数字的按键为角色切换按键，对应到角色配置文件的 1-7
 
 <img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231005093247.png" alt="folotoy-robot">
 
