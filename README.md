@@ -52,7 +52,8 @@
 
 B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004191909.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272765067-ff9585f6-4533-453e-a1ff-6d9d61f0a5dd.jpg" alt="folotoy-robot">
+
 
 ### 火火兔整机（适合希望到手即用的用户）
 
@@ -63,7 +64,7 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
 B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004185705.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272764856-8e9e4d23-71ad-4fcc-ad78-91e866702c7a.png" alt="folotoy-robot">
 
 
 ## 适配玩具
@@ -72,19 +73,19 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 - 火火兔 G6 版本（必须是 MicroUSB 接口的 G6/G6C，不支持早期 MiniUSB 接口，改造成本低，推荐用户首选此版本）
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000519.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272773157-68ad9fb7-f77e-4ae3-ad48-7e0cf2d113e9.jpg" alt="folotoy-robot">
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927085208.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272765099-0f76547e-22f9-41d9-8d8e-f013adb42349.png" alt="folotoy-robot">
 
 以上型号对比图片来自火火兔官网：http://www.alilo.com.cn/#/pages/products/detail?type=1&name=G6
 
 - 火火兔 F6/F6s 版本
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000812.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272765126-3730b1aa-d65e-4ab4-b31d-a32d27c11b19.png" alt="folotoy-robot">
 
 - 米兔 C1 故事机(拆机需要专业工具，改造难度较大)
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230927000636.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272773277-81106667-86cf-4e14-856d-19b463f786d6.png" alt="folotoy-robot">
 
 
 ## 按键说明
@@ -97,11 +98,13 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 角色切换：图示标注 1-7 数字的按键为角色切换按键，对应到角色配置文件的 1-7
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231005093247.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272773455-36eb6085-2b62-4009-8eaf-5b3bf88768c1.png" alt="folotoy-robot">
+
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272764950-cbaf933e-69fc-4cfb-932c-b4a1b26067a5.jpg" alt="folotoy-robot">
 
 角色的修改与定义在[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/roles.json)中进行
 
-<img width="512" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231005093424.png" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" alt="folotoy-robot">
 
 
 ## 交流社区
@@ -111,8 +114,8 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 [https://t.me/fofotuai](https://t.me/fofotuai)
 
 
-<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20230926234745.png" alt="folotoy-robot">
+<img width="256" src="https://user-images.githubusercontent.com/1455685/272765491-57b7b972-18a6-403a-8ab3-535292178172.png" alt="folotoy-robot">
 
 ### 微信
 
-<img width="256" src="https://guoxinghua-md-images-1256257597.cos.ap-beijing.myqcloud.com/note/20231004073940.png" alt="folotoy-robot">
+<img width="256" src="https://user-images.githubusercontent.com/1455685/272772738-98deeac3-87cc-42cb-9f1b-332078b1da72.png" alt="folotoy-robot">
