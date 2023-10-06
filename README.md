@@ -53,7 +53,7 @@ Currently, there are three versions:
  - Compatible with Alilo Honey Bunny F6 (to be released in early October)
  - Compatible with Mitu Story Machine C1 (to be released in early October)
 
-Bilibili Workshop Order Link: https://gf.bilibili.com/item/detail/1104524005
+Bilibili Workshop Order Link: https://gf.bilibili.com/item/detail/1104222005
 
 <img width="512" src="https://user-images.githubusercontent.com/1455685/272765067-ff9585f6-4533-453e-a1ff-6d9d61f0a5dd.jpg" alt="folotoy-robot">
 
@@ -65,7 +65,7 @@ Bilibili Workshop Order Link: https://gf.bilibili.com/item/detail/1104524005
 - Alilo Honey Bunny's original customized blank silicone buttons (1 set)
 - Conversation experience package: 1000 multi-role dialogues within three months after first use (Version 3.5), roles and voices can be defined by users themselves (this feature will be gradually launched in October, currently after receiving the goods, it can be used with self-built servers or experience servers provided by us)
 
-Bilibili Workshop Order Link: https://gf.bilibili.com/item/detail/1104222005
+Bilibili Workshop Order Link: https://gf.bilibili.com/item/detail/1104524005
 
 <img width="512" src="https://user-images.githubusercontent.com/1455685/272764856-8e9e4d23-71ad-4fcc-ad78-91e866702c7a.png" alt="folotoy-robot">
 
