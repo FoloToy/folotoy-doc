@@ -52,7 +52,7 @@
  - 适配火火兔 F6（10 月上旬发布）
  - 适配米兔故事机 C1（10 月上旬发布）
 
-B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
+B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
 
 <img width="512" src="https://user-images.githubusercontent.com/1455685/272765067-ff9585f6-4533-453e-a1ff-6d9d61f0a5dd.jpg" alt="folotoy-robot">
 
@@ -64,7 +64,7 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 - 火火兔原厂定制的空白硅胶按键 1 套
 - 对话体验包：首次使用后三个月内 1000 次多角色对话（3.5版本），角色和音色可自行定义（此功能将在 10 月份逐步上线后兑现，目前收到货后可使用自建服务器或者我们提供体验服务器）
 
-B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104222005
+B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
 <img width="512" src="https://user-images.githubusercontent.com/1455685/272764856-8e9e4d23-71ad-4fcc-ad78-91e866702c7a.png" alt="folotoy-robot">
 
