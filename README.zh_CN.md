@@ -120,4 +120,4 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
 ### 微信
 
-<img width="256" src="https://user-images.githubusercontent.com/1455685/272772738-98deeac3-87cc-42cb-9f1b-332078b1da72.png" alt="folotoy-robot">
+<img width="256" src="https://user-images.githubusercontent.com/1455685/274927257-a2af12db-b663-4565-bc46-d9d359547f97.png" alt="folotoy-robot">
