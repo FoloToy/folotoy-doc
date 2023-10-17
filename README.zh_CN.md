@@ -108,6 +108,12 @@ B 站工坊下单链接：https://gf.bilibili.com/item/detail/1104524005
 
 <img width="512" src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" alt="folotoy-robot">
 
+### 米兔 C-1 按键功能
+
+对话：和玩具开始对话时，需要**按住**中间的按键，当结束对话时，松开按键
+
+角色切换：图示标注 1-7 数字的按键为角色切换按键，对应到角色配置文件的 1-7
+<img width="512" src="https://user-images.githubusercontent.com/1455685/275680292-a149a5c6-9a7c-4611-bbb2-d4ddced4c3e1.jpg" alt="folotoy-robot">
 
 ## 交流社区
 
