@@ -30,6 +30,9 @@
   - [服务器程序安装教程-Windows ](https://www.bilibili.com/video/BV1YN411t74A)
   - [服务器程序安装教程-Linux ](https://www.bilibili.com/video/BV1bp4y1w7ER)
 
+- 网友提供
+  - [基于群晖NAS部署FoloToy 服务说明](https://tnu7owoxao.feishu.cn/wiki/HzFKwA3QPigdcCkn3VmckSPSn0g)
+
 
 ## 资源集合
 
