@@ -18,7 +18,7 @@
 * [交流社区](#交流社区)
 
 
-## 视频教程
+## 教程
 
 - YouTube
 
@@ -29,9 +29,10 @@
   - [电路板替换教程](https://www.bilibili.com/video/BV1184y1S7pV)
   - [服务器程序安装教程-Windows ](https://www.bilibili.com/video/BV1YN411t74A)
   - [服务器程序安装教程-Linux ](https://www.bilibili.com/video/BV1bp4y1w7ER)
+  - [米兔电路板替换教程](https://www.bilibili.com/video/BV1Qp4y1T71J)
 
 - 网友提供
-  - [基于群晖NAS部署FoloToy 服务说明](https://tnu7owoxao.feishu.cn/wiki/HzFKwA3QPigdcCkn3VmckSPSn0g)
+  - [基于群晖 NAS 部署 FoloToy 服务说明](https://tnu7owoxao.feishu.cn/wiki/HzFKwA3QPigdcCkn3VmckSPSn0g)
 
 
 ## 资源集合
