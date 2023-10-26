@@ -101,9 +101,7 @@ Conversation: When starting a conversation with the toy, **hold** down the middl
 
 Role Switching: The buttons marked with numbers 1-7 are used for role switching. They correspond to roles 1-7 in the role configuration file.
 
-<img width="512" src="https://user-images.githubusercontent.com/1455685/272773455-36eb6085-2b62-4009-8eaf-5b3bf88768c1.png" alt="folotoy-robot">
-
-<img width="512" src="https://user-images.githubusercontent.com/1455685/272764950-cbaf933e-69fc-4cfb-932c-b4a1b26067a5.jpg" alt="folotoy-robot">
+<img width="512" src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" alt="folotoy-robot">
 
 Role modification and definition can be done in the [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/roles.json) file.
 
