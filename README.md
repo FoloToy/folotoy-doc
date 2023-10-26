@@ -121,4 +121,4 @@ Role modification and definition can be done in the [roles.json](https://github.
 
 ### WeChat
 
-<img width="256" src="https://user-images.githubusercontent.com/1455685/276510278-3a4f9793-dde9-4153-92b8-f072a9f04924.png" alt="folotoy-robot">
+<img width="256" src="https://user-images.githubusercontent.com/1455685/278220092-06bd554a-0659-4ead-9ee5-a15662fc8e1a.png" alt="folotoy-robot">
