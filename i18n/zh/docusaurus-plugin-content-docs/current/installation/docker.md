@@ -1,23 +1,32 @@
 ---
-title: Docker install
+title: 通过 Docker 安装
 sidebar_label: Docker
 ---
 
-This document provides the necessary steps for installation of FoloToy Server on a any system that runs Docker. For a walkthrough that provides the necessary steps for manual installation see [Manual Install](debian.md).
+本文档提供了在运行 Docker 的任何系统上安装 FoloToy 服务器的必要步骤。
 
-This setup is recommended if you are running FoloToy Server **on your home network**, as otherwise your [EMQX](https://github.com/emqx/emqx) might be at risk. If you intend to expose [EMQX](https://github.com/emqx/emqx) directly to the internet check out the [advanced guides](../guides/emqx.md).
+如果您在家庭网络上运行 FoloToy 服务器，建议使用此设置，否则您的 [EMQX](https://github.com/emqx/emqx) 可能会有风险。如果您打算直接将 [EMQX](https://github.com/emqx/emqx) 暴露在互联网上，请查看[高级指南](../guides/emqx.md)。
 
-## Requirements
+## 准备工作
 
-- Docker _(if you are new to Docker, see [Installing Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/linux/))_
-- A Machine that's always on, so FoloToy Server can continually serve your toys
-- At least 512 MB of RAM on the machine for the installation to succeed.
-- Recommended using Linux x86_64/ARM64, Debian 10-11/Ubuntu 20.04-22.04/Armbian
-- External internet access, to talk to openai.com or azure.com etc.
+- Docker _(如果你没接触过 Docker 或者对 Docker 不熟, 请查看 [Docker安装教程](https://docs.docker.com/engine/install/) 和 [Docker Compose安装教程](https://docs.docker.com/compose/install/linux/))_
+- 一台始终在线的机器，使 FoloToy 服务器能够持续为您的玩具提供服务
+- 机器上至少需要 512 MB 的内存才能成功安装。
+- 推荐使用 Linux x86_64/ARM64，Debian 10-11/Ubuntu 20.04-22.04/Armbian
+- 需要互联网访问权限，以便与 openai.com 或 azure.com 等进行通信。
 
-## Instructions
+## 安装说明
 
-1. Create a file called `docker-compose.yml` with the following content:
+1. 创建一个目录，例如在你的 Home 目录下创建目录 `folotoy-server`
+
+  ```bash
+  cd ~
+  mkdir folotoy-server
+  ```
+
+  接下来的操作都在 `folotoy-server` 目录中进行
+
+2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中:
 
    ```yml title="docker-compose.yml"
   version: '3'
@@ -135,7 +144,7 @@ This setup is recommended if you are running FoloToy Server **on your home netwo
     emqx-data:
     emqx-log:
    ```
-2. Create a file called `roles.json` with the following content:
+3. 创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
 
    ```yml title="roles.json"
    {

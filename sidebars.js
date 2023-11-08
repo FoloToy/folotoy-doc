@@ -43,7 +43,7 @@ module.exports = {
     },
     {
       type: "doc",
-      id: "development",
+      id: "contributing",
     },
   ],
 };

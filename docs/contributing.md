@@ -1,10 +1,10 @@
 ---
-id: development
-title: Development and Contributing
-sidebar_label: Development and Contributing
+id: contributing
+title: Contributing
+sidebar_label: Contributing
 ---
 
-## Issues
+## Contributing
 
 大家收到板子或者玩具有问题，请先看已经关闭的 issues，看看有没有与自己一样的问题：https://github.com/FoloToy/folotoy-server-self-hosting/issues?q=is%3Aissue+is%3Aclosed
 
