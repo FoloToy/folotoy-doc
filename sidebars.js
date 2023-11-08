@@ -4,6 +4,7 @@ module.exports = {
       type: "category",
       label: "Getting started",
       items: [
+        "faq",
         {
           type: "category",
           label: "Installation",
@@ -14,7 +15,6 @@ module.exports = {
             "installation/windows-wsl2",
           ],
         },
-        "faq",
       ],
     },
     {
