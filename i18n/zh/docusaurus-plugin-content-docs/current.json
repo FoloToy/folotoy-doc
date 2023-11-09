@@ -26,5 +26,9 @@
   "sidebar.docs.category.Maintenance": {
     "message": "维护",
     "description": "The label for category Maintenance in sidebar docs"
+  },
+  "sidebar.docs.category.Web Tool": {
+    "message": "网页工具",
+    "description": "The label for category Web Tool in sidebar docs"
   }
 }
