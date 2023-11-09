@@ -11,7 +11,7 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 
 ## Requirements
 
-- 检查原主板是否是支持的型号
+- Check if the original motherboard is a supported model.
 - A cross screwdriver with a diameter of 2.5mm and a length of over 5cm.
 - A functioning Mitu C1 can be purchased on major e-commerce websites.
 - A replacement circuit board for the C1, produced by FoloToy, can be purchased at: https://gf.bilibili.com/item/detail/1104222005.
@@ -20,16 +20,16 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 
 ## Instructions
 
-1. 检查 Mitu C1 录音和播放是否正常
-2. 撕开 Mitu C1 底部的标签纸，使用螺丝刀拧开螺丝，取下底部盖板
-3. 用薄片撬开 Mitu C1 背后开关上面的外壳
-4. 使用螺丝刀拧开 Mitu C1 背后的颗螺丝
-3. 小心的打开 Mitu C1 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头
-4. 拧开主板上的螺丝，取下主板
-5. 使用 FoloToy 的主板替换掉原主板
-6. 插好替换的电源 usb 线，话筒，灯，扬声器和电源的插座，最后插电源的插座，另外固定电池的挡板需要轻轻转动一个角度。
-7. 插好插座后，先不要合起外壳安装螺丝，先打开兔子尾巴上的电源开关，看看新安装的灯是否能亮，并且蓝色慢闪。
-8. 如果没有问题，安装好外壳，拧好螺丝就完成了替换。
+1. Check if the recording and playback of Mitu C1 are normal.
+2. Tear off the label paper at the bottom of Mitu C1, use a screwdriver to unscrew the screws, and remove the bottom cover.
+3. Pry open the shell above the switch on the back of Mitu C1 with a thin sheet.
+4. Use a screwdriver to unscrew the screws on the back of Mitu C1.
+5. Carefully open the shell of Mitu C1, unplug all plugs on the motherboard, first unplug the power plug.
+6. Unscrew the screws on the motherboard and remove it.
+7. Replace it with FoloToy's motherboard.
+8. Connect replacement power USB cable, microphone, light, speaker, and power socket; finally connect power socket; gently rotate battery bracket at an angle for fixation.
+9. After connecting sockets, do not close up or install screws yet; first turn on/off switch on rabbit's tail to see if newly installed light can illuminate and slowly flash in blue color.
+10.If there is no problem, install outer casing and tighten screws to complete replacement process.
 
 ## Wi-Fi Configure
 
@@ -59,7 +59,7 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 
 ## Usage
 
-在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+After assembling the toy, completing the network configuration, and connecting to the server, hold down the designated recording button to start a conversation. Release it to end the conversation. The other small buttons are for switching characters. Clicking on them will activate the character switch. The numerical values on these character buttons correspond to the keys in roles.json file.
 
 <img src="https://user-images.githubusercontent.com/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
 <img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

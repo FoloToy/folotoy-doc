@@ -12,7 +12,7 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 ## Requirements
 
 :::caution
-在购买 G6 的时候，不要买错了型号，替换电路板只支持右边 MicroUSB 接口的 G6
+When purchasing the G6, make sure not to buy the wrong model. The replacement circuit board only supports the G6 with a MicroUSB interface on the right side.
 <img src="https://user-images.githubusercontent.com/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
 :::
 
@@ -25,14 +25,14 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 ## Instructions
 
-1. 检查 Alilo G6 录音和播放是否正常
-2. 使用螺丝刀拧开 Alilo G6 背后的 6 颗螺丝
-3. 小心的打开 Alilo G6 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头，插头上有胶，可使用美工刀轻轻划开，一定要注意千万不要划到自己的手
-4. 拧开主板上的4颗螺丝，取下主板
-5. 使用 FoloToy 的主板替换掉原主板，拧紧 3 颗螺丝固定
-6. 插好话筒，灯，扬声器和电源的插座，最后插电源的插座。
-7. 插好插座后，先不要合起外壳安装螺丝，先打开兔子尾巴上的电源开关，看看新安装的灯是否能亮，并且蓝色慢闪。
-8. 如果没有问题，安装好外壳，拧好螺丝就完成了替换。
+1. Check if the recording and playback of Alilo G6 are normal.
+2. Use a screwdriver to unscrew the 6 screws on the back of Alilo G6.
+3. Carefully open the casing of Alilo G6, unplug all plugs on the motherboard, first unplug the power plug, there is glue on the plug, you can use an art knife to gently cut it open, be sure not to cut your hand.
+4. Unscrew the 4 screws on the motherboard and remove it.
+5. Replace the original motherboard with FoloToy's motherboard and tighten 3 screws to fix it.
+6. Plug in microphone, light, speaker and power sockets, finally plug in power socket.
+7. After plugging in all sockets, do not close the casing or install screws yet. First turn on/off switch on rabbit's tail to see if newly installed light can turn on and flash slowly in blue color.
+8. If there is no problem, install the casing and tighten screws to complete replacement process.
 
 ## Wi-Fi Configure
 
@@ -62,7 +62,7 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 ## Usage
 
-在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+After assembling the toy, completing the network configuration, and connecting to the server, hold down the large circular button in the middle for conversation. Release it to end the conversation. The 7 small circular buttons around it are character switch buttons. Clicking on them will activate character switching, and the numerical values on these buttons correspond to the keys in roles.json.
 
 <img src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
 <img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

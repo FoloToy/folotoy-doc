@@ -18,19 +18,19 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 ## Instructions
 
 :::caution
-如果是 F6s 这个型号，原主板为 Type-C 接口，直接替换存在 MIC 和扬声器接口不适配的情况，目前可通过转接线实现正常连接
+If it is the F6s model, the original motherboard has a Type-C interface. Direct replacement may result in an incompatible situation with the MIC and speaker interfaces. Currently, normal connection can be achieved through an adapter cable.
 <img src="https://user-images.githubusercontent.com/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
 :::
 
 
-1. 检查 Alilo F6 录音和播放是否正常
-2. 使用螺丝刀拧开 Alilo F6 底座和背后的螺丝
-3. 小心的打开 Alilo F6 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头，插头上有胶，可使用美工刀轻轻划开，一定要注意千万不要划到自己的手
-4. 拧开主板上螺丝，取下主板
-5. 使用 FoloToy 的主板替换掉原主板，拧紧螺丝固定
-6. 插好话筒，灯，扬声器和电源的插座，最后插电源的插座。
-7. 插好插座后，先不要合起外壳安装螺丝，先打开兔子尾巴上的电源开关，看看新安装的灯是否能亮，并且蓝色慢闪。
-8. 如果没有问题，安装好外壳，拧好螺丝就完成了替换。
+1. Check if the recording and playback of Alilo F6 are normal.
+2. Use a screwdriver to unscrew the screws on the base and back of Alilo F6.
+3. Carefully open the casing of Alilo F6, unplug all plugs on the motherboard, first unplug the power plug, there is glue on the plug, you can use an art knife to gently cut it open, be sure not to cut your hand.
+4. Unscrew the screws on the motherboard and remove it.
+5. Replace the original motherboard with FoloToy's motherboard and tighten the screws to secure it.
+6. Plug in microphone, light, speaker, and power sockets in order, finally plug in power socket.
+7. After plugging in all sockets, do not close the casing or install screws yet; first turn on/off switch located at rabbit's tail to see if newly installed light can illuminate and flash slowly in blue color.
+8. If there are no problems, install and screw tightens casing to complete replacement process.
 
 ## Wi-Fi Configure
 
@@ -60,7 +60,7 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 
 ## Usage
 
-在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+After assembling the toy, completing the network configuration, and connecting to the server, press and hold the indicated recording button to start a conversation. Release it to end the conversation. The small button is used for switching characters. Clicking on it will activate the character switch. The numerical values on the character buttons correspond to the keys in roles.json file.
 
 <img src="https://user-images.githubusercontent.com/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
 <img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
