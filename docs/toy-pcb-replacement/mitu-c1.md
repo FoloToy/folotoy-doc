@@ -43,6 +43,8 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 
    Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address, and port number that you want your toy to connect with.
 
+   **Server Address/Port are required, if you have not setup your own server, please refer to [Server Installation](installation/docker.md).**
+  
    :::caution
    If no page pops up, you can also configure it by entering http://192.168.4.1 in your browser.
    :::
@@ -53,3 +55,11 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+
+
+## Usage
+
+在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+
+<img src="https://user-images.githubusercontent.com/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
+<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

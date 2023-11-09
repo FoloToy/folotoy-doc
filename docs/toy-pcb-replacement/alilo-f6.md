@@ -17,6 +17,12 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 
 ## Instructions
 
+:::caution
+如果是 F6s 这个型号，原主板为 Type-C 接口，直接替换存在 MIC 和扬声器接口不适配的情况，目前可通过转接线实现正常连接
+<img src="https://user-images.githubusercontent.com/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
+:::
+
+
 1. 检查 Alilo F6 录音和播放是否正常
 2. 使用螺丝刀拧开 Alilo F6 底座和背后的螺丝
 3. 小心的打开 Alilo F6 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头，插头上有胶，可使用美工刀轻轻划开，一定要注意千万不要划到自己的手
@@ -38,6 +44,8 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 
    Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address, and port number that you want your toy to connect with.
 
+   **Server Address/Port are required, if you have not setup your own server, please refer to [Server Installation](installation/docker.md).**
+
    :::caution
    If no page pops up, you can also configure it by entering http://192.168.4.1 in your browser.
    :::
@@ -48,3 +56,11 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+
+
+## Usage
+
+在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+
+<img src="https://user-images.githubusercontent.com/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
+<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

@@ -11,6 +11,11 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 ## Requirements
 
+:::caution
+在购买 G6 的时候，不要买错了型号，替换电路板只支持右边 MicroUSB 接口的 G6
+<img src="https://user-images.githubusercontent.com/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
+:::
+
 - A cross screwdriver with a diameter of 2.5mm and a length of over 5cm.
 - A utility knife, used to remove the adhesive on top of the PCB socket.
 - A functioning Alilo G6 can be purchased on major e-commerce websites.
@@ -39,7 +44,9 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 3. Connect to the hotspot of the toy.
 
-   Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address, and port number that you want your toy to connect with.
+   Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address and port that you want your toy to connect with.
+
+   **Server Address/Port are required, if you have not setup your own server, please refer to [Server Installation](installation/docker.md).**
 
    :::caution
    If no page pops up, you can also configure it by entering http://192.168.4.1 in your browser.
@@ -51,3 +58,11 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+
+
+## Usage
+
+在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
+
+<img src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
+<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
