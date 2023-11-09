@@ -20,7 +20,7 @@
     "description": "The label for category Integrations in sidebar docs"
   },
   "sidebar.docs.category.Advanced Configuration": {
-    "message": "Advanced Configuration",
+    "message": "高级配置",
     "description": "The label for category Advanced Configuration in sidebar docs"
   },
   "sidebar.docs.category.Maintenance": {

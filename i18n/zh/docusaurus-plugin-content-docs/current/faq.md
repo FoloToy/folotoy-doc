@@ -9,7 +9,7 @@ sidebar_label: 常见问题(FAQ)
 
 - **录音**：通过UDP接收玩具发送的实时录音数据，并调用 STT（声音转文本）API 将声音转换为文本。目前支持的 STT 选项包括：`openai-whisper`、`azure-stt`、`azure-whisper`。
 - **思考**：在接收到上述文本后，立即调用 LLM（大型语言模型）API以流式方式获取 LLM 生成的句子。然后，调用 TTS（文本转语音）API 将句子转换为人类语音。目前支持的 LLM 选项包括：`openai`、 `azure-openai `或由 [One-Api](https://github.com/songquanpeng/one-api) 代理的 LLM。
-- **播放音频**：玩具将接收由FotoLoy服务器生成的TTS（文本转语音）音频文件流，并按顺序播放它们。目前支持的 TTS 选项包括： `openai-tts`,  `azure-tts`,  `elevenlabs`,  `edge-tss`(免费)。
+- **播放音频**：玩具将接收由FoloToy服务器生成的 TTS（文本转语音）音频文件流，并按顺序播放它们。目前支持的 TTS 选项包括： `openai-tts`,  `azure-tts`,  `elevenlabs`,  `edge-tts`(免费)。
 
 ## 连不上自己的服务器?
 

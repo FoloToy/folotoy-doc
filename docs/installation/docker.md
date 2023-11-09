@@ -241,7 +241,7 @@ This setup is recommended if you are running FoloToy Server **on your home netwo
 
 ## Usage
 
-The following steps are based on the example of Huohuo Rabbit G6. For instructions on how to connect other models of toys, please refer to [Toy Connection Instructions](guides/emqx.md).
+The following steps are based on the example of Alilo G6. For instructions on how to connect other models of toys, please refer to [Toy Connection Instructions](guides/emqx.md).
 
 1. Turn on the switch at the back of the toy to power it on. The blue flashing light indicates that the toy has entered pairing mode.
 

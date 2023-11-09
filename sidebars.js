@@ -7,12 +7,22 @@ module.exports = {
         "faq",
         {
           type: "category",
-          label: "Installation",
+          label: "Server Installation",
           items: [
             "installation/docker",
             "installation/synology-nas",
             "installation/flyio",
             "installation/windows-wsl2",
+          ],
+        },
+        {
+          type: "category",
+          label: "Toy PCB Replacement",
+          items: [
+            "toy-pcb-replacement/video-tutorial",
+            "toy-pcb-replacement/alilo-g6",
+            "toy-pcb-replacement/alilo-f6",
+            "toy-pcb-replacement/mitu-c1",
           ],
         },
       ],
