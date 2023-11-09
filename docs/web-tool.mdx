@@ -1,0 +1,67 @@
+---
+id: web-tool
+title: Using Web Serial to upgrate and monitor your device
+sidebar_label: Using Web Serial to upgrate and monitor your device
+---
+
+#### This [ web ](https://tool.folotoy.com/index) is designed to facilitate three key operations for your device: program, console, and conversation content viewing.
+
+- Program: This feature allows you to easily update the firmware of your devices.
+
+- Console: Use this function to view real-time logs from your devices, assisting in efficient debugging and troubleshooting.
+
+- Dialogue: This feature enables you to view and manage conversation content associated with your devices.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+defaultValue="program"
+values={[
+{ label: 'Program', value: 'program'},
+{ label: 'Console', value: 'console'},
+{ label: 'Dialogue', value: 'dialogue'}
+]}>
+<TabItem value="program">
+
+To get started with your program, you will need to download the appropriate firmware, select the correct baudrate, and follow the steps to connect and write the fThirmware. Detailed instructions are as follows:
+
+1. Access Program: Click on the 'Program' option in the interface.
+
+2. Download Firmware: Visit the  [ firmware download page ](https://github.com/FoloToy/folotoy-tool/releases) and select the firmware that corresponds to your device.
+
+3. Select BaudRate: After downloading the firmware, you need to select the correct baud rate for communication. For Windows users, a baudrate of 921600 is recommended. For macOS users, a baudrate of 460800 is recommended. Alternatively, you can use the default baudrate.
+
+4. Connect: Click the 'Connect' button to establish a connection with your device.
+
+5. Select Firmware and Write: Choose the downloaded firmware file, set Address at 0x0 and click the 'Write' button. Wait for a few minutes for the firmware to be written to you device.
+
+</TabItem>
+<TabItem value="console">
+
+To monitor real-time logs from your device, follow the steps below:
+
+1. Access Console: Click on the 'Console' option in the interface.
+
+2. Connect Device: Connect your device. Once connected, you should be able to see real-time logs from your device in the console.
+
+
+</TabItem>
+<TabItem value="dialogue">
+
+To connect to your device and view real-time dialogue content, follow the steps below:
+
+1. Access Dialogue: Click on the 'Dialogue' option in the interface.
+
+2. Enter Connection Details: On the connection dialogue page, input the following information:
+
+    - Client ID: This is the unique identifier for your connection.
+    - Host: This is the server address to which your device will connect.
+    - Port: This is the port number on the server to which your device will connect.
+    - SN (Serial Number): This can be found in the device logs.
+    - Username: This is the username for the server connection.
+    - Password: This is the password for the server connection.
+3. Connect: Click the 'Connect' button. Once connected successfully, you will be able to view real-time dialogue content from your device.
+
+</TabItem>
+</Tabs>

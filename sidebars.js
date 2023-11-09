@@ -52,6 +52,13 @@ module.exports = {
       ],
     },
     {
+      type: "category",
+      label: "Web Tool",
+      items: [
+        "web-tool",
+      ],
+    },
+    {
       type: "doc",
       id: "contributing",
     },
