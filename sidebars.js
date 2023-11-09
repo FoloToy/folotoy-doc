@@ -10,10 +10,10 @@ module.exports = {
           label: "Server Installation",
           items: [
             "installation/docker",
+            "installation/1panel",
             "installation/synology-nas",
             "installation/flyio",
             "installation/windows-wsl2",
-            "installation/1panel",
           ],
         },
         {
@@ -30,20 +30,28 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Guides",
-      items: ["guides/1panel"],
+      label: "Advanced Configuration",
+      items: [
+        "configuration/environment_variables",
+        "configuration/roles_config",
+      ],
     },
+    /*{
+      type: "category",
+      label: "Guides",
+      items: [
+        "guides/emqx",
+        "guides/mosquitto",
+        "guides/nginx"
+      ],
+    },
+    */
     {
       type: "category",
       label: "Integrations",
       items: [
         "integrations/mqtt",
       ],
-    },
-    {
-      type: "category",
-      label: "Advanced Configuration",
-      items: ["configuration/environment_variables"],
     },
     {
       type: "category",

@@ -1,6 +1,6 @@
 ---
 title: 使用 1Panel 安装
-sidebar_label: 1Panel(推荐)
+sidebar_label: 1Panel(强烈推荐)
 ---
 
 要简化您的 FoloToy 服务器 Docker 安装过程，您可以使用开源运维工具[1Panel](https://github.com/1Panel-dev/1Panel)。

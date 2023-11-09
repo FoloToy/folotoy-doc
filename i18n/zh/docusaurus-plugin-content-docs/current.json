@@ -12,7 +12,7 @@
     "description": "The label for category Installation in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
-    "message": "配置教程",
+    "message": "高级部署指南",
     "description": "The label for category Guides in sidebar docs"
   },
   "sidebar.docs.category.Integrations": {
@@ -20,7 +20,7 @@
     "description": "The label for category Integrations in sidebar docs"
   },
   "sidebar.docs.category.Advanced Configuration": {
-    "message": "高级配置",
+    "message": "服务器高级配置",
     "description": "The label for category Advanced Configuration in sidebar docs"
   },
   "sidebar.docs.category.Maintenance": {

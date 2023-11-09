@@ -1,6 +1,6 @@
 ---
-title: Docker install
-sidebar_label: Docker(Mosquitto)
+title: Advanced installation with Mosquitto
+sidebar_label: Advanced installation with Mosquitto
 ---
 
 This document provides the necessary steps for installation of FoloToy Server on a any system that runs Docker. For a walkthrough that provides the necessary steps for manual installation see [Manual Install](debian.md).
