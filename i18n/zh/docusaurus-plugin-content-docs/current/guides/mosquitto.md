@@ -3,7 +3,7 @@ title: Docker install
 sidebar_label: Docker(Mosquitto)
 ---
 
-This document provides the necessary steps for installation of FoloToy Server on a any system that runs Docker. For a walkthrough that provides the necessary steps for manual installation see [Manual Install](debian.md).
+This document provides the necessary steps for installation of FoloToy Server on a any system that runs Docker. 
 
 This setup is recommended if you are running FoloToy Server **on your home network**, as otherwise your [EMQX](https://github.com/emqx/emqx) might be at risk. If you intend to expose [EMQX](https://github.com/emqx/emqx) directly to the internet check out the [advanced guides](../guides/emqx.md).
 
