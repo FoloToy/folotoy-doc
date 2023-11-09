@@ -7,8 +7,8 @@
     "message": "开始",
     "description": "The label for category Getting started in sidebar docs"
   },
-  "sidebar.docs.category.Installation": {
-    "message": "安装说明",
+  "sidebar.docs.category.Server Installation": {
+    "message": "服务器部署说明",
     "description": "The label for category Installation in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
@@ -30,5 +30,9 @@
   "sidebar.docs.category.Web Tool": {
     "message": "网页工具",
     "description": "The label for category Web Tool in sidebar docs"
+  },
+  "sidebar.docs.category.Toy PCB Replacement": {
+    "message": "更换玩具电路板说明",
+    "description": "The label for category Toy PCB Replacement in sidebar docs"
   }
 }
