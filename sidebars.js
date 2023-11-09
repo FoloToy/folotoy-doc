@@ -13,6 +13,7 @@ module.exports = {
             "installation/synology-nas",
             "installation/flyio",
             "installation/windows-wsl2",
+            "installation/1panel",
           ],
         },
         {

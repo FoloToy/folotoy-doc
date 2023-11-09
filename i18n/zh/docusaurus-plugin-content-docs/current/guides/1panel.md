@@ -1,5 +1,6 @@
 ---
 title: Web based management of your docker installation with 1Panel
+sidebar_label: 1Panel()
 ---
 
 To manage your docker installation of FoloToy Server you could use the open-source management UI [1Panel](https://github.com/1Panel-dev/1Panel).
