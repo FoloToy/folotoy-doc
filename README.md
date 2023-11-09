@@ -1,24 +1,32 @@
-# Documents Website
+# FoloToy Documents Website
 
 This documents website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator and automatically deployed to [docs.folotoy.com](https://docs.folotoy.com).
 
+[English](./README.md) | [简体中文](./README.zh_CN.md)
+
 ### Installation
 
-```
+```bash
 $ npm i
 ```
 
 ### Local Development
 
-```
+```bash
 $ npm start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
+```bash
+$ npm run start-zh
+```
+
+This command starts a local development server and open up a browser window with opening Chinese pages.
+
 ### Build
 
-```
+```bash
 $ npm run build
 ```
 
