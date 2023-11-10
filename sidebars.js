@@ -36,16 +36,13 @@ module.exports = {
         "configuration/roles_config",
       ],
     },
-    /*{
+    {
       type: "category",
       label: "Guides",
       items: [
         "guides/emqx",
-        "guides/mosquitto",
-        "guides/nginx"
       ],
     },
-    */
     {
       type: "category",
       label: "Integrations",
