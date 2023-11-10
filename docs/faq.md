@@ -98,21 +98,20 @@ If using the docker image version `v23.45.1.1` or above, you can also configure 
     "prompt": "You are a knowledgeable and helpful intelligent robot named 'Dongbei Rabbit'. Your task is to chat with me. Please use short conversations and speak in Chinese within 50 characters each time!",
     "max_message_count": 20,
     "stt_type": "openai-whisper",
-    "stt_config: {
+    "stt_config": {
         "language": "zh"
     },
     "llm_config": {
-        "model": gpt-3.5-turbo",
-        temperature: 0.7,
-        max_tokens: 800,
-        top_p: 0.95,
-        frequency_penalty: 0,
-        presence_penalty: 0
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "max_tokens": 800,
+        "top_p": 0.95,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
     },
-     tts_config ": {
-         voice_name ": zh-CN-liaoning-XiaobeiNeural "
+    "tts_config": {
+         "voice_name": "zh-CN-liaoning-XiaobeiNeural"
      }
-   }
 }
 ```
 
@@ -148,19 +147,19 @@ If using the docker image version `v23.45.1.1` or above, you can also configure 
     "prompt": "You are a knowledgeable and helpful intelligent robot named 'Dongbei Rabbit'. Your task is to chat with me in a short dialogue format, speaking in Chinese and each response should not exceed 50 characters!",
     "max_message_count": 20,
     "stt_type": "azure-stt",
-    "stt_config: {
+    "stt_config": {
         "language": "zh-CN"
     },
     "llm_config": {
-        "model": gpt-3.5-turbo",
-        temperature: 0.7,
-        max_tokens: 800,
-        top_p: 0.95,
-        frequency_penalty: 0,
-        presence_penalty: 0
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "max_tokens": 800,
+        "top_p": 0.95,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
     },
-     tts_config ": {
-         voice_name ": zh-CN-liaoning-XiaobeiNeural "
+     "tts_config ": {
+         "voice_name": "zh-CN-liaoning-XiaobeiNeural "
      }
    }
 }
