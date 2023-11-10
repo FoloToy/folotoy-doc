@@ -35,7 +35,7 @@ sidebar_label: 米兔 C1
 
 2. 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
 
 3. 连接到玩具的热点。
 
