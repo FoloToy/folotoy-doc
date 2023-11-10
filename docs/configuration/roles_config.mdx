@@ -25,9 +25,10 @@ FoloToy 服务器程序可以通过修改一系列的配置来达到自定义的
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-## 语音转文字(Sound-to-Text)角色级别配置说明
+## 语音转文字 STT (Sound-to-Text)角色级别配置说明
 
 stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper
+
 <Tabs
 defaultValue="openai-whisper"
 values={[
@@ -41,6 +42,18 @@ values={[
 openai-whisper 的 language 可以不用设置，但是如果设置了就需要使用正确的 language 语言代码，语言代码与 azure-stt 不同，例如 openai-whisper 中文要使用 `zh`, 在 roles.json 文件中可以为每一个角色配置不同的语言代码，点击这里查看所有的语言代码: [OpenAI Whisper language 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 :::
 
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| --------- | ---- | --------- |
+| language     |  The language of the input audio. Supplying the input language in [ISO-639-1]((https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) format will improve accuracy and latency.  https://platform.openai.com/docs/api-reference/audio/createTranscription  | 无                    | 
+| api_base     |  接口的base url    | https://api.openai.com/v1 | 
+| key     | api key     | 无 | 
+| model     |  使用的模型 ID   |  whisper-1 | 
+| prompt     | An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language.     | ok. Let's begin. | 
+
+配置示例
+
    ```yml title="roles.json"
    {
     "1": {  
@@ -53,7 +66,7 @@ openai-whisper 的 language 可以不用设置，但是如果设置了就需要�
           "api_base": "https://api.openai.com/v1",
           "key": "sk-AAAAAAAAAAAAAAAAAAa",
           "model": "whisper-1",
-          "prompt": "ok. Let's begein."
+          "prompt": "ok. Let's begin."
         },
         "llm_type": "openai",
         "llm_config": {
@@ -77,6 +90,16 @@ openai-whisper 的 language 可以不用设置，但是如果设置了就需要�
 :::caution
 azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-whipser 不同，例如 azure-stt 中文要使用 `zh-CN`, 在 roles.json 文件中为每一个角色配置正确的语言代码，点击这里查看所有的语言代码: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt)
 :::
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  language    |   The language of the input audio.  点击这里查看所有的语言代码: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt) | zh-CN | 
+|  key    |  Azure Speech Services Key, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview  |  | 
+|  service_region    |  Azure Speech Services Region, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview    |  | 
+
+配置示例
 
    ```yml title="roles.json"
    {
@@ -113,6 +136,17 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
 azure-whisper 的还是预览状态，只有 North Central US 和 West Europe 能部署，另外使用whisper前提是有 azure openai 的权限。 [查看 Whisper models (Preview) 可用区域](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#whisper-models-preview)
 :::
 
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  api_base    | 接口地址     |  | 
+|  key    |  接口密钥    |  | 
+|  deployment_name    | 模型部署名称，不要填模型名称     |  | 
+|  api_version    | 接口版本     | 2023-09-01-preview | 
+
+配置示例
+
    ```yml title="roles.json"
    {
     "1": {  
@@ -121,11 +155,10 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
         "max_message_count": 10,
         "stt_type": "openai-whisper",
         "stt_config": {
-          "language": "zh",
-          "api_base": "https://api.openai.com/v1",
-          "key": "sk-AAAAAAAAAAAAAAAAAAa",
-          "model": "whisper-1",
-          "prompt": "ok. Let's begein."
+          "api_base": "https://xxx.openai.azure.com",
+          "key": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "deployment_name": "whisper",
+          "api_version": "2023-09-01-preview"
         },
         "llm_type": "openai",
         "llm_config": {
@@ -146,7 +179,45 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
 </TabItem>
 </Tabs>
 
-## 示例
+## AI 大语言模型 LLM (Large Language Model)角色级别配置说明
+
+llm_type 可以设置为：openai, azure-openai
+
+<Tabs
+defaultValue="openai"
+values={[
+{ label: 'openai', value: 'openai', },
+{ label: 'azure-openai', value: 'azure-openai', },
+]}>
+<TabItem value="openai">
+</TabItem>
+<TabItem value="azure-openai">
+</TabItem>
+</Tabs>
+
+## 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
+
+tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts
+
+<Tabs
+defaultValue="openai-tts"
+values={[
+{ label: 'openai-tts', value: 'openai-tts', },
+{ label: 'azure-tts', value: 'azure-tts', },
+{ label: 'elevenlabs', value: 'elevenlabs', },
+{ label: 'edge-tts', value: 'edge-tts', },
+]}>
+<TabItem value="openai-tts">
+</TabItem>
+<TabItem value="azure-tts">
+</TabItem>
+<TabItem value="elevenlabs">
+</TabItem>
+<TabItem value="edge-tts">
+</TabItem>
+</Tabs>
+
+## 完整示例参考
 
 <Tabs
 defaultValue="docker-compose"
