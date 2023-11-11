@@ -34,5 +34,9 @@
   "sidebar.docs.category.Toy PCB Replacement": {
     "message": "更换玩具电路板说明",
     "description": "The label for category Toy PCB Replacement in sidebar docs"
+  },
+  "sidebar.docs.category.Dev Suit": {
+    "message": "开发套件",
+    "description": "The label for category Dev Suit in sidebar docs"
   }
 }

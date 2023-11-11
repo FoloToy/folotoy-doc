@@ -36,6 +36,11 @@ module.exports = {
         "configuration/roles_config",
       ],
     },
+    {
+      type: "category",
+      label: "ChatGPT Learning Dev Suit",
+      items: ["dev-suit/quickstart", "dev-suit/partsinfo"],
+    },
     /*{
       type: "category",
       label: "Guides",
@@ -49,23 +54,17 @@ module.exports = {
     {
       type: "category",
       label: "Integrations",
-      items: [
-        "integrations/mqtt",
-      ],
+      items: ["integrations/mqtt"],
     },
     {
       type: "category",
       label: "Maintenance",
-      items: [
-        "upgrading",
-      ],
+      items: ["upgrading"],
     },
     {
       type: "category",
       label: "Web Tool",
-      items: [
-        "web-tool",
-      ],
+      items: ["web-tool"],
     },
     {
       type: "doc",
