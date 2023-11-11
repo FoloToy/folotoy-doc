@@ -65,5 +65,9 @@ module.exports = {
       type: "doc",
       id: "contributing",
     },
+    {
+      type: "doc",
+      id: "community",
+    },
   ],
 };
