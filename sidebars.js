@@ -41,16 +41,11 @@ module.exports = {
       label: "ChatGPT Learning Dev Suit",
       items: ["dev-suit/quickstart", "dev-suit/partsinfo"],
     },
-    /*{
+    {
       type: "category",
       label: "Guides",
-      items: [
-        "guides/emqx",
-        "guides/mosquitto",
-        "guides/nginx"
-      ],
+      items: ["guides/emqx"],
     },
-    */
     {
       type: "category",
       label: "Integrations",
