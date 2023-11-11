@@ -246,7 +246,7 @@ values={[
 | endpoint  | api base  | https://xxx.openai.azure.com | 
 | api_version | azure api version | 2023-05-15 |
 | key | azure api key | aaaaaaaaaaaaaaaaa |
-| model | openai model id，https://platform.openai.com/docs/api-reference/chat/create |  |
+| model | azure-openai 的模型名称与 openai 的不同，azure-openai 使用的是部署名（Deployment Name），例如可以在部署 gpt-3.5-turbo 的时候设置部署名称是 gpt-35 |  |
 | max_tokens |https://platform.openai.com/docs/api-reference/chat/create#chat-create-model | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 | top_p | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 0.95 |
