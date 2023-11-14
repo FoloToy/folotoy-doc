@@ -72,7 +72,8 @@ title: EMQX 的高级安装说明
 {allow, {username, {re, "^[0-9a-zA-Z]{8,32}$"}}, publish, ["/user/folotoy/${username}/thing/command/callAck", "/user/folotoy/${username}/thing/event/post"]}.
 
 %% integration acl
-{allow, {username, "integration"}, subscribe, ["/user/folotoy/+/integration/event/post"]}.
+{allow, {username, "integration"}, subscribe, ["/sys/folotoy/+/thing/event/post", "/sys/configAck"]}.
+{allow, {username, "integration"}, publish, ["/sys/config"]}.
 
 {deny, all}.
 
