@@ -31,6 +31,10 @@
     "message": "网页工具",
     "description": "The label for category Web Tool in sidebar docs"
   },
+  "sidebar.docs.category.Community": {
+    "message": "加入社区",
+    "description": "The label for category Community in sidebar docs"
+  },
   "sidebar.docs.category.Toy PCB Replacement": {
     "message": "更换玩具电路板说明",
     "description": "The label for category Toy PCB Replacement in sidebar docs"
