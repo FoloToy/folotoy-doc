@@ -35,8 +35,8 @@
     "message": "更换玩具电路板说明",
     "description": "The label for category Toy PCB Replacement in sidebar docs"
   },
-  "sidebar.docs.category.Dev Suit": {
-    "message": "开发套件",
+  "sidebar.docs.category.ChatGPT Learning Dev Suit": {
+    "message": "ChatGPT 学习开发套件",
     "description": "The label for category Dev Suit in sidebar docs"
   }
 }
