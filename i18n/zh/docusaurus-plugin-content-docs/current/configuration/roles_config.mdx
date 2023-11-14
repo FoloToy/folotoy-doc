@@ -25,6 +25,172 @@ FoloToy 服务器程序可以通过修改一系列的配置来达到自定义的
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+## 基本配置
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| --------- | ---- | --------- |
+| start_text     | 开机提示语音，系统自动将 start_text 转成语音文件发送给玩具(必须) | 无                    | 
+| prompt     |  角色的提示词定义(必须)    | 无 | 
+| stt_type |  sound-to-text 引擎类型，可选值：openai-whisper, azure-whisper, azure-tts   | openai-whisper | 
+| stt_config |  sound-to-text 引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
+| llm_type |  large-language-model 类型，可选值： openai，azure-openai, 也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-like 从而支持更多的大模型 | openai | 
+| llm_config |  大模型的配置  | 无 | 
+| tts_type |  text-to-sound 引擎类型，可选值：openai-tts, azure-tts, elevenlabs, edge-tts   | openai-tts | 
+| tts_config |  text-to-sound 引擎的配置   | 无 | 
+
+<Tabs
+defaultValue="roles-minimal.json"
+values={[
+{ label: '最小 roles.json 配置', value: 'roles-minimal.json', },
+{ label: '完整 roles.json 配置', value: 'roles-full.json', },
+]}>
+<TabItem value="roles-minimal.json">
+
+配置示例：
+
+   ```yml title="roles.json"
+   {
+       "1": {
+         "start_text": "你好，我是陪伴兔，请问有什么我可以帮助你的吗？",
+         "prompt": "你扮演一个孩子的小伙伴，名字叫陪伴兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心。"
+       },
+       "2": {
+         "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
+         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+       },
+       "3": {
+         "start_text": "Hi, I'm Wimi. Nice to meet you.",
+         "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!"
+       },
+       "4": {
+         "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
+         "prompt": "夸夸我"
+       },
+       "5": {
+         "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
+         "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？"
+       },
+       "6": {
+         "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
+         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+       },
+       "7": {
+         "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
+         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+       }
+   }
+   ```
+</TabItem>
+
+<TabItem value="roles-full.json">
+
+配置示例：
+
+   ```yml title="roles.json"
+   {
+      "1": {
+        "start_text": "你好，我是微眯，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫微眯，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 5,
+        "stt_type": "openai-whisper",
+        "sst_config": {
+          "language": "zh"
+        },
+        "tts_type": "openai-tts",
+        "tts_config": {
+          "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "voice_name": "alloy"
+        },
+        "llm_type": "openai",
+        "llm_config": {
+          "api_base": "https://xxxx.ccc/v1",
+          "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "model": "gpt-3.5-turbo",
+          "temperature": 0.7,
+          "max_tokens": 800,
+          "top_p": 0.95,
+          "frequency_penalty": 0,
+          "presence_penalty": 0
+        }
+      },
+      "2": {
+        "model": "gpt-35-turbo",
+        "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
+        "max_message_count": 20,
+        "voice_name": "zh-CN-liaoning-XiaobeiNeural"
+      },
+      "3": {
+        "model": "gpt-3.5-turbo",
+        "start_text": "Hi, I'm Wimi. Nice to meet you.",
+        "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
+        "max_message_count": 20,
+        "voice_name": "c8Vkv3mdER2fkhJdEIPK",
+        "language": "en",
+        "tts_type": "elevenlabs"
+      },
+      "4": {
+        "model": "gpt-3.5-turbo",
+        "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
+        "prompt": "夸夸我",
+        "max_message_count": 20,
+        "voice_name": "zh-CN-shaanxi-XiaoniNeural",
+        "language": "zh",
+        "tts_type": "azure-tts"
+      },
+      "5": {
+        "model": "gpt-3.5-turbo",
+        "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
+        "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？",
+        "max_message_count": 20,
+        "stt_type": "azure-stt",
+        "llm_type": "azure-openai",
+        "tts_type": "azure-tts",
+        "voice_name": "zh-CN-YunxiaNeural",
+        "language": "zh-CN",
+        "llm_config": {
+          "model": "gpt-35-turbo"
+        }
+      },
+      "6": {
+        "model": "gpt-3.5-turbo",
+        "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
+        "max_message_count": 20,
+        "voice_name": "zh-TW-HsiaoChenNeural",
+        "language": "zh-CN",
+        "stt_type": "azure-stt",
+        "tts_type": "azure-tts"
+      },
+      "7": {
+        "model": "gpt-3.5-turbo",
+        "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
+        "max_message_count": 20,
+        "voice_name": "zh-CN-YunyangNeural",
+        "language": "zh",
+        "tts_type": "edge-tts"
+      },
+      "toys": {
+        "08d1f9c6a310": {
+          "2": {
+            "model": "gpt-3.5-turbo",
+            "start_text": "哈哈哈哈哈，我是一个超快可爱的大小兔，请问有什么我可以帮助你的吗？",
+            "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
+            "max_message_count": 5,
+            "voice_name": "zh-TW-HsiaoChenNeural"
+          }
+        }
+      }
+}
+   ```
+</TabItem>
+</Tabs>
+
+
+
 ## 语音转文字 STT (Sound-to-Text)角色级别配置说明
 
 stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper
@@ -47,7 +213,7 @@ openai-whisper 的 language 可以不用设置，但是如果设置了就需要�
 | 参数名称 | 参数说明 | 默认值 |
 | --------- | ---- | --------- |
 | language     |  The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency.  https://platform.openai.com/docs/api-reference/audio/createTranscription  | 无                    | 
-| api_base     |  接口的base url    | https://api.openai.com/v1 | 
+| api_base     |  接口的 base url    | https://api.openai.com/v1 | 
 | key     | api key     | 无 | 
 | model     |  使用的模型 ID   |  whisper-1 | 
 | prompt     | An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language.     | ok. Let's begin. | 
@@ -107,7 +273,7 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
         "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
         "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
         "max_message_count": 10,
-        "stt_type": "openai-whisper",
+        "stt_type": "azure-stt",
         "stt_config": {
           "language": "zh-CN",
           "key": "ef0f2781b5a24bbbbbbbbbbbbbbbbbbbb",
@@ -197,7 +363,7 @@ values={[
 | :--     | :--     |  :--     |
 |  api_base    | api base url  |  https://api.openai.com/v1 | 
 | key | openai api_key | sk-AAAAAAAAAAAAA |
-| model | openai model id，https://platform.openai.com/docs/api-reference/chat/create |  |
+| model | The model name of azure-openai is different from openai. Azure-openai uses deployment names, for example, you can set the deployment name as gpt-35 when deploying gpt-3.5-turbo. |  |
 | max_tokens |https://platform.openai.com/docs/api-reference/chat/create#chat-create-model | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 | top_p | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 0.95 |
@@ -246,7 +412,7 @@ values={[
 | endpoint  | api base  | https://xxx.openai.azure.com | 
 | api_version | azure api version | 2023-05-15 |
 | key | azure api key | aaaaaaaaaaaaaaaaa |
-| model | azure-openai 的模型名称与 openai 的不同，azure-openai 使用的是部署名（Deployment Name），例如可以在部署 gpt-3.5-turbo 的时候设置部署名称是 gpt-35 |  |
+| model | openai model id，https://platform.openai.com/docs/api-reference/chat/create |  |
 | max_tokens |https://platform.openai.com/docs/api-reference/chat/create#chat-create-model | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 | top_p | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 0.95 |
@@ -261,7 +427,7 @@ values={[
         "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
         "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
         "max_message_count": 10,
-        "stt_type": "azure-whisper",
+        "stt_type": "openai-whisper",
         "stt_config": {
           "api_base": "https://xxx.openai.azure.com",
           "key": "aaaaaaaaaaaaaaaaaaaaaaaaa",

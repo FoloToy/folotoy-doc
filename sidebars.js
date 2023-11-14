@@ -34,6 +34,7 @@ module.exports = {
       items: [
         "configuration/environment_variables",
         "configuration/roles_config",
+        "configuration/advanced_roles_config",
       ],
     },
     {
