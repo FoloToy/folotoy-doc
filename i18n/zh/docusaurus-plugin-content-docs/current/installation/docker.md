@@ -100,6 +100,10 @@ sidebar_label: Docker
         AZURE_OPENAI_KEY: ef0f2781b5a24b15baaaaaaaaaaaaaaaaaaaaaaa
         AZURE_OPENAI_ENDPOINT: https://xxxxx.openai.azure.com/
         AZURE_OPENAI_API_VERSION: "2023-05-15"
+
+        #LLM_TYPE=dify
+        DIFY_API_BASE: http://192.168.52.164/v1
+        DIFY_KEY: app-zm56c2HRiIWRXsR67jfnrmCE
   
         #Baidu YIYAN API
         #LLM_TYPE: yiyan
