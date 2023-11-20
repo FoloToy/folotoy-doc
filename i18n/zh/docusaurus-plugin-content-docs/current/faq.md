@@ -40,7 +40,7 @@ folotoy-server-self-hosting 默认的配置 docker-compose.yml 中，使用了 1
 **注意：** 重启服务之后，玩具也需要关机重开或者按一次任意角色切换键来重新连接服务器
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose  restart folotoy
 ```
 
 ## 使用 azure openai 时会找不到模型？
@@ -172,7 +172,7 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
 在修改好 `roles.json` 之后, 在 folotoy-server-self-hosting 目录下执行以下重启服务才会生效
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 
@@ -191,7 +191,7 @@ sudo docker compose folotoy restart
 在修改好 `roles.json` 之后, 在 folotoy-server-self-hosting 目录下执行以下重启服务才会生效
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## 语音对话间隔时间长或者出现丢失？

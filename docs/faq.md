@@ -40,7 +40,7 @@ Execute the following command in the folotoy-server-self-hosting directory to re
 Note: After restarting the service, the toy also needs to be turned off and on again or press any role switch key once to reconnect to the server.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## Can't find the model when using azure openai?
@@ -171,7 +171,7 @@ Modify the parameter `max_message_count` in `roles.json` to a value greater than
 After modifying `roles.json`, execute the following command to restart the service in the folotoy-server-self-hosting directory for the changes to take effect.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 
@@ -190,7 +190,7 @@ After making these modifications, the system will only keep the most recent 10 r
 After modifying `roles.json`, you need to execute the following command in the folotoy-server-self-hosting directory for the changes to take effect.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## Is the interval between voice conversations long or is there loss?
