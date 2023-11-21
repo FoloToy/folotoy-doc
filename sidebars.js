@@ -40,7 +40,7 @@ module.exports = {
     {
       type: "category",
       label: "ChatGPT Learning Dev Suit",
-      items: ["dev-suit/quickstart", "dev-suit/partsinfo"],
+      items: ["dev-suit/quickstart", "dev-suit/partsinfo", "dev-suit/configure_keys"],
     },
     {
       type: "category",
