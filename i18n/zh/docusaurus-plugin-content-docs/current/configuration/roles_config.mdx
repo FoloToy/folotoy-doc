@@ -34,7 +34,7 @@ import TabItem from "@theme/TabItem";
 | start_text     | 开机提示语音，系统自动将 start_text 转成语音文件发送给玩具(必须) | 无                    | 
 | prompt     |  角色的提示词定义(必须)    | 无 | 
 | max_message_count     |  设置为一个大于 0 的数值，比如改成 10，这样表示上下文支持 10 次对话，0 表示不支持上下文。每一个模型都有自己的上下文Token大小的限制，如果超过限制，可以再按一次当前的角色按钮来清空上下文。也可以通过调整 max_message_count 和 max_tokens 的值来大概限制上下文大小。    | 0 | 
-| stt_type |  sound-to-text 引擎类型，可选值：openai-whisper, azure-whisper, azure-tts   | openai-whisper | 
+| stt_type |  sound-to-text 引擎类型，可选值：openai-whisper, azure-whisper, azure-stt, dify-stt   | openai-whisper | 
 | stt_config |  sound-to-text 引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
 | llm_type |  large-language-model 类型，可选值： openai，azure-openai, dify 也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-like 从而支持更多的大模型 | openai | 
 | llm_config |  大模型的配置  | 无 | 
@@ -194,7 +194,7 @@ values={[
 
 ## 语音转文字 STT (Sound-to-Text)角色级别配置说明
 
-stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper
+stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt
 
 <Tabs
 defaultValue="openai-whisper"
@@ -202,6 +202,7 @@ values={[
 { label: 'openai-whisper', value: 'openai-whisper', },
 { label: 'azure-stt', value: 'azure-stt', },
 { label: 'azure-whisper', value: 'azure-whisper', },
+{ label: 'dify-stt', value: 'dify-stt', },
 ]}>
 <TabItem value="openai-whisper">
 
@@ -326,6 +327,48 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
           "key": "aaaaaaaaaaaaaaaaaaaaaaaaa",
           "deployment_name": "whisper",
           "api_version": "2023-09-01-preview"
+        },
+        "llm_type": "openai",
+        "llm_config": {
+            "model": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "max_tokens": 800,
+            "top_p": 0.95,
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        },
+        "tts_type": "azure-tts",
+        "tts_config": {
+          "voice_name": "zh-CN-XiaoxiaoNeural"
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="dify-stt">
+
+:::caution
+支持 dify 的 cloud 和 self-hosting 
+:::
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  api_base    | 接口地址     | https://api.dify.ai/v1 | 
+|  key    |  接口密钥    |  | 
+配置示例
+
+   ```yml title="roles.json"
+   {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 10,
+        "stt_type": "dify-stt",
+        "stt_config": {
+          "api_base": "https://api.dify.ai/v1",
+          "key": "app-aaaaaaaaaaaaaaaaaaaaaaaaa"
         },
         "llm_type": "openai",
         "llm_config": {
@@ -764,6 +807,9 @@ values={[
         # Azure STT
         AZURE_STT_KEY: 3eba91b6143f4d3eeeeeeeeeeeeeeeeeeeeeeeee
         AZURE_STT_SERVICE_REGION: eastasia
+        
+        DIFY_STT_API_BASE: http://192.168.52.164/v1
+        DIFY_STT_KEY: app-zm56c2HRiIWRXsR67jfnrmCE
   
         # Default LLM(Large Language Model) type
         # Options: [openai, azure-openai]
