@@ -270,7 +270,7 @@ The following steps are based on the example of Alilo G6. For instructions on ho
   To update the running FoloToy Server configuration to the latest version, run the following commands:
   
   ```bash
-  docker compose pull
-  docker compose up -d
+  docker compose pull folotoy
+  docker compose up folotoy -d
   ```
   

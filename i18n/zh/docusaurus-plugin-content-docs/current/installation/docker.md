@@ -284,6 +284,6 @@ sidebar_label: Docker
 要将正在运行的FoloToy服务器配置更新到最新版本，请运行以下命令：
 
 ```bash
-docker compose pull
-docker compose up -d
+  docker compose pull folotoy
+  docker compose up folotoy -d
 ```
