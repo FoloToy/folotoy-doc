@@ -21,6 +21,7 @@ import TabItem from "@theme/TabItem";
 defaultValue="program"
 values={[
 { label: '刷机', value: 'program'},
+{ label: '抹除', value: 'erase'},
 { label: '日志', value: 'console'},
 { label: '对话', value: 'dialogue'}
 ]}>
@@ -32,7 +33,7 @@ values={[
 
 1. 访问刷机：在界面中点击'刷机'选项。
 
-2. 下载固件：访问[固件下载页面](https://github.com/FoloToy/folotoy-tool/releases)并选择与您的设备对应的固件。
+2. 下载固件：访问[固件下载页面](https://github.com/FoloToy/folotoy-bin/releases/)并选择与您的设备对应的固件。
 
 3. 选择波特率：下载固件后，您需要选择正确的通信波特率。对于Windows用户，推荐的波特率为921600。对于macOS用户，推荐的波特率为460800。或者，您可以使用默认的波特率。
 
@@ -48,6 +49,28 @@ values={[
 <img src="https://user-images.githubusercontent.com/41461127/281997016-9d660483-1377-466d-a801-7534da1ce8d4.png" />
 
 </TabItem>
+
+<TabItem value="erase">
+
+要抹除设备，请按照以下步骤操作：
+
+<img src="https://user-images.githubusercontent.com/41461127/281997006-e7e25ec8-5501-41cd-81b1-8529ea73cacf.png" />
+
+1. 访问刷机：在界面中点击'刷机'选项。
+
+2. 选择波特率：下载固件后，您需要选择正确的通信波特率。对于Windows用户，推荐的波特率为921600。对于macOS用户，推荐的波特率为460800。或者，您可以使用默认的波特率。
+
+3. 连接：点击'连接'按钮与您的设备建立连接。
+
+<img src="https://user-images.githubusercontent.com/41461127/281996985-2035d87f-ca5e-434a-85d5-50dbb73dd50e.png" />
+
+
+4. 抹除：点击右上角的'抹除'按钮抹除设备
+
+<img src="https://user-images.githubusercontent.com/41461127/281997011-8f89d911-fe91-407d-8845-52b912540840.png" />
+
+</TabItem>
+
 <TabItem value="console">
 
 要查看设备的实时日志，请按照以下步骤操作：
