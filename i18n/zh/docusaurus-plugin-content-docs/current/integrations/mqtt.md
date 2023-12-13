@@ -7,6 +7,8 @@ folotoy 服务器内的 MQTT 功能允许将有用的值发布到 MQTT 代理或
 
 ## MQTT Topics
 
+在使用 MQTT 集成功能之前，需要在设置 INTEGRATION_MQTT 为 true，参考环境变量设置[查看](../configuration/environment_variables.md)
+
 以下是可用的主题和权限描述。
 
 | Topic                                                  | Permissions | Description              | Payload                                                                           |

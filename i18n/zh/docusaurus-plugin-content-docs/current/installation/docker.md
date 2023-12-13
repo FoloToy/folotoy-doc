@@ -26,7 +26,7 @@ sidebar_label: Docker
 
   接下来的操作都在 `folotoy-server` 目录中进行
 
-2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中:
+2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中, 请注意修改 ip ，key 等为自己的:
 
    ```yml title="docker-compose.yml"
   version: '3'
@@ -116,6 +116,8 @@ sidebar_label: Docker
         # Default TTS(Text to Sound) type
         # Options: [edge-tts, azure-tts, elevenlabs, openai-tts]
         # edge-tts is Free but slow
+        # If you change TTS_TYPE to other option, please modify roles.json
+        # https://docs.folotoy.com/zh/docs/configuration/roles_config
         TTS_TYPE: edge-tts
   
         # Azure TTS
@@ -131,7 +133,7 @@ sidebar_label: Docker
         OPENAI_TTS_KEY: sk-16XnP3HLHWho21oO2m0AAAAAAAAAAAAAAAAAAAAAA
         OPENAI_TTS_MODEL: tts-1  
   
-        AUDIO_DOWNLOAD_URL: http://192.168.52.164:8082
+        AUDIO_DOWNLOAD_URL: http://<your_ip>:8082
         AUDIO_SAVE_PATH: /audio
   
         # MQTT Broker
@@ -141,7 +143,7 @@ sidebar_label: Docker
         MQTT_USERNAME: folotoy
         MQTT_PASSWORD: folotoy
   
-        SPEECH_UDP_SERVER_HOST: 192.168.52.164
+        SPEECH_UDP_SERVER_HOST: <your_ip>
         SPEECH_UDP_SERVER_PORT: 8085
   
   volumes:

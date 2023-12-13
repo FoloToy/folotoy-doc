@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       type: "category",
-      label: "ChatGPT Learning Dev Suit",
+      label: "Octopus Dev Suit",
       items: ["dev-suit/quickstart", "dev-suit/partsinfo", "dev-suit/configure_keys"],
     },
     {
