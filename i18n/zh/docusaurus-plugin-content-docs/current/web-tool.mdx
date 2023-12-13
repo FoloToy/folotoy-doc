@@ -4,7 +4,6 @@ title: 固件升级和问题诊断
 sidebar_label: 固件升级和问题诊断
 ---
 
-
 这个[网页](https://tool.folotoy.com/index)旨在为您的设备提供三种主要操作：刷机、日志和对话。
 
 ## 驱动安装
@@ -19,6 +18,8 @@ sidebar_label: 固件升级和问题诊断
 - 日志：使用此功能查看设备的实时日志，有助于有效地调试和故障排除。
 - 对话：此功能使您可以查看和管理与设备相关的对话内容。
 
+*** Windows 用户可能需要安装[ 驱动 ](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340)后，设备才能连接上电脑。 ***
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -26,6 +27,7 @@ import TabItem from "@theme/TabItem";
 defaultValue="program"
 values={[
 { label: '刷机', value: 'program'},
+{ label: '抹除', value: 'erase'},
 { label: '日志', value: 'console'},
 { label: '对话', value: 'dialogue'}
 ]}>
@@ -37,7 +39,7 @@ values={[
 
 1. 访问刷机：在界面中点击'刷机'选项。
 
-2. 下载固件：访问[固件下载页面](https://github.com/FoloToy/folotoy-tool/releases)并选择与您的设备对应的固件。
+2. 下载固件：访问[固件下载页面](https://github.com/FoloToy/folotoy-bin/releases/)并选择与您的设备对应的固件。
 
 3. 选择波特率：下载固件后，您需要选择正确的通信波特率。对于Windows用户，推荐的波特率为921600。对于macOS用户，推荐的波特率为460800。或者，您可以使用默认的波特率。
 
@@ -53,9 +55,34 @@ values={[
 <img src="https://user-images.githubusercontent.com/41461127/281997016-9d660483-1377-466d-a801-7534da1ce8d4.png" />
 
 </TabItem>
+
+<TabItem value="erase">
+
+*** 执行设备擦除将删除设备上的所有内容，此操作不可逆。如果您执行了设备擦除，请联系我们进行设备恢复。***
+
+要抹除设备，请按照以下步骤操作：
+
+<img src="https://user-images.githubusercontent.com/41461127/281997006-e7e25ec8-5501-41cd-81b1-8529ea73cacf.png" />
+
+1. 访问刷机：在界面中点击'刷机'选项。
+
+2. 选择波特率：下载固件后，您需要选择正确的通信波特率。对于Windows用户，推荐的波特率为921600。对于macOS用户，推荐的波特率为460800。或者，您可以使用默认的波特率。
+
+3. 连接：点击'连接'按钮与您的设备建立连接。
+
+<img src="https://user-images.githubusercontent.com/41461127/281996985-2035d87f-ca5e-434a-85d5-50dbb73dd50e.png" />
+
+
+4. 抹除：点击右上角的'抹除'按钮抹除设备
+
+<img src="https://user-images.githubusercontent.com/41461127/281997011-8f89d911-fe91-407d-8845-52b912540840.png" />
+
+</TabItem>
+
 <TabItem value="console">
 
 要查看设备的实时日志，请按照以下步骤操作：
+
 <img src="https://user-images.githubusercontent.com/41461127/281996988-d4c1fc26-fe02-4d82-bb89-0af8df732126.png" />
 
 1. 访问日志：在界面中点击'日志'选项。
@@ -65,11 +92,16 @@ values={[
 </TabItem>
 <TabItem value="dialogue">
 
+*** 在使用该功能前，请先确保 MQTT 功能在服务器上已处于开启状态 ***
+
 要在HTTPS网站上使用Websocket，您需要进行以下设置：
 
 1. 点击地址栏左侧的图标，然后点击“站点设置”。
+
 <img src="https://user-images.githubusercontent.com/41461127/282994109-3117e901-ed00-4748-b72e-56ad95659415.png" />
-2. 将“不安全内容”设置为“允许”。 
+
+2. 将“不安全内容”设置为“允许”。
+
 <img src="https://user-images.githubusercontent.com/41461127/282992948-80724a74-8581-4937-9220-5bf1c5e69e1c.png" />
 
 为了确保更安全的连接，您可以通过在服务器上配置SSL来使用SSL上的Websocket。Websocket over SSL可能需要激活才能使用。以下是如何激活的指南：
@@ -79,6 +111,7 @@ values={[
 2. 输入服务器的地址和端口。
 
 3. 点击“激活”按钮。
+
 <img src="https://user-images.githubusercontent.com/41461127/282994811-675ebd20-334b-48e4-a134-1a98aec117ac.png" />
 
 4. 会弹出一个页面询问您是否确认继续访问该站点。选择“继续”或类似选项来激活该地址。
@@ -86,6 +119,7 @@ values={[
 5. Websocket over SSL连接现在应该已经激活并准备就绪。
 
 要连接设备并查看实时对话内容，请按照以下步骤操作：
+
 <img src="https://user-images.githubusercontent.com/41461127/283020535-a0ec9ac9-d653-4e84-b2f3-cc347486c619.png" />
 
 
@@ -99,6 +133,7 @@ values={[
     - SN（序列号）：这可以在设备日志中找到。
     - 用户名：这是服务器连接的用户名。
     - 密码：这是服务器连接的密码。
+    
 3. 连接：点击'连接'按钮。一旦成功连接，您将能够查看设备的实时对话内容。
 
 <img src="https://user-images.githubusercontent.com/41461127/281996977-6d332466-bc35-4dab-b7af-c0c6af210fc5.png" />

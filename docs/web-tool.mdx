@@ -5,6 +5,7 @@ sidebar_label: Using Web Serial to upgrade and monitor your device
 ---
 
 This [ web ](https://tool.folotoy.com/index) is designed to facilitate three key operations for your device: program, console, and conversation content viewing.
+
 <img src="https://user-images.githubusercontent.com/41461127/281992533-f5204e50-e79e-472c-8edf-398e087f3f91.png" />
 
 - Program: This feature allows you to easily upgrade the firmware of your devices.
@@ -13,6 +14,8 @@ This [ web ](https://tool.folotoy.com/index) is designed to facilitate three key
 
 - Dialogue: This feature enables you to view and manage conversation content associated with your devices.
 
+*** For windows users, you may need to install a [ driver ](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340) so that your device can connect to your PC. ***
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -20,12 +23,14 @@ import TabItem from "@theme/TabItem";
 defaultValue="program"
 values={[
 { label: 'Program', value: 'program'},
+{ label: 'Erase', value: 'erase'},
 { label: 'Console', value: 'console'},
 { label: 'Dialogue', value: 'dialogue'}
 ]}>
 <TabItem value="program">
 
 To get started with your program, you will need to download the appropriate firmware, select the correct baudrate, and follow the steps to connect and write the firmware. Detailed instructions are as follows:
+
 <img src="https://user-images.githubusercontent.com/41461127/281992629-0466abde-d449-4c47-97af-e511fa106560.png" />
 
 1. Access Program: Click on the 'Program' option in the interface.
@@ -35,17 +40,42 @@ To get started with your program, you will need to download the appropriate firm
 3. Select BaudRate: After downloading the firmware, you need to select the correct baud rate for communication. For Windows users, a baudrate of 921600 is recommended. For macOS users, a baudrate of 460800 is recommended. Alternatively, you can use the default baudrate.
 
 4. Connect: Click the 'Connect' button to establish a connection with your device.
+
 <img src="https://user-images.githubusercontent.com/41461127/281994290-8a4eff4e-8188-480d-aa99-4691c32faef8.png" />
 
 5. Select Firmware and Write: Choose the downloaded firmware file, set Address at 0x0 and click the 'Write' button. Wait for a few minutes for the firmware to be written to you device.
+
 <img src="https://user-images.githubusercontent.com/41461127/281992600-fee3e3ba-283a-4f80-8739-117de1b41384.png" />
 <img src="https://user-images.githubusercontent.com/41461127/281992674-229dae15-2519-4db5-aebe-c7f3a6d99d62.png" />
 <img src="https://user-images.githubusercontent.com/41461127/281992865-bd7bd16a-b1fa-4567-8352-ee15b78248c6.png" />
 
 </TabItem>
+
+<TabItem value="erase">
+
+*** Performing a device wipe will erase all content on the device and this action is irreversible. If you have performed a device wipe, please contact us for device restoration. ***
+
+To erase your device, follow the steps below:
+
+<img src="https://user-images.githubusercontent.com/41461127/281992629-0466abde-d449-4c47-97af-e511fa106560.png" />
+
+1. Access Program: Click on the 'Program' option in the interface.
+
+2. Select BaudRate: After downloading the firmware, you need to select the correct baud rate for communication. For Windows users, a baudrate of 921600 is recommended. For macOS users, a baudrate of 460800 is recommended. Alternatively, you can use the default baudrate.
+
+3. Connect: Click the 'Connect' button to establish a connection with your device.
+
+<img src="https://user-images.githubusercontent.com/41461127/281994290-8a4eff4e-8188-480d-aa99-4691c32faef8.png" />
+
+4. Erase: Click 'Erase' button at the right top corner to erase your device
+
+<img src="https://user-images.githubusercontent.com/41461127/281992600-fee3e3ba-283a-4f80-8739-117de1b41384.png" />
+
+</TabItem>
 <TabItem value="console">
 
 To monitor real-time logs from your device, follow the steps below:
+
 <img src="https://user-images.githubusercontent.com/41461127/281993025-22cf2d2f-8e94-48df-a861-ed966ade27c7.png" />
 
 1. Access Console: Click on the 'Console' option in the interface.
@@ -54,6 +84,8 @@ To monitor real-time logs from your device, follow the steps below:
 
 </TabItem>
 <TabItem value="dialogue">
+*** Before using this feature, please make sure the MQTT is enabled on your server ***
+
 To use Websocket on an HTTPS site, you need to make the following settings:
 
 1. Click on the icon on the left side of the address bar then click on "Site Settings."
@@ -61,6 +93,7 @@ To use Websocket on an HTTPS site, you need to make the following settings:
 <img src="https://user-images.githubusercontent.com/41461127/282994109-3117e901-ed00-4748-b72e-56ad95659415.png" />
 
 2. Set "Insecure Content" to "Allow."
+
 <img src="https://user-images.githubusercontent.com/41461127/282992948-80724a74-8581-4937-9220-5bf1c5e69e1c.png" />
 
 To ensure a more secure connection, you can use Websocket over SSL by configuring SSL on your server. Websocket over SSL may require activation to be used. Here's a guide on how to activate it:
@@ -68,6 +101,7 @@ To ensure a more secure connection, you can use Websocket over SSL by configurin
 1. Once you have configured SSL on your server, ensure that the Websocket server is running and listening on the appropriate port.
 2. Enter the address and port of the Websocket server.
 3. After entering the address and port, click on "Activate" button.
+
 <img src="https://user-images.githubusercontent.com/41461127/282994822-dcfe2e8d-8511-47bc-b02d-cf9c9b41384c.png" />
 
 4. A page will pop up asking for your confirmation to continue accessing the site. Select "Continue" or a similar option to activate the address.
@@ -75,6 +109,7 @@ To ensure a more secure connection, you can use Websocket over SSL by configurin
 
 
 To connect to your device and view real-time dialogue content, follow the steps below:
+
 <img src="https://user-images.githubusercontent.com/41461127/283020543-5412b154-f732-4518-9e2f-c772842eee53.png" />
 
 1. Access Dialogue: Click on the 'Dialogue' option in the interface.
@@ -89,6 +124,7 @@ To connect to your device and view real-time dialogue content, follow the steps 
     - Password: This is the password for the server connection.
 
 3. Connect: Click the 'Connect' button. Once connected successfully, you will be able to view real-time dialogue content from your device.
+
 <img src="https://user-images.githubusercontent.com/41461127/281994871-c62d7d99-6c93-4110-98cd-3aa6fe703d4c.png" />
 
 </TabItem>
