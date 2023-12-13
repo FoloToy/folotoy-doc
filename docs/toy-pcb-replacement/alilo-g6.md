@@ -11,6 +11,11 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 ## Requirements
 
+:::caution
+When purchasing the G6, make sure not to buy the wrong model. The replacement circuit board only supports the G6 with a MicroUSB interface on the right side.
+<img src="https://user-images.githubusercontent.com/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
+:::
+
 - A cross screwdriver with a diameter of 2.5mm and a length of over 5cm.
 - A utility knife, used to remove the adhesive on top of the PCB socket.
 - A functioning Alilo G6 can be purchased on major e-commerce websites.
@@ -20,14 +25,14 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 ## Instructions
 
-1. 检查 Alilo G6 录音和播放是否正常
-2. 使用螺丝刀拧开 Alilo G6 背后的 6 颗螺丝
-3. 小心的打开 Alilo G6 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头，插头上有胶，可使用美工刀轻轻划开，一定要注意千万不要划到自己的手
-4. 拧开主板上的4颗螺丝，取下主板
-5. 使用 FoloToy 的主板替换掉原主板，拧紧 3 颗螺丝固定
-6. 插好话筒，灯，扬声器和电源的插座，最后插电源的插座。
-7. 插好插座后，先不要合起外壳安装螺丝，先打开兔子尾巴上的电源开关，看看新安装的灯是否能亮，并且蓝色慢闪。
-8. 如果没有问题，安装好外壳，拧好螺丝就完成了替换。
+1. Check if the recording and playback of Alilo G6 are normal.
+2. Use a screwdriver to unscrew the 6 screws on the back of Alilo G6.
+3. Carefully open the casing of Alilo G6, unplug all plugs on the motherboard, first unplug the power plug, there is glue on the plug, you can use an art knife to gently cut it open, be sure not to cut your hand.
+4. Unscrew the 4 screws on the motherboard and remove it.
+5. Replace the original motherboard with FoloToy's motherboard and tighten 3 screws to fix it.
+6. Plug in microphone, light, speaker and power sockets, finally plug in power socket.
+7. After plugging in all sockets, do not close the casing or install screws yet. First turn on/off switch on rabbit's tail to see if newly installed light can turn on and flash slowly in blue color.
+8. If there is no problem, install the casing and tighten screws to complete replacement process.
 
 ## Wi-Fi Configure
 
@@ -39,7 +44,9 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 3. Connect to the hotspot of the toy.
 
-   Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address, and port number that you want your toy to connect with.
+   Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address and port that you want your toy to connect with.
+
+   **Server Address/Port are required, if you have not setup your own server, please refer to [Server Installation](installation/docker.md).**
 
    :::caution
    If no page pops up, you can also configure it by entering http://192.168.4.1 in your browser.
@@ -51,3 +58,11 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+
+
+## Usage
+
+After assembling the toy, completing the network configuration, and connecting to the server, hold down the large circular button in the middle for conversation. Release it to end the conversation. The 7 small circular buttons around it are character switch buttons. Clicking on them will activate character switching, and the numerical values on these buttons correspond to the keys in roles.json.
+
+<img src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
+<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

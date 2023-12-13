@@ -7,12 +7,12 @@
     "message": "开始",
     "description": "The label for category Getting started in sidebar docs"
   },
-  "sidebar.docs.category.Installation": {
-    "message": "安装说明",
+  "sidebar.docs.category.Server Installation": {
+    "message": "服务器部署说明",
     "description": "The label for category Installation in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
-    "message": "配置教程",
+    "message": "高级部署指南",
     "description": "The label for category Guides in sidebar docs"
   },
   "sidebar.docs.category.Integrations": {
@@ -20,15 +20,27 @@
     "description": "The label for category Integrations in sidebar docs"
   },
   "sidebar.docs.category.Advanced Configuration": {
-    "message": "高级配置",
+    "message": "服务器高级配置",
     "description": "The label for category Advanced Configuration in sidebar docs"
   },
   "sidebar.docs.category.Maintenance": {
-    "message": "维护",
+    "message": "服务器维护",
     "description": "The label for category Maintenance in sidebar docs"
   },
   "sidebar.docs.category.Web Tool": {
-    "message": "网页工具",
+    "message": "刷机工具",
     "description": "The label for category Web Tool in sidebar docs"
+  },
+  "sidebar.docs.category.Community": {
+    "message": "加入社区",
+    "description": "The label for category Community in sidebar docs"
+  },
+  "sidebar.docs.category.Toy PCB Replacement": {
+    "message": "更换玩具电路板说明",
+    "description": "The label for category Toy PCB Replacement in sidebar docs"
+  },
+  "sidebar.docs.category.Octopus Dev Suit": {
+    "message": "八爪鱼套件",
+    "description": "The label for category Dev Suit in sidebar docs"
   }
 }

@@ -26,7 +26,7 @@ sidebar_label: Docker
 
   接下来的操作都在 `folotoy-server` 目录中进行
 
-2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中:
+2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中, 请注意修改 ip ，key 等为自己的:
 
    ```yml title="docker-compose.yml"
   version: '3'
@@ -99,7 +99,11 @@ sidebar_label: Docker
         #Azure OpenAI
         AZURE_OPENAI_KEY: ef0f2781b5a24b15baaaaaaaaaaaaaaaaaaaaaaa
         AZURE_OPENAI_ENDPOINT: https://xxxxx.openai.azure.com/
-        AZURE_OPENAI_VERSION: "2023-05-15"
+        AZURE_OPENAI_API_VERSION: "2023-05-15"
+
+        #LLM_TYPE=dify
+        DIFY_API_BASE: http://192.168.52.164/v1
+        DIFY_KEY: app-zm56c2HRiIWRXsR67jfnrmCE
   
         #Baidu YIYAN API
         #LLM_TYPE: yiyan
@@ -112,6 +116,8 @@ sidebar_label: Docker
         # Default TTS(Text to Sound) type
         # Options: [edge-tts, azure-tts, elevenlabs, openai-tts]
         # edge-tts is Free but slow
+        # If you change TTS_TYPE to other option, please modify roles.json
+        # https://docs.folotoy.com/zh/docs/configuration/roles_config
         TTS_TYPE: edge-tts
   
         # Azure TTS
@@ -127,7 +133,7 @@ sidebar_label: Docker
         OPENAI_TTS_KEY: sk-16XnP3HLHWho21oO2m0AAAAAAAAAAAAAAAAAAAAAA
         OPENAI_TTS_MODEL: tts-1  
   
-        AUDIO_DOWNLOAD_URL: http://192.168.52.164:8082
+        AUDIO_DOWNLOAD_URL: http://<your_ip>:8082
         AUDIO_SAVE_PATH: /audio
   
         # MQTT Broker
@@ -137,7 +143,7 @@ sidebar_label: Docker
         MQTT_USERNAME: folotoy
         MQTT_PASSWORD: folotoy
   
-        SPEECH_UDP_SERVER_HOST: 192.168.52.164
+        SPEECH_UDP_SERVER_HOST: <your_ip>
         SPEECH_UDP_SERVER_PORT: 8085
   
   volumes:
@@ -280,6 +286,6 @@ sidebar_label: Docker
 要将正在运行的FoloToy服务器配置更新到最新版本，请运行以下命令：
 
 ```bash
-docker compose pull
-docker compose up -d
+  docker compose pull folotoy
+  docker compose up folotoy -d
 ```

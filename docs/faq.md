@@ -40,7 +40,7 @@ Execute the following command in the folotoy-server-self-hosting directory to re
 Note: After restarting the service, the toy also needs to be turned off and on again or press any role switch key once to reconnect to the server.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## Can't find the model when using azure openai?
@@ -98,21 +98,20 @@ If using the docker image version `v23.45.1.1` or above, you can also configure 
     "prompt": "You are a knowledgeable and helpful intelligent robot named 'Dongbei Rabbit'. Your task is to chat with me. Please use short conversations and speak in Chinese within 50 characters each time!",
     "max_message_count": 20,
     "stt_type": "openai-whisper",
-    "stt_config: {
+    "stt_config": {
         "language": "zh"
     },
     "llm_config": {
-        "model": gpt-3.5-turbo",
-        temperature: 0.7,
-        max_tokens: 800,
-        top_p: 0.95,
-        frequency_penalty: 0,
-        presence_penalty: 0
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "max_tokens": 800,
+        "top_p": 0.95,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
     },
-     tts_config ": {
-         voice_name ": zh-CN-liaoning-XiaobeiNeural "
+    "tts_config": {
+         "voice_name": "zh-CN-liaoning-XiaobeiNeural"
      }
-   }
 }
 ```
 
@@ -148,19 +147,19 @@ If using the docker image version `v23.45.1.1` or above, you can also configure 
     "prompt": "You are a knowledgeable and helpful intelligent robot named 'Dongbei Rabbit'. Your task is to chat with me in a short dialogue format, speaking in Chinese and each response should not exceed 50 characters!",
     "max_message_count": 20,
     "stt_type": "azure-stt",
-    "stt_config: {
+    "stt_config": {
         "language": "zh-CN"
     },
     "llm_config": {
-        "model": gpt-3.5-turbo",
-        temperature: 0.7,
-        max_tokens: 800,
-        top_p: 0.95,
-        frequency_penalty: 0,
-        presence_penalty: 0
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "max_tokens": 800,
+        "top_p": 0.95,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
     },
-     tts_config ": {
-         voice_name ": zh-CN-liaoning-XiaobeiNeural "
+     "tts_config ": {
+         "voice_name": "zh-CN-liaoning-XiaobeiNeural "
      }
    }
 }
@@ -172,7 +171,7 @@ Modify the parameter `max_message_count` in `roles.json` to a value greater than
 After modifying `roles.json`, execute the following command to restart the service in the folotoy-server-self-hosting directory for the changes to take effect.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 
@@ -191,7 +190,7 @@ After making these modifications, the system will only keep the most recent 10 r
 After modifying `roles.json`, you need to execute the following command in the folotoy-server-self-hosting directory for the changes to take effect.
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## Is the interval between voice conversations long or is there loss?

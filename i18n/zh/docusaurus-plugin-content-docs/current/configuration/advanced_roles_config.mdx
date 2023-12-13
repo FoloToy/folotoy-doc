@@ -1,0 +1,117 @@
+---
+title: 单一实例支持多个设备分别设置角色
+sidebar_label: 单一实例支持多个设备分别设置角色
+---
+
+这篇文档提供了部署单一服务实例支持多个设备分别设置角色的说明，在阅读这篇文档之前，需要了解 roles.json 的基本配置，点击这里阅读[角色配置](roles_config.mdx)
+
+## 配置概览
+
+在[角色配置](roles_config.mdx)文档中，我们知道了可以定义 1-7 的 key 值来对应玩具的按键，为了能为每一个玩具分别定义角色内容，在 roles.json 中需要添加 toys 字段，而 roles.json 中 1-7 的定义
+将会作为按键的默认配置，也就是说，如果 toys 中没有定义指定的玩具，那么玩具就会自动使用 roles.json 中 1-7 的定义。
+
+修改后的 roles.json 支持通过 MQTT 发送命令动态加载（需要镜像是 v23.46.1.1 以后版本），不需要重启容器。
+
+## 配置的优先级
+
+**`roles.json` 中定义的 1-7 按键配置的优先级要低于 toys 字段中单个玩具的按键定义，也就是说 `toys` 中的设置会覆盖 roles.json 中 1-7 的配置，从而达到单个玩具角色级别的配置。toys 中每个玩具的设置可以不用完整
+定义 1-7 按键，如果没有定义指定的按键，那么服务器程序使用 roles.json 中 1-7 的配置**
+
+举个例子，下面的例子在 roles.json 仅定义了必要的配置，在 toys 中为 sn 为 08d1f9c6a310 的玩具单独定义了 2 号按键：
+
+   ```yml title="roles.json"
+    {
+      "1": {
+        "start_text": "你好，我是陪伴兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫陪伴兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心。"
+      },
+      "2": {
+        "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+      },
+      "3": {
+        "start_text": "Hi, I'm Wimi. Nice to meet you.",
+        "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!"
+      },
+      "4": {
+        "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
+        "prompt": "夸夸我"
+      },
+      "5": {
+        "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
+        "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？"
+      },
+      "6": {
+        "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+      },
+      "7": {
+        "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+      },
+      "toys": {
+        "08d1f9c6a310": {
+          "2": {
+            "model": "gpt-3.5-turbo",
+            "start_text": "哈哈哈哈哈，我是一个来自侏罗纪的霸王龙",
+            "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“霸王龙”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
+            "max_message_count": 5,
+            "tts_type": "edge-tts",
+            "voice_name": "zh-TW-HsiaoChenNeural"
+          }
+        }
+      }
+    }
+   ```
+
+
+## 动态加载角色配置
+
+**如果是直接挂载文件 roles.json 到容器，请先使用命令`chmod 666 roles.json`修改 roles.json 的权限为 `666`，否则容器无法动态加载 roles.json**
+
+```bash
+$ ls -lh
+total 552K
+drwxr-xr-x 2 lewang lewang 484K Nov 14 11:55 audio
+-rw-r--r-- 1 lewang lewang 3.3K Nov 14 11:42 docker-compose.yml
+-rw-r--r-- 1 lewang lewang  35K Oct 19 17:50 LICENSE
+-rw-r--r-- 1 lewang lewang 6.4K Oct 23 22:12 README.md
+-rw-r--r-- 1 lewang lewang 4.2K Oct 19 22:26 README.zh_CN.md
+-rw-r--r-- 1 lewang lewang 3.9K Nov 14 12:13 roles.json
+drwxr-xr-x 2 lewang lewang 4.0K Nov  8 14:25 templates
+
+$ chmod 666 roles.json
+
+$ ls -lh
+total 552K
+drwxr-xr-x 2 lewang lewang 484K Nov 14 11:55 audio
+-rw-r--r-- 1 lewang lewang 3.3K Nov 14 11:42 docker-compose.yml
+-rw-r--r-- 1 lewang lewang  35K Oct 19 17:50 LICENSE
+-rw-r--r-- 1 lewang lewang 6.4K Oct 23 22:12 README.md
+-rw-r--r-- 1 lewang lewang 4.2K Oct 19 22:26 README.zh_CN.md
+-rw-rw-rw- 1 lewang lewang 3.9K Nov 14 12:13 roles.json
+drwxr-xr-x 2 lewang lewang 4.0K Nov  8 14:25 templates
+```
+
+使用 MQTT 客户端或者编写代码连接到 MQTT Broker，向主题 `/sys/config` 发送以下内容, 请查看[更多 MQTT 集成说明](/docs/integrations/mqtt)：
+
+```json
+{
+  "identifier":"load_roles_config"
+}
+```
+
+FoloToy 服务在收到消息之后会立即重新加载 roles.json 并向主题 `/sys/configAck` 回复消息：
+
+```json
+{"identifier": "load_roles_config", "result": 1}
+```
+
+并在控制打印以下日志：
+
+```text
+2023-11-14 14:37:28,650 - Thread-5 (_thread_main) - folotoy_app.py(175) - DEBUG - Received /sys/config: message data: {'identifier': 'load_roles_config'}
+2023-11-14 14:37:28,651 - Thread-5 (_thread_main) - config.py(169) - INFO - Load roles config: {'1': {'start_text': '你好，我是陪伴兔，请问有什么我可以帮助你的吗？', 'prompt': '你扮演一个孩子的小伙伴，名字叫陪伴兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心。'}, '2': {'start_text': '你好，俺是东北兔，请问有什么俺可以帮助你的吗？', 'prompt': '你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！'}, '3': {'start_text': "Hi, I'm Wimi. Nice to meet you.", 'prompt': 'You\'re a knowledgeable and helpful AI named "Wimi". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!'}, '4': {'start_text': '你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ', 'prompt': '夸夸我'}, '5': {'start_text': '你好，我是口算兔，我们一起来玩玩口算游戏吧？', 'prompt': '我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？'}, '6': {'start_text': '你好，我是台湾兔，请问有什么我可以帮助你的吗？', 'prompt': '你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！'}, '7': {'start_text': '你好，我是小兔，请问有什么我可以帮助你的吗？', 'prompt': '你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！'}, 'toys': {'08d1f9c6a310': {'2': {'model': 'gpt-3.5-turbo', 'start_text': '哈哈哈哈哈，我是一个来自侏罗纪的霸王龙', 'prompt': '你是一个知识渊博，乐于助人的智能机器人,你的名字叫“霸王龙”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！', 'max_message_count': 5, 'tts_type': 'edge-tts', 'voice_name': 'zh-TW-HsiaoChenNeural'}}}}
+2023-11-14 14:37:28,651 - Thread-5 (_thread_main) - folotoy_app.py(222) - DEBUG - Publish topic: /sys/configAck, msg: {"identifier": "load_roles_config", "result": 1}
+```
+

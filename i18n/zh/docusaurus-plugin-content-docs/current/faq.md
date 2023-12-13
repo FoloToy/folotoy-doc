@@ -40,7 +40,7 @@ folotoy-server-self-hosting 默认的配置 docker-compose.yml 中，使用了 1
 **注意：** 重启服务之后，玩具也需要关机重开或者按一次任意角色切换键来重新连接服务器
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose  restart folotoy
 ```
 
 ## 使用 azure openai 时会找不到模型？
@@ -98,7 +98,7 @@ openai-whisper 的 language 可以不用设置，但是如果设置了就需要�
     "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
     "max_message_count": 20,
     "stt_type": "openai-whisper",
-    "stt_config: {
+    "stt_config": {
         "language": "zh"
     },
     "llm_config": {
@@ -147,7 +147,7 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
     "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
     "max_message_count": 20,
     "stt_type": "azure-stt",
-    "stt_config: {
+    "stt_config": {
         "language": "zh-CN"
     },
     "llm_config": {
@@ -172,7 +172,7 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
 在修改好 `roles.json` 之后, 在 folotoy-server-self-hosting 目录下执行以下重启服务才会生效
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 
@@ -191,7 +191,7 @@ sudo docker compose folotoy restart
 在修改好 `roles.json` 之后, 在 folotoy-server-self-hosting 目录下执行以下重启服务才会生效
 
 ```bash
-sudo docker compose folotoy restart
+sudo docker compose restart folotoy
 ```
 
 ## 语音对话间隔时间长或者出现丢失？

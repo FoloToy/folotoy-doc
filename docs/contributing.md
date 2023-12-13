@@ -4,9 +4,12 @@ title: Contributing
 sidebar_label: Contributing
 ---
 
-## Contributing
+## Improvement Suggestions
 
-大家收到板子或者玩具有问题，请先看已经关闭的 issues，看看有没有与自己一样的问题：https://github.com/FoloToy/folotoy-server-self-hosting/issues?q=is%3Aissue+is%3Aclosed
+If you receive a board or toy with problems, please first check the closed issues to see if there are any similar issues:
 
-如果不能找解决问题的方法，请在这里发 issue：https://github.com/FoloToy/folotoy-server-self-hosting/issues ，发 issue 的时候把服务器的日志和详细的配置（隐藏掉key）都发出来
+- https://github.com/FoloToy/folotoy-server-self-hosting/issues?q=is%3Aissue+is%3Aclosed
 
+If you cannot find a solution to the problem, please submit an issue here and include the server logs and detailed configuration (with key and IP hidden):
+
+- https://github.com/FoloToy/folotoy-server-self-hosting/issues

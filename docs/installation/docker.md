@@ -90,7 +90,7 @@ This setup is recommended if you are running FoloToy Server **on your home netwo
         #Azure OpenAI
         AZURE_OPENAI_KEY: ef0f2781b5a24b15baaaaaaaaaaaaaaaaaaaaaaa
         AZURE_OPENAI_ENDPOINT: https://xxxxx.openai.azure.com/
-        AZURE_OPENAI_VERSION: "2023-05-15"
+        AZURE_OPENAI_API_VERSION: "2023-05-15"
   
         #Baidu YIYAN API
         #LLM_TYPE: yiyan
@@ -270,7 +270,7 @@ The following steps are based on the example of Alilo G6. For instructions on ho
   To update the running FoloToy Server configuration to the latest version, run the following commands:
   
   ```bash
-  docker compose pull
-  docker compose up -d
+  docker compose pull folotoy
+  docker compose up folotoy -d
   ```
   

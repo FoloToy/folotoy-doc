@@ -10,6 +10,7 @@ module.exports = {
           label: "Server Installation",
           items: [
             "installation/docker",
+            "installation/1panel",
             "installation/synology-nas",
             "installation/flyio",
             "installation/windows-wsl2",
@@ -29,38 +30,45 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Advanced Configuration",
+      items: [
+        "configuration/environment_variables",
+        "configuration/roles_config",
+        "configuration/advanced_roles_config",
+      ],
+    },
+    {
+      type: "category",
+      label: "Octopus Dev Suit",
+      items: ["dev-suit/quickstart", "dev-suit/partsinfo", "dev-suit/configure_keys"],
+    },
+    {
+      type: "category",
       label: "Guides",
-      items: ["guides/1panel"],
+      items: ["guides/emqx"],
     },
     {
       type: "category",
       label: "Integrations",
-      items: [
-        "integrations/mqtt",
-      ],
-    },
-    {
-      type: "category",
-      label: "Advanced Configuration",
-      items: ["configuration/environment_variables"],
+      items: ["integrations/mqtt"],
     },
     {
       type: "category",
       label: "Maintenance",
-      items: [
-        "upgrading",
-      ],
+      items: ["upgrading"],
     },
     {
       type: "category",
       label: "Web Tool",
-      items: [
-        "web-tool",
-      ],
+      items: ["web-tool"],
     },
     {
       type: "doc",
       id: "contributing",
+    },
+    {
+      type: "doc",
+      id: "community",
     },
   ],
 };

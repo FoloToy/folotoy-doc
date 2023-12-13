@@ -17,14 +17,20 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 
 ## Instructions
 
-1. 检查 Alilo F6 录音和播放是否正常
-2. 使用螺丝刀拧开 Alilo F6 底座和背后的螺丝
-3. 小心的打开 Alilo F6 的外壳后，拔掉主板上所有的插头，首先拔掉电源插头，插头上有胶，可使用美工刀轻轻划开，一定要注意千万不要划到自己的手
-4. 拧开主板上螺丝，取下主板
-5. 使用 FoloToy 的主板替换掉原主板，拧紧螺丝固定
-6. 插好话筒，灯，扬声器和电源的插座，最后插电源的插座。
-7. 插好插座后，先不要合起外壳安装螺丝，先打开兔子尾巴上的电源开关，看看新安装的灯是否能亮，并且蓝色慢闪。
-8. 如果没有问题，安装好外壳，拧好螺丝就完成了替换。
+:::caution
+If it is the F6s model, the original motherboard has a Type-C interface. Direct replacement may result in an incompatible situation with the MIC and speaker interfaces. Currently, normal connection can be achieved through an adapter cable.
+<img src="https://user-images.githubusercontent.com/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
+:::
+
+
+1. Check if the recording and playback of Alilo F6 are normal.
+2. Use a screwdriver to unscrew the screws on the base and back of Alilo F6.
+3. Carefully open the casing of Alilo F6, unplug all plugs on the motherboard, first unplug the power plug, there is glue on the plug, you can use an art knife to gently cut it open, be sure not to cut your hand.
+4. Unscrew the screws on the motherboard and remove it.
+5. Replace the original motherboard with FoloToy's motherboard and tighten the screws to secure it.
+6. Plug in microphone, light, speaker, and power sockets in order, finally plug in power socket.
+7. After plugging in all sockets, do not close the casing or install screws yet; first turn on/off switch located at rabbit's tail to see if newly installed light can illuminate and flash slowly in blue color.
+8. If there are no problems, install and screw tightens casing to complete replacement process.
 
 ## Wi-Fi Configure
 
@@ -38,6 +44,8 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 
    Open your phone or computer and select "FoloToy-xxxx" WiFi network. Wait a moment, and your phone or computer will automatically open a configuration page where you can set up which WiFi network, server address, and port number that you want your toy to connect with.
 
+   **Server Address/Port are required, if you have not setup your own server, please refer to [Server Installation](installation/docker.md).**
+
    :::caution
    If no page pops up, you can also configure it by entering http://192.168.4.1 in your browser.
    :::
@@ -48,3 +56,11 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+
+
+## Usage
+
+After assembling the toy, completing the network configuration, and connecting to the server, press and hold the indicated recording button to start a conversation. Release it to end the conversation. The small button is used for switching characters. Clicking on it will activate the character switch. The numerical values on the character buttons correspond to the keys in roles.json file.
+
+<img src="https://user-images.githubusercontent.com/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
+<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
