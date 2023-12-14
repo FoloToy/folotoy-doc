@@ -65,8 +65,8 @@ Folotoy 八爪鱼 AI 开发套件包括以下组件：
 
 FoloToy 提供的测试 MQTT 服务器
 
-* 地址：octopus.fly.dev
-* 端口：1883
+* 地址：octopusx.fly.dev
+* 端口：4883
 
 如果希望自建服务器，请[参考这里服务器部署说明](../installation/1panel.md)，选择合适的方案自建服务器。
 
