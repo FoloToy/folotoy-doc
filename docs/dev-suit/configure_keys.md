@@ -27,7 +27,7 @@ sidebar_label: Configure Keys
 
 ### AT Commands
 
-*** changes take effect after reboot ***
+*** changes take effect after reboot. Only English input and lowercase letters are supported. ***
 
 1. View configuration file:
    ```
