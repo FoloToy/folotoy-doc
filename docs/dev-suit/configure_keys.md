@@ -27,69 +27,140 @@ sidebar_label: Configure Keys
 
 ### AT Commands
 
-- Only supports English input and lowercase letters.
+*** changes take effect after reboot. Only English input and lowercase letters are supported. ***
 
-1. **View Configuration**
+1. View configuration file:
+   ```
+   at+config=?
+   ```
 
-    - View the current configuration file.
+2. View all AT commands:
+   ```
+   at+command=?
+   ```
 
-        ```
-        at+keys=?
-        ```
+3. View key configuration:
+   ```
+   at+keys=?
+   ```
 
-2. **Configure Talk Key**
+4. Configure talk key:
 
-    - Example: Define the talk key as GPIO 27.
+- Example: Define talk key as GPIO 27
 
-        ```
-        at+keys=talk,27
-        ```
+    ```
+    at+keys=talk,<GPIO> // at+keys=talk,27
+    ```
 
-3. **Configure Reset WIFI Key**
+5. Configure WIFI reset key:
 
-    - Example: Define the WIFI reset key as GPIO 29 and GPIO 30.
+- Example: Define WIFI reset key as GPIO 29 and GPIO 30
 
-        ```
-        at+keys=wifi_rst,29;30
-        ```
+    ```
+    at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
+    ```
 
-4. **Reboot Configuration**
+6. Configure enter dialogue mode key:
 
-    - After modifying the configuration file, a reboot is required for the changes to take effect.
+- Example: Define enter dialogue mode key as GPIO 29 and GPIO 30
 
-        ```
-        at+reboot
-        ```
+    ```
+    at+keys=dialogue,<GPIO>;<GPIO> // at+keys=dialogue,29;30
+    ```
 
-5. **Configure Role**
+7. Reboot configuration (changes take effect after reboot):
 
-    - If not configured, the role ID defaults to 1.
+   ```
+   at+reboot
+   ```
 
-    - Example: Define the keys for role 1 as GPIO 22.
+8. Configure role:
 
-        ```
-        at+keys=role_idx,1,22
-        ```
+- If not configured, the default role ID is 1.
 
-    - Example: Delete the key definition for role 1.
+- Example: Define GPIO 22 as the key for role 1
 
-        ```
-        at+keys=role_idx,1,0
-        ```
+    ```
+    at+keys=role_idx,<index>,<GPIO> // at+keys=role_idx,1,22
+    ```
 
-6. **Configure Switch Role Key**
+- Example: Remove key definition for role 1
 
-    - Example: Configure GPIO 27 to switch to the previous role.
+    ```
+    at+keys=role_idx,<index>,<GPIO> // at+keys=role_idx,1,0
+    ```
 
-        ```
-        at+keys=role_prev,27
-        ```
+9. Configure switch role key:
 
-    - Example: Configure GPIO 28 to switch to the next role.
+- Example: Configure GPIO 27 to switch to the previous role
 
-        ```
-        at+keys=role_next,28
-        ```
+    ```
+    at+keys=role_prev,<GPIO>  // at+keys=role_prev,27
+    ```
+
+- Example: Configure GPIO 28 to switch to the next role
+
+    ```
+    at+keys=role_next,<GPIO>  // at+keys=role_next,28
+    ```
+
+10. Modify MQTT configuration:
+
+- Example: Modify the broker to 192.168.52.1
+
+    ```
+    at+config=mqtt,broker,<broker> // at+config=mqtt,broker,192.168.52.1
+    ```
+
+- Example: Modify the port to 1883
+
+    ```
+    at+config=mqtt,port,<port> // at+config=mqtt,port,1883
+    ```
+
+- Modify both the broker and port simultaneously
+
+    ```
+    at+config=mqtt,broker,<broker>;port,<port> // at+config=mqtt,broker,192.168.52.1;port,1883
+    ```
+
+11. Modify WIFI configuration:
+
+- Example: Modify the SSID to "test-wifi"
+
+    ```
+    at+config=wifi,ssid,<ssid> // at+config=wifi,ssid,test-wifi
+    ```
+
+- Example: Modify the password to "123456"
+    ```
+    at+config=wifi,password,<password> // at+config=wifi,password,123456
+    ```
+
+- Modify both the SSID and password simultaneously
+
+    ```
+    at+config=wifi,ssid,<ssid>;password,<password> // at+config=wifi,ssid,test-wifi;password,123456
+    ```
+
+12. Modify voice threshold in continuous dialogue mode:
+
+- Example: Modify voice threshold to 100
+
+    ```
+    at+config=common,voice,<threshold> // at+config=common,voice,100
+    ```
+
+13. Continuous dialogue:
+    ```
+    at+command=dialogue,start // enter continuous dialogue mode
+    at+command=dialogue,stop // exit continuous dialogue mode
+    ```
+
+14. Reset WIFI and enter pairing mode:
+    ```
+    at+command=wifi,reset
+    ```
 
 ### Specific Steps
 

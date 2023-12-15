@@ -26,71 +26,143 @@ sidebar_label: 配置按键
 - 每一个按键都要对应单独的 GPIO
 
 ### AT 指令
+*** 修改配置后都需要重启设备才能生效, 仅支持英文输入法且为小写字母 ***
 
-- 仅支持英文输入法且为小写字母
+1. 查看配置文件
+    ```json
+    at+config=?
+    ```
 
-1. **查看配置**
+2. 查看所有的 AT 指令
+    ```json
+    at+command=?
+    ````
 
-    - 查看当前配置文件
+3. 查看按键配置
 
-        ```
-        at+keys=?
-        ```
+    ```json
+    at+keys=?
+    ```
 
-2. **配置对话按键**
+4. 配置对话按键
 
-    - 例：对话按键定义为 GPIO 27
+  - 例：对话按键定义为 GPIO 27
 
-        ```
-        at+keys=talk,27
-        ```
+    ```json
+    at+keys=talk,<GPIO> // at+keys=talk,27
+    ```
 
-3. **配置重置 WIFI 按键**
+5. 配置重置 WIFI 按键
 
-    - 例：将 WIFI 重置按键定义为 GPIO 29 和 GPIO 30
+  - 例：将 WIFI 重置按键定义为 GPIO 29 和 GPIO 30
+
+    ```json
+    at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
+    ```
+
+6. 配置进入连续对话模式按键
+
+  - 例：将 WIFI 重置按键定义为 GPIO 29 和 GPIO 30
+
+    ```json
+    at+keys=dialogue,<GPIO>;<GPIO> // at+keys=dialogue,29;30
+    ```
+
+7. 重启配置（修改配置文件后，重启才能生效）
+
+    ```json
+    at+reboot
+    ```
+
+8. 配置角色
+
+  - 如果没有配置过，则角色 id 默认为 1
+
+  - 例：将角色 1 的按键定义为 GPIO 22
+
+    ```json
+    at+keys=role_idx,<index>,<GPIO> // at+keys=role_idx,1,22
+    ```
+
+  - 例：删除角色 1 的按键定义
     
-        ```
-        at+keys=wifi_rst,29;30
-        ```
+    ```json
+    at+keys=role_idx,<index>,<GPIO> // at+keys=role_idx,1,0
+    ```
 
-4. **重启配置**
+9. 配置切换角色按键
 
-    - 修改配置文件后，重启才能生效
+  - 例：配置 GPIO 27 为切换上一个角色
 
-        ```
-        at+reboot
-        ```
+    ```json
+    at+keys=role_prev,<GPIO>  // at+keys=role_prev,27
+    ```
 
-5. **配置角色**
+  - 例：配置 GPIO 28 为切换下一个角色
 
-    - 如果没有配置过，则角色 id 默认为 1
+    ```json
+    at+keys=role_next,<GPIO>  // at+keys=role_next,28
+    ```
 
-    - 例：将角色 1 的按键定义为 GPIO 22
-    
-        ```
-        at+keys=role_idx,1,22
-        ```
-    
-    - 例：删除角色 1 的按键定义
+10. 修改配置中的 MQTT
 
-        ```
-        at+keys=role_idx,1,0
-        ```
+  - 例：修改 Broker 为 192.168.52.1
 
-6. **配置切换角色按键**
+    ```json
+    at+config=mqtt,broker,<broker> // at+config=mqtt,broker,192.168.52.1
+    ```
 
-    - 例：配置 GPIO 27 为切换上一个角色
+  - 例： 修改 Port 为1883
 
-        ```
-        at+keys=role_prev,27
-        ```
+    ```json
+    at+config=mqtt,port,<port> // at+config=mqtt,port,1883
+    ```
 
-    - 例：配置 GPIO 28 为切换下一个角色
+  - 同时修改 Broker 和 Port
 
-        ```
-        at+keys=role_next,28
-        ```
+    ```json
+    at+config=mqtt,broker,<broker>;port,<port> // at+config=mqtt,broker,192.168.52.1;port,1883
+    ```
+11. 修改配置中的 WIFI
 
+  - 例： 修改 SSID 为 test-wifi
+
+    ```json
+    at+config=wifi,ssid,<ssid> // at+config=wifi, ssid, test-wifi
+    ```
+
+  - 例： 修改密码为 123456
+
+    ```json
+    at+config=wifi,password,<password> // at+config=wifi,password,123456
+    ```
+
+  - 同时修改 SSID 和密码
+
+    ```json
+    at+config=wifi,ssid,<ssid>;password,<password> // at+config=wifi,ssid,test-wifi;password,123456
+    ```
+
+12. 修改配置中连续对话的声音阈值
+
+  - 例：修改声音阈值为 100
+
+    ```json
+    at+config=common,voice,<threshold> // at+config=common,voice, 100
+    ```
+
+13. 连续对话
+
+    ```json
+    at+command=dialogue,start //进入连续对话
+    at+command=dialogue,stop //退出连续对话
+    ```
+
+14. 重置 WIFI 并进入配网模式
+
+    ```json
+    at+command=wifi,reset
+    ```
 ### 具体步骤
 
 1. 通过套件附带的 Type C 数据线，将接口扩展板和 PC 电脑连接
