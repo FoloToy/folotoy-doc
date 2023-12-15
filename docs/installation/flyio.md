@@ -172,7 +172,7 @@ Your app is ready! Deploy with `flyctl deploy`
 
 一共需要添加以下4个变量, 其中 OPENAI_OPENAI_KEY, OPENAI_TTS_KEY 和 OPENAI_WHISPER_KEY 可以用同一个 apiKey
 
-* MQTT_PASSWORD ，这个密码就是前面passwd文件中使用的密码，请保持一致
+* MQTT_PASSWORD ，这个密码就是前面 passwd 文件中 folotoy 用户使用的密码，请保持一致
 * OPENAI_OPENAI_KEY，这个是 OpenAI 的 apiKey
 * OPENAI_TTS_KEY，这个是 OpenAI 的 apiKey
 * OPENAI_WHISPER_KEY，这个是 OpenAI 的 apiKey

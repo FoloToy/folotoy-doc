@@ -86,6 +86,7 @@ FoloToy 提供的测试 MQTT 服务器
 ![ChatGPT Learning Dev](https://github.com/FoloToy/folotoy-doc/assets/1455685/cc2c77b7-2ece-4072-bb9f-867c995e22f0)
 
 
+
 ### 开始对话
 
 开始对话按照以下步骤进行：
@@ -93,20 +94,20 @@ FoloToy 提供的测试 MQTT 服务器
 * 按住按钮 A，LED 灯呈现绿色常亮状态，表示正在录音，此时即可对麦克风进行对话
 * 说话结束后即可松开按住按钮 A，此时LED 灯呈现绿色呼吸闪烁状态，表示AI正在思考
 * 等待大概 2s~5s 后（这个时间通常与网络延时影响，若网络条件较差，可能更长或出现超时），将听到扬声器播放回答
-* 单独短按按钮 A 和按钮 B，表示循环切换角色，目前服务器可以配置 7 种角色
+* 单独短按按钮 B 和按钮 C，表示循环切换角色，目前服务器可以配置 7 种角色
 
 
 
-## 应用示例
+## 应用示例(视频教程)
 
-### DIY 一个 ChatGPT 语音对话机器人
+### 在 B 站观看
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=577930846&bvid=BV12z4y1N7ne&cid=1320023873&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+* [DIY 一个 ChatGPT 语音对话机器人](https://www.bilibili.com/video/BV12z4y1N7ne)
+* [DIY 一个 ChatGPT 地球仪](https://www.bilibili.com/video/BV1WC4y1E7rC)
+* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.bilibili.com/video/BV1Tu4y1L7BJ)
 
-### DIY 一个 ChatGPT 地球仪
+### 在 YouTube 观看 
 
-<iframe  width="100%" height="600" src="//player.bilibili.com/player.html?aid=748378781&bvid=BV1WC4y1E7rC&cid=1334184922&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-### 用 3D 打印机制作一只会思考的硬核佩奇
-
-<iframe  width="100%" height="600" src="//player.bilibili.com/player.html?aid=919030114&bvid=BV1Tu4y1L7BJ&cid=1348458910&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+* [DIY 一个 ChatGPT 语音对话机器人](https://www.youtube.com/watch?v=jNusLpfHjgA)
+* [DIY 一个 ChatGPT 地球仪](https://www.youtube.com/watch?v=KgeUpd2TS2k)
+* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.youtube.com/watch?v=RHJuSXLq8yM)
