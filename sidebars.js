@@ -60,7 +60,7 @@ module.exports = {
     {
       type: "category",
       label: "Web Tool",
-      items: ["web-tool"],
+      items: ["web-tool", "esp-tool"],
     },
     {
       type: "doc",
