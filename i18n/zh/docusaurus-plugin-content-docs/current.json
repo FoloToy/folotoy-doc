@@ -31,6 +31,10 @@
     "message": "刷机工具",
     "description": "The label for category Web Tool in sidebar docs"
   },
+  "sidebar.docs.category.AT Command": {
+    "message": "AT 指令",
+    "description": "The label for category AT Command in sidebar docs"
+  },
   "sidebar.docs.category.Community": {
     "message": "加入社区",
     "description": "The label for category Community in sidebar docs"

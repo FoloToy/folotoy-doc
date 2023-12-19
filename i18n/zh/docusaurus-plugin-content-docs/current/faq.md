@@ -23,15 +23,31 @@ folotoy-server-self-hosting 默认的配置 docker-compose.yml 中，使用了 1
 * 18083/tcp: **可选**, EMQX 的 Web 管理后台的 HTTP 端口
 * 8083/tcp: **可选**, EMQX 的 Websocket 端口
 
-## 连接刷机 USB 线后，看不到串口设备?
+## 连接刷机 USB 线后，Chrome/Edge 浏览器看不到串口设备?
 
 **请确认玩具是否已经开机，刷机需要在通电开机状态下进行，单独的电路板连接 USB 线是不行的**
 
-* 刷机工具地址：[tool.folotoy.com](https://tool.folotoy.com)
-* 请使用最新版 Chrome 或者 Edge 浏览器访问刷机工具来刷机 
-* 请确认刷机线是否为玩具配套的数据线，有些 USB 线只有充电功能，没有数据功能，需要使用有数据功能的 USB 线
-* 如果是 Windows 系统，如果插入 USB 线后无法找到串口设备，请尝试安装驱动
-* MacOS 不需要安装驱动，MacOS 刷机波特率可以选择 460800 或者更低
+1. 确保您的计算机已安装最新版本的 Chrome/Edge 浏览器。
+2. 如果是 Windows 用户，请确保安装了[驱动](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340)。
+3. 确保您使用的是玩具配套的数据线或者其他可以传输数据的数据线（有些数据线仅用于充电）。
+4. 确保数据线连接良好，您可以在刷机选择设备的时候，停留一阵子观察设备是否会经常断开重连。
+5. 在确保上述的操作正确后，浏览器仍然无法查看设备的话，可以通过以下方式查看系统的串口设备：
+    - macOS：
+        - 打开终端。
+        - 输入命令 `ls /dev/cu.*` 查看所有串口设备。
+    - Windows：
+        - 打开设备管理器
+        - 找到“端口(COM和LPT)”查看所有串口设备
+5. 如果您找到了设备，但是浏览器无法识别到设备，您可以尝试使用 [esptool](./esp-tool.mdx) 方法刷写设备。
+
+## 使用 Chrome/Edge 浏览器刷机的过程中出现刷机错误？
+
+1. 确保您的计算机已安装最新版本的 Chrome/Edge 浏览器。
+2. 确保您使用的是玩具配套的数据线或者其他可以传输数据的数据线（有些数据线仅用于充电）。
+3. 确保数据线连接良好，您可以在刷机选择设备的时候，停留一阵子观察设备是否会经常断开重连。
+4. 确保您在刷机的过程中，没有误碰设备导致设备断开。
+5. 如果是Macos，请确保波特率选择 460800 或者更低。
+6. 如果持续出现这个问题，您可以尝试使用 [esptool](./esp-tool.mdx) 方法刷写设备。
 
 ## 修改 `roles.json` 后如何生效?
 
@@ -228,6 +244,15 @@ sudo docker ps
 
 <img src="https://github.com/FoloToy/folotoy-server-self-hosting/assets/1455685/6b75dab4-8f71-411f-a266-0ad43824df82" />
 
+## 查看服务器日志已经成功推送了消息，但是设备不播放？
+
+1. 将设备连接到电脑，打开[网页工具](https://tool.folotoy.com/)查看设备日志，具体操作方法[点击](./web-tool.mdx)查看。
+2. 查看设备是否有收到推送的消息。
+3. 查看推送的消息是否在设备超时后才收到，超时后收到的音频不会再播放。
+4. 如果设备没有收到，请确保设备的 MQTT 服务器地址和端口配置正确：
+    - 您可以通过重新配网的方式来修改 MQTT 服务器地址和端口。进入配网模式：[火火兔G6/G6s](./toy-pcb-replacement/alilo-g6.md)， [火火兔F6/F6s](./toy-pcb-replacement/alilo-f6.md)， [米兔C1](./toy-pcb-replacement/mitu-c1.md)
+    - 您可以通过[AT 指令](./at-command.mdx)来重新配置 MQTT Broker 和 Port
+
 ## 如何修改服务程序日志级别为 DEBUG 或者 INFO？
 
 修改 `docker-compose.yml` 配置，修改之后需要参考前面步骤重启容器：
@@ -242,6 +267,6 @@ LOG_LEVEL: INFO
 LOG_LEVEL: DEBUG
 ```
 
-## 为什么我的Docker时间戳日志与我的机器不同？
+## 为什么我的 Docker 时间戳日志与我的机器不同？
 
 Docker容器的时区默认为UTC。要设置容器的时区，请在您的YML文件中使用`TZ`环境变量。更多信息请参阅[环境变量](https://docs.folotoy.com/docs/configuration/environment_variables)。
