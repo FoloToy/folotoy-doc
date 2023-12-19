@@ -13,7 +13,7 @@ sidebar_label: Fly.io
 
 ## 开始安装部署
 
-如果本机没有安装 git 命令，也需要安装好 git 和 flyio 的命令，部署全程都需要使用命令，非常的 Geek。
+如果本机没有安装 `git` 命令，也需要安装好 `git` 和 `flyio` 的命令，部署全程都需要使用命令，非常的 Geek。
 
 * [安装 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [安装 flyctl](https://fly.io/docs/hands-on/install-flyctl/)
@@ -53,7 +53,7 @@ git clone https://github.com/FoloToy/folotoy-server-self-hosting.git
 
 #### 修改 fly.toml 文件
 
-把 fly.toml 配置文件中所有的 <your_app_name> 改为自己定义的：
+把 `fly.toml` 配置文件中所有的 `<your_app_name>` 改为自己定义的：
 
 ```
 # Todo: modify your app name
@@ -124,12 +124,12 @@ primary_region = "nrt"
 ```
 #### 修改 passwd 文件
 
-在 passwd 文件中添加自己 mqtt 服务账号，玩具的 SN 和 key。
+在 `passwd` 文件中添加自己 mqtt 服务账号，玩具的 SN 和 key。
 
-* 例如我的玩具 SN 和 Key 分别是 F234103026 和 JvRjTtz5brsN，这里 SN 和 key 可以从包装上获取，没有了也可以用附带的 USB 线连接电脑和玩具，再访问 tool.folotoy.com 来查看
+* 例如我的玩具 SN 和 Key 分别是 F234103026 和 JvRjTtz5brsN，这里 SN 和 key 可以从包装上获取，没有了也可以用附带的 USB 线连接电脑和玩具，再访问 [网页工具](https://tool.folotoy.com) 来查看
 * 如果有多个玩具，请在这个文件中每一个玩具添加一行
 * 我的 mqtt 服务账号用户名和密码分别是 folotoy 和 Ev6****cDB， 这里用户名请保持为 folotoy，密码可以设置为任意的字符串
-* **注意**, passwd 这个文件不能有空行，最后一行不能为空
+* **注意**, `passwd` 这个文件不能有空行，最后一行不能为空
 
 例如我的 passwd 如下
 ```
@@ -170,14 +170,14 @@ Your app is ready! Deploy with `flyctl deploy`
 
 <img width="1531" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/92eadfca-7f98-476b-87a5-5a8cfd16cfd8" />
 
-一共需要添加以下4个变量, 其中 OPENAI_OPENAI_KEY, OPENAI_TTS_KEY 和 OPENAI_WHISPER_KEY 可以用同一个 apiKey
+一共需要添加以下4个变量, 其中 `OPENAI_OPENAI_KEY`, `OPENAI_TTS_KEY` 和 `OPENAI_WHISPER_KEY` 可以用同一个 `apiKey`
 
-* MQTT_PASSWORD ，这个密码就是前面 passwd 文件中 folotoy 用户使用的密码，请保持一致
+* MQTT_PASSWORD ，这个密码就是前面 `passwd` 文件中 folotoy 用户使用的密码，请保持一致
 * OPENAI_OPENAI_KEY，这个是 OpenAI 的 apiKey
 * OPENAI_TTS_KEY，这个是 OpenAI 的 apiKey
 * OPENAI_WHISPER_KEY，这个是 OpenAI 的 apiKey
 
-也可以通过修改目录下的 set_secrets.sh 来通过执行命令行 ./set_secrets.sh 创建，效果与在flyio后台添加是一样的，例如我的 set_secrets.sh 内容如下：
+也可以通过修改目录下的 `set_secrets.sh` 来通过执行命令行 `./set_secrets.sh` 创建，效果与在flyio后台添加是一样的，例如我的 `set_secrets.sh` 内容如下：
 
 ```
 fly secrets set MQTT_PASSWORD="Ev6****cDB"

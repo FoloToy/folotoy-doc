@@ -122,12 +122,12 @@ primary_region = "nrt"
 ```
 #### Modify the passwd file
 
-Add your MQTT service account, toy's SN, and key to the passwd file.
+Add your MQTT service account, toy's SN, and key to the `passwd` file.
 
-* For example, my toy's SN and key are F234103026 and JvRjTtz5brsN, respectively, you can find the SN and key on the packaging. If you don't have them, you can connect the toy to your computer using the provided USB cable and visit [folotoy tool](tool.folotoy.com) to retrieve them.
+* For example, my toy's SN and key are F234103026 and JvRjTtz5brsN, respectively, you can find the SN and key on the packaging. If you don't have them, you can connect the toy to your computer using the provided USB cable and visit [folotoy tool](https://tool.folotoy.com) to retrieve them.
 * If you have multiple toys, add a new line for each toy in this file.
 * My MQTT service account username and password are folotoy and Ev6****cDB, respectively. Please keep the username as folotoy, and you can choose any string as the password.
-* **Note**: The passwd file should not contain empty lines, and the last line should not be empty.
+* **Note**: The `passwd` file should not contain empty lines, and the last line should not be empty.
 
 For example, here is my passwd file:
 ```
@@ -160,7 +160,7 @@ Platform: machines
 Your app is ready! Deploy with `flyctl deploy`
 ```
 
-"This way, you have created an app. Open the fly.io dashboard in a browser and navigate to the newly created project to add several password configurations that you will need.
+This way, you have created an app. Open the fly.io dashboard in a browser and navigate to the newly created project to add several password configurations that you will need.
 
 <img width="1515" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/58a3a4c0-bae8-481c-91ed-5f0f5476d286" />
 
@@ -168,14 +168,14 @@ Your app is ready! Deploy with `flyctl deploy`
 
 <img width="1531" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/92eadfca-7f98-476b-87a5-5a8cfd16cfd8" />
 
-Four variables need to be added in total, where OPENAI_OPENAI_KEY, OPENAI_TTS_KEY, and OPENAI_WHISPER_KEY can use the same apiKey.
+Four variables need to be added in total, where `OPENAI_OPENAI_KEY`, `OPENAI_TTS_KEY`, and `OPENAI_WHISPER_KEY` can use the same `apiKey`.
 
-* MQTT_PASSWORD: This password is the same as the one used by the "folotoy" user in the previous "passwd" file. Please keep it consistent.
+* MQTT_PASSWORD: This password is the same as the one used by the "folotoy" user in the previous `passwd` file. Please keep it consistent.
 * OPENAI_OPENAI_KEY: This is the apiKey for OpenAI.
 * OPENAI_TTS_KEY: This is the apiKey for OpenAI Text-to-Speech.
 * OPENAI_WHISPER_KEY: This is the apiKey for OpenAI Whisper.
 
-You can also create the secrets by modifying the set_secrets.sh file in the directory and executing the command ./set_secrets.sh. The effect is the same as adding them in the Fly.io dashboard. For example, the content of my set_secrets.sh file is as follows
+You can also create the secrets by modifying the `set_secrets.sh` file in the directory and executing the command `./set_secrets.sh`. The effect is the same as adding them in the Fly.io dashboard. For example, the content of my `set_secrets.sh` file is as follows
 
 ```
 fly secrets set MQTT_PASSWORD="Ev6****cDB"
@@ -293,29 +293,31 @@ Once the deployment is completed, you can log in to the Fly.io dashboard to chec
 
 If the firmware version of your toy is v23.50.3.10 or later, follow these steps to configure the toy:
 
-1. Put the toy into configuration mode.
-2. Connect your phone or computer to the toy.
-3. Fill in the following information for MQTT:
+* Put the toy into configuration mode.
+* Connect your phone or computer to the toy.
+* Fill in the following information for MQTT:
 
    - MQTT Server Address: folotoy-server-test.fly.dev
    - MQTT Server Port: 1883
 
 If the firmware version of your toy is earlier than v23.50.3.10, you need to update the firmware to the latest version or install the following configuration and re-publish the program:
 
-1. Log in to the flyio backend and find the IP address of the service. For example, my IP address is 149.*.*.218.
+* Log in to the flyio backend and find the IP address of the service. For example, my IP address is 149.*.*.218.
 
    ![image](https://github.com/FoloToy/folotoy-doc/assets/1455685/1e440c6a-1ebd-4c08-b812-c9ff7dc03155)
 
-2. After modifying the fly.toml file, replace:
+  After modifying the fly.toml file,
+
+  replace
 
    ```
    SPEECH_UDP_SERVER_HOST = "folotoy-server-test.fly.dev"
    ```
 
-   with:
+   with
 
    ```
    SPEECH_UDP_SERVER_HOST = "149.248.197.218"
    ```
 
-3. Save the file and execute `fly launch --ha=false` in the command line.
+. Save the file and execute `fly launch --ha=false` in the command line.
