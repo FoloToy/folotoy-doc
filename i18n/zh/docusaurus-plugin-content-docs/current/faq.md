@@ -250,7 +250,7 @@ sudo docker ps
 2. 查看设备是否有收到推送的消息。
 3. 查看推送的消息是否在设备超时后才收到，超时后收到的音频不会再播放。
 4. 如果设备没有收到，请确保设备的 MQTT 服务器地址和端口配置正确：
-    - 您可以通过重新配网的方式来修改 MQTT 服务器地址和端口。进入配网模式：[火火兔G6/G6s](./toy-pcb-replacement/alilo-g6.md)， [火火兔F6/F6s](./toy-pcb-replacement/alilo-f6.md)， [米兔C1](./toy-pcb-replacement/mitu-c1.md)
+    - 您可以通过重新配网的方式来修改 MQTT 服务器地址和端口。进入配网模式：[火火兔G6/G6s](./toy-pcb-replacement/alilo-g6.md#wi-fi配置)， [火火兔F6/F6s](./toy-pcb-replacement/alilo-f6.md#wi-fi配置)， [米兔C1](./toy-pcb-replacement/mitu-c1.md#wi-fi配置)
     - 您可以通过[AT 指令](./at-command.mdx)来重新配置 MQTT Broker 和 Port
 
 ## 如何修改服务程序日志级别为 DEBUG 或者 INFO？
@@ -270,3 +270,9 @@ LOG_LEVEL: DEBUG
 ## 为什么我的 Docker 时间戳日志与我的机器不同？
 
 Docker容器的时区默认为UTC。要设置容器的时区，请在您的YML文件中使用`TZ`环境变量。更多信息请参阅[环境变量](https://docs.folotoy.com/docs/configuration/environment_variables)。
+
+## 设备如何进入配网模式？
+
+首次收到设备或者刷机后，设备都会自动进入配网模式
+
+手动进入配网模式：[火火兔G6/G6s](./toy-pcb-replacement/alilo-g6.md#wi-fi配置)， [火火兔F6/F6s](./toy-pcb-replacement/alilo-f6.md#wi-fi配置)， [米兔C1](./toy-pcb-replacement/mitu-c1.md#wi-fi配置)。或者通过[AT 指令](./at-command.mdx#重置-wifi-并进入配网模式)进入配网模式
