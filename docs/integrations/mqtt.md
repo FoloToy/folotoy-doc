@@ -3,9 +3,11 @@ title: MQTT Integration
 sidebar_label: MQTT
 ---
 
-The MQTT function within folotoy server allows useful values to be published to an MQTT broker or subscribe to the topic to modify the configuration of folotoy server.. This is useful in allowing other automation platforms to consume data from folotoy server or talk with.
+The MQTT function within folotoy server allows useful values to be published to an MQTT broker or subscribe to the topic to modify the configuration of folotoy server. This is useful in allowing other automation platforms to consume data from folotoy server or talk with.
 
 ## MQTT Topics
+
+Before using the MQTT integration feature, you need to set `INTEGRATION_MQTT` to `true`. Please refer to the [environment variable settings](../configuration/environment_variables.md) for more information.
 
 The following are the available topics and permission descriptions.
 

@@ -187,7 +187,7 @@ fly secrets set OPENAI_WHISPER_KEY="sk-MOfAmt06v*********************uPx33lKL"
 
 ```
 
-完成前面的步骤之后，执行：fly launch --ha=false
+完成前面的步骤之后，执行：`fly launch --ha=false`
 
 以下这两处选择 N
 
@@ -318,4 +318,4 @@ Updating existing machines in 'folotoy-server-test' with rolling strategy
   SPEECH_UDP_SERVER_HOST = "149.248.197.218"
 ```
 
-保存之后，在命令行中执行 fly launch --ha=false
+保存之后，在命令行中执行 `fly launch --ha=false`

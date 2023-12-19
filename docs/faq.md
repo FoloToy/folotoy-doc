@@ -23,16 +23,31 @@ In the default configuration of folotoy-server-self-hosting docker-compose.yml, 
 * 18083/tcp: **optional**, HTTP port for EMQX's web management console
 * 8083/tcp: **optional**, Websocket port for EMQX
 
-## Can't see the serial port device after connecting the flashing USB cable?
+## Can't see the serial port device in Chrome/Edge browser after connecting the flashing USB cable?
 
-**Please make sure that the toy is powered on. Flashing needs to be done in a powered-on state. It is not possible to connect only the circuit board with a USB cable.**
+**Please ensure that the toy is powered on. Flashing can only be done when the device is powered on. Connecting the USB cable to the standalone circuit board alone will not work.**
 
-* Flashing tool address: [tool.folotoy.com](https://tool.folotoy.com)
-* Please use the latest version of Chrome or Edge browser to access the flashing tool for flashing.
-* Please confirm if the flashing cable is the data cable provided with the toy. Some USB cables only have charging function and do not have data function, so you need to use a USB cable with data function.
-* If it is a Windows system and cannot find the serial port device after inserting the USB cable, please try installing drivers.
-* MacOS does not require driver installation. The baud rate for flashing on MacOS can be set as 460800 or lower.
+1. Make sure your computer has the latest version of Chrome/Edge browser installed.
+2. If you are a Windows user, make sure you have installed the [driver](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340).
+3. Ensure that you are using the data cable provided with the toy or any other data transfer-capable cable (some cables are for charging only).
+4. Ensure that the data cable is properly connected. When selecting the device for flashing, observe if the device frequently disconnects and reconnects.
+5. If the browser still cannot detect the device after ensuring the above steps are correct, you can view the system's serial port devices using the following methods:
+    - macOS:
+        - Open Terminal.
+        - Enter the command `ls /dev/cu.*` to view all serial port devices.
+    - Windows:
+        - Open Device Manager.
+        - Locate "Ports (COM & LPT)" to view all serial port devices.
+6. If you find the device but the browser cannot recognize it, you can try using the [esptool](./esp-tool.mdx) method to flash the device.
 
+## Facing flashing errors while using Chrome/Edge browser?
+
+1. Make sure your computer has the latest version of Chrome/Edge browser installed.
+2. Ensure that you are using the data cable provided with the toy or any other data transfer-capable cable (some cables are for charging only).
+3. Ensure that the data cable is properly connected. When selecting the device for flashing, observe if the device frequently disconnects and reconnects.
+4. Make sure you do not accidentally touch the device and cause it to disconnect during the flashing process.
+5. If you are using macOS, make sure to select a baud rate of 460800 or lower.
+6. If the problem persists, you can try using the [esptool](./esp-tool.mdx) method to flash the device.
 ## How to make the changes in `roles.json` take effect?
 
 Execute the following command in the folotoy-server-self-hosting directory to restart the service.
@@ -242,6 +257,30 @@ to
 LOG_LEVEL: DEBUG
 ```
 
+## The server logs show that the messages have been successfully pushed, but the device is not playing them?
+
+1. Connect the device to the computer and open the [web tool](https://tool.folotoy.com/) to check the device logs. For detailed instructions, click [here](./web-tool.mdx).
+2. Check if the device has received the pushed message.
+3. Verify if the pushed message was received after the device's timeout. Audio received after the timeout will not be played.
+4. If the device has not received the message, ensure that the MQTT server address and port configuration are correct:
+   - You can modify the MQTT server address and port by reconfiguring the network. Enter the network configuration mode: [Firefly G6/G6s](./toy-pcb-replacement/alilo-g6.md), [Firefly F6/F6s](./toy-pcb-replacement/alilo-f6.md), [Mitutoyo C1](./toy-pcb-replacement/mitu-c1.md).
+   - You can reconfigure the MQTT Broker and Port using [AT commands](./at-command.mdx).
+
 ## Why are my Docker timestamp logs different than my machine?
 
 Docker container timezones default to UTC. To set the timezone for your container, use the `TZ` Environment Variable in your YML file. More information found at [Environment Variables](https://docs.teslamate.org/docs/configuration/environment_variables)
+
+## Why Chrome/Edge can't recognize my device?
+
+1. Ensure that your computer has the latest version of Chrome/Edge browser installed.
+2. Use a data cable that can transfer both power and data (some cables are for charging only).
+3. Make sure the device is powered on.
+4. View the system's serial port devices,
+    - macOS:
+        - Open the Terminal.
+        - Enter the command ls `/dev/cu.*` to view all serial port devices.
+    -  Windows:
+      - Open Device Manager.
+      - Locate "Ports (COM & LPT)" to view all serial port devices.
+  6. If you can find the device, you can try flashing it using the [esptool](./esp-tool.mdx) method.
+7. If you're still unable to find the device, please contact [us](./community.md) for further assistance.

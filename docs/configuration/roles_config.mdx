@@ -3,53 +3,55 @@ title: Roles Configuration
 sidebar_label: Roles Configuration
 ---
 
-这篇文档对 `roles.json` 的配置进行说明，并给出一些配置的示例供大家参考。
+This document provides an explanation of the configuration for roles.json and offers some configuration examples for reference.
 
-## 配置概览
+## Overview of Configuration
 
-FoloToy 服务器程序可以通过修改一系列的配置来达到自定义的效果，可以通过以下的方式来修改：
+The FoloToy server program can achieve custom effects by modifying a series of configurations. You can make modifications in the following ways:
 
-* 环境变量：通过直接修改传入的环境变量或者修改 `docker-compose.yml` 文件中定义的环境变量
-* 角色配置文件：通过修改 `roles.json`， `roles.json` 中必须定义 7 个角色
+* Environment Variables: Modify the passed environment variables directly or modify the environment variables defined in the `docker-compose.yml` file.
+* Role Configuration File: Modify the `roles.json` file, which must define 7 roles.
 
-## 配置的优先级
+## Configuration Priority
 
-**`docker-compose.yml` 中定义的环境变量的优先级要低于角色配置文件 `roles.json` 中的定义，也就是说 `roles.json` 中的设置会覆盖 `docker-compose.yml` 中的配置，从而达到角色级别的配置。**
+The configurations defined in `docker-compose.yml` have lower priority than the definitions in the role configuration file `roles.json`. This means that the settings in `roles.json` will override the configurations in `docker-compose.yml`, achieving role-level configuration.
 
-举几个例子来说明：
+Here are a few examples to illustrate:
 
-1. 在 `docker-compose.yml` 中定义了 `STT_TYPE` 为 `openai-whisper`，如果在 `roles.json` 中所有的角色都不设置 `stt_type`，那么所有的角色的 `stt_type` 都自动设置为 `openai-whisper`
-2. 如果 `roles.json` 其中 `key` 为 4 的角色设置 `stt_type` 为 `azure-stt`，那么除 4 外，其它角色的 `stt_type` 都自动设置为 `openai-whisper`
+1. If `STT_TYPE` is defined as `openai-whisper` in `docker-compose.yml` and no roles in `roles.json` set `stt_type`, then the `stt_type` for all roles will be automatically set to `openai-whisper`.
+2. If the role with key 4 in `roles.json` sets `stt_type` to `azure-stt`, then except for role 4, the `stt_type` for other roles will be automatically set to `openai-whisper`.
+
+Please note that these examples are for reference purposes, and you can customize the configurations according to your specific requirements.
 
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-## 基本配置
+## Basic Configuration
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| --------- | ---- | --------- |
-| start_text     | 开机提示语音，系统自动将 start_text 转成语音文件发送给玩具(必须) | 无                    | 
-| prompt     |  角色的提示词定义(必须)    | 无 | 
-| max_message_count     |  设置为一个大于 0 的数值，比如改成 10，这样表示上下文支持 10 次对话，0 表示不支持上下文。每一个模型都有自己的上下文Token大小的限制，如果超过限制，可以再按一次当前的角色按钮来清空上下文。也可以通过调整 max_message_count 和 max_tokens 的值来大概限制上下文大小。    | 0 | 
-| stt_type |  sound-to-text 引擎类型，可选值：openai-whisper, azure-whisper, azure-stt, dify-stt   | openai-whisper | 
-| stt_config |  sound-to-text 引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
-| llm_type |  large-language-model 类型，可选值： openai，azure-openai, dify 也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-like 从而支持更多的大模型 | openai | 
-| llm_config |  大模型的配置  | 无 | 
-| tts_type |  text-to-sound 引擎类型，可选值：openai-tts, azure-tts, elevenlabs, edge-tts   | openai-tts | 
-| tts_config |  text-to-sound 引擎的配置   | 无 | 
+| Parameter Name | Description | Default Value |
+| -------------- | ----------- | ------------- |
+| start_text | Startup prompt text, automatically converted to audio and sent to the toy (required) | None |
+| prompt | Definition of the role's prompt (required) | None |
+| max_message_count | Set to a value greater than 0, e.g., 10, to enable context support for up to 10 conversations. Set to 0 to disable context. Each model has its own limit on the size of context tokens. If the limit is exceeded, press the role button again to clear the context. You can also adjust the values of `max_message_count` and `max_tokens` to limit the context size. | 0 |
+| stt_type | Sound-to-text engine type, options: openai-whisper, azure-whisper, azure-stt, dify-stt | openai-whisper |
+| stt_config | Sound-to-text engine specific configuration. Configuration parameters vary for different engine types. | None |
+| llm_type | Large language model type, options: openai, azure-openai, dify. You can also use [one-api](https://github.com/songquanpeng/one-api) to proxy the interface of larger models to be openai-like, thereby supporting more large models. | openai |
+| llm_config | Configuration for the large language model. | None |
+| tts_type | Text-to-sound engine type, options: openai-tts, azure-tts, elevenlabs, edge-tts | openai-tts |
+| tts_config | Configuration for the text-to-sound engine. | None |
 
 <Tabs
 defaultValue="roles-minimal.json"
 values={[
-{ label: '最小 roles.json 配置', value: 'roles-minimal.json', },
-{ label: '完整 roles.json 配置', value: 'roles-full.json', },
+{ label: 'Minimum roles.json configuration.', value: 'roles-minimal.json', },
+{ label: 'Full roles.json configuration', value: 'roles-full.json', },
 ]}>
 <TabItem value="roles-minimal.json">
 
-配置示例：
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -87,7 +89,7 @@ values={[
 
 <TabItem value="roles-full.json">
 
-配置示例：
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -192,9 +194,9 @@ values={[
 
 
 
-## 语音转文字 STT (Sound-to-Text)角色级别配置说明
+## Sound-to-Text (STT) Role Level Configuration Instructions
 
-stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt
+The `stt_type` can be set to: `openai-whisper`, `azure-stt`, `azure-whisper`, `dify-stt`.
 
 <Tabs
 defaultValue="openai-whisper"
@@ -207,20 +209,20 @@ values={[
 <TabItem value="openai-whisper">
 
 :::caution
-openai-whisper 的 language 可以不用设置，但是如果设置了就需要使用正确的 language 语言代码，语言代码与 azure-stt 不同，例如 openai-whisper 中文要使用 `zh`, 在 roles.json 文件中可以为每一个角色配置不同的语言代码，点击这里查看所有的语言代码: [OpenAI Whisper language 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+For `openai-whisper`, the `language` parameter is optional. However, if you choose to set it, you need to use the correct language code. The language codes for `openai-whisper` are different from those used in `azure-stt`. For example, for Chinese in `openai-whisper`, you would use the code `zh`. In the `roles.json` file, you can configure different language codes for each role. You can find a list of all language codes for `openai-whisper` here: [OpenAI Whisper language 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| --------- | ---- | --------- |
-| language     |  The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency.  https://platform.openai.com/docs/api-reference/audio/createTranscription  | 无                    | 
-| api_base     |  接口的 base url    | https://api.openai.com/v1 | 
-| key     | api key     | 无 | 
-| model     |  使用的模型 ID   |  whisper-1 | 
-| prompt     | An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language.     | ok. Let's begin. | 
+| Parameter Name | Description | Default Value |
+| -------------- | ----------- | ------------- |
+| language | The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency. | None |
+| api_base | The base URL of the API endpoint. | https://api.openai.com/v1 |
+| key | Your API key. | None |
+| model | The ID of the model to use. | whisper-1 |
+| prompt | An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language. | "ok. Let's begin." |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -256,18 +258,18 @@ openai-whisper 的 language 可以不用设置，但是如果设置了就需要�
 <TabItem value="azure-stt">
 
 :::caution
-azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-whipser 不同，例如 azure-stt 中文要使用 `zh-CN`, 在 roles.json 文件中为每一个角色配置正确的语言代码，点击这里查看所有的语言代码: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt)
+For `azure-stt`, you need to use the correct language codes, which are different from those used in `openai-whisper`. For example, for Chinese in `azure-stt`, you would use the code `zh-CN`. In the `roles.json` file, make sure to configure the correct language code for each role. You can find a list of all language codes supported by `azure-stt` here: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt)
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| :--     | :--     |  :--     |
-|  language    |   The language of the input audio.  点击这里查看所有的语言代码: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt) | zh-CN | 
-|  key    |  Azure Speech Services Key, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview  |  | 
-|  service_region    |  Azure Speech Services Region, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview    |  | 
+| Parameter Name | Parameter Description | Default Value |
+| -------------- | --------------------- | ------------- |
+| language | The language of the input audio. Click here to see all language codes: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt) | zh-CN |
+| key | Azure Speech Services Key. For more information, refer to: [Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | None |
+| service_region | Azure Speech Services Region. For more information, refer to: [Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | None |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -301,19 +303,19 @@ azure-stt 需要使用正确的 language 语言代码，语言代码与 openai-w
 <TabItem value="azure-whisper">
 
 :::caution
-azure-whisper 的还是预览状态，只有 North Central US 和 West Europe 能部署，另外使用whisper前提是有 azure openai 的权限。 [查看 Whisper models (Preview) 可用区域](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#whisper-models-preview)
+Azure Whisper is still in preview and can only be deployed in the North Central US and West Europe regions. Additionally, using Whisper requires Azure OpenAI permissions. You can check the available regions for Whisper models in the preview phase here: [Whisper Models (Preview) Available Regions](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#whisper-models-preview).
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| :--     | :--     |  :--     |
-|  api_base    | 接口地址     |  | 
-|  key    |  接口密钥    |  | 
-|  deployment_name    | 模型部署名称，不要填模型名称     |  | 
-|  api_version    | 接口版本     | 2023-09-01-preview | 
+| Parameter Name | Parameter Description | Default Value |
+| -------------- | --------------------- | ------------- |
+| api_base | API endpoint URL | None |
+| key | API key for authentication | None |
+| deployment_name | Deployment name for the model (do not use the model name) | None |
+| api_version | API version | 2023-09-01-preview |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -348,16 +350,17 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
 <TabItem value="dify-stt">
 
 :::caution
-支持 dify 的 cloud 和 self-hosting 
+Support for DIFY includes both cloud and self-hosting options.
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| :--     | :--     |  :--     |
-|  api_base    | 接口地址     | https://api.dify.ai/v1 | 
-|  key    |  接口密钥    |  | 
-配置示例
+| Parameter Name | Description | Default Value |
+| :-- | :-- | :-- |
+| api_base | API endpoint | https://api.dify.ai/v1 |
+| key | API key |  |
+
+Configuration example:
 
    ```yml title="roles.json"
    {
@@ -389,9 +392,9 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
 </TabItem>
 </Tabs>
 
-## AI 大语言模型 LLM (Large Language Model)角色级别配置说明
+## The configuration instructions for the role level of the AI large language model (LLM) 
 
-llm_type 可以设置为：openai, azure-openai, dify
+The `llm_type` parameter can be set to one of the following values: `openai`, `azure-openai`, or `dify`.
 
 <Tabs
 defaultValue="openai"
@@ -403,9 +406,9 @@ values={[
 ]}>
 <TabItem value="openai">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  |  https://api.openai.com/v1 | 
 | key | openai api_key | sk-AAAAAAAAAAAAA |
@@ -416,7 +419,7 @@ values={[
 | frequency_penalty |  | 0 |
 | presence_penalty | Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. | 0 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {
@@ -451,9 +454,9 @@ values={[
 </TabItem>
 <TabItem value="azure-openai">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 | endpoint  | api base  | https://xxx.openai.azure.com | 
 | api_version | azure api version | 2023-05-15 |
@@ -465,7 +468,7 @@ values={[
 | frequency_penalty |  | 0 |
 | presence_penalty | Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. | 0 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {
@@ -502,11 +505,11 @@ values={[
 </TabItem>
 <TabItem value="gemini">
 
-**注意: gemini 接口与 OpenAI 接口所有不同，需要在 role 定义中将 `send_initial_messages` 设置为 `false`**
+**Note: The Gemini interface is different from the OpenAI interface. In the role definition, please set `send_initial_messages` to `false`.**
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 | api_base    | api base url  |  https://generativelanguage.googleapis.com | 
 | api_version | api version  |  v1beta | 
@@ -516,9 +519,9 @@ values={[
 | temperature | https://ai.google.dev/models/gemini#model_metadata. | 0.7 |
 | top_p | https://ai.google.dev/models/gemini#model_metadata | 1 |
 | top_k | https://ai.google.dev/models/gemini#model_metadata | 1 |
-| safety_settings | 填写 gemini 文档中定义的格式，https://ai.google.dev/docs/safety_setting_gemini | [] |
+| safety_settings | Please fill in the format defined in the Gemini documentation: [Gemini Documentation](https://ai.google.dev/docs/safety_setting_gemini) | [] |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
 {
@@ -542,16 +545,16 @@ values={[
 </TabItem>
 <TabItem value="dify">
 
-dify 可以自行部署 https://github.com/langgenius/dify 或者直接使用 cloud 版本 https://cloud.dify.ai/
+DIFY can be deployed on your own infrastructure using the GitHub repository: https://github.com/langgenius/dify. Alternatively, you can directly use the cloud version of DIFY at https://cloud.dify.ai/.
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  |  https://api.dify.ai/v1 | 
-| key | dify api_key, dify 可以自行部署或者使用 cloud 版的 dify，创建对话型 app 再创建 api key | app-AAAAAAAAAAAAA |
+| key | DIFY API key. DIFY can be self-hosted or used with the cloud version. Create a conversational app and then generate an API key. | app-AAAAAAAAAAAAA |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {
@@ -582,9 +585,9 @@ dify 可以自行部署 https://github.com/langgenius/dify 或者直接使用 cl
 </TabItem>
 </Tabs>
 
-## 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
+##Explanation of Role-Level Configuration for Text-to-Speech (TTS)
 
-tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts
+The "tts_type" parameter can be set to: openai-tts, azure-tts, elevenlabs, edge-tts.
 
 <Tabs
 defaultValue="openai-tts"
@@ -596,9 +599,9 @@ values={[
 ]}>
 <TabItem value="openai-tts">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  | https://api.openai.com/v1 | 
 |  key    | openai api key     | sk-AAAA      |
@@ -606,7 +609,7 @@ values={[
 |  speed    |  The speed of the generated audio. Select a value from 0.25 to 4.0    |  1.0     |
 |  voice_name    |  The voice to use when generating the audio. Supported voices are alloy, echo, fable, onyx, nova, and shimmer.    |  alloy     |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {
@@ -645,20 +648,20 @@ values={[
 </TabItem>
 <TabItem value="azure-tts">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 |  key    | Azure Speech Services Key, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview     |       |
 |  service_region    |  Azure Speech Services Region, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview    |       |
 |  voice_name    |  Voice Name, 点击这里查看声音列表 https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/language-support?tabs=tts    |   zh-CN-YunyangNeural    |
-| style | The voice-specific speaking style. You can express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. If the style value is missing or invalid, the entire mstts:express-as element is ignored and the service uses the default neutral speech.  | 无，如果配置了这个字段，将会使用 ssml 来生成语音 |
-| styledegree | The intensity of the speaking style. You can specify a stronger or softer style to make the speech more expressive or subdued. The range of accepted values are: 0.01 to 2 inclusive. The default value is 1, which means the predefined style intensity. The minimum unit is 0.01, which results in a slight tendency for the target style. A value of 2 results in a doubling of the default style intensity. If the style degree is missing or isn't supported for your voice, this attribute is ignored. | 默认值是1，只有设置了 style 字段才会生效 |
-| role | The speaking role-play. The voice can imitate a different age and gender, but the voice name isn't changed. For example, a male voice can raise the pitch and change the intonation to imitate a female voice, but the voice name isn't be changed. If the role is missing or isn't supported for your voice, this attribute is ignored. | 无，只有设置了 style 字段才会生效 |
+| style | The voice-specific speaking style. You can express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. If the style value is missing or invalid, the entire mstts:express-as element is ignored and the service uses the default neutral speech.  | None. If this field is configured, SSML will be used to generate the speech. |
+| styledegree | The intensity of the speaking style. You can specify a stronger or softer style to make the speech more expressive or subdued. The range of accepted values are: 0.01 to 2 inclusive. The default value is 1, which means the predefined style intensity. The minimum unit is 0.01, which results in a slight tendency for the target style. A value of 2 results in a doubling of the default style intensity. If the style degree is missing or isn't supported for your voice, this attribute is ignored. | The default value is 1. The style field will only take effect if it is set. |
+| role | The speaking role-play. The voice can imitate a different age and gender, but the voice name isn't changed. For example, a male voice can raise the pitch and change the intonation to imitate a female voice, but the voice name isn't be changed. If the role is missing or isn't supported for your voice, this attribute is ignored. | None, Only when the style field is set will it take effect. |
 
-SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice
+Please refer to the Azure documentation for specific SSML settings： https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {
@@ -695,17 +698,17 @@ SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azu
 </TabItem>
 <TabItem value="elevenlabs">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
 | key | elevenlabs key |  |
 | model | elevenlabs model | eleven_multilingual_v2  |
-| voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. 也可以参考下图查找 |  |
+| voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. You can also refer to the image below for guidance. |  |
 
 <img src="https://user-images.githubusercontent.com/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {
@@ -742,13 +745,13 @@ SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azu
 </TabItem>
 <TabItem value="edge-tts">
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Description | Default Value |
 | :--     | :--     |  :--     |
-|  voice_name    |  Voice Name, 点击这里查看声音列表 https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices    |   zh-CN-YunyangNeural    |
+|  voice_name    |  Voice Name, Click here to view the list of voices: https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices    |   zh-CN-YunyangNeural    |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {
@@ -783,14 +786,14 @@ SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azu
 </TabItem>
 </Tabs>
 
-## 完整示例参考
+## Complete example for reference
 
 <Tabs
 defaultValue="docker-compose"
 values={[
-{ label: 'docker-compose.yml 示例', value: 'docker-compose', },
-{ label: 'roles.json 示例', value: 'roles', },
-{ label: 'roles.json 使用 azure-stt 示例', value: 'roles-azure-stt', },
+{ label: 'docker-compose.yml example', value: 'docker-compose', },
+{ label: 'roles.json example', value: 'roles', },
+{ label: 'roles.json using azure-stt example', value: 'roles-azure-stt', },
 ]}>
 <TabItem value="docker-compose">
 

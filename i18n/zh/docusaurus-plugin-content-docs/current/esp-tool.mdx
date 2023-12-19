@@ -1,0 +1,54 @@
+---
+id: esp-tool
+title: 固件升级(使用esptool)
+sidebar_label: 固件升级(使用esptool)
+---
+
+可能由于一些兼容性问题，无法通过 Chrome/Edge 来更新固件，还可以通过以下方法来更新固件
+
+### 驱动安装
+
+1. MacOS 下可以直接使用，不需要安装驱动
+2. 如果 Windows 系统没有自带串口驱动，需要安装好串口驱动，[驱动下载](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340)。
+
+### 使用 Python3 更新固件
+
+1. 打开 Terminal 后，创建一个目录：mkdir esptool
+2. 下载最新[固件](https://github.com/FoloToy/folotoy-bin/releases) 到 esptool 目录下面
+3. 用随机附带的 USB 线连接好玩具和电脑，并且将玩具开机，在 Terminal 执行 ```json ls -l /dev/tty* ```中查看到串口设备，例如我的是 /dev/tty.usbserial-14210
+4. 安装 esptool 工具，先进入 esptool 目录，然后执行以下命令
+
+```python
+python3 -m venv venv
+. venv/bin/activate
+pip install esptool
+```
+
+5. 使用如下命令刷入固件
+
+刷入固件(**注意：修改VERSION为自己下载的固件版本**)
+
+```bash
+VERSION=23.50.3.11
+esptool.py --chip esp32 --port /dev/tty.usbserial-14210 --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x0 folotoy-${VERSION}.bin
+```
+
+
+### 使用 esptool 命令更新固件
+
+如果本机没有 python3 环境，也可以尝试以下的方法来进行刷机：
+
+1. 下载  Espressif 官方的刷机工具 [esptool](https://github.com/espressif/esptool/releases/tag/v4.6.2 )，我的电脑是 Mac，我下载了 mac 版的下载工具
+2. 把下载的 esptool-v4.6.2-macos.zip 解压到 esptool-v4.6.2-macos
+2. 下载最新[固件](https://github.com/FoloToy/folotoy-bin/releases) 到 esptool-v4.6.2-macos 下面
+4. 用随机附带的 USB 线连接好玩具和电脑，并且将玩具开机，在 Terminal 执行 ls -l /dev/tty* 中查看到串口设备，例如我的是 /dev/tty.usbserial-14210
+5. 使用如下命令刷入固件
+
+如果报 permission denied 的错误，说明没有权限，可以执行 chmod +x esptool 添加权限，修改权限之后重新执行，这个时候 MacOS 可能会安全提示，去 System Settings 下 Privacy & Security 允许 esptool 的执行
+
+刷入固件(**注意：修改VERSION为自己下载的固件版本**)
+
+```bash
+VERSION=23.50.3.11
+./esptool --chip esp32 --port /dev/tty.usbserial-14210 --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x0 folotoy-${VERSION}.bin
+```

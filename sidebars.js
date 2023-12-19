@@ -63,6 +63,11 @@ module.exports = {
       items: ["web-tool", "esp-tool"],
     },
     {
+      type: "category",
+      label: "AT Command",
+      items: ["at-command",],
+    },
+    {
       type: "doc",
       id: "contributing",
     },

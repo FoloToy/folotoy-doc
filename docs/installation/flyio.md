@@ -1,34 +1,32 @@
 ---
-title: 在 Fly.io 上安装 FoloToy 服务器程序
+title: Installing FoloToy Server Program on Fly.io
 sidebar_label: Fly.io
 ---
+This article provides the necessary steps to install the FoloToy server program on [Fly.io](https://fly.io).
 
-本文提供了在[Fly.io](https://fly.io)上安装 FoloToy 服务器程序的必要步骤。
+## Prerequisites
 
+* Register an account on [fly.io](https://fly.io) and link your bank card.
+* Prepare an OpenAI API key. You can register for an API key [here](https://platform.openai.com/api-keys). If you are unable to register for OpenAI, you can also register for the [MagickChat](https://one-api.magickchat.com/) service and obtain a testing API key.
 
-## 前置准备
+## Getting Started with Installation and Deployment
 
-* 注册 [fly.io](https://fly.io) 的账号并绑定好银行卡。
-* 准备好一个 OpenAI 的 apiKey，点击这里注册 [OpenAI](https://platform.openai.com/api-keys)，如果无法注册 OpenAI， 也可以注册 [MagickChat](https://one-api.magickchat.com/) 服务，领取一个测试使用的 apiKey。
+If you don't have the `git` command installed on your machine, you'll need to install `git` and the `flyctl` command. The entire deployment process requires the use of commands, so it's quite geeky.
 
-## 开始安装部署
+* [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Install flyctl](https://fly.io/docs/hands-on/install-flyctl/)
 
-如果本机没有安装 git 命令，也需要安装好 git 和 flyio 的命令，部署全程都需要使用命令，非常的 Geek。
+### Obtain the Required Configuration Files for Deployment
 
-* [安装 git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [安装 flyctl](https://fly.io/docs/hands-on/install-flyctl/)
-
-### 获取部署需要的配置文件
-
-打开你的终端，在 macOS 上可以使用自带的 Terminal.app
+Open your terminal. On macOS, you can use the built-in Terminal.app.
 
 ```
 git clone https://github.com/FoloToy/folotoy-server-self-hosting.git
 ```
 
-### 修改配置文件
+### Modify Configuration Files
 
-进入目录 `./folotoy-server-self-hosting/flyio/folotoy-server` ，该目录下的文件如下：
+Navigate to the directory `./folotoy-server-self-hosting/flyio/folotoy-server`. The files in this directory are as follows:
 
 ```
 ├── flyio
@@ -43,17 +41,17 @@ git clone https://github.com/FoloToy/folotoy-server-self-hosting.git
 │       └── start.sh
 ```
 
-需要根据自己情况修改的文件如下：
+The files that need to be modified according to your own situation are as follows:
 
 * fly.toml
 * passwd
 
-如果希望自行定义玩具的角色，还可以修改 roles.json 文件。
+If you want to define the roles of the toys yourself, you can also modify the roles.json file.
 
 
-#### 修改 fly.toml 文件
+#### Modify the `fly.toml` File
 
-把 fly.toml 配置文件中所有的 <your_app_name> 改为自己定义的：
+Replace all instances of `<your_app_name>` in the `fly.toml` configuration file with your own defined name.
 
 ```
 # Todo: modify your app name
@@ -65,7 +63,7 @@ app = "<your_app_name>"
     # Todo: modify your audio files download url
   AUDIO_DOWNLOAD_URL = "http://<your_app_name>.fly.dev:8082"
 ```
-例如我给我的应用取名是 folotoy-server-test，那么我的 fly.toml 是这样的：
+If you have named your application "folotoy-server-test," your fly.toml file should look like this:
 
 ```toml
 # fly.toml app configuration file generated for folotoy-server-test on 2023-12-13T18:33:02+08:00
@@ -122,22 +120,22 @@ primary_region = "nrt"
     port = 1883
 
 ```
-#### 修改 passwd 文件
+#### Modify the passwd file
 
-在 passwd 文件中添加自己 mqtt 服务账号，玩具的 SN 和 key。
+Add your MQTT service account, toy's SN, and key to the passwd file.
 
-* 例如我的玩具 SN 和 Key 分别是 F234103026 和 JvRjTtz5brsN，这里 SN 和 key 可以从包装上获取，没有了也可以用附带的 USB 线连接电脑和玩具，再访问 tool.folotoy.com 来查看
-* 如果有多个玩具，请在这个文件中每一个玩具添加一行
-* 我的 mqtt 服务账号用户名和密码分别是 folotoy 和 Ev6****cDB， 这里用户名请保持为 folotoy，密码可以设置为任意的字符串
-* **注意**, passwd 这个文件不能有空行，最后一行不能为空
+* For example, my toy's SN and key are F234103026 and JvRjTtz5brsN, respectively, you can find the SN and key on the packaging. If you don't have them, you can connect the toy to your computer using the provided USB cable and visit [folotoy tool](tool.folotoy.com) to retrieve them.
+* If you have multiple toys, add a new line for each toy in this file.
+* My MQTT service account username and password are folotoy and Ev6****cDB, respectively. Please keep the username as folotoy, and you can choose any string as the password.
+* **Note**: The passwd file should not contain empty lines, and the last line should not be empty.
 
-例如我的 passwd 如下
+For example, here is my passwd file:
 ```
 folotoy:Ev6****cDB
 F234103026:JvRjTtz5brsN
 ```
 
-#### 开始执行 flyio 命令
+#### Start executing the flyio command
 
 * fly auth login
 * fly launch --ha=false --no-deploy
@@ -162,7 +160,7 @@ Platform: machines
 Your app is ready! Deploy with `flyctl deploy`
 ```
 
-这样就创建好了一个app，用浏览器打开 fly.io 的后台，进入刚刚创建的项目，来添加几个需要用到的密码配置。
+"This way, you have created an app. Open the fly.io dashboard in a browser and navigate to the newly created project to add several password configurations that you will need.
 
 <img width="1515" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/58a3a4c0-bae8-481c-91ed-5f0f5476d286" />
 
@@ -170,14 +168,14 @@ Your app is ready! Deploy with `flyctl deploy`
 
 <img width="1531" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/92eadfca-7f98-476b-87a5-5a8cfd16cfd8" />
 
-一共需要添加以下4个变量, 其中 OPENAI_OPENAI_KEY, OPENAI_TTS_KEY 和 OPENAI_WHISPER_KEY 可以用同一个 apiKey
+Four variables need to be added in total, where OPENAI_OPENAI_KEY, OPENAI_TTS_KEY, and OPENAI_WHISPER_KEY can use the same apiKey.
 
-* MQTT_PASSWORD ，这个密码就是前面 passwd 文件中 folotoy 用户使用的密码，请保持一致
-* OPENAI_OPENAI_KEY，这个是 OpenAI 的 apiKey
-* OPENAI_TTS_KEY，这个是 OpenAI 的 apiKey
-* OPENAI_WHISPER_KEY，这个是 OpenAI 的 apiKey
+* MQTT_PASSWORD: This password is the same as the one used by the "folotoy" user in the previous "passwd" file. Please keep it consistent.
+* OPENAI_OPENAI_KEY: This is the apiKey for OpenAI.
+* OPENAI_TTS_KEY: This is the apiKey for OpenAI Text-to-Speech.
+* OPENAI_WHISPER_KEY: This is the apiKey for OpenAI Whisper.
 
-也可以通过修改目录下的 set_secrets.sh 来通过执行命令行 ./set_secrets.sh 创建，效果与在flyio后台添加是一样的，例如我的 set_secrets.sh 内容如下：
+You can also create the secrets by modifying the set_secrets.sh file in the directory and executing the command ./set_secrets.sh. The effect is the same as adding them in the Fly.io dashboard. For example, the content of my set_secrets.sh file is as follows
 
 ```
 fly secrets set MQTT_PASSWORD="Ev6****cDB"
@@ -187,18 +185,18 @@ fly secrets set OPENAI_WHISPER_KEY="sk-MOfAmt06v*********************uPx33lKL"
 
 ```
 
-完成前面的步骤之后，执行：fly launch --ha=false
+After completing the previous steps, execute the following command: `fly launch --ha=false`.
 
-以下这两处选择 N
+Choose "N" for the following two options.
 
 - Would you like to set up a Postgresql database now? N
 - Would you like to set up an Upstash Redis database now? N
 
-选择离自己近的区域：
+Choose the region that is closest to you:
 
 <img width="1458" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/e09badf8-02f4-40a5-b3a2-80ddd11b068e" />
 
-我的操作如下：
+I performed the following actions:
 ```
 ❯ fly launch --ha=false
 Creating app in /Users/lewang/Playground/flyio/folotoy-server-self-hosting/flyio/folotoy-server
@@ -287,35 +285,37 @@ Updating existing machines in 'folotoy-server-test' with rolling strategy
 
 ```
 
-这样部署就完成了，进入 flyio 后台查看一下状态
+Once the deployment is completed, you can log in to the Fly.io dashboard to check the status.
 
 <img width="1512" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/a45970d3-374d-4a90-b2cb-2ea11501069b" />
 
+## Configuring MQTT Server for Your Toy
 
-## 为自己玩具配置 MQTT 服务器
+If the firmware version of your toy is v23.50.3.10 or later, follow these steps to configure the toy:
 
-如果玩具固件版本在 v23.50.3.10 之后，在玩具进入配置模式后，用手机或者电脑连接玩具，在 MQTT 处填写如下
+1. Put the toy into configuration mode.
+2. Connect your phone or computer to the toy.
+3. Fill in the following information for MQTT:
 
-* MQTT Server Address: folotoy-server-test.fly.dev
-* MQTT Server Port: 1883
+   - MQTT Server Address: folotoy-server-test.fly.dev
+   - MQTT Server Port: 1883
 
-如果玩具固件在 v23.50.3.10 之前，需要更新固件至最新版版本，或者安装下面的配置重新发布程序
+If the firmware version of your toy is earlier than v23.50.3.10, you need to update the firmware to the latest version or install the following configuration and re-publish the program:
 
-* 登录 flyio 后台，查看到服务的 ip 地址，例如我的 ip 是 149.*.*.218
+1. Log in to the flyio backend and find the IP address of the service. For example, my IP address is 149.*.*.218.
 
-<img width="1624" alt="image" src="https://github.com/FoloToy/folotoy-doc/assets/1455685/1e440c6a-1ebd-4c08-b812-c9ff7dc03155" />
+   ![image](https://github.com/FoloToy/folotoy-doc/assets/1455685/1e440c6a-1ebd-4c08-b812-c9ff7dc03155)
 
-修改 fly.toml 文件之后再重新发布：
+2. After modifying the fly.toml file, replace:
 
-把
-```
-  SPEECH_UDP_SERVER_HOST = "folotoy-server-test.fly.dev"
-```
+   ```
+   SPEECH_UDP_SERVER_HOST = "folotoy-server-test.fly.dev"
+   ```
 
-修改为
+   with:
 
-```
-  SPEECH_UDP_SERVER_HOST = "149.248.197.218"
-```
+   ```
+   SPEECH_UDP_SERVER_HOST = "149.248.197.218"
+   ```
 
-保存之后，在命令行中执行 fly launch --ha=false
+3. Save the file and execute `fly launch --ha=false` in the command line.
