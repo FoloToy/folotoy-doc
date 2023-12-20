@@ -261,10 +261,10 @@ LOG_LEVEL: DEBUG
 
 1. Connect the device to the computer and open the [web tool](https://tool.folotoy.com/) to check the device logs. For detailed instructions, click [here](./web-tool.mdx).
 2. Check if the device has received the pushed message.
-3. Verify if the pushed message was received after the device's timeout. Audio received after the timeout will not be played.
+3. Verify if the pushed message was received after the device's timeout（default timeout: 30 seconds）. Audio received after the timeout will not be played. You can use [AT commands](./at-command.mdx#modify-the-timeout-for-waiting-the-server-response) to modify the timeout
 4. If the device has not received the message, ensure that the MQTT server address and port configuration are correct:
-   - You can modify the MQTT server address and port by reconfiguring the network. Enter the network configuration mode: [Firefly G6/G6s](./toy-pcb-replacement/alilo-g6.md), [Firefly F6/F6s](./toy-pcb-replacement/alilo-f6.md), [Mitutoyo C1](./toy-pcb-replacement/mitu-c1.md).
-   - You can reconfigure the MQTT Broker and Port using [AT commands](./at-command.mdx).
+   - You can modify the MQTT server address and port by reconfiguring the network. Enter the network configuration mode: [Firefly G6/G6s](./toy-pcb-replacement/alilo-g6.md#wi-fi-configure), [Firefly F6/F6s](./toy-pcb-replacement/alilo-f6.md#wi-fi-configure), [Mitutoyo C1](./toy-pcb-replacement/mitu-c1.md#wi-fi-configure).
+   - You can reconfigure the MQTT Broker and Port using [AT commands](./at-command.mdx#modify-mqtt-configuration).
 
 ## Why are my Docker timestamp logs different than my machine?
 

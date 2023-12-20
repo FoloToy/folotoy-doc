@@ -35,6 +35,10 @@
     "message": "AT 指令",
     "description": "The label for category AT Command in sidebar docs"
   },
+  "sidebar.docs.category.Folotoy Manual": {
+    "message": "说明书",
+    "description": "The label for category Folotoy Manual in sidebar docs"
+  },
   "sidebar.docs.category.Community": {
     "message": "加入社区",
     "description": "The label for category Community in sidebar docs"
