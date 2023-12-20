@@ -68,6 +68,11 @@ module.exports = {
       items: ["at-command",],
     },
     {
+      type: "category",
+      label: "Folotoy Manual",
+      items: ["folotoy-manual",],
+    },
+    {
       type: "doc",
       id: "contributing",
     },
