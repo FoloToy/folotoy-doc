@@ -21,6 +21,33 @@ Folotoy 八爪鱼 AI 开发套件包括以下组件：
 
 ![IMG_8050](https://github.com/FoloToy/folotoy-doc/assets/1455685/b18e66d2-a89b-4fe5-b57c-7f02be483f0a)
 
+## 应用示例(视频教程)
+
+### 在 B 站观看
+
+* [DIY 一个 ChatGPT 语音对话机器人](https://www.bilibili.com/video/BV12z4y1N7ne)
+
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=577930846&bvid=BV12z4y1N7ne&cid=1320023873&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+* [DIY 一个 ChatGPT 地球仪](https://www.bilibili.com/video/BV1WC4y1E7rC)
+
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=748378781&bvid=BV1WC4y1E7rC&cid=1334184922&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.bilibili.com/video/BV1Tu4y1L7BJ)
+
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=919030114&bvid=BV1Tu4y1L7BJ&cid=1348458910&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+* [圣诞老人也会用 ChatGPT 了](https://www.bilibili.com/video/BV15N4y147Fm)
+
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=880093245&bvid=BV15N4y147Fm&cid=1373634475&p=1autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### 在 YouTube 观看 
+
+* [DIY 一个 ChatGPT 语音对话机器人](https://www.youtube.com/watch?v=jNusLpfHjgA)
+* [DIY 一个 ChatGPT 地球仪](https://www.youtube.com/watch?v=KgeUpd2TS2k)
+* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.youtube.com/watch?v=RHJuSXLq8yM)
+* [圣诞老人也会用 ChatGPT 了](https://www.youtube.com/watch?v=I7m-jDwGem4&t=2s)
+
 ## 开始组装
 
 ### 组件概览图
@@ -96,17 +123,3 @@ FoloToy 提供的测试 MQTT 服务器
 * 单独短按按钮 B 和按钮 C，表示循环切换角色，目前服务器可以配置 7 种角色
 
 
-
-## 应用示例(视频教程)
-
-### 在 B 站观看
-
-* [DIY 一个 ChatGPT 语音对话机器人](https://www.bilibili.com/video/BV12z4y1N7ne)
-* [DIY 一个 ChatGPT 地球仪](https://www.bilibili.com/video/BV1WC4y1E7rC)
-* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.bilibili.com/video/BV1Tu4y1L7BJ)
-
-### 在 YouTube 观看 
-
-* [DIY 一个 ChatGPT 语音对话机器人](https://www.youtube.com/watch?v=jNusLpfHjgA)
-* [DIY 一个 ChatGPT 地球仪](https://www.youtube.com/watch?v=KgeUpd2TS2k)
-* [用 3D 打印机制作一只会思考的硬核佩奇](https://www.youtube.com/watch?v=RHJuSXLq8yM)
