@@ -155,3 +155,26 @@ sidebar_label: AT 指令
 
     at+command=wifi,reset
 
+
+### 重置 WIFI 并进入配网模式
+
+    at+command=wifi,reset
+
+
+### 切换录音模式
+
+    at+command=record,click //点击录音按键进入录音，录音完成后自动结束
+    at+command=record,press //按下录音按键进入录音，松开按键结束录音
+    at+command=record,continuous //点击录音按键进入连续对话模式
+
+
+### 开机提示音配置
+
+    at+command=open_tip_type,open //打开开机提示音
+    at+command=open_tip_type,close //关闭开机提示音
+
+
+### 电压预警配置
+
+    at+config=common,voltage_alarm,<value> //配置预警电压，默认3.7
+
