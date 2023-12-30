@@ -158,3 +158,20 @@ sidebar_label: AT Command
 
 ### Reset WIFI and enter pairing mode:
     at+command=wifi,reset
+
+### Switch recording mode
+
+    at+command=record,click // click the recording button to enter the recording, and it will automatically end after the recording is completed
+    at+command=record,press // press the recording button to enter recording, release the button to end recording
+    at+command=record,continuous // click the recording button to enter continuous conversation mode
+
+
+### Open tip audio configuration
+
+    at+command=open_tip_type,open // open tip audio enable
+    at+command=open_tip_type,close // open tip audio disable
+
+
+### Voltage alarm configuration
+
+    at+config=common,voltage_alarm,<value> // setting voltage alarm, default 3.7
