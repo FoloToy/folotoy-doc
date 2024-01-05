@@ -196,7 +196,7 @@ sudo docker compose restart folotoy
 
 每一个模型都有自己的上下文Token大小的限制，如果超过限制，可以再按一次当前的角色按钮来清空上下文。也可以通过调整 `max_message_count` 和 `max_tokens` 的值来大概限制上下文大小。
 
-修改 `roles.json` 里面 `max_message_count` 这个参数为一个大于 0 的数值，比如改成 `10`，这样表示上下文支持 10 次对话，在修改 `max_tokens`` 为 `200`，经过 10 轮对话，大概的上下文大小为
+修改 `roles.json` 里面 `max_message_count` 这个参数为一个大于 0 的数值，比如改成 `10`，这样表示上下文支持 10 次对话，在修改 `max_tokens` 为 `200`，经过 10 轮对话，大概的上下文大小为
 
 ```
 10*200*2=4000
