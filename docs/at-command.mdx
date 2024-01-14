@@ -175,3 +175,9 @@ sidebar_label: AT Command
 ### Voltage alarm configuration
 
     at+config=common,voltage_alarm,<value> // setting voltage alarm, default 3.7
+
+### Voice Config
+
+    at+voice=test // enter voicetest mode, which can print volume logs during recording
+    at+voice=autoconfig // enter the volume threshold automatic configuration mode, which can automatically configure the volume threshold after 5 seconds
+    at+voice=normal // exit voicetest or volume threshold automatic configuration mode
