@@ -77,7 +77,7 @@ module.exports = {
           sidebarCollapsible: false,
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
-            "https://github.com/FoloToy/folotoy-doc/edit/main/docs/",
+            "https://github.com/FoloToy/folotoy-doc/edit/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
