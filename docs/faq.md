@@ -284,3 +284,19 @@ Docker container timezones default to UTC. To set the timezone for your containe
       - Locate "Ports (COM & LPT)" to view all serial port devices.
   6. If you can find the device, you can try flashing it using the [esptool](./esp-tool.mdx) method.
 7. If you're still unable to find the device, please contact [us](./community.md) for further assistance.
+
+## What do light's colors mean?
+
+Each color represents a different device status.
+
+ Color | Device Status |
+|  ----  | ----  |
+| Steady white | Standby mode |
+| Steady green | Recording in progress |
+| Steady pink | Detected human voice in continuous conversation mode |
+| Steady red | File system mount failure / Wi-Fi initialization failure |
+| Flashing green | Waiting for server response for audio |
+| Flashing blue | Pairing mode |
+| Rainbow gradient | Power-on initialization / Audio playback in progress |
+| Flashing red | Low battery |
+| Flashing yellow | Unable to connect to the server |
