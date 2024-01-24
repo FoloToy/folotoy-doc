@@ -179,3 +179,12 @@ sidebar_label: AT 指令
     at+voice=autoconfig // 进入音量阈值自动配置模式，进入该模式后可在5s后自动配置音量阈值
     at+voice=normal // 退出voicetest或音量阈值自动配置模式
 
+### 配置耳灯亮度
+
+    at+config=common,led_brightness,<value> // 设置耳灯的最大亮度，取值范围由小到大 0-255
+
+  - 例：修改耳灯亮度为 100
+
+  ```json
+  at+config=common,led_brightness,100
+  ```
