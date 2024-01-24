@@ -181,3 +181,14 @@ sidebar_label: AT Command
     at+voice=test // enter voicetest mode, which can print volume logs during recording
     at+voice=autoconfig // enter the volume threshold automatic configuration mode, which can automatically configure the volume threshold after 5 seconds
     at+voice=normal // exit voicetest or volume threshold automatic configuration mode
+
+### Configure Earlight Brightness
+
+    // Sets the maximum brightness of the earlight, with values ranging from 0 to 255
+    at+config=common,led_brightness,<value>
+
+- Example: Set earlight brightness to 100
+
+    ```json
+    at+config=common,led_brightness,100
+    ```
