@@ -192,3 +192,13 @@ sidebar_label: AT Command
     ```json
     at+config=common,led_brightness,100
     ```
+
+### Volume Config
+
+    at+config=common,volume,<value> // Set the volume level, default to 100, with a range of values ranging from 0 to 100, currently, only CACTUS type products are supported for use
+
+- Example: Changing the volume level to 100
+
+  ```json
+  at+config=common,volume,100
+  ```

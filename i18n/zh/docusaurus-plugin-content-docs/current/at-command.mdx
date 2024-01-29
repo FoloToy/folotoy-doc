@@ -188,3 +188,13 @@ sidebar_label: AT 指令
   ```json
   at+config=common,led_brightness,100
   ```
+
+### 音量配置
+
+    at+config=common,volume,<value> // 设置音量大小，默认为100，取值范围由小到大 0-100，目前仅支持CACTUS类型产品使用
+
+- 例：修改音量大小为 100
+
+  ```json
+  at+config=common,volume,100
+  ```
