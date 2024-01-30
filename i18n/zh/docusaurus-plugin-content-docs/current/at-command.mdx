@@ -191,7 +191,9 @@ sidebar_label: AT 指令
 
 ### 音量配置
 
-    at+config=common,volume,<value> // 设置音量大小，默认为100，取值范围由小到大 0-100，目前仅支持CACTUS类型产品使用
+    at+config=common,volume,<value> // 设置音量大小，默认为100，取值范围由小到大 0-100
+    at+command=volume_control_type,knob // 设置为通过旋钮控制音量
+    at+command=volume_control_type,at // 设置为通过at指令或者mqtt指令控制音量
 
 - 例：修改音量大小为 100
 
