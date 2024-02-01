@@ -12,5 +12,5 @@ Telegram
 
 Wechat
 
-<img style={{width:  '20em'}}  src="https://user-images.githubusercontent.com/1455685/279261384-cbdd8620-b9b6-47c0-9fc6-ceded03d5721.jpg" />
+<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/IMG_9616.2547jdyg7ubk.webp" />
 
