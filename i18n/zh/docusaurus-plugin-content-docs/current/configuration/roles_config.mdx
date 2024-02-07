@@ -194,7 +194,7 @@ values={[
 
 ## 语音转文字 STT (Sound-to-Text)角色级别配置说明
 
-stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt
+stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
 
 <Tabs
 defaultValue="openai-whisper"
@@ -203,6 +203,7 @@ values={[
 { label: 'azure-stt', value: 'azure-stt', },
 { label: 'azure-whisper', value: 'azure-whisper', },
 { label: 'dify-stt', value: 'dify-stt', },
+{ label: 'aliyun-asr', value: 'aliyun-asr', },
 ]}>
 <TabItem value="openai-whisper">
 
@@ -383,6 +384,34 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
         "tts_config": {
           "voice_name": "zh-CN-XiaoxiaoNeural"
         }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="aliyun-asr">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
+|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
+|  region_id    |  区域代码    |  cn-shanghai | 
+|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
+配置示例
+
+   ```yml title="roles.json"
+   {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 10,
+        "stt_type": "aliyun-asr",
+        "stt_config": {
+          "app_key": "7xxxxxxxx904N7CNG"
+        },
+        "llm_type": "openai",
+        "tts_type": "aliyun-tts"
     }
   }
    ```
@@ -638,7 +667,7 @@ model 字段的填写填写大模型对应的模型代码，例如 `ERNIE-Bot 4.
 
 ## 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
 
-tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts
+tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts, aliyun-tts
 
 <Tabs
 defaultValue="openai-tts"
@@ -647,6 +676,7 @@ values={[
 { label: 'azure-tts', value: 'azure-tts', },
 { label: 'elevenlabs', value: 'elevenlabs', },
 { label: 'edge-tts', value: 'edge-tts', },
+{ label: 'aliyun-tts', value: 'aliyun-tts', },
 ]}>
 <TabItem value="openai-tts">
 
@@ -850,6 +880,43 @@ SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azu
   } 
    ```
 
+</TabItem>
+<TabItem value="aliyun-tts">
+
+:::caution
+支持阿里云平台官方模型和自己训练的个性化模型 
+:::
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
+|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
+|  region_id    |  区域代码    |  cn-shanghai | 
+|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
+|  voice_id    |  这里的配置优先级比项目设置高，如果不是自定义模型，请不要添加这个配置    |  | 
+|  volume    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
+|  speech_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
+|  pitch_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置   |  | 
+配置示例
+
+   ```yml title="roles.json"
+   {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 10,
+        "stt_type": "aliyun-asr",
+        "stt_config": {
+          "app_key": "Lxxxxxxxx904N7XJN",
+          "voice_id": "voice-fbe9a71"
+        },
+        "llm_type": "openai",
+        "tts_type": "aliyun-tts"
+    }
+  }
+   ```
 </TabItem>
 </Tabs>
 
