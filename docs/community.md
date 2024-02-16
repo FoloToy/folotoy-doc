@@ -12,5 +12,5 @@ Telegram
 
 Wechat
 
-<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/IMG_9616.2547jdyg7ubk.webp" />
+<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/folotoy-com/Snipaste_2024-02-16_11-23-21.29zvaheeqzgg.webp" />
 
