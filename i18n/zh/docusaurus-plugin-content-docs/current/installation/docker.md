@@ -22,6 +22,10 @@ sidebar_label: Docker
   ```bash
   cd ~
   mkdir folotoy-server
+  mkdir folotoy-server/config
+
+  # 或者
+  #mkdir -p folotoy-server/config
   ```
 
   接下来的操作都在 `folotoy-server` 目录中进行
@@ -166,7 +170,7 @@ services:
       SPEECH_UDP_SERVER_HOST: your_vps_ip
       SPEECH_UDP_SERVER_PORT: 8085
    ```
-3. 创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
+3. 在 config 目录下创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
 
    ```yml title="roles.json"
    {
