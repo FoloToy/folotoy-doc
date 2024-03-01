@@ -65,8 +65,8 @@ After the first power-on, the development kit will automatically enter the netwo
 
 FoloToy provides a test MQTT server with the following details:
 
-- Address: octopusx.fly.dev
-- Port: 4883
+- Address: 47.116.13.134
+- Port: 1883
 
 If you prefer to set up your own server, please refer to the server deployment instructions [here](../installation/1panel.md) and choose the appropriate solution to build your own server.
 
