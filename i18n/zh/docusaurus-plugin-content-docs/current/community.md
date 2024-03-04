@@ -12,5 +12,5 @@ Telegram
 
 微信群
 
-<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/folotoy-com/Snipaste_2024-02-16_11-23-21.29zvaheeqzgg.webp" />
+<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/folotoy-com/wechat-group.4pb1c5l10ge0.webp" />
 
