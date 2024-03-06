@@ -296,7 +296,7 @@ Each color represents a different device status.
 | Steady pink | Detected human voice in continuous conversation mode |
 | Steady red | File system mount failure / Wi-Fi initialization failure |
 | Flashing green | Waiting for server response for audio |
-| Flashing blue | Pairing mode |
+| Flashing blue | Config mode |
 | Rainbow gradient | Power-on initialization / Audio playback in progress |
 | Flashing red | Low battery |
 | Flashing yellow | Unable to connect to the server |
