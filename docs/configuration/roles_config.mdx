@@ -394,7 +394,7 @@ Configuration example:
 
 ## The configuration instructions for the role level of the AI large language model (LLM) 
 
-The `llm_type` parameter can be set to one of the following values: `openai`, `azure-openai`, or `dify`.
+The `llm_type` parameter can be set to one of the following values: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic
 
 <Tabs
 defaultValue="openai"
@@ -404,6 +404,11 @@ values={[
 { label: 'gemini', value: 'gemini', },
 { label: 'dify', value: 'dify', },
 { label: 'qianfan', value: 'qianfan', },
+{ label: 'xiaodu', value: 'xiaodu', },
+{ label: 'moonshot', value: 'moonshot', },
+{ label: 'groq', value: 'groq', },
+{ label: 'ollama', value: 'ollama', },
+{ label: 'anthropic', value: 'anthropic', },
 ]}>
 <TabItem value="openai">
 
@@ -639,6 +644,145 @@ model 字段的填写填写大模型对应的模型代码，例如 `ERNIE-Bot 4.
    ```
 
 </TabItem>
+<TabItem value="xiaodu">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| client_id | app client id | TESTAAAAAAAAAAAAA |
+| secret | app secret |  |
+| max_tokens | max output token count | 400 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "xiaodu",
+        "llm_config": {
+            "client_id": "TESTbbbbbbbbbbbb",
+            "secret": "TESTAAAAAAAAAAAAa",
+            "max_tokens": 800
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="moonshot">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  https://api.moonshot.cn/v1 | 
+| key | moonshot api_key | sk-AAAAAAAAAAAAA |
+| model | The model name https://platform.moonshot.cn/docs/pricing |  |
+| max_tokens | max output token count | 400 |
+| temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "moonshot",
+        "llm_config": {
+            "api_base": "https://api.moonshot.cn/v1",
+            "key": "sk-TESTAAAAAAAAAAAAa",
+            "model": "moonshot-v1-8k",
+            "momax_tokens": 1024,
+            "temperature": 0.7
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="ollama">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  http://localhost:11434 | 
+| model | The model name, such as gemma:2b, more at https://ollama.com/library |  |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "ollama",
+        "llm_config": {
+            "api_base": "http://localhost:11434",
+            "model": "gemma:7b"
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="groq">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  https://api.groq.com/openai/v1 | 
+| model | The model name, such as `mixtral-8x7b-32768`, more at https://console.groq.com/docs/models |  |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "groq",
+        "llm_config": {
+            "api_base": "https://api.groq.com/openai/v1",
+            "model": ""mixtral-8x7b-32768"
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="anthropic">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  "https://api.anthropic.com | 
+| key | api_key | sk-ant-api03-Vq-W2wQHS21qAAAAAAAAAAA |
+| model | The model name https://www.anthropic.com/api |  |
+| max_tokens | max output token count | 1024 |
+| temperature | | 0.7 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "anthropic",
+        "llm_config": {
+            "api_base": "https://api.anthropic.com",
+            "key": "sk-ant-api-TESTAAAAAAAAAAAAa",
+            "model": "claude-3-sonnet-20240229",
+            "momax_tokens": 1024,
+            "temperature": 0.7
+        }
+    }
+  }
+   ```
+</TabItem>
 </Tabs>
 
 ##Explanation of Role-Level Configuration for Text-to-Speech (TTS)
@@ -715,6 +859,9 @@ Configurable parameters:
 | styledegree | The intensity of the speaking style. You can specify a stronger or softer style to make the speech more expressive or subdued. The range of accepted values are: 0.01 to 2 inclusive. The default value is 1, which means the predefined style intensity. The minimum unit is 0.01, which results in a slight tendency for the target style. A value of 2 results in a doubling of the default style intensity. If the style degree is missing or isn't supported for your voice, this attribute is ignored. | The default value is 1. The style field will only take effect if it is set. |
 | role | The speaking role-play. The voice can imitate a different age and gender, but the voice name isn't changed. For example, a male voice can raise the pitch and change the intonation to imitate a female voice, but the voice name isn't be changed. If the role is missing or isn't supported for your voice, this attribute is ignored. | None, Only when the style field is set will it take effect. |
 | dialect_name     | dialect name     |  voice_name must be set to a value who supports dialect name     |
+| prosody_rate     |   rate, options: ['slow', 'x-slow', 'medium', 'fast', 'x-fast'] or [0, 3]   |   1   |
+| prosody_pitch     |  pitch, options: ['low', 'x-low', 'medium', 'high', 'x-high'] or [0.5, 1,5]   | 1     |
+| prosody_volume     | volume, options: ['silent', 'x-soft', 'soft', 'medium', 'x-loud'] or [0, 1.5]     |  1     |
 
 
 当 voice_name 设置为 `zh-CN-XiaoxiaoDialectsNeural` 时，dialect_name 可以设置为以下的方言：
