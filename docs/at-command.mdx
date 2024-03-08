@@ -145,10 +145,6 @@ sidebar_label: AT Command
     at+config=common,timeout,<seconds> // at+config=common,timeout,50
     ```
 
-### Continuous dialogue:
-    at+command=dialogue,start // enter continuous dialogue mode
-    at+command=dialogue,stop // exit continuous dialogue mode
-
 ### Reset WIFI and enter pairing mode:
     at+command=wifi,reset
 
@@ -157,6 +153,12 @@ sidebar_label: AT Command
     at+command=record,click // click the recording button to enter the recording, and it will automatically end after the recording is completed
     at+command=record,press // press the recording button to enter recording, release the button to end recording
     at+command=record,continuous // click the recording button to enter continuous conversation mode
+
+
+### Start a conversation (According to the recording mode above):
+
+    at+command=dialogue,start // enter conversation
+    at+command=dialogue,stop // exit conversation
 
 
 ### Open tip audio configuration

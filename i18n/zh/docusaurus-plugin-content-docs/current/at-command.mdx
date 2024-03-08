@@ -138,11 +138,6 @@ sidebar_label: AT 指令
     at+config=common,timeout,<seconds> // at+config=common,timeout,50
     ```
 
-### 连续对话
-
-    at+command=dialogue,start //进入连续对话
-    at+command=dialogue,stop //退出连续对话
-
 ### 重置 WIFI 并进入配网模式
 
     at+command=wifi,reset
@@ -153,6 +148,12 @@ sidebar_label: AT 指令
     at+command=record,click //点击录音按键进入录音，录音完成后自动结束
     at+command=record,press //按下录音按键进入录音，松开按键结束录音
     at+command=record,continuous //点击录音按键进入连续对话模式
+
+
+### 开始对话（根据上面的录音模式）
+
+    at+command=dialogue,start //进入对话
+    at+command=dialogue,stop //退出对话
 
 
 ### 开机提示音配置
