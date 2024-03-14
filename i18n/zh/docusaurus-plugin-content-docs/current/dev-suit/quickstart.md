@@ -83,8 +83,20 @@ Folotoy 八爪鱼 AI 开发套件包括以下组件：
 
 恭喜你，到这里就完成了 Folotoy 八爪鱼 AI 开发套件的组装。
 
+## Wi-Fi配置
 
-## 配置开发套件和连接测试服务器
+[设备配网及配置服务器](../manual/wifi-connect.md)
+
+### 如何进入配网模式
+* 同时按住按钮 B 和按钮 C 超过3s，LED 灯将变为蓝色呼吸闪烁状态
+* 打开手机并连接至 Folotoy- 的 Wi-Fi 热点，手机即可自动打开网络配置页面，在此进行Wi-Fi名称/Wi-Fi密码/服务器IP/服务器端口的配置
+* 进入蓝色呼吸闪烁状态之后，配置的方法与前面初次配置完全相同。
+
+扩展板上连接了 3 个按钮，在扩展板上也有标示，如图所示
+
+![ChatGPT Learning Dev](https://github.com/FoloToy/folotoy-doc/assets/1455685/cc2c77b7-2ece-4072-bb9f-867c995e22f0)
+
+<!-- ## 配置开发套件和连接测试服务器
 
 ### 初次配置
 
@@ -111,7 +123,7 @@ FoloToy 提供的测试 MQTT 服务器
 扩展板上连接了 3 个按钮，在扩展板上也有标示，如图所示
 
 ![ChatGPT Learning Dev](https://github.com/FoloToy/folotoy-doc/assets/1455685/cc2c77b7-2ece-4072-bb9f-867c995e22f0)
-
+ -->
 
 ### 开始对话
 

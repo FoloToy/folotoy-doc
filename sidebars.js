@@ -70,7 +70,7 @@ module.exports = {
     {
       type: "category",
       label: "Folotoy Manual",
-      items: ["folotoy-manual",],
+      items: ["manual/folotoy-manual", "manual/wifi-connect"],
     },
     {
       type: "doc",

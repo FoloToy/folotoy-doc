@@ -242,6 +242,10 @@ sudo docker ps
 
 <img src="https://github.com/FoloToy/folotoy-server-self-hosting/assets/1455685/6b75dab4-8f71-411f-a266-0ad43824df82" />
 
+## How to view device logs?
+
+[Firmware upgrade and FAQ](web-tool.mdx)
+
 ## How to modify the log level of the service program to DEBUG or INFO?
 
 Modify the `docker-compose.yml` configuration, and after modification, refer to the previous steps to restart the container:
@@ -285,18 +289,34 @@ Docker container timezones default to UTC. To set the timezone for your containe
   6. If you can find the device, you can try flashing it using the [esptool](./esp-tool.mdx) method.
 7. If you're still unable to find the device, please contact [us](./community.md) for further assistance.
 
+## How to enter pair mode?
+
+If it is the first time the device is powered on, it will automatically enter pairing mode
+
+Manually enter pairing mode: [Alilo G6/G6s](./toy-pcb-replacement/alilo-g6.md#how-to-enter-pair-mode), [Alilo F6/F6s](./toy-pcb-replacement/alilo-f6.md#how-to-enter-pair-mode), [Mitu C1](./toy-pcb-replacement/mitu-c1.md#how-to-enter-pair-mode), [Octopus](./dev-suit/quickstart.md#how-to-enter-pair-mode), or enter pairing mode through [AT commands](./at-command.mdx#reset-wifi-and-enter-pairing-mode).
+
+
+## How to connect to Wifi and set mqtt address？
+
+[Network configure and server configure](./manual/wifi-connect.md)
+
+## Device doesn't word?
+
+According to the color of the device lights, find the corresponding solution. [Meanings of various light colors](#what-do-lights-colors-mean)
+
 ## What do light's colors mean?
 
-Each color represents a different device status.
+Each color represents a different state of the device:
 
- Color | Device Status |
-|  ----  | ----  |
-| Steady white | Standby mode |
-| Steady green | Recording in progress |
-| Steady pink | Detected human voice in continuous conversation mode |
-| Steady red | File system mount failure / Wi-Fi initialization failure |
-| Flashing green | Waiting for server response for audio |
-| Flashing blue | Config mode |
-| Rainbow gradient | Power-on initialization / Audio playback in progress |
-| Flashing red | Low battery |
-| Flashing yellow | Unable to connect to the server |
+| Color | Device Status | Solution |
+| ---- | ---- | ---- |
+| Solid White | Standby | The device has successfully connected to the server. If the device is unable to function properly, please [check the server logs](#how-to-view-server-logs) to troubleshoot. |
+| Solid Green | Recording in progress | - |
+| Solid Pink | Continuous voice detection in conversation mode | - |
+| Solid Red | File system mount failure / WiFi initialization failure | Please try to [upgrade the firmware](./web-tool.mdx). |
+| Blinking Green | Waiting for server response for audio | If the green light blinks for a while and then returns to solid white, it indicates a server timeout. Please [check the server logs](#how-to-view-server-logs) to troubleshoot. |
+| Blinking Blue | Pairing mode | The device is in pairing mode. Please [configure the device network and server](./manual/wifi-connect.md). |
+| Rainbow Gradient | Boot initialization / Playing audio | - |
+| Blinking Red | Low battery | - |
+| Blinking Yellow | Unable to connect to the server | 1. Device server configuration error. Please reconfigure the [device server](./manual/wifi-connect.md). 2. Server error. Please [check the server logs](#how-to-view-server-logs) to troubleshoot. |
+

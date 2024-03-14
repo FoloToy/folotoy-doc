@@ -34,6 +34,17 @@ If it is the F6s model, the original motherboard has a Type-C interface. Direct 
 
 ## Wi-Fi Configure
 
+[Network configure and server configure](../manual/wifi-connect.md)
+
+
+### How to enter pair mode
+
+Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
+
+   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+
+<!-- ## Wi-Fi Configure
+
 1. Turn on the switch at the back of the toy to power it on. The blue flashing light indicates that the toy has entered pairing mode.
 
 2. Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
@@ -56,7 +67,7 @@ If it is the F6s model, the original motherboard has a Type-C interface. Direct 
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
-
+ -->
 
 ## Usage
 

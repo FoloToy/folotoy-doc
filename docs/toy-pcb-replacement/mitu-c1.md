@@ -31,7 +31,19 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 9. After connecting sockets, do not close up or install screws yet; first turn on/off switch on rabbit's tail to see if newly installed light can illuminate and slowly flash in blue color.
 10.If there is no problem, install outer casing and tighten screws to complete replacement process.
 
+
 ## Wi-Fi Configure
+
+[Network configure and server configure](../manual/wifi-connect.md)
+
+
+### How to enter pair mode
+
+Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
+
+   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
+
+<!-- ## Wi-Fi Configure
 
 1. Turn on the switch at the back of the toy to power it on. The blue flashing light indicates that the toy has entered pairing mode.
 
@@ -54,7 +66,7 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
    * Open configuration page: Once connected to FoloToy's WiFi network, it will automatically open a configuration page.
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
-   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4) -->
 
 
 ## Usage

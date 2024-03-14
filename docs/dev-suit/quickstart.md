@@ -56,24 +56,13 @@ After connecting all the components, rotate the switch on the development board 
 
 Congratulations! You have completed the assembly of the Folotoy Octopus AI Development Kit.
 
+## Wi-Fi Configure
 
-## Configuring the Development Kit and Connecting to the Test Server
-
-### Initial Configuration
-
-After the first power-on, the development kit will automatically enter the network configuration mode. At this point, using your own smartphone or computer, search for available Wi-Fi networks. You will see a wireless network starting with `FoloToy-`. Select the `FoloToy-` network, and wait for a moment. Your smartphone or computer will automatically display the configuration page. If you have connected to the `FoloToy-` network but the configuration page does not appear, you can open the browser on your smartphone or computer and directly enter http://192.168.4.1 for configuration.
-
-FoloToy provides a test MQTT server with the following details:
-
-- Address: 47.116.13.134
-- Port: 1883
-
-If you prefer to set up your own server, please refer to the server deployment instructions [here](../installation/1panel.md) and choose the appropriate solution to build your own server.
-
-![Snipaste_2023-12-14_22-50-29](https://github.com/FoloToy/folotoy-doc/assets/1455685/6aa265ed-ccce-4f18-8f06-39abe4c30dc6)
+[Network configure and server configure](../manual/wifi-connect.md)
 
 
-### Reconfiguration
+### How to enter pair mode
+
 
 If you have already performed the initial configuration and wish to reconfigure the device, you can follow these steps:
 
