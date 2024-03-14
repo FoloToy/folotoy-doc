@@ -41,13 +41,26 @@ sidebar_label: 配置按键
     at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
     ```
 
-### 配置进入连续对话模式按键
+### 切换录音模式
 
-  - 例：将 WIFI 重置按键定义为 GPIO 29 和 GPIO 30
+  - 例：按下录音按键进入录音，松开按键结束录音
 
     ```json
-    at+keys=dialogue,<GPIO>;<GPIO> // at+keys=dialogue,29;30
+      at+command=record,press
     ```
+
+  - 例：点击录音按键进入录音，录音完成后自动结束
+
+    ```json
+    at+command=record,click
+    ```
+
+  - 例：点击录音按键进入连续对话模式
+
+    ```json
+    at+command=record,continuous
+    ```
+
 ### 配置角色
 
   - 如果没有配置过，则角色 id 默认为 1

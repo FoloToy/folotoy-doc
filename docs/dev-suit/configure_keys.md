@@ -33,12 +33,24 @@ sidebar_label: Configure Keys
     at+keys=talk,<GPIO> // at+keys=talk,27
     ```
 
-### Configure WIFI reset key:
+### Switch recording mode
 
-- Example: Define WIFI reset key as GPIO 29 and GPIO 30
+- Example: press the recording button to enter recording, release the button to end recording
 
     ```json
-    at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
+    at+command=record,press
+    ```
+
+- Example: click the recording button to enter the recording, and it will automatically end after the recording is completed
+
+    ```json
+    at+command=record,click
+    ```
+    
+- Example: click the recording button to enter continuous conversation mode
+
+    ```json
+    at+command=record,continuous
     ```
 
 ### Configure enter dialogue mode key:
