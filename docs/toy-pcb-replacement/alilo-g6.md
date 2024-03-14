@@ -34,7 +34,20 @@ When purchasing the G6, make sure not to buy the wrong model. The replacement ci
 7. After plugging in all sockets, do not close the casing or install screws yet. First turn on/off switch on rabbit's tail to see if newly installed light can turn on and flash slowly in blue color.
 8. If there is no problem, install the casing and tighten screws to complete replacement process.
 
+
 ## Wi-Fi Configure
+
+[Network configure and server configure](../manual/wifi-connect.md)
+
+
+### How to enter pair mode
+
+imultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
+
+   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+
+
+<!-- ## Wi-Fi Configure
 
 1. Turn on the switch at the back of the toy to power it on. The blue flashing light indicates that the toy has entered pairing mode.
 
@@ -57,7 +70,7 @@ When purchasing the G6, make sure not to buy the wrong model. The replacement ci
    * Open configuration page: Once connected to FoloToy's WiFi network, it will automatically open a configuration page.
    * Home screen explanation: There are three buttons on the home screen - "Configure WiFi" is used for setting up WiFi connection; "Info" is for viewing hardware information; "Exit" is for exiting the configuration. See the image below.
 
-   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4) -->
 
 
 ## Usage

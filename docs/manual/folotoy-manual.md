@@ -1,5 +1,4 @@
 ---
-id: folotoy-manual
 title: FoloToy User Manual
 sidebar_label: FoloToy User Manual
 ---

@@ -38,5 +38,9 @@
   "sidebar.docs.category.Web Tool": {
     "message": "Web Tool",
     "description": "The label for category Web Tool in sidebar docs"
+  },
+  "sidebar.docs.category.Folotoy Manual": {
+    "message": "Manual",
+    "description": "The label for category Folotoy Manual in sidebar docs"
   }
 }

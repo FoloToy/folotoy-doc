@@ -35,7 +35,16 @@ sidebar_label: 火火兔 G6/G6s
 
 ## Wi-Fi配置
 
-1. 打开玩具背面的开关以供电。蓝色闪烁的灯光表示玩具已进入配对模式。
+[设备配网及配置服务器](../manual/wifi-connect.md)
+
+### 如何进入配网模式
+
+同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
+
+   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+
+
+<!-- 1. 打开玩具背面的开关以供电。蓝色闪烁的灯光表示玩具已进入配对模式。
 
 2. 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
@@ -56,7 +65,7 @@ sidebar_label: 火火兔 G6/G6s
    * 打开配置页面：一旦连接到 FoloToy 的 WiFi 网络，将自动打开一个配置页面。
    * 主屏幕说明：主屏幕上有三个按钮 - "Configure WiFi"用于设置WiFi连接；"Info"用于查看硬件信息；"Exit"用于退出配置。请参考下面的图片。
 
-   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4)
+   ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4) -->
 
 
 ## 开始对话
