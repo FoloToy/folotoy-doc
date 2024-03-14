@@ -63,6 +63,7 @@ Congratulations! You have completed the assembly of the Folotoy Octopus AI Devel
 
 ### How to enter pair mode
 
+
 If you have already performed the initial configuration and wish to reconfigure the device, you can follow these steps:
 
 1. Press and hold buttons B and C simultaneously for more than 3 seconds. The LED light will turn into a blue breathing blink state.

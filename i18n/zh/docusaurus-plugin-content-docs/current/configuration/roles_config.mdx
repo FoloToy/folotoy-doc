@@ -194,7 +194,7 @@ values={[
 
 ## 语音转文字 STT (Sound-to-Text)角色级别配置说明
 
-stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt
+stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
 
 <Tabs
 defaultValue="openai-whisper"
@@ -203,6 +203,7 @@ values={[
 { label: 'azure-stt', value: 'azure-stt', },
 { label: 'azure-whisper', value: 'azure-whisper', },
 { label: 'dify-stt', value: 'dify-stt', },
+{ label: 'aliyun-asr', value: 'aliyun-asr', },
 ]}>
 <TabItem value="openai-whisper">
 
@@ -387,11 +388,39 @@ azure-whisper 的还是预览状态，只有 North Central US 和 West Europe �
   }
    ```
 </TabItem>
+<TabItem value="aliyun-asr">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
+|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
+|  region_id    |  区域代码    |  cn-shanghai | 
+|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
+配置示例
+
+   ```yml title="roles.json"
+   {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 10,
+        "stt_type": "aliyun-asr",
+        "stt_config": {
+          "app_key": "7xxxxxxxx904N7CNG"
+        },
+        "llm_type": "openai",
+        "tts_type": "aliyun-tts"
+    }
+  }
+   ```
+</TabItem>
 </Tabs>
 
 ## AI 大语言模型 LLM (Large Language Model)角色级别配置说明
 
-llm_type 可以设置为：openai, azure-openai, dify
+llm_type 可以设置为：openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic
 
 <Tabs
 defaultValue="openai"
@@ -400,6 +429,12 @@ values={[
 { label: 'azure-openai', value: 'azure-openai', },
 { label: 'gemini', value: 'gemini', },
 { label: 'dify', value: 'dify', },
+{ label: 'qianfan', value: 'qianfan', },
+{ label: 'xiaodu', value: 'xiaodu', },
+{ label: 'moonshot', value: 'moonshot', },
+{ label: 'groq', value: 'groq', },
+{ label: 'ollama', value: 'ollama', },
+{ label: 'anthropic', value: 'anthropic', },
 ]}>
 <TabItem value="openai">
 
@@ -502,8 +537,6 @@ values={[
 </TabItem>
 <TabItem value="gemini">
 
-**注意: gemini 接口与 OpenAI 接口所有不同，需要在 role 定义中将 `send_initial_messages` 设置为 `false`**
-
 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
@@ -570,7 +603,7 @@ dify 可以自行部署 https://github.com/langgenius/dify 或者直接使用 cl
         "llm_type": "dify",
         "llm_config": {
             "api_base": "http://192.168.52.164/v1",
-            "key": 0.7
+            "key": "app-AAAAAAAAAAAAAAAAAAa"
         },
         "tts_type": "azure-tts",
         "tts_config": {
@@ -581,11 +614,204 @@ dify 可以自行部署 https://github.com/langgenius/dify 或者直接使用 cl
    ```
 
 </TabItem>
+<TabItem value="qianfan">
+
+支持百度千帆大模型平台中的大模型，点击这里查看支持列表：[对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat)，包括不限于以下大模型：
+
+- ERNIE-Bot 4.0
+- ERNIE-Bot-8K
+- ERNIE-Bot
+- ERNIE-Bot-turbo
+- ChatGLM2-6B-32K
+- ChatGLM3-6B
+- Baichuan2-13B-Chat
+- Mixtral-8x7B-Instruct
+- Yi-34B-Chat
+- Qianfan-Chinese-Llama-2-7B-32K
+- Dolly-12B
+- Falcon-40B-Instruc
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| client_id    | 创建应用后获取API Key，https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application  |  13rBTgx*****************e03XE | 
+| secret | 创建应用后获取Secret Key，https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application   |  zYxtMI***************QLerLgQ2W5e | 
+| model | [对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat) | yi_34b_chat |
+| extra_parameters | 第三方大模型推理高级参数，依据第三方大模型厂商不同而变化 | {} |
+
+**注意** 
+
+model 字段的填写填写大模型对应的模型代码，例如 `ERNIE-Bot 4.0`，打开它的[API文档](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/clntwmv7t), 可以看到请求的 URL 是 https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro ，
+那么它的模型代码是 `completions_pro`，也就是说 URL 是这样模式  https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/{model} ，那么模型代码就是 {model} 定义的字段。
+
+配置示例
+
+   ```yml title="roles.json"
+{
+      "2": {
+        "start_text": "哈哈哈哈哈，我是一个超快可爱的大小兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天",
+        "max_message_count": 5,
+        "llm_type": "qianfan",
+        "llm_config": {
+          "client_id": "your api key",
+          "secret": "your secret key"
+          "model": "completions_pro"
+        },
+        "tts_type": "azure-tts",
+        "tts_config": {
+          "voice_name": "zh-TW-HsiaoChenNeural"
+        }
+      }
+    }
+   ```
+
+</TabItem>
+<TabItem value="xiaodu">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| client_id | app client id | TESTAAAAAAAAAAAAA |
+| secret | app secret |  |
+| max_tokens | max output token count | 400 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "xiaodu",
+        "llm_config": {
+            "client_id": "TESTbbbbbbbbbbbb",
+            "secret": "TESTAAAAAAAAAAAAa",
+            "max_tokens": 800
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="moonshot">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  https://api.moonshot.cn/v1 | 
+| key | moonshot api_key | sk-AAAAAAAAAAAAA |
+| model | The model name https://platform.moonshot.cn/docs/pricing |  |
+| max_tokens | max output token count | 400 |
+| temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "moonshot",
+        "llm_config": {
+            "api_base": "https://api.moonshot.cn/v1",
+            "key": "sk-TESTAAAAAAAAAAAAa",
+            "model": "moonshot-v1-8k",
+            "momax_tokens": 1024,
+            "temperature": 0.7
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="ollama">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  http://localhost:11434 | 
+| model | The model name, such as gemma:2b, more at https://ollama.com/library |  |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "ollama",
+        "llm_config": {
+            "api_base": "http://localhost:11434",
+            "model": "gemma:7b"
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="groq">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  https://api.groq.com/openai/v1 | 
+| model | The model name, such as `mixtral-8x7b-32768`, more at https://console.groq.com/docs/models |  |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "groq",
+        "llm_config": {
+            "api_base": "https://api.groq.com/openai/v1",
+            "model": ""mixtral-8x7b-32768"
+        }
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="anthropic">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+| api_base    | api base url  |  "https://api.anthropic.com | 
+| key | api_key | sk-ant-api03-Vq-W2wQHS21qAAAAAAAAAAA |
+| model | The model name https://www.anthropic.com/api |  |
+| max_tokens | max output token count | 1024 |
+| temperature | | 0.7 |
+
+配置示例
+
+   ```yml title="roles.json"
+  {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心",
+        "llm_type": "anthropic",
+        "llm_config": {
+            "api_base": "https://api.anthropic.com",
+            "key": "sk-ant-api-TESTAAAAAAAAAAAAa",
+            "model": "claude-3-sonnet-20240229",
+            "momax_tokens": 1024,
+            "temperature": 0.7
+        }
+    }
+  }
+   ```
+</TabItem>
 </Tabs>
 
 ## 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
 
-tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts
+tts_type 可以设置为：openai-tts, azure-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
 
 <Tabs
 defaultValue="openai-tts"
@@ -594,6 +820,8 @@ values={[
 { label: 'azure-tts', value: 'azure-tts', },
 { label: 'elevenlabs', value: 'elevenlabs', },
 { label: 'edge-tts', value: 'edge-tts', },
+{ label: 'aliyun-tts', value: 'aliyun-tts', },
+{ label: 'dify-tts', value: 'dify-tts', },
 ]}>
 <TabItem value="openai-tts">
 
@@ -650,12 +878,31 @@ values={[
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-|  key    | Azure Speech Services Key, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview     |       |
-|  service_region    |  Azure Speech Services Region, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview    |       |
-|  voice_name    |  Voice Name, 点击这里查看声音列表 https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/language-support?tabs=tts    |   zh-CN-YunyangNeural    |
+| key    | Azure Speech Services Key, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview     |       |
+| service_region    |  Azure Speech Services Region, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview    |       |
+| voice_name    |  Voice Name, 点击这里查看声音列表 https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/language-support?tabs=tts    |   zh-CN-YunyangNeural    |
 | style | The voice-specific speaking style. You can express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. If the style value is missing or invalid, the entire mstts:express-as element is ignored and the service uses the default neutral speech.  | 无，如果配置了这个字段，将会使用 ssml 来生成语音 |
 | styledegree | The intensity of the speaking style. You can specify a stronger or softer style to make the speech more expressive or subdued. The range of accepted values are: 0.01 to 2 inclusive. The default value is 1, which means the predefined style intensity. The minimum unit is 0.01, which results in a slight tendency for the target style. A value of 2 results in a doubling of the default style intensity. If the style degree is missing or isn't supported for your voice, this attribute is ignored. | 默认值是1，只有设置了 style 字段才会生效 |
 | role | The speaking role-play. The voice can imitate a different age and gender, but the voice name isn't changed. For example, a male voice can raise the pitch and change the intonation to imitate a female voice, but the voice name isn't be changed. If the role is missing or isn't supported for your voice, this attribute is ignored. | 无，只有设置了 style 字段才会生效 |
+| dialect_name     | dialect name     |  voice_name 要设置为一个支持方言的值，然后才能设置方言，另外需要注意 azure 的区域是否支持方言，中文方言建议使用 eastasia 区 | 
+| prosody_rate     |   语速，可选值 ['slow', 'x-slow', 'medium', 'fast', 'x-fast'] 或者 [0, 3]   |   1   |
+| prosody_pitch     |  声调, 可选值 ['low', 'x-low', 'medium', 'high', 'x-high'] 或者 [0.5, 1,5]   | 1     |
+| prosody_volume     | 音量, 可选值 ['silent', 'x-soft', 'soft', 'medium', 'x-loud'] 或者 [0, 1.5]     |  1     |
+
+当 voice_name 设置为 `zh-CN-XiaoxiaoDialectsNeural` 时，dialect_name 可以设置为以下的方言：
+
+- 山东方言： `zh-CN-shandong`
+- 东北话： `zh-CN-liaoning`
+- 四川方言： `zh-CN-sichuan`
+- 台湾话： `zh-TW`
+- 河南方言： `zh-CN-henan`
+- 陕西方言： `zh-CN-shaanxi`
+- 闽南话： `nan-CN`
+- 安徽普通话： `zh-CN-anhui`
+- 甘肃方言： `zh-CN-gansu`
+- 湖南普通话： `zh-CN-hunan`
+- 陕西方言： `zh-CN-shanxi`
+
 
 SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice
 
@@ -779,6 +1026,69 @@ SSML 具体设置请参考 Azure 文档： https://learn.microsoft.com/en-us/azu
         }
     }
   } 
+   ```
+
+</TabItem>
+<TabItem value="aliyun-tts">
+
+:::caution
+支持阿里云平台官方模型和自己训练的个性化模型 
+:::
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
+|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
+|  region_id    |  区域代码    |  cn-shanghai | 
+|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
+|  voice_id    |  这里的配置优先级比项目设置高，如果不是自定义模型，请不要添加这个配置    |  | 
+|  volume    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
+|  speech_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
+|  pitch_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置   |  | 
+配置示例
+
+   ```yml title="roles.json"
+   {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "max_message_count": 10,
+        "stt_type": "aliyun-asr",
+        "stt_config": {
+          "app_key": "Lxxxxxxxx904N7XJN",
+          "voice_id": "voice-fbe9a71"
+        },
+        "llm_type": "openai",
+        "tts_type": "aliyun-tts"
+    }
+  }
+   ```
+</TabItem>
+<TabItem value="dify-tts">
+
+可配置参数列表
+
+| 参数名称 | 参数说明 | 默认值 |
+| :--     | :--     |  :--     |
+|  api_base    | api base url  | https://api.dify.ai/v1 | 
+|  key    | app key     | app-AAAA      |
+
+配置示例
+
+   ```yml title="roles.json"
+    {
+    "1": {  
+        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
+        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "tts_type": "dify-tts",
+        "tts_config": {
+          "api_base": "https://api.dify.ai/v1",
+          "key": "app-AAAAA"
+        }
+    }
+  }
    ```
 
 </TabItem>

@@ -49,14 +49,6 @@ sidebar_label: AT 指令
     at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
     ```
 
-### 配置进入连续对话模式按键
-
-  - 例：将进入连续对话模式按键定义为 GPIO 29 和 GPIO 30
-
-    ```json
-    at+keys=dialogue,<GPIO>;<GPIO> // at+keys=dialogue,29;30
-    ```
-
 ### 重启配置（修改配置文件后，重启才能生效）
 
     at+reboot
@@ -173,3 +165,30 @@ sidebar_label: AT 指令
 
     at+config=common,voltage_alarm,<value> //配置预警电压，默认3.7
 
+### 声音配置
+
+    at+voice=test // 进入voicetest模式，该模式录音时可打印音量大小日志
+    at+voice=autoconfig // 进入音量阈值自动配置模式，进入该模式后可在5s后自动配置音量阈值
+    at+voice=normal // 退出voicetest或音量阈值自动配置模式
+
+### 配置耳灯亮度
+
+    at+config=common,led_brightness,<value> // 设置耳灯的最大亮度，取值范围由小到大 0-255
+
+  - 例：修改耳灯亮度为 100
+
+  ```json
+  at+config=common,led_brightness,100
+  ```
+
+### 音量配置
+
+    at+config=common,volume,<value> // 设置音量大小，60dB，取值范围由小到大 50dB-80dB
+    at+command=volume_control_type,knob // 设置为通过旋钮控制音量
+    at+command=volume_control_type,at // 设置为通过at指令或者mqtt指令控制音量
+
+- 例：修改音量大小为 50dB
+
+  ```json
+  at+config=common,volume,50
+  ```

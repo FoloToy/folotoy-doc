@@ -18,7 +18,7 @@ sidebar_label: 火火兔 G6/G6s
 - 直径为2.5毫米，长度超过5厘米的十字螺丝刀。
 - 一把美工刀，用于去除PCB插座上的粘合剂。
 - 可在主要电商网站购买到功能正常的火火兔 G6。
-- FoloToy生产的G6替换电路板可在以下链接购买：https://gf.bilibili.com/item/detail/1104222005。
+- FoloToy生产的G6替换电路板可在以下链接购买：https://gf.bilibili.com/item/detail/1104222005 。
 
 <img src="https://user-images.githubusercontent.com/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
 

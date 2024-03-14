@@ -22,6 +22,10 @@ sidebar_label: Docker
   ```bash
   cd ~
   mkdir folotoy-server
+  mkdir folotoy-server/config
+
+  # 或者
+  #mkdir -p folotoy-server/config
   ```
 
   接下来的操作都在 `folotoy-server` 目录中进行
@@ -29,128 +33,144 @@ sidebar_label: Docker
 2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中, 请注意修改 ip ，key 等为自己的:
 
    ```yml title="docker-compose.yml"
-  version: '3'
-  
-  services:
-    emqx:
-      image: emqx/emqx:latest
-      restart: always
-      ports:
-        - "1883:1883/tcp"
-        - "18083:18083/tcp"
-        - "8083:8083/tcp"
-      volumes:
-        - emqx-data:/opt/emqx/data
-        - emqx-log:/opt/emqx/log
-    nginx:
-      image: nginx:latest
-      restart: always
-      ports:
-        - "8082:80/tcp"
-      volumes:
-        - ./audio:/usr/share/nginx/html
-    folotoy:
-      image: lewangdev/folotoy-server:latest
-      restart: always
-      depends_on:
-        emqx:
-            condition: service_started
-        nginx:
-            condition: service_started
-      ports:
-        - "8085:8085/udp"
-      volumes:
-        - ./audio:/audio
-        - ./roles.json:/roles.json
-      environment:
-        TZ: Asia/Shanghai
-  
-        LOG_LEVEL: DEBUG
-  
-        ROLES_FILE_PATH: /roles.json
-  
-        # Default STT(Sound To Text) type
-        # Options: [openai-whisper, azure-whisper, azure-stt]
-        STT_TYPE: openai-whisper
-  
-        # OpenAI Whisper
-        #OPENAI_WHISPER_API_BASE: https://one-api.xxxx.cc/v1
-        OPENAI_WHISPER_KEY: sk-Gnkw1ZnG5rUWbzVl316dddddddddddddddddd
-        OPENAI_WHISPER_MODEL: whisper-1
-        
-        # Azure Whisper
-        AZURE_WHISPER_API_BASE: https://xxxxx.openai.azure.com
-        AZURE_WHISPER_KEY: 9afbef65bcf6487eeeeeeeeeeeeeeeeeee
-        AZURE_WHISPER_DEPLOYMENT_NAME: whisper
-        AZURE_WHISPER_API_VERSION: 2023-09-01-preview
-  
-        # Azure STT
-        AZURE_STT_KEY: 3eba91b6143f4d3eeeeeeeeeeeeeeeeeeeeeeeee
-        AZURE_STT_SERVICE_REGION: eastasia
-  
-        # Default LLM(Large Language Model) type
-        # Options: [openai, azure-openai]
-        LLM_TYPE: openai
-  
-        # OpenAI
-        #OPENAI_OPENAI_API_BASE: https://one-api.xxx.cc/v1
-        OPENAI_OPENAI_KEY: sk-5N8F5VXsa7oOZI8Q874601110AAAAAAAAAAAAAAAAAAAAAA
-  
-        #Azure OpenAI
-        AZURE_OPENAI_KEY: ef0f2781b5a24b15baaaaaaaaaaaaaaaaaaaaaaa
-        AZURE_OPENAI_ENDPOINT: https://xxxxx.openai.azure.com/
-        AZURE_OPENAI_API_VERSION: "2023-05-15"
+version: '3'
+volumes:
+  emqx-etc:
+  emqx-data:
+  emqx-log:
+services:
+  emqx:
+    image: emqx/emqx:latest
+    restart: always
+    ports:
+      - "1883:1883/tcp"
+      - "18083:18083/tcp"
+      - "8083:8083/tcp"
+    volumes:
+      - emqx-etc:/opt/emqx/etc    
+      - emqx-data:/opt/emqx/data
+      - emqx-log:/opt/emqx/log
+    environment:
+      EMQX_NODE_NAME: emqx@node1.emqx.io
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "8082:80/tcp"
+    volumes:
+      - ./audio:/usr/share/nginx/html
+  folotoy:
+    image: lewangdev/folotoy-server:latest
+    restart: always
+    ports:
+      - "8085:8085/udp"
+    volumes:
+      - ./audio:/audio
+      - ./config:/config
+    environment:
+      TZ: Asia/Shanghai
 
-        #LLM_TYPE=dify
-        DIFY_API_BASE: http://192.168.52.164/v1
-        DIFY_KEY: app-zm56c2HRiIWRXsR67jfnrmCE
-  
-        #Baidu YIYAN API
-        #LLM_TYPE: yiyan
-        YIYAN_CLIENT_ID: xxxxxxxxxxxxxxxxxx
-        YIYAN_SECRET: xxxxxxxxxxxxxxxxxxxxx
-  
-        # If your elevenlabs is a free account, keep 2 here
-        VOICE_EXECUTOR_MAX_WORKERS: 2
-  
-        # Default TTS(Text to Sound) type
-        # Options: [edge-tts, azure-tts, elevenlabs, openai-tts]
-        # edge-tts is Free but slow
-        # If you change TTS_TYPE to other option, please modify roles.json
-        # https://docs.folotoy.com/zh/docs/configuration/roles_config
-        TTS_TYPE: edge-tts
-  
-        # Azure TTS
-        AZURE_TTS_KEY: 3eba91b6143f4d399edeeeeeeeeeeeeeeeeeeeee
-        AZURE_TTS_SERVICE_REGION: eastasia
-  
-        # elevenlabs
-        ELEVENLABS_TTS_KEY: a920b73991e68d5c9c9aaaaaaaaaaaaaaaa
-        ELEVENLABS_TTS_MODEL: eleven_multilingual_v2
-  
-        # OpenAI TTS
-        #OPENAI_TTS_API_BASE: https://one-api.xxx.cc/v1
-        OPENAI_TTS_KEY: sk-16XnP3HLHWho21oO2m0AAAAAAAAAAAAAAAAAAAAAA
-        OPENAI_TTS_MODEL: tts-1  
-  
-        AUDIO_DOWNLOAD_URL: http://<your_ip>:8082
-        AUDIO_SAVE_PATH: /audio
-  
-        # MQTT Broker
-        MQTT_BROKER_HOST: emqx
-        MQTT_BROKER_PORT: 1883
-        MQTT_CLIENT_ID: folotoy
-        MQTT_USERNAME: folotoy
-        MQTT_PASSWORD: folotoy
-  
-        SPEECH_UDP_SERVER_HOST: <your_ip>
-        SPEECH_UDP_SERVER_PORT: 8085
-  
-  volumes:
-    emqx-data:
-    emqx-log:
+      LOG_LEVEL: DEBUG
+
+      ROLES_FILE_PATH: /config/roles.json
+
+      # Default STT(Sound To Text) type
+      # Options: [openai-whisper, azure-whisper, azure-stt, dify-stt, aliyun-asr]
+      STT_TYPE: openai-whisper
+
+      # OpenAI Whisper
+      #OPENAI_WHISPER_API_BASE: https://one-api.xxxx.com/v1
+      OPENAI_WHISPER_KEY: sk-Gnkw1ZnG5rUWbzVl316dddddddddddddddddd
+      OPENAI_WHISPER_MODEL: whisper-1
+      
+      # Azure Whisper
+      AZURE_WHISPER_API_BASE: https://xxxxx.openai.azure.com
+      AZURE_WHISPER_KEY: 9afbef65bcf6487eeeeeeeeeeeeeeeeeee
+      AZURE_WHISPER_DEPLOYMENT_NAME: whisper
+      AZURE_WHISPER_API_VERSION: 2023-09-01-preview
+
+      # Azure STT
+      AZURE_STT_KEY: 3eba91b6143f4d3eeeeeeeeeeeeeeeeeeeeeeeee
+      AZURE_STT_SERVICE_REGION: eastasia
+
+      # Dify STT
+      DIFY_STT_API_BASE: https://api.dify.ai/v1
+      DIFY_STT_KEY: app-xxxxxxxxxxxxxxxxxxxxx
+      
+      # Aliyun ASR
+      ALIYUN_ASR_ACCESS_KEY_ID: LTxxxxxxxxxxxxxxxxxxxxx
+      ALIYUN_ASR_ACCESS_KEY_SECRET: 3zWkHVxxxxxxxxxxxxxxxxxxxxx
+      ALIYUN_ASR_APP_KEY: Ltamxxxxxxxxxxxxxxxxxxxxx
+
+      # Default LLM(Large Language Model) type
+      # Options: [openai, azure-openai, gemini, dify, qianfan]
+      LLM_TYPE: openai
+
+      # OpenAI
+      #OPENAI_OPENAI_API_BASE: https://one-api.xxx.com/v1
+      #OPENAI_OPENAI_MODEL: gpt-3.5-turbo
+      OPENAI_OPENAI_KEY: sk-5N8F5VXsa7oOZI8Q874601110AAAAAAAAAAAAAAAAAAAAAA
+
+      #Azure OpenAI
+      AZURE_OPENAI_KEY: ef0f2781b5a24b15baaaaaaaaaaaaaaaaaaaaaaa
+      AZURE_OPENAI_ENDPOINT: https://xxxxx.openai.azure.com/
+      AZURE_OPENAI_API_VERSION: "2023-05-15"
+      #AZURE_OPENAI_MODEL: gpt-35-turbo
+
+      #DIFY
+      DIFY_API_BASE: https://api.dify.ai/v1
+      DIFY_KEY: app-5YGbxxxxxxxxxxxxxxxxxxxxx
+      
+      #Xiaodu API
+      XIAODU_CLIENT_ID: xxxxxxxxxxxxxxxxxx
+      XIAODU_SECRET: xxxxxxxxxxxxxxxxxxxxx
+
+      # GEMINI
+      GEMINI_KEY: AIzaSyxxxxxxxxxxxxxxxxxxk
+      
+      # Qianfan
+      QIANFAN_CLIENT_ID: 13rBTgxxxxxxxxxxxxxxxxxx
+      QIANFAN_SECRET: zYxtMIQLexxxxxxxxxxxxxxxxxx
+
+      # If your elevenlabs is a free account, keep 2 here
+      VOICE_EXECUTOR_MAX_WORKERS: 2
+
+      # Default TTS(Text to Sound) type
+      # Options: [openai-tts, azure-tts, elevenlabs, edge-tts, aliyun-tts]
+      # edge-tts is Free but slow
+      TTS_TYPE: edge-tts
+
+      # Azure TTS
+      AZURE_TTS_KEY: 3eba91b6143f4d399edeeeeeeeeeeeeeeeeeeeee
+      AZURE_TTS_SERVICE_REGION: eastasia
+
+      # elevenlabs
+      ELEVENLABS_TTS_KEY: a920b73991e68d5c9c9aaaaaaaaaaaaaaaa
+      ELEVENLABS_TTS_MODEL: eleven_multilingual_v2
+
+      # OpenAI TTS
+      OPENAI_TTS_KEY: sk-16XnP3HLHWho21oO2m0AAAAAAAAAAAAAAAAAAAAAA
+      OPENAI_TTS_MODEL: tts-1  
+
+      # Aliyun TTS
+      ALIYUN_TTS_ACCESS_KEY_ID: LTAI5t91NSxxxxxxxxxxxxxxxxxxxxx
+      ALIYUN_TTS_ACCESS_KEY_SECRET: 3zWkHVxxxxxxxxxxxxxxxxxxxxx
+      ALIYUN_TTS_APP_KEY: Ltamxxxxxxxxxxxxx
+
+      AUDIO_DOWNLOAD_URL: http://your_vps_ip:8082
+      AUDIO_SAVE_PATH: /audio
+
+      # MQTT Broker
+      MQTT_BROKER_HOST: emqx
+      MQTT_BROKER_PORT: 1883
+      MQTT_CLIENT_ID: folotoy
+      MQTT_USERNAME: folotoy
+      MQTT_PASSWORD: folotoy
+
+      SPEECH_UDP_SERVER_HOST: your_vps_ip
+      SPEECH_UDP_SERVER_PORT: 8085
    ```
-3. 创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
+3. 在 config 目录下创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
 
    ```yml title="roles.json"
    {

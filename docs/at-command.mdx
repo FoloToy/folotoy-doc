@@ -54,13 +54,6 @@ sidebar_label: AT Command
     at+keys=wifi_rst,<GPIO>;<GPIO> // at+keys=wifi_rst,29;30
     ```
 
-### Configure enter dialogue mode key:
-
-- Example: Define enter dialogue mode key as GPIO 29 and GPIO 30
-
-    ```
-    at+keys=dialogue,<GPIO>;<GPIO> // at+keys=dialogue,29;30
-    ```
 
 ### Reboot configuration (changes take effect after reboot):
 
@@ -175,3 +168,32 @@ sidebar_label: AT Command
 ### Voltage alarm configuration
 
     at+config=common,voltage_alarm,<value> // setting voltage alarm, default 3.7
+
+### Voice Config
+
+    at+voice=test // enter voicetest mode, which can print volume logs during recording
+    at+voice=autoconfig // enter the volume threshold automatic configuration mode, which can automatically configure the volume threshold after 5 seconds
+    at+voice=normal // exit voicetest or volume threshold automatic configuration mode
+
+### Configure Earlight Brightness
+
+    // Sets the maximum brightness of the earlight, with values ranging from 0 to 255
+    at+config=common,led_brightness,<value>
+
+- Example: Set earlight brightness to 100
+
+    ```json
+    at+config=common,led_brightness,100
+    ```
+
+### Volume Config
+
+    at+config=common,volume,<value> // Set the volume level, default to 60dB, with a range of values ranging from 50dB to 80dB
+    at+command=volume_control_type,knob // Set to control volume through a knob
+    at+command=volume_control_type,at // Set to control volume through at command or mqtt command
+
+- Example: Changing the volume level to 50dB
+
+  ```json
+  at+config=common,volume,50dB
+  ```
