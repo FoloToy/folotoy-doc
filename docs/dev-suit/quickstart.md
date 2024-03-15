@@ -93,19 +93,19 @@ To start a conversation, follow these steps:
 
 * [DIY a ChatGPT Voice Conversation Robot](https://www.bilibili.com/video/BV12z4y1N7ne)
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=577930846&bvid=BV12z4y1N7ne&cid=1320023873&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=577930846&bvid=BV12z4y1N7ne&cid=1320023873&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 * [DIY a ChatGPT Globe](https://www.bilibili.com/video/BV1WC4y1E7rC)
 
-<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=748378781&bvid=BV1WC4y1E7rC&cid=1334184922&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=748378781&bvid=BV1WC4y1E7rC&cid=1334184922&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 * [Create a Thinking Hardcore Peppa Pig with a 3D Printer](https://www.bilibili.com/video/BV1Tu4y1L7BJ)
 
-<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=919030114&bvid=BV1Tu4y1L7BJ&cid=1348458910&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=919030114&bvid=BV1Tu4y1L7BJ&cid=1348458910&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 * [Santa Claus Can Use ChatGPT](https://www.bilibili.com/video/BV15N4y147Fm)
 
-<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=880093245&bvid=BV15N4y147Fm&cid=1373634475&p=1autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=880093245&bvid=BV15N4y147Fm&cid=1373634475&p=1autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ### Watch on YouTube

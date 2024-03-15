@@ -5,7 +5,7 @@ sidebar_label: 火火兔 G6/G6s
 
 本文提供了火火兔 G6/G6s PCB更换的必要步骤。如果您不打算阅读下面的文档，也可以参考下面的视频。
 
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/hR7V1izzeZw?si=T3cY8y4Oy2Bxkg0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/hR7V1izzeZw?si=T3cY8y4Oy2Bxkg0H" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## 准备

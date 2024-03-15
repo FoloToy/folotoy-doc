@@ -7,4 +7,4 @@ To manage your docker installation of FoloToy Server you could use the open-sour
 
 ## Installation Video
 
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/89paeh35qBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/89paeh35qBA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -6,7 +6,7 @@ sidebar_label: Alilo G6/G6s
 This document provides the necessary steps for PCB replacement of Alilo G6/G6s. If you don't plan to read the document below, you can also refer to the video below.
 
 
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/hR7V1izzeZw?si=T3cY8y4Oy2Bxkg0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/hR7V1izzeZw?si=T3cY8y4Oy2Bxkg0H" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## Requirements

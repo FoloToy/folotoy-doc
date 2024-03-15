@@ -1,6 +1,6 @@
 ---
-title: 成品 FoloToy 使用说明书
-sidebar_label: 成品 FoloToy 使用说明书
+title:  仙人掌使用说明书
+sidebar_label: 仙人掌使用说明书
 ---
 
 ## 视频指引
@@ -17,7 +17,7 @@ sidebar_label: 成品 FoloToy 使用说明书
   border="0"
   frameBorder="no"
   framespacing="0"
-   allowFullScreen={true}
+  allowFullScreen={true}
 >
   {" "}
 </iframe>
@@ -30,21 +30,15 @@ sidebar_label: 成品 FoloToy 使用说明书
 
 ### 1. 连接网络
 
-:::caution
-成品火火兔已经预设好了体验服务器地址，仅需连接上网络，不需要额外配置服务器地址
-:::
-
 [设备配网及配置服务器](./wifi-connect.md)
 
-
-<!-- ### 1. 打开玩具背面的开关以供电。耳朵处于蓝色闪烁的灯光表示玩具已进入配对模式。如果没有自动进入配对模式，参考“常见问题-火火兔如何进入配对模式”
-
-### 2. 连接到玩具的热点 -->
-
+:::caution
+仙人掌已经预设好了体验服务器地址，仅需连接上网络，不需要额外配置服务器地址
+:::
 
 ### 2. 开始对话
 
-- 在配置完成网络并且连接上服务器之后，点按中间大圆按键进行对话，停止说话后，火火兔会发出一个提示音表明录音结束。
+- 在配置完成网络并且连接上服务器之后，点按中间大圆按键进行对话，停止说话后，会发出一个提示音表明录音结束。
 
 ### 3. 切换角色
 
@@ -63,8 +57,4 @@ sidebar_label: 成品 FoloToy 使用说明书
 <img src="https://github.com/FoloToy/folotoy-doc/assets/41461127/9ab22432-da85-4763-a8d3-4fe74e3265e5" />
 
 
-
-## 常见问题排查
-
-[各种灯的颜色代表了什么意思？](../faq.md#各种灯的颜色代表了什么意思)
 
