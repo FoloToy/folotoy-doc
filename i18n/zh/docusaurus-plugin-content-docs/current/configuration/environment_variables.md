@@ -25,7 +25,7 @@ FoloToy 服务器接受以下环境变量以进行运行时配置：
 | **ALIYUN_ASR_ACCESS_KEY_ID**    | aliyun access key id     |   获取token请参考：https://help.aliyun.com/document_detail/450514.html   |
 | **ALIYUN_ASR_ACCESS_KEY_SECRET**    | aliyun access secret key     |  获取token请参考： https://help.aliyun.com/document_detail/450514.html  |
 | **ALIYUN_ASR_APP_KEY**    | aliyun app key      |   获取 app key 请参考：https://help.aliyun.com/document_detail/72214.html   |
-| **LLM_TYPE**  |   Large Language Model Type: openai, azure-openai  |       openai               |
+| **LLM_TYPE**  |   Large Language Model Type: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic  |       openai               |
 | **OPENAI_OPENAI_API_BASE**  |  OpenAI API Base Url        | https://api.openai.com/v1
 | **OPENAI_OPENAI_KEY**          |  OpenAI API Key    |     sk-AAAAAAAA      |
 | **OPENAI_OPENAI_MODEL**          |  OpenAI Model     |     gpt-3.5-turbo      |
@@ -40,8 +40,20 @@ FoloToy 服务器接受以下环境变量以进行运行时配置：
 | **QIANFAN_CLIENT_ID**  |  Qianfan API Key        | 13rBTgx*****************e03XE
 | **QIANFAN_SECRET**          |  Qianfan Secret Key Key    |     zYxtMI***************QLerLgQ2W5e      |
 | **QIANFAN_MODEL**          |  Qianfan Model Key    |     yi_34b_chat      |
+| **MOONSHOT_API_BASE** | https://platform.moonshot.cn/ | https://api.moonshot.cn/v1 |
+| **MOONSHOT_KEY** |  | sk-xxxxx |
+| **MOONSHOT_MODEL** |  | moonshot-v1-8k |
+| **OLLAMA_API_BASE** | https://ollama.com | http://localhost:11434 |
+| **OLLAMA_MODEL** |  | gemma:2b |
+| **GROQ_API_BASE** | Groq api base | https://api.groq.com/openai/v1 |
+| **GROQ_MODEL** | Groq model | mixtral-8x7b-32768 |
+| **GROQ_KEY** | Groq api key |  |
+| **ANTHROPIC_API_BASE** |  | https://api.anthropic.com |
+| **ANTHROPIC_KEY** |  | sk-ant-api03-xx |
+| **ANTHROPIC_MODEL** |  | claude-3-sonnet-20240229 |
+| **ANTHROPIC_MAX_TOKENS** |  | 1024  |
 | **VOICE_EXECUTOR_MAX_WORKERS**     |   Voice task threadpool max size | 2 |
-| **TTS_TYPE** |      文转声音引擎类别: openai-tts, azure-tts, elevenlabs, edge-tts        |     edge-tts          |
+| **TTS_TYPE** |      文转声音引擎类别: openai-tts, azure-tts, azure-openai-tts, aliyun-tts, elevenlabs, edge-tts        |     edge-tts          |
 | **AZURE_TTS_KEY** |  Azure Speech Services Key            |               |
 | **AZURE_TTS_SERVICE_REGION**      |  Azure Speech Services Region              |          |
 | **ELEVENLABS_TTS_KEY** |   elevenlabs.io API Key           |          |
@@ -54,6 +66,11 @@ FoloToy 服务器接受以下环境变量以进行运行时配置：
 | **ALIYUN_TTS_APP_KEY**    | aliyun app key      |   获取 app key 请参考：https://help.aliyun.com/document_detail/72214.html   |
 | **DIFY_TTS_API_BASE** |  Dify Base Url            |    https://api.dify.ai/v1           |
 | **DIFY_TTS_KEY**      |  Dify App key              |          |
+| **AZURE_OPENAI_TTS_API_BASE**      |  |    https://xxx.openai.azure.com/      |
+| **AZURE_OPENAI_TTS_API_VERSION**      |  |    2024-02-15-preview      |
+| **AZURE_OPENAI_TTS_DEPLOYMENT_NAME**      |  |    tts      |
+| **AZURE_OPENAI_TTS_KEY**      | https://learn.microsoft.com/en-us/azure/ai-services/openai/text-to-speech-quickstart?tabs=command-line#rest-api  |         |
+| **AZURE_OPENAI_TTS_MODEL**      |  |   tts-1       |
 | **AUDIO_DOWNLOAD_URL**    |  录音和生成的语音的下载目录        |       |
 | **AUDIO_SAVE_PATH**    |     录音和生成的语言的存放目录     |     |
 | **MQTT_BROKER_HOST**    |    MQTT Broker Host      |     |
