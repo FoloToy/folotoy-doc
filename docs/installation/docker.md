@@ -17,9 +17,9 @@ This setup is recommended if you are running FoloToy Server **on your home netwo
 
 ## Instructions
 
-1. Create a file called `docker-compose.yml` with the following content:
+1. Create a file called `docker-compose.yml` with the following content，the newest version can be found here [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml):
 
-   ```yml title="docker-compose.yml"
+```yml title="docker-compose.yml"
 version: '3'
 volumes:
   emqx-etc:

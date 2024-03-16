@@ -30,9 +30,9 @@ sidebar_label: Docker
 
   接下来的操作都在 `folotoy-server` 目录中进行
 
-2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中, 请注意修改 ip ，key 等为自己的:
+2. 创建一个 `docker-compose.yml` 文件，并且把以下内容保存到文件中, 请注意修改 ip ，key 等为自己的，最新版在这里 [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)::
 
-   ```yml title="docker-compose.yml"
+```yml title="docker-compose.yml"
 version: '3'
 volumes:
   emqx-etc:
@@ -172,7 +172,7 @@ services:
    ```
 3. 在 config 目录下创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
 
-   ```yml title="roles.json"
+```yml title="roles.json"
    {
   "1": {
     "model": "gpt-3.5-turbo",
@@ -267,7 +267,7 @@ services:
   }
 }
 
-   ```
+```
 
 3. 使用`docker compose up`命令启动Docker容器。要在后台运行容器，请添加`-d`标志：
 
