@@ -124,10 +124,12 @@ sidebar_label: AT 指令
 
 ### 修改配置中连续对话的声音阈值
 
-  - 例：修改声音阈值为 100
+    at+config=common,voice,<value> // at+config=common,voice, 默认60dB，取值范围 50dB-80dB
+
+  - 例：修改声音阈值为 60dB
 
     ```json
-    at+config=common,voice,<threshold> // at+config=common,voice, 100
+    at+config=common,voice,60
     ```
 
 ### 修改设备等待服务器回复的超时时长
@@ -184,12 +186,12 @@ sidebar_label: AT 指令
 
 ### 音量配置
 
-    at+config=common,volume,<value> // 设置音量大小，60dB，取值范围由小到大 50dB-80dB
+    at+config=common,volume,<value> // 设置音量大小，默认100，取值范围 0-100
     at+command=volume_control_type,knob // 设置为通过旋钮控制音量
     at+command=volume_control_type,at // 设置为通过at指令或者mqtt指令控制音量
 
-- 例：修改音量大小为 50dB
+- 例：修改音量大小为 100
 
   ```json
-  at+config=common,volume,50
+  at+config=common,volume,100
   ```
