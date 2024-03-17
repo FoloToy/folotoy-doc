@@ -132,10 +132,12 @@ sidebar_label: AT Command
 
 ### Modify voice threshold in continuous dialogue mode:
 
-- Example: Modify voice threshold to 100
+    at+config=common,voice,<threshold> // default to 60dB, with a range of values ranging from 50dB to 80dB
+
+- Example: Modify voice threshold to 60dB
 
     ```
-    at+config=common,voice,<threshold> // at+config=common,voice,100
+    at+config=common,voice,60
     ```
 ### Modify the timeout for waiting the server response
 
@@ -190,12 +192,12 @@ sidebar_label: AT Command
 
 ### Volume Config
 
-    at+config=common,volume,<value> // Set the volume level, default to 60dB, with a range of values ranging from 50dB to 80dB
+    at+config=common,volume,<value> // Set the volume level, default to 100, with a range of values ranging from 0 to 100
     at+command=volume_control_type,knob // Set to control volume through a knob
     at+command=volume_control_type,at // Set to control volume through at command or mqtt command
 
-- Example: Changing the volume level to 50dB
+- Example: Changing the volume level to 100
 
   ```json
-  at+config=common,volume,50dB
+  at+config=common,volume,100
   ```
