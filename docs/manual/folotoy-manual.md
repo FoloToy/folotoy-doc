@@ -15,9 +15,9 @@ sidebar_label: FoloToy User Manual
   src="//player.bilibili.com/player.html?aid=282570656&bvid=BV1Hc41117my&cid=1376386243&p=1"
   scrolling="no"
   border="0"
-  frameborder="no"
+  frameBorder="no"
   framespacing="0"
-  allowfullscreen="true"
+  allowFullScreen={true}
 >
   {" "}
 </iframe>

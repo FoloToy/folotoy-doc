@@ -7,4 +7,4 @@ sidebar_label: 1Panel(强烈推荐)
 
 ## 视频教程
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=450359425&bvid=BV13j411v7Bb&cid=1313086032&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=450359425&bvid=BV13j411v7Bb&cid=1313086032&p=1" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>

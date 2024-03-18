@@ -6,7 +6,7 @@ sidebar_label: Mitu C1
 This document provides the necessary steps for PCB replacement of Mitu C1. If you don't plan to read the document below, you can also refer to the video below.
 
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## Requirements
