@@ -18,9 +18,9 @@ title: EMQX 的高级安装说明
 
 ### 玩具和 folotoy-server 身份验证
 
-- 从侧边栏`访问控制` > `身份验证`创建一个基于密码的数据库
-- 从侧边栏`访问控制` > `身份验证` > `你创建的数据库` > `用户管理`创建一个新的**超级用户**（用户名和密码应该是在docker-compose.yml中定义的（MQTT_USERNAME和MQTT_PASSWORD）），推荐使用用户名为`folotoy`
-- 从侧边栏`访问控制` > `身份验证` > `你创建的数据库` > `用户管理`创建一个新用户（用户名和密码可以在使用 Web 串口工具连接设备后，在日志中找到：https://tool.folotoy.com/index>Console），或者在贴有二维码的包装上找到 sn 和 key：
+- 从侧边栏`客户端认证` > `身份验证`创建一个基于密码的数据库
+- 从侧边栏`客户端认证` > `身份验证` > `你创建的数据库` > `用户管理`创建一个新的**超级用户**（用户名和密码应该是在docker-compose.yml中定义的（MQTT_USERNAME和MQTT_PASSWORD）），推荐使用用户名为`folotoy`
+- 从侧边栏`客户端认证` > `身份验证` > `你创建的数据库` > `用户管理`创建一个新用户（用户名和密码可以在使用 Web 串口工具连接设备后，在日志中找到：https://tool.folotoy.com/index>Console），或者在贴有二维码的包装上找到 sn 和 key：
    - sn 将作为用户名
    - key 将作为密码
 - 如果您想要使用集成 MQTT，还需要创建一个名为 `integration` 的用户
