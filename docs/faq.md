@@ -300,7 +300,7 @@ Manually enter pairing mode: [Alilo G6/G6s](./toy-pcb-replacement/alilo-g6.md#ho
 
 [Network configure and server configure](./manual/wifi-connect.md)
 
-## Device doesn't word?
+## Device doesn't work?
 
 According to the color of the device lights, find the corresponding solution. [Meanings of various light colors](#what-do-lights-colors-mean)
 

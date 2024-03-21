@@ -69,7 +69,7 @@ Simultaneously press and hold the previous/next button for more than 5 seconds t
    ![config](https://github.com/FoloToy/folotoy-tool/assets/1455685/3cf6d0ac-9504-40ec-94c1-54a09a990fd4) -->
 
 
-## Usage
+## Starting a Conversation
 
 After assembling the toy, completing the network configuration, and connecting to the server, hold down the designated recording button to start a conversation. Release it to end the conversation. The other small buttons are for switching characters. Clicking on them will activate the character switch. The numerical values on these character buttons correspond to the keys in roles.json file.
 
