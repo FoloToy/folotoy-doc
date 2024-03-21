@@ -1,6 +1,6 @@
 ---
-title:  仙人掌使用说明书
-sidebar_label: 仙人掌使用说明书
+title:  Cactus User Manual
+sidebar_label: Cactus User Manual
 ---
 
 <!-- ## 视频指引
@@ -26,58 +26,54 @@ sidebar_label: 仙人掌使用说明书
 
 - [仙人掌 AI 大模型对话玩具](https://www.youtube.com/watch?v=oXxzM-v_f30) -->
 
-## 使用方法
+## 1. Network Configuration
 
-### 1. 连接网络
-
-[设备配网及配置服务器](./wifi-connect.md)
+[Network configure and server configure](./wifi-connect.md)
 
 :::caution
-仙人掌已经预设好了体验服务器地址，仅需连接上网络，不需要额外配置服务器地址
+The Cactus server is already configured. Just connect to the network and you're ready to go!
 :::
+
+### How to enter pair mode
+
+- Press and hold the "Switch Role" button until the cactus prompts "请配置网络"
 
 <!-- ### 1. 打开玩具背面的开关以供电。耳朵处于蓝色闪烁的灯光表示玩具已进入配对模式。如果没有自动进入配对模式，参考“常见问题-火火兔如何进入配对模式”
 
 ### 2. 连接到玩具的热点 -->
 
 
-### 2. 开始对话
+## 2. Start a conversation
 
-- 在配置完成网络并且连接上服务器之后，长按“对话”键进行对话，停止说话后，仙人掌会发出一个提示音表明录音结束。
+- Once the network configuration is complete and the server is connected, press and hold the "Conversation" button to start the conversation. After you stop speaking, the cactus will emit a prompt sound to indicate that the recording is over.
 
-### 3. 切换角色
+## 3. Switch roles
 
-- 点击“切换角色”键，点击后切换角色生效。
+- Click the "Switch Role" button to switch to different cactus roles. Each role has a different personality and ability.
 
-- 三个角色分别对应的是：
+- Here is an introduction to the three roles:
 
   1. 你好，我是搞笑仙人掌，和我聊聊吧？
   2. 你好，我是模仿仙人掌，和我聊聊吧？
   3. 你好，我是魔力仙人掌，和我聊聊吧？
 
-<img src="https://github.com/FoloToy/folotoy-doc/assets/41461127/78895ccf-9812-48fe-b534-636420bcd0b5" />
+<img src="https://github.com/FoloToy/folotoy-doc/assets/41461127/dae8d4e1-54e6-485f-b0ff-62e88668bb23" />
 
 
 
-##  如何进入配网模式
 
-- 长按“切换角色”键，直到仙人掌发出“请配置网络”提示音
 
 <!-- <img src="https://github.com/FoloToy/folotoy-doc/assets/41461127/ae8bed1b-9a7e-4aff-866e-188a3a77b231" /> -->
 
- ## 常见问题排查
+ ## Cactus Troubleshooting
 
-| 功能 | 文本（中文） |
+| Feature | Prompt（中文） |
 | --- | --- |
-| 提示充电完成 | 已经充满能量了！  |
-| 错误提示音 | 无  | 
-| 开始充电提示音 | 无  |
-| 电量低提示音 | 啊~~~，好累 | 
-| 录音开始提示音 | 无  | 
-| 录音完成/发送提示音 | 无  | 
-| mqtt服务器连接成功提示音 | 电波对接成功!  | 
-| wifi配置模式提示音 | 请配置网络  |
-| wifi连接成功提示音 | wifi连接成功 
-| wifi未连接提示音 | wifi未连接 |
+| Charging Completed | 已经充满能量了！  |
+| Low power | 啊~~~，好累 | 
+| Mqtt server connected | 电波对接成功!  | 
+| Pair mode | 请配置网络  |
+| Wifi Connected | wifi连接成功 |
+| Wifi disconnected | wifi未连接 |
 
 

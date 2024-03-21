@@ -76,7 +76,7 @@ The expansion board is equipped with 3 buttons, which are also labeled on the bo
 
 
 
-### Starting a Conversation
+## Starting a Conversation
 
 To start a conversation, follow these steps:
 

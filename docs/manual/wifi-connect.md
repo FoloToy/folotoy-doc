@@ -5,7 +5,7 @@ sidebar_label:  Network configure and server configure
 
 ## Network Configuration
 
-- Power on the device. If it is the first time the device is powered on, it will automatically enter pairing mode. Manually enter pairing mode: [Alilo G6/G6s](../toy-pcb-replacement/alilo-g6.md#how-to-enter-pairing-mode), [Alilo F6/F6s](../toy-pcb-replacement/alilo-f6.md#how-to-enter-pairing-mode), [Mitu C1](../toy-pcb-replacement/mitu-c1.md#how-to-enter-pairing-mode), [Octopus](../dev-suit/quickstart.md#how-to-enter-pairing-mode), or enter pairing mode through [AT commands](../at-command.mdx#reset-wifi-and-enter-pairing-mode).
+- Power on the device. If it is the first time the device is powered on, it will automatically enter pairing mode. Manually enter pairing mode: [Alilo G6/G6s](../toy-pcb-replacement/alilo-g6.md#how-to-enter-pair-mode), [Alilo F6/F6s](../toy-pcb-replacement/alilo-f6.md#how-to-enter-pair-mode), [Mitu C1](../toy-pcb-replacement/mitu-c1.md#how-to-enter-pair-mode), [Octopus](../dev-suit/quickstart.md#how-to-enter-pair-mode), [Cactus](./cactus-manual.md#how-to-enter-pair-mode) or enter pairing mode through [AT commands](../at-command.mdx#reset-wifi-and-enter-pairing-mode).
 
 - Open your smartphone or computer and select the "FoloToy-xxxx" wireless network. Wait a moment, and a configuration page will automatically open on your smartphone or computer, where you can set which WiFi network to connect to, server address, and port number.
 
