@@ -1,23 +1,23 @@
 ---
-title: OpenAI Whisper Configuration
+title: OpenAI Whisper 配置
 sidebar_label: OpenAI Whisper
 ---
 
 :::caution
-For `openai-whisper`, the `language` parameter is optional. However, if you choose to set it, you need to use the correct language code. The language codes for `openai-whisper` are different from those used in `azure-stt`. For example, for Chinese in `openai-whisper`, you would use the code `zh`. In the `roles.json` file, you can configure different language codes for each role. You can find a list of all language codes for `openai-whisper` here: [OpenAI Whisper language 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+对于 openai-whisper，语言参数不是必需的。但如果您选择设置它，则需要使用正确的语言代码。openai-whisper 的语言代码与 azure-stt 中使用的语言代码不同。例如，对于 openai-whisper 中的中文，您将使用代码 zh。在 roles.json 文件中，您可以为每个角色配置不同的语言代码。您可以在这里找到 [Openai-Whisper 所有语言代码列表](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 :::
 
-Configurable parameters:
+可配置参数:
 
-| Parameter Name | Description | Default Value |
+| 参数名字 | 描述 | 默认值 |
 | -------------- | ----------- | ------------- |
-| language | The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency. | None |
-| api_base | The base URL of the API endpoint. | https://api.openai.com/v1 |
-| key | Your API key. | None |
-| model | The ID of the model to use. | whisper-1 |
-| prompt | An optional text to guide the model's style or continue a previous audio segment. The prompt should match the audio language. | "ok. Let's begin." |
+| language | 输入音频的语言。以  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 格式提供输入语言将提高准确性和延迟 | 无 |
+| api_base | API EendPoint 的基本 URL | https://api.openai.com/v1 |
+| key | 你的 API key | 无 |
+| model | 使用的模型 ID | whisper-1 |
+| prompt | 这是一个可选的文本，可以用来指导模型的风格或衔接上一个音频片段。提示语的语言应该与音频的语言一致 | "ok. Let's begin." |
 
-Configuration example:
+配置示例:
 
    ```yml title="roles.json"
    {

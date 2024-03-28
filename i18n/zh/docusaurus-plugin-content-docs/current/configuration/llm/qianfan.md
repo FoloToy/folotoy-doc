@@ -1,6 +1,6 @@
 ---
-title: Baidu Qianfan Configuration
-sidebar_label: Baidu Qianfan
+title: 百度千帆配置
+sidebar_label: 百度千帆
 ---
 
 支持百度千帆大模型平台中的大模型，点击这里查看支持列表：[对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat)，包括不限于以下大模型：
@@ -22,9 +22,9 @@ sidebar_label: Baidu Qianfan
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| client_id    | 创建应用后获取API Key，https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application  |  13rBTgx*****************e03XE | 
-| secret | 创建应用后获取Secret Key，https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application   |  zYxtMI***************QLerLgQ2W5e | 
-| model | [对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat) | yi_34b_chat |
+| client_id    | 创建应用后获取API Key，获取请参考：[Client Id](https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application)  |  13rBTgx*****************e03XE | 
+| secret | 创建应用后获取Secret Key，获取请参考：[Secret](https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application)   |  zYxtMI***************QLerLgQ2W5e | 
+| model | 大模型名称，获取请参考：[对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat) | yi_34b_chat |
 | extra_parameters | 第三方大模型推理高级参数，依据第三方大模型厂商不同而变化 | {} |
 
 **注意** 

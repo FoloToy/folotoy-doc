@@ -1,5 +1,5 @@
 ---
-title: Azure OpenAI Configuration
+title: Azure OpenAI 配置
 sidebar_label: Azure OpenAI
 ---
 
@@ -7,15 +7,14 @@ sidebar_label: Azure OpenAI
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| endpoint  | api base  | https://xxx.openai.azure.com | 
-| api_version | azure api version | 2023-05-15 |
+| endpoint  | api base 地址 | https://xxx.openai.azure.com | 
+| api_version | azure api 版本 | 2023-05-15 |
 | key | azure api key | aaaaaaaaaaaaaaaaa |
-| model | openai model id，https://platform.openai.com/docs/api-reference/chat/create |  |
-| max_tokens |https://platform.openai.com/docs/api-reference/chat/create#chat-create-model | 400 |
-| temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
-| top_p | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 0.95 |
-| frequency_penalty |  | 0 |
-| presence_penalty | Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. | 0 |
+| model | openai 模型 ID，获取请参考：[Model Id](https://platform.openai.com/docs/api-reference/chat/create) |  |
+| max_tokens |最大输入 token，获取请参考：[Max Tokens](https://platform.openai.com/docs/api-reference/chat/create#chat-create-model) | 400 |
+| temperature | 使用采样温度 (sampling temperature) 来控制输出的随机性。该值介于 0 到 2 之间。较高的温度 (例如 0.8) 会使输出更加随机，生成意想不到的结果。较低的温度 (例如 0.2) 会使输出更加集中，更贴近于给定的输入内容。我们通常建议您调整采样温度或 top_p 参数之一，但不要同时调整两者 | 0.7 |
+| top_p | 核采样 (top_p) 是另一种替代采样温度 (sampling temperature) 的方法。与采样温度不同，核采样关注的是概率质量累积位于顶部的部分结果 (token)。具体来说，top_p 代表了累积概率的阈值。例如，top_p 为 0.1 表示模型仅考虑占总概率质量前 10% 的结果  | 0 |
+| presence_penalty | 这是数值范围为 -2.0 到 2.0 的数字，用于控制文本生成过程中的新颖性。数值越高，模型就越倾向于讨论新主题，生成的句子也会更加新颖和独特 | 0 |
 
 配置示例
 

@@ -1,5 +1,5 @@
 ---
-title: Elevenlabs Text to Sound Configuration
+title: Elevenlabs 文本转语音配置
 sidebar_label: Elevenlabs TTS
 ---
 
@@ -8,9 +8,9 @@ sidebar_label: Elevenlabs TTS
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| key | elevenlabs key |  |
-| model | elevenlabs model | eleven_multilingual_v2  |
-| voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. 也可以参考下图查找 |  |
+| key | elevenlabs key | 无 |
+| model | elevenlabs 模型名称 | eleven_multilingual_v2  |
+| voice_id | Elevenlas 语音 ID  - 要使用的语音 ID，您可以使用 https://elevenlabs.io/api 列出所有可用语音。 也可以参考下图查找 |  |
 
 <img src="https://user-images.githubusercontent.com/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
 

@@ -4,17 +4,17 @@ sidebar_label: Dify Sound to Text
 ---
 
 :::caution
-Support for DIFY includes both cloud and self-hosting options.
+既支持云端服务也支持自建服务
 :::
 
-Configurable parameters:
+可配置参数:
 
-| Parameter Name | Description | Default Value |
+| 参数名字 | 描述 | 默认值 |
 | :-- | :-- | :-- |
 | api_base | API endpoint | https://api.dify.ai/v1 |
-| key | API key |  |
+| key | API key | 无  |
 
-Configuration example:
+配置示例:
 
    ```yml title="roles.json"
    {
