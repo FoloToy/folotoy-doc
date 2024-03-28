@@ -103,7 +103,9 @@ services:
       ALIYUN_ASR_APP_KEY: Ltamxxxxxxxxxxxxxxxxxxxxx
 
       # Default LLM(Large Language Model) type
-      # Options: [openai, azure-openai, gemini, dify, qianfan]
+      # Options: ['openai', 'azure-openai', 'gemini', 'dify', 'qianfan', 'xiaodu',
+      #           'ollama', 'groq', 'moonshot', 'anthropic', 'zhipu', 'lingyiwanwu', 
+      #           'dashscope', 'spark-desk', 'minimax', 'aws-bedrock']
       LLM_TYPE: openai
 
       # OpenAI
@@ -132,11 +134,46 @@ services:
       QIANFAN_CLIENT_ID: 13rBTgxxxxxxxxxxxxxxxxxx
       QIANFAN_SECRET: zYxtMIQLexxxxxxxxxxxxxxxxxx
 
+      # Moonshot
+      MOONSHOT_API_BASE: https://api.moonshot.cn/v1
+      MOONSHOT_KEY: sk-XCLMlj54GDTxxxx
+      MOONSHOT_MODEL: moonshot-v1-8k
+
+      # Aliyun Dashscope
+      DASHSCOPE_KEY: sk-f4x
+      DASHSCOPE_MODEL: qwen-turbo
+      DASHSCOPE_ENABLE_SEARCH: true
+      
+      # Lingyiwanwu
+      LINGYIWANWU_KEY: 4b2f584b4x
+      LINGYIWANWU_MODEL: yi-34b-chat-200k
+      
+      # Zhipu
+      ZHIPU_KEY: 4544625bb0d0ax
+      #ZHIPU_MODEL=glm-3-turbo
+      
+      # Spark Desk
+      SPARK_DESK_API_VERSION: v2.0
+      SPARK_DESK_APP_ID: d2c1xxxxxxxxxxx
+      SPARK_DESK_API_KEY: 10610b3xxxxxxx
+      SPARK_DESK_API_SECRET: N2I5xxxxxxxxx
+      SPARK_DESK_TEMPERATURE: 0.7
+      SPARK_DESK_MAX_TOKENS: 4096
+      
+      # MINIMAX
+      MINIMAX_KEY: eyJhbGciOiJSUzI1NiIsInRxxxxxxxxxxxxxxx
+
+      # AWS Bedrock
+      AWS_BEDROCK_ACCESS_KEY_ID: AKIAQLJIxxxxxxxxxxxxxxxxxxx
+      AWS_BEDROCK_ACCESS_KEY_SECRET: ss07ojxxW/X7YHZkxxxxxxxxxx
+      AWS_BEDROCK_MODEL: anthropic.claude-v2:1
+      
+
       # If your elevenlabs is a free account, keep 2 here
       VOICE_EXECUTOR_MAX_WORKERS: 2
 
       # Default TTS(Text to Sound) type
-      # Options: [openai-tts, azure-tts, elevenlabs, edge-tts, aliyun-tts]
+      # Options: [openai-tts, azure-openai-tts, azure-tts, dify-tts, elevenlabs, edge-tts, aliyun-tts]
       # edge-tts is Free but slow
       TTS_TYPE: edge-tts
 
@@ -157,6 +194,17 @@ services:
       ALIYUN_TTS_ACCESS_KEY_SECRET: 3zWkHVxxxxxxxxxxxxxxxxxxxxx
       ALIYUN_TTS_APP_KEY: Ltamxxxxxxxxxxxxx
 
+      # Azure Openai TTS
+      AZURE_OPENAI_TTS_API_BASE: https://xxx-whisper.openai.azure.com/
+      AZURE_OPENAI_TTS_API_VERSION: 2024-02-15-preview
+      AZURE_OPENAI_TTS_DEPLOYMENT_NAME: tts
+      AZURE_OPENAI_TTS_KEY: 01fdbc75bdxxxxxx
+      AZURE_OPENAI_TTS_MODEL: tts-1
+
+      # Dify TTS
+      DIFY_TTS_API_BASE: https://api.dify.ai/v1
+      DIFY_TTS_KEY: app-5YGbAx
+      
       AUDIO_DOWNLOAD_URL: http://your_vps_ip:8082
       AUDIO_SAVE_PATH: /audio
 
@@ -169,102 +217,40 @@ services:
 
       SPEECH_UDP_SERVER_HOST: your_vps_ip
       SPEECH_UDP_SERVER_PORT: 8085
-   ```
+
+```
 3. 在 config 目录下创建一个 `roles.json` 文件，并且把以下内容保存到文件中:
 
 ```yml title="roles.json"
-   {
-  "1": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
-    "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
-    "max_message_count": 20,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-CN-XiaoxiaoNeural",
-    "language": "zh"
-  },
-  "2": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
-    "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-    "max_message_count": 20,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-CN-liaoning-XiaobeiNeural",
-    "language": "zh"
-  },
-  "3": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "Hi, I'm Fofo. Nice to meet you.",
-    "prompt": "Your name is \"Fofo\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-    "max_message_count": 20,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "en-US-AnaNeural",
-    "language": "en"
-  },
-  "4": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，额是陕西兔，请问有什么额可以帮助你的吗？ ",
-    "prompt": "你擅于鼓励别人，乐观积极，无论别人和你说了什么，你都能夸对方，让人快乐",
-    "max_message_count": 10,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-CN-shaanxi-XiaoniNeural",
-    "language": "zh"
-  },
-  "5": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，我是童话故事兔，想听什么童话故事吗？试试说，我想听听三只小猫咪的故事",
-    "prompt": "你是一个知识渊博的智能机器人,你的名字叫“故事兔”，你的任务是讲故事给一位7岁孩子的听，你要先听取孩子想听的故事主题，然后根据孩子的说的内容，用中文讲一段故事，每个故事不超过200个字！",
-    "max_message_count": 10,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-CN-XiaoyiNeural",
-    "language": "zh"
-  },
-  "6": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
-    "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-    "max_message_count": 10,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-TW-HsiaoChenNeural",
-    "language": "zh"
-  },
-  "7": {
-    "model": "gpt-3.5-turbo",
-    "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
-    "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？",
-    "max_message_count": 20,
-    "temperature": 0.7,
-    "max_tokens": 800,
-    "top_p": 0.95,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "voice_name": "zh-CN-YunxiaNeural",
-    "language": "zh"
-  }
+{
+    "1": {
+      "start_text": "你好，我是陪伴兔，请问有什么我可以帮助你的吗？",
+      "prompt": "你扮演一个孩子的小伙伴，名字叫陪伴兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心。"
+    },
+    "2": {
+      "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
+      "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+    },
+    "3": {
+      "start_text": "Hi, I'm Fofo. Nice to meet you.",
+      "prompt": "You're a knowledgeable and helpful AI named \"Fofo\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!"
+    },
+    "4": {
+      "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
+      "prompt": "夸夸我"
+    },
+    "5": {
+      "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
+      "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？"
+    },
+    "6": {
+      "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
+      "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+    },
+    "7": {
+      "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
+      "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
+    }
 }
 
 ```
