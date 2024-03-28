@@ -36,11 +36,11 @@ Configurable parameters:
 | start_text | Startup prompt text, automatically converted to audio and sent to the toy (required) | None |
 | prompt | Definition of the role's prompt (required) | None |
 | max_message_count | Set to a value greater than 0, e.g., 10, to enable context support for up to 10 conversations. Set to 0 to disable context. Each model has its own limit on the size of context tokens. If the limit is exceeded, press the role button again to clear the context. You can also adjust the values of `max_message_count` and `max_tokens` to limit the context size. | 0 |
-| stt_type | Sound-to-text engine type, options: openai-whisper, azure-whisper, azure-stt, dify-stt | openai-whisper |
+| stt_type | Sound-to-text engine type| openai-whisper |
 | stt_config | Sound-to-text engine specific configuration. Configuration parameters vary for different engine types. | None |
-| llm_type | Large language model type, options: openai, azure-openai, dify. You can also use [one-api](https://github.com/songquanpeng/one-api) to proxy the interface of larger models to be openai-like, thereby supporting more large models. | openai |
+| llm_type | Large language model type. You can also use [one-api](https://github.com/songquanpeng/one-api) to proxy the interface of larger models to be openai-compatible, thereby supporting more large models. | openai |
 | llm_config | Configuration for the large language model. | None |
-| tts_type | Text-to-sound engine type, options: openai-tts, azure-tts, elevenlabs, edge-tts | openai-tts |
+| tts_type | Text-to-sound engine type | openai-tts |
 | tts_config | Configuration for the text-to-sound engine. | None |
 
 <Tabs

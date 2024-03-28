@@ -34,11 +34,11 @@ import TabItem from "@theme/TabItem";
 | start_text     | 开机提示语音，系统自动将 start_text 转成语音文件发送给玩具(必须) | 无                    | 
 | prompt     |  角色的提示词定义(必须)    | 无 | 
 | max_message_count     |  设置为一个大于 0 的数值，比如改成 10，这样表示上下文支持 10 次对话，0 表示不支持上下文。每一个模型都有自己的上下文Token大小的限制，如果超过限制，可以再按一次当前的角色按钮来清空上下文。也可以通过调整 max_message_count 和 max_tokens 的值来大概限制上下文大小。    | 0 | 
-| stt_type |  sound-to-text 引擎类型，可选值：openai-whisper, azure-whisper, azure-stt, dify-stt   | openai-whisper | 
+| stt_type |  sound-to-text 引擎类型 | openai-whisper | 
 | stt_config |  sound-to-text 引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
-| llm_type |  large-language-model 类型，可选值： openai，azure-openai, dify 也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-like 从而支持更多的大模型 | openai | 
+| llm_type |  large-language-model 类型，也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-compatible 从而支持更多的大模型 | openai | 
 | llm_config |  大模型的配置  | 无 | 
-| tts_type |  text-to-sound 引擎类型，可选值：openai-tts, azure-tts, elevenlabs, edge-tts   | openai-tts | 
+| tts_type |  text-to-sound 引擎类型   | openai-tts | 
 | tts_config |  text-to-sound 引擎的配置   | 无 | 
 
 <Tabs
