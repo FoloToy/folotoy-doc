@@ -56,6 +56,7 @@ module.exports = {
         "configuration/llm/azure-openai",
         "configuration/llm/gemini",
         "configuration/llm/dify",
+        "configuration/llm/fastgpt",
         "configuration/llm/qianfan",
         "configuration/llm/xiaodu",
         "configuration/llm/moonshot",
