@@ -1,5 +1,5 @@
 ---
-title: AWS Bedrock Configuration
+title: AWS Bedrock 配置
 sidebar_label: AWS Bedrock
 ---
 
@@ -8,11 +8,11 @@ sidebar_label: AWS Bedrock
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| region_name    | region name  |  ap-northeast-1 | 
+| region_name    | 区域名称  |  ap-northeast-1 | 
 | aws_access_key_id | aws access key id | HS21qAAAAAAAAAAA |
 | aws_secret_access_key | aws access secret key | HS21qAAAAAAAAAAA |
-| model | https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html | anthropic.claude-v2.1 |
-| max_tokens | max output token count | 1024 |
+| model | 大模型名称，获取请参考：[model](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html) | anthropic.claude-v2.1 |
+| max_tokens | 最大输入 token| 1024 |
 | temperature | | 0.7 |
 
 配置示例

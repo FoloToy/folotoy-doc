@@ -1,6 +1,6 @@
 ---
-title: Xunfei Spark Desk Configuration
-sidebar_label: Xunfei Spark Desk
+title: 讯飞 Spark Desk Configuration
+sidebar_label: 讯飞 Spark Desk
 ---
 ---
 
@@ -11,10 +11,10 @@ sidebar_label: Xunfei Spark Desk
 | api_key | api_key | xQHS21qAAAAAAAAAAA |
 | api_secret | api_secret | xQHS21qAAAAAAAAAAA |
 | app_id | app_id | d2c169c5 |
-| api_version | api_version: v1.5,v2.0,v3.0,v3.5 | v2.0 |
-| max_tokens | max output token count | 1024 |
-| temperature | | 0.7 |
-| top_p | top_p | 0.9 |
+| api_version | api 版本: v1.5,v2.0,v3.0,v3.5 | v2.0 |
+| max_tokens | 最大输出token| 1024 |
+| temperature | 核采样 (top_p) 是另一种替代采样温度 (sampling temperature) 的方法。与采样温度不同，核采样关注的是概率质量累积位于顶部的部分结果 (token)。具体来说，top_p 代表了累积概率的阈值。例如，top_p 为 0.1 表示模型仅考虑占总概率质量前 10% 的结果 | 0.7 |
+| top_p | 这是数值范围为 -2.0 到 2.0 的数字，用于控制文本生成过程中的新颖性。数值越高，模型就越倾向于讨论新主题，生成的句子也会更加新颖和独特 | 0.9 |
 
 配置示例
 

@@ -1,6 +1,6 @@
 ---
-title: Aliyun Text to Sound Configuration
-sidebar_label: Aliyun TTS
+title: 阿里云文本转语音配置
+sidebar_label: 阿里云 TTS
 ---
 :::caution
 支持阿里云平台官方模型和自己训练的个性化模型 
@@ -10,10 +10,10 @@ sidebar_label: Aliyun TTS
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
-|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
+|  access_key_id    | 获取请参考：[Access Key Id](https://help.aliyun.com/document_detail/450514.html)    | | 
+|  access_key_secret    |  获取请参考：[Access Key Secret](https://help.aliyun.com/document_detail/450514.html)    |  | 
 |  region_id    |  区域代码    |  cn-shanghai | 
-|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
+|  app_key    |  获取请参考：[App Key](https://help.aliyun.com/document_detail/72214.html)    |  | 
 |  voice_id    |  这里的配置优先级比项目设置高，如果不是自定义模型，请不要添加这个配置    |  | 
 |  volume    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
 |  speech_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 

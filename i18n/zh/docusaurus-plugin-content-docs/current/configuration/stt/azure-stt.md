@@ -1,22 +1,22 @@
 ---
-title: Azure Sound to Text Configuration
+title: Azure Sound to Text 配置
 sidebar_label: Azure Sound to Text
 ---
 
 
 :::caution
-For `azure-stt`, you need to use the correct language codes, which are different from those used in `openai-whisper`. For example, for Chinese in `azure-stt`, you would use the code `zh-CN`. In the `roles.json` file, make sure to configure the correct language code for each role. You can find a list of all language codes supported by `azure-stt` here: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt)
+对于 `azure-stt` 语音转文本服务，您需要使用正确的语言代码，这些代码与 `openai-whisper` 不同。例如，对于中文，`azure-stt` 使用代码 `zh-CN`。在 `roles.json` 文件中，请确保为每个角色配置正确的语言代码。您可以在此链接找到 `azure-stt` 支持的所有语言代码列表：[Azure STT 语言 BCP-47 代码](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt)
 :::
 
-Configurable parameters:
+可配置参数:
 
-| Parameter Name | Parameter Description | Default Value |
+| 参数名字 | 描述 | 默认值 |
 | -------------- | --------------------- | ------------- |
-| language | The language of the input audio. Click here to see all language codes: [Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt) | zh-CN |
-| key | Azure Speech Services Key. For more information, refer to: [Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | None |
-| service_region | Azure Speech Services Region. For more information, refer to: [Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | None |
+| language | 输入入音频的语言，语言代码：[Azure STT language BCP-47 codes](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=stt) | zh-CN |
+| key | Azure Speech Services Key. 点击查看更多：[Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | 无 |
+| service_region | Azure Speech Services 地区. 点击查看更多：[Azure Speech Services Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview) | 无 |
 
-Configuration example:
+配置示例:
 
    ```yml title="roles.json"
    {

@@ -1,5 +1,5 @@
 ---
-title: OpenAI Text to Sound Configuration
+title: OpenAI 文本转语音配置
 sidebar_label: OpenAI TTS
 ---
 
@@ -7,11 +7,11 @@ sidebar_label: OpenAI TTS
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-|  api_base    | api base url  | https://api.openai.com/v1 | 
+|  api_base    | api base 地址  | https://api.openai.com/v1 | 
 |  key    | openai api key     | sk-AAAA      |
-|  model    |  One of the available TTS models: tts-1 or tts-1-hd    |  tts-1     |
-|  speed    |  The speed of the generated audio. Select a value from 0.25 to 4.0    |  1.0     |
-|  voice_name    |  The voice to use when generating the audio. Supported voices are alloy, echo, fable, onyx, nova, and shimmer.    |  alloy     |
+|  model    |  TTS模型： `tts-1` 或者 `tts-1-hd`    |  tts-1     |
+|  speed    | 语音速度。 介于0.25 到 4.0 之间   |  1.0     |
+|  voice_name    |  用于生成语音的音色. 支持的音色有： alloy, echo, fable, onyx, nova, shimmer    |  alloy     |
 
 配置示例
 

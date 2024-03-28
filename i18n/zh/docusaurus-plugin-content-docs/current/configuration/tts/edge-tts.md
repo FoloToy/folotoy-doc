@@ -1,5 +1,5 @@
 ---
-title: MS Edge Text to Sound Configuration
+title: MS Edge 文本转语音配置
 sidebar_label: MS Edge TTS
 ---
 
@@ -7,7 +7,7 @@ sidebar_label: MS Edge TTS
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-|  voice_name    |  Voice Name, 点击这里查看声音列表 https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices    |   zh-CN-YunyangNeural    |
+|  voice_name    |  Voice Name, 获取请查看：[声音列表](https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices)    |   zh-CN-YunyangNeural    |
 
 配置示例
 

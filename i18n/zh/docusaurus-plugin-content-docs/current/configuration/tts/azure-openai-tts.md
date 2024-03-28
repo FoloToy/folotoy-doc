@@ -1,5 +1,5 @@
 ---
-title: Azure OpenAI Text to Sound Configuration
+title: Azure OpenAI 文本转语音配置
 sidebar_label: Azure OpenAI TTS
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Lingyiwanwu Configuration
-sidebar_label: Lingyiwanwu
+title: 零一万物配置
+sidebar_label: 零一万物
 ---
 
 可配置参数列表
@@ -9,9 +9,9 @@ sidebar_label: Lingyiwanwu
 | :--     | :--     |  :--     |
 | api_base    | api base url  |   | 
 | key | api_key | sk-W2wQHS21qAAAAAAAAAAA |
-| model | https://platform.lingyiwanwu.com/docs | yi-34b-chat-0205 |
-| max_tokens | max output token count | 1024 |
-| temperature | | 0.7 |
+| model | 大模型名称，获取请参考：[Model](https://platform.lingyiwanwu.com/docs) | yi-34b-chat-0205 |
+| max_tokens | 最大输入 token | 1024 |
+| temperature |  使用采样温度 (sampling temperature) 来控制输出的随机性。该值介于 0 到 2 之间。较高的温度 (例如 0.8) 会使输出更加随机，生成意想不到的结果。较低的温度 (例如 0.2) 会使输出更加集中，更贴近于给定的输入内容 | 0.7 |
 
 配置示例
 

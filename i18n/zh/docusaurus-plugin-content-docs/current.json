@@ -50,5 +50,17 @@
   "sidebar.docs.category.Octopus Dev Suit": {
     "message": "八爪鱼套件",
     "description": "The label for category Dev Suit in sidebar docs"
+  },
+  "sidebar.docs.category.STT Configuration": {
+    "message": "STT（语音转文本）配置",
+    "description": "The label for category STT Configuration in sidebar docs"
+  },
+  "sidebar.docs.category.LLM Configuration": {
+    "message": "LLM（大型语言模型）配置",
+    "description": "The label for category LLM Configuration in sidebar docs"
+  },
+  "sidebar.docs.category.TTS Configuration": {
+    "message": "TTS（文本转语音）配置",
+    "description": "The label for category TTS Configuration in sidebar docs"
   }
 }
