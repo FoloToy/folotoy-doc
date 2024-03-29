@@ -1,5 +1,5 @@
 ---
-title: Dify Configuration
+title: Dify 配置
 sidebar_label: Dify
 ---
 

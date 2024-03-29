@@ -11,6 +11,19 @@
     "message": "服务器部署说明",
     "description": "The label for category Installation in sidebar docs"
   },
+  "sidebar.docs.category.Server Installation Method": {
+    "message": "服务器部署方法",
+    "description": "The label for category Installation Method in sidebar docs"
+  },
+  "sidebar.docs.category.Server Installation File": {
+    "message": "服务器部署文件",
+    "description": "The label for category Installation File in sidebar docs"
+  },
+  "sidebar.docs.category.Roles Detailed Settings": {
+    "message": "角色详细设置",
+    "description": "The label for category  Roles Detailed Settingsin sidebar docs"
+  },
+
   "sidebar.docs.category.Guides": {
     "message": "高级部署指南",
     "description": "The label for category Guides in sidebar docs"
@@ -50,5 +63,17 @@
   "sidebar.docs.category.Octopus Dev Suit": {
     "message": "八爪鱼套件",
     "description": "The label for category Dev Suit in sidebar docs"
+  },
+  "sidebar.docs.category.STT Configuration": {
+    "message": "STT（语音转文本）配置",
+    "description": "The label for category STT Configuration in sidebar docs"
+  },
+  "sidebar.docs.category.LLM Configuration": {
+    "message": "LLM（大型语言模型）配置",
+    "description": "The label for category LLM Configuration in sidebar docs"
+  },
+  "sidebar.docs.category.TTS Configuration": {
+    "message": "TTS（文本转语音）配置",
+    "description": "The label for category TTS Configuration in sidebar docs"
   }
 }

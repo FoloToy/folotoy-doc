@@ -1,5 +1,5 @@
 ---
-title: Groq Configuration
+title: Groq 配置
 sidebar_label: Groq
 ---
 
@@ -7,8 +7,8 @@ sidebar_label: Groq
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.groq.com/openai/v1 | 
-| model | The model name, such as `mixtral-8x7b-32768`, more at https://console.groq.com/docs/models |  |
+| api_base    | api base 地址  |  https://api.groq.com/openai/v1 | 
+| model | 大模型名称, 例如： `mixtral-8x7b-32768`,  获取请参考：[Model](https://console.groq.com/docs/models) |  |
 
 配置示例
 

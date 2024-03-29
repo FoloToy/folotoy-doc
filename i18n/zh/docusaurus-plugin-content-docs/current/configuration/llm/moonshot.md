@@ -1,5 +1,5 @@
 ---
-title: Moonshot Configuration
+title: Moonshot 配置
 sidebar_label: Moonshot
 ---
 
@@ -7,11 +7,11 @@ sidebar_label: Moonshot
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.moonshot.cn/v1 | 
+| api_base    | api base 地址  |  https://api.moonshot.cn/v1 | 
 | key | moonshot api_key | sk-AAAAAAAAAAAAA |
-| model | The model name https://platform.moonshot.cn/docs/pricing |  |
-| max_tokens | max output token count | 400 |
-| temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
+| model | 大模型名称， 获取请参考：[Model](https://platform.moonshot.cn/docs/pricing) | 无 |
+| max_tokens | 最大输入 token | 400 |
+| temperature | 使用采样温度 (sampling temperature) 来控制输出的随机性。该值介于 0 到 2 之间。较高的温度 (例如 0.8) 会使输出更加随机，生成意想不到的结果。较低的温度 (例如 0.2) 会使输出更加集中，更贴近于给定的输入内容| 0.7 |
 
 配置示例
 

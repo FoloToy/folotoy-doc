@@ -1,6 +1,6 @@
 ---
-title: Xiaodu Configuration
-sidebar_label: Xiaodu
+title: 小度配置
+sidebar_label: 小度
 ---
 
 可配置参数列表
@@ -9,7 +9,7 @@ sidebar_label: Xiaodu
 | :--     | :--     |  :--     |
 | client_id | app client id | TESTAAAAAAAAAAAAA |
 | secret | app secret |  |
-| max_tokens | max output token count | 400 |
+| max_tokens | 最大输入 token | 400 |
 
 配置示例
 

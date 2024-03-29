@@ -1,23 +1,23 @@
 ---
-title: Azure OpenAI Whisper Configuration
+title: Azure OpenAI Whisper 配置
 sidebar_label: Azure OpenAI Whisper
 ---
 
 
 :::caution
-Azure Whisper is still in preview and can only be deployed in the North Central US and West Europe regions. Additionally, using Whisper requires Azure OpenAI permissions. You can check the available regions for Whisper models in the preview phase here: [Whisper Models (Preview) Available Regions](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#whisper-models-preview).
+Azure Whisper 目前仍处于预览阶段，并且只能在以下区域部署：美国中部北区和西欧。此外，使用 Whisper 需要 Azure OpenAI 权限。有关预览阶段 Whisper 模型的可用区域，您可以在此链接查看：[Whisper 模型（预览版）可用区域](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#whisper-models-preview).
 :::
 
-Configurable parameters:
+可配置参数:
 
-| Parameter Name | Parameter Description | Default Value |
+| 参数名字 | 描述 | 默认值 |
 | -------------- | --------------------- | ------------- |
-| api_base | API endpoint URL | None |
-| key | API key for authentication | None |
-| deployment_name | Deployment name for the model (do not use the model name) | None |
-| api_version | API version | 2023-09-01-preview |
+| api_base | API endpoint 地址 | 无 |
+| key | 用于认证的 API key | 无 |
+| deployment_name | 模型部署名称（请勿使用模型名称） | 无 |
+| api_version | API 版本 | 2023-09-01-preview |
 
-Configuration example:
+配置示例:
 
    ```yml title="roles.json"
    {
