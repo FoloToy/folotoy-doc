@@ -1,6 +1,6 @@
 ---
-title: FoloToy User Manual
-sidebar_label: FoloToy User Manual
+title: Fofo User Manual
+sidebar_label: Fofo User Manual
 ---
 
 ## Video Guide

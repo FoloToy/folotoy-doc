@@ -3,8 +3,7 @@ id: environment_variables
 title: 环境变量
 sidebar_label: 环境变量(docker-compose.yml)
 ---
-
-FoloToy 服务器接受以下环境变量以进行运行时配置：
+最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)。FoloToy 服务器接受以下环境变量以进行运行时配置：
 
 
 | 变量名     | 描述          | 默认值 |
