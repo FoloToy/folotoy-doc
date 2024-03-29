@@ -11,6 +11,19 @@
     "message": "服务器部署说明",
     "description": "The label for category Installation in sidebar docs"
   },
+  "sidebar.docs.category.Server Installation Method": {
+    "message": "服务器部署方法",
+    "description": "The label for category Installation Method in sidebar docs"
+  },
+  "sidebar.docs.category.Server Installation File": {
+    "message": "服务器部署文件",
+    "description": "The label for category Installation File in sidebar docs"
+  },
+  "sidebar.docs.category.Roles Detailed Settings": {
+    "message": "角色详细设置",
+    "description": "The label for category  Roles Detailed Settingsin sidebar docs"
+  },
+
   "sidebar.docs.category.Guides": {
     "message": "高级部署指南",
     "description": "The label for category Guides in sidebar docs"
