@@ -34,20 +34,6 @@ import TabItem from "@theme/TabItem";
 | start_text     | 开机提示语音，系统自动将 start_text 转成语音文件发送给玩具(必须) | 无                    | 
 | prompt     |  角色的提示词定义(必须)    | 无 | 
 | max_message_count     |  设置为一个大于 0 的数值，比如改成 10，这样表示上下文支持 10 次对话，0 表示不支持上下文。每一个模型都有自己的上下文Token大小的限制，如果超过限制，可以再按一次当前的角色按钮来清空上下文。也可以通过调整 max_message_count 和 max_tokens 的值来大概限制上下文大小。    | 0 | 
-| stt_type |  sound-to-text 引擎类型 | openai-whisper | 
-| stt_config |  sound-to-text 引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
-| llm_type |  large-language-model 类型，也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-compatible 从而支持更多的大模型 | openai | 
-| llm_config |  大模型的配置  | 无 | 
-| tts_type |  text-to-sound 引擎类型   | openai-tts | 
-| tts_config |  text-to-sound 引擎的配置   | 无 | 
-
-<Tabs
-defaultValue="roles-minimal.json"
-values={[
-{ label: '最小 roles.json 配置', value: 'roles-minimal.json', },
-{ label: '完整 roles.json 配置', value: 'roles-full.json', },
-]}>
-<TabItem value="roles-minimal.json">
 
 配置示例：
 
@@ -83,13 +69,77 @@ values={[
        }
    }
    ```
-</TabItem>
+## 高级配置
+`roles.json`可以给每个角色配置单独的 STT, LLM, TTS。
 
-<TabItem value="roles-full.json">
 
-配置示例：
+| 参数名称 | 参数说明 | 默认值 |
+| --------- | ---- | --------- |
+| stt_type |  语音转文本引擎类型 | openai-whisper | 
+| stt_config |  语音转文本引擎具体配置，不同类型的引擎配置参数不同   | 无 | 
+| llm_type |  大型数据模型类型，也可以通过 [one-api](https://github.com/songquanpeng/one-api) 来中转大模型接口为 openai-compatible 从而支持更多的大模型 | openai | 
+| llm_config |  大模型的配置  | 无 | 
+| tts_type |  文本转语音引擎类型   | openai-tts | 
+| tts_config |  语音转文本引擎的配置   | 无 | 
 
-   ```yml title="roles.json"
+### 语音转文字 STT (Sound-to-Text)角色级别配置说明
+
+stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
+
+详细配置：
+
+* [openai-whisper](./stt/openai-whisper.md)
+* [azure-stt](./stt/azure-stt.md)
+* [azure-whisper](./stt/azure-whisper.md)
+* [dify-stt](./stt/dify-stt.md)
+* [aliyun-asr](./stt/aliyun-asr.md)
+
+
+### AI 大语言模型 LLM (Large Language Model)角色级别配置说明
+
+llm_type 可以设置为：openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic, dashscope, spark-desk, minimax, aws-bedrock, zhipu, lingyiwanwu
+
+详细配置：
+
+* [openai](./llm/openai.md)
+* [azure-openai](./llm/azure-openai.md)
+* [gemini](./llm/gemini.md)
+* [dify](./llm/dify.md)
+* [qianfan](./llm/qianfan.md)
+* [xiaodu](./llm/xiaodu.md)
+* [moonshot](./llm/moonshot.md)
+* [groq](./llm/groq.md)
+* [ollama](./llm/ollama.md)
+* [anthropic](./llm/anthropic.md)
+* [dashscope](./llm/dashscope.md)
+* [spark-desk](./llm/spark-desk.md)
+* [minimax](./llm/minimax.md)
+* [aws-bedrock](./llm/aws-bedrock.md)
+* [zhipu](./llm/zhipu.md)
+* [lingyiwanwu](./llm/lingyiwanwu.md)
+* [fastgpt](./llm/fastgpt.md)
+
+
+### 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
+
+tts_type 可以设置为：openai-tts, azure-tts, azure-openai-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
+
+详细配置：
+
+* [openai-tts](./tts/openai-tts.md)
+* [azure-tts](./tts/azure-tts.md)
+* [azure-openai-tts](./tts/azure-openai-tts.md)
+* [elevenlabs](./tts/elevenlabs.md)
+* [edge-tts](./tts/edge-tts.md)
+* [aliyun-tts](./tts/aliyun-tts.md)
+* [dify-tts](./tts/dify-tts.md)
+
+
+配置示例。请根据您的需要，修改以下配置：
+:::caution
+以下配置优先级比`docker-compose.yml`高
+:::
+ ```yml title="roles.json"
    {
       "1": {
         "start_text": "你好，我是微眯，请问有什么我可以帮助你的吗？",
@@ -187,60 +237,5 @@ values={[
       }
 }
    ```
-</TabItem>
-</Tabs>
 
-
-
-## 语音转文字 STT (Sound-to-Text)角色级别配置说明
-
-stt_type 可以设置为：openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
-
-详细配置：
-
-* [openai-whisper](./stt/openai-whisper.md)
-* [azure-stt](./stt/azure-stt.md)
-* [azure-whisper](./stt/azure-whisper.md)
-* [dify-stt](./stt/dify-stt.md)
-* [aliyun-asr](./stt/aliyun-asr.md)
-
-
-## AI 大语言模型 LLM (Large Language Model)角色级别配置说明
-
-llm_type 可以设置为：openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic, dashscope, spark-desk, minimax, aws-bedrock, zhipu, lingyiwanwu
-
-详细配置：
-
-* [openai](./llm/openai.md)
-* [azure-openai](./llm/azure-openai.md)
-* [gemini](./llm/gemini.md)
-* [dify](./llm/dify.md)
-* [qianfan](./llm/qianfan.md)
-* [xiaodu](./llm/xiaodu.md)
-* [moonshot](./llm/moonshot.md)
-* [groq](./llm/groq.md)
-* [ollama](./llm/ollama.md)
-* [anthropic](./llm/anthropic.md)
-* [dashscope](./llm/dashscope.md)
-* [spark-desk](./llm/spark-desk.md)
-* [minimax](./llm/minimax.md)
-* [aws-bedrock](./llm/aws-bedrock.md)
-* [zhipu](./llm/zhipu.md)
-* [lingyiwanwu](./llm/lingyiwanwu.md)
-* [fastgpt](./llm/fastgpt.md)
-
-
-## 文字转语音 TTS (Text-to-Sound) 角色级别配置说明
-
-tts_type 可以设置为：openai-tts, azure-tts, azure-openai-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
-
-详细配置：
-
-* [openai-tts](./tts/openai-tts.md)
-* [azure-tts](./tts/azure-tts.md)
-* [azure-openai-tts](./tts/azure-openai-tts.md)
-* [elevenlabs](./tts/elevenlabs.md)
-* [edge-tts](./tts/edge-tts.md)
-* [aliyun-tts](./tts/aliyun-tts.md)
-* [dify-tts](./tts/dify-tts.md)
 
