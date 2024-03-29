@@ -15,6 +15,6 @@ sidebar_label:  服务器主要配置文件说明
 
     :::caution
 
-    `roles.json` 中的配置会覆盖 `docker-compose.yml` 中的配置，从而达到角色级别的配置。如果在 `role.json`中定义了 TTS， LLM， STT， 则系统会自动使用  `roles.json` 中所定义的。请仔细查阅文档中[角色配置](./roles_config.mdx#高级配置)关于 TTS， LLM， STT 的配置。
+    `roles.json` 中的配置会覆盖 `docker-compose.yml` 中的配置，从而达到角色级别的配置。如果在 `role.json`中定义了 TTS， LLM， STT， 则系统会自动使用  `roles.json` 中所定义的。请仔细查阅文档中[角色配置](../configuration/roles_config.mdx#高级配置)关于 TTS， LLM， STT 的配置。
 
     :::
