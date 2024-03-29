@@ -15,8 +15,6 @@ Configurable parameters:
 
 Configuration example:
 
-
-
    ```yml title="roles.json"
    {
     "1": {  

@@ -55,7 +55,7 @@ values={[
 
 1. `roles.json` 中的配置会覆盖 `docker-compose.yml` 中的配置，从而达到角色级别的配置。如果在 `role.json`中定义了 `TTS`， `LLM`， `STT`， 则系统会自动使用  `roles.json` 中所定义的。**首次使用我们建议您不要再`roles.json`中定义 `TTS`， `LLM`， `STT`**。
 
-2. 如果您想给不同的角色定义不同的 `TTS`， `LLM`， `STT`, 您可以前往`角色详细设置`中查看详情。
+2. 如果您想给不同的角色定义不同的 `TTS`， `LLM`， `STT`, 您可以前往[角色配置](../configuration/roles_config.mdx#高级配置)中查看详情。
 
 3. 每次修改后，都需要重启 Folotoy 服务器。
 

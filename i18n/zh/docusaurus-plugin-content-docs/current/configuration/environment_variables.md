@@ -3,8 +3,37 @@ id: environment_variables
 title: 环境变量
 sidebar_label: 环境变量(docker-compose.yml)
 ---
-最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)。FoloToy 服务器接受以下环境变量以进行运行时配置：
+最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)。
 
+该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
+
+如果您想要在全局设置 STT 的语音类型，您可以添加以下字段（请根据您的 STT 类型 选择添加相应的字段）：
+
+- OPENAI_TTS_VOICE_NAME(alloy, echo, fable, onyx, nova, shimmer)
+- AZURE_OPENAI_TTS_VOICE_NAME(alloy, echo, fable, onyx, nova, shimmer)
+- AZURE_TTS_VOICE_NAME([声音列表](https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/language-support?tabs=tts))
+- EDGE_TTS_VOICE_NAME([声音列表](https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices))
+- ELEVENLABS_TTS_VOICE_ID([声音列表](https://elevenlabs.io/api))
+- ALIYUN_TTS_APP_KEY([App Key](https://help.aliyun.com/document_detail/72214.html))
+- DIFY_TTS_KEY
+
+**如果您想要给每个角色设置特定的 STT，请查看[角色配置](./roles_config.mdx#高级配置)**
+
+:::caution
+
+- 请注意将`your_vps_ip`为自己的 ip。将各种服务的 Key 修改为 自己的 Key。**特别注意`AUDIO_DOWNLOAD_URL`带有`http://`，`SPEECH_UDP_SERVER_HOST`不带**。
+
+- 确保所有使用了的端口都打开，`1883/tcp`，`8082/tcp`，`18083/tcp`，`8083/tcp`，`8085/udp`，尤其注意 `8085`端口是 `UDP`。对于一些 VPS，可能需要去安全组打开，**请一定确保打开成功，特别是确保 `8085` 是`UDP`**。
+
+- 每次修改后，都需要重编，执行以下命令：
+    ```bash
+    docker compose up -d
+    ```
+- 该文件中的 `TTS`， `LLM`， `STT` 都优先级低于 `roles.json`，如果在 `role.json` 中定义了 `TTS`， `LLM`， `STT`，该文件中的定义将不会生效。搭建完成后如果测试发现与这里定义的服务有冲突，请检查 `roles.json`。
+:::
+
+
+FoloToy 服务器接受以下环境变量以进行运行时配置：
 
 | 变量名     | 描述          | 默认值 |
 | --------------------------------- | ---------------------------- | ----------------------------- |
