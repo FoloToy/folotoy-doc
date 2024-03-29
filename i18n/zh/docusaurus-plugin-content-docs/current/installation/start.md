@@ -29,7 +29,7 @@ values={[
 ]}>
 <TabItem value="docker-compose">
 
-[docker.compose.yml](../configuration/environment_variables)。该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
+[docker-compose.yml](../configuration/environment_variables)。该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
 
 
 :::caution
@@ -49,7 +49,7 @@ values={[
 
 <TabItem value="roles">
 
-[roles.json](../configuration/roles_config)。该文件用于配置每个角色的参数。例如：`开机提示语音`，`角色的提示词定义`以及每个角色各自的 `TTS（语音转文本）`，`LLM（大型语言模型）`和 `STT（语音转文字）`。**如果未配置 TTS，LLM，STT，系统会选择 `docker.compose.yml`中配置的相应参数**。最新版的文件在这里：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
+[roles.json](../configuration/roles_config)。该文件用于配置每个角色的参数。例如：`开机提示语音`，`角色的提示词定义`以及每个角色各自的 `TTS（语音转文本）`，`LLM（大型语言模型）`和 `STT（语音转文字）`。**如果未配置 TTS，LLM，STT，系统会选择 `docker-compose.yml`中配置的相应参数**。最新版的文件在这里：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
 
 :::caution
 

@@ -3,7 +3,7 @@ title:  Server Configuration File Explanation
 sidebar_label:  Server Configuration File Explanation
 ---
 
-1. [docker.compose.yml](../configuration/environment_variables).This file is used to configure global parameters, such as:`TTS(Text-to-Speech)`, `LLM(Large Language Model)`, `STT(Speech-to-Text)`,`Server address` and `Port`.
+1. [docker-compose.yml](../configuration/environment_variables).This file is used to configure global parameters, such as:`TTS(Text-to-Speech)`, `LLM(Large Language Model)`, `STT(Speech-to-Text)`,`Server address` and `Port`.
 
     :::caution
 
@@ -11,7 +11,7 @@ sidebar_label:  Server Configuration File Explanation
     :::
 
 
-2. [roles.json](../configuration/roles_config).This file is used to configure the parameters for each role, such as:：`start text`, `prompt`, each role's own `TTS (Text-to-Speech)`, `LLM (Large Language Model)` and `STT (Speech-to-Text)`. **If TTS, LLM, STT are not defined in `roles.json`, the system will use the ones defined in `docker.compose.yml`**。
+2. [roles.json](../configuration/roles_config).This file is used to configure the parameters for each role, such as:：`start text`, `prompt`, each role's own `TTS (Text-to-Speech)`, `LLM (Large Language Model)` and `STT (Speech-to-Text)`. **If TTS, LLM, STT are not defined in `roles.json`, the system will use the ones defined in `docker-compose.yml`**。
 
     :::caution
 
