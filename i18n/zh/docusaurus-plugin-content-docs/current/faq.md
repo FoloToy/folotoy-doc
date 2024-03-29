@@ -33,7 +33,7 @@ folotoy-server-self-hosting 默认的配置 docker-compose.yml 中，使用了 1
 **请确认玩具是否已经开机，刷机需要在通电开机状态下进行，单独的电路板连接 USB 线是不行的**
 
 1. 确保您的计算机已安装最新版本的 Chrome/Edge 浏览器。
-2. 如果是 Windows 用户，请确保安装了[驱动](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340)。
+2. 如果是 Windows 用户，请确保安装了[驱动](https://github.com/FoloToy/folotoy-doc/issues/52)。
 3. 确保您使用的是玩具配套的数据线或者其他可以传输数据的数据线（有些数据线仅用于充电）。
 4. 确保数据线连接良好，您可以在刷机选择设备的时候，停留一阵子观察设备是否会经常断开重连。
 5. 在确保上述的操作正确后，浏览器仍然无法查看设备的话，可以通过以下方式查看系统的串口设备：

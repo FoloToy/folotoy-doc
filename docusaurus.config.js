@@ -74,7 +74,7 @@ module.exports = {
       {
         docs: {
           // routeBasePath: "", // Docs-only
-          sidebarCollapsible: false,
+          sidebarCollapsible: true,
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/FoloToy/folotoy-doc/edit/main/",
