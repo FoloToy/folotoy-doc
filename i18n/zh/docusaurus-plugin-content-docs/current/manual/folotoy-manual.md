@@ -1,6 +1,6 @@
 ---
-title: 成品 FoloToy 使用说明书
-sidebar_label: 成品 FoloToy 使用说明书
+title: Fofo 使用说明书
+sidebar_label: Fofo 使用说明书
 ---
 
 ## 视频指引
