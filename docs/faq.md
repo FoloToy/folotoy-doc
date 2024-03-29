@@ -28,7 +28,7 @@ In the default configuration of folotoy-server-self-hosting docker-compose.yml, 
 **Please ensure that the toy is powered on. Flashing can only be done when the device is powered on. Connecting the USB cable to the standalone circuit board alone will not work.**
 
 1. Make sure your computer has the latest version of Chrome/Edge browser installed.
-2. If you are a Windows user, make sure you have installed the [driver](https://www.wch.cn/downloads/category/67.html?feature=USB%E8%BD%AC%E4%B8%B2%E5%8F%A3&product_name=CH340).
+2. If you are a Windows user, make sure you have installed the [driver](https://github.com/FoloToy/folotoy-doc/issues/52).
 3. Ensure that you are using the data cable provided with the toy or any other data transfer-capable cable (some cables are for charging only).
 4. Ensure that the data cable is properly connected. When selecting the device for flashing, observe if the device frequently disconnects and reconnects.
 5. If the browser still cannot detect the device after ensuring the above steps are correct, you can view the system's serial port devices using the following methods:

@@ -26,7 +26,7 @@ sidebar_label: FoloToy User Manual
 
 - [Folotoy AI Voice Dialogue Modified Toy Quick Start Guide](https://www.youtube.com/watch?v=oXxzM-v_f30)
 
-### 1. Network Configuration
+## 1. Network Configuration
 
 :::caution
 The Folotoy server is already configured. Just connect to the network and you're ready to go!
@@ -41,11 +41,11 @@ The Folotoy server is already configured. Just connect to the network and you're
 ### 2. 连接到玩具的热点 -->
 
 
-### 2. Start a conversation
+## 2. Start a conversation
 
 - After the network is configured and connected to the server, press the big round button in the middle to start the conversation. After you stop speaking, FoloToy will emit a beep to indicate the end of the recording.
 
-### 3. Switch roles
+## 3. Switch roles
 
 - he 7 round small buttons around are role switching buttons. After clicking, the role switch takes effect.
 

@@ -8,10 +8,14 @@ module.exports = {
         {
           type: "category",
           label: "Server Installation",
+          collapsible: true,
+          collapsed: true,
           items: [
             {
               type: "category",
               label: "Server Installation File",
+              collapsible: true,
+              collapsed: false,
               items: [
                 "installation/serverFile",
                 "configuration/environment_variables",
@@ -20,29 +24,29 @@ module.exports = {
               ]
             },
     
-              {
-                type: "category",
-                label: "Server Installation Method",
-                items: [
-                  "installation/docker",
-                  "installation/1panel",
-                  "installation/synology-nas",
-                  "installation/flyio",
-                  "installation/windows-wsl2",
-                ]
-              }
+            {
+              type: "category",
+              label: "Server Installation Method",
+              items: [
+                "installation/docker",
+                "installation/1panel",
+                "installation/synology-nas",
+                "installation/flyio",
+                "installation/windows-wsl2",
+              ]
+            }
           ],
-        },
-        {
-          type: "category",
-          label: "Toy PCB Replacement",
-          items: [
-            "toy-pcb-replacement/video-tutorial",
-            "toy-pcb-replacement/alilo-g6",
-            "toy-pcb-replacement/alilo-f6",
-            "toy-pcb-replacement/mitu-c1",
-          ],
-        },
+        }
+      ],
+    },
+    {
+      type: "category",
+      label: "Toy PCB Replacement",
+      items: [
+        "toy-pcb-replacement/video-tutorial",
+        "toy-pcb-replacement/alilo-g6",
+        "toy-pcb-replacement/alilo-f6",
+        "toy-pcb-replacement/mitu-c1",
       ],
     },
     {
@@ -131,7 +135,7 @@ module.exports = {
     {
       type: "category",
       label: "Folotoy Manual",
-      items: ["manual/folotoy-manual", "manual/cactus-manual", "manual/wifi-connect"],
+      items: ["manual/folotoy-manual", "manual/cactus-manual", "manual/magicBox-manual", "manual/wifi-connect"],
     },
     {
       type: "doc",
