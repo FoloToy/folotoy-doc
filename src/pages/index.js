@@ -4,7 +4,7 @@ import { Redirect } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 function Home() {
-  return <Redirect to={useBaseUrl("/docs/installation/docker")} />;
+  return <Redirect to={useBaseUrl("/docs/installation/serverFile")} />;
 }
 
 export default Home;

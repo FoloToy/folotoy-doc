@@ -27,7 +27,7 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/installation/docker",
+          to: "/docs/installation/serverFile",
           activeBasePath: "docs",
           label: "Docs",
           position: "left",
