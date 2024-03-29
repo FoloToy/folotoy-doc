@@ -6,19 +6,20 @@ sidebar_label: Aliyun TTS
 支持阿里云平台官方模型和自己训练的个性化模型 
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
-|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
-|  region_id    |  区域代码    |  cn-shanghai | 
-|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
-|  voice_id    |  这里的配置优先级比项目设置高，如果不是自定义模型，请不要添加这个配置    |  | 
-|  volume    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
-|  speech_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置    |  | 
-|  pitch_rate    |  这里的配置优先级比项目设置高，请不要添加这个配置   |  | 
-配置示例
+|  access_key_id    | For more information, refer to:[Access Key Id](https://help.aliyun.com/document_detail/450514.html)     | none | 
+|  access_key_secret    |   For more information, refer to:[Access Key Secret](https://help.aliyun.com/document_detail/450514.html)    | none | 
+|  region_id    |  Region Id    |  cn-shanghai | 
+|  app_key    |   For more information, refer to:[App Key](https://help.aliyun.com/document_detail/72214.html)   | none  | 
+|  voice_id    |  The configuration here takes precedence over project settings. If it is not a custom model, please do not add this configuration.    | none | 
+|  volume    |  The configuration here takes precedence over project settings. If it is not a custom model, please do not add this configuration.  |none | 
+|  speech_rate    |  The configuration here takes precedence over project settings. If it is not a custom model, please do not add this configuration.   | none | 
+|  pitch_rate    |  The configuration here takes precedence over project settings. If it is not a custom model, please do not add this configuration.  | none | 
+
+Configuration example:
 
    ```yml title="roles.json"
    {

@@ -12,7 +12,7 @@ Configurable parameters:
 | Parameter Name | Description | Default Value |
 | :-- | :-- | :-- |
 | api_base | API endpoint | https://api.dify.ai/v1 |
-| key | API key |  |
+| key | API key | none |
 
 Configuration example:
 

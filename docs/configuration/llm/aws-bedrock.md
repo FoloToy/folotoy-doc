@@ -4,18 +4,18 @@ sidebar_label: AWS Bedrock
 ---
 
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 | region_name    | region name  |  ap-northeast-1 | 
 | aws_access_key_id | aws access key id | HS21qAAAAAAAAAAA |
 | aws_secret_access_key | aws access secret key | HS21qAAAAAAAAAAA |
 | model | https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html | anthropic.claude-v2.1 |
 | max_tokens | max output token count | 1024 |
-| temperature | | 0.7 |
+| temperature |  What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {

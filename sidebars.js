@@ -84,6 +84,8 @@ module.exports = {
             "configuration/llm/spark-desk",
             "configuration/llm/minimax",
             "configuration/llm/aws-bedrock",
+            "configuration/llm/fastgpt",
+
           ],
         },
         {

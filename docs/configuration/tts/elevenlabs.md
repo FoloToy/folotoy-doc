@@ -3,18 +3,17 @@ title: Elevenlabs Text to Sound Configuration
 sidebar_label: Elevenlabs TTS
 ---
 
+Configurable parameters:
 
-可配置参数列表
-
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-| key | elevenlabs key |  |
+| key | elevenlabs key | none |
 | model | elevenlabs model | eleven_multilingual_v2  |
-| voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. 也可以参考下图查找 |  |
+| voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. Or as shown in the image below | none |
 
 <img src="https://user-images.githubusercontent.com/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
 
-配置示例
+Configuration example:
 
 ```yml title="roles.json"
     {

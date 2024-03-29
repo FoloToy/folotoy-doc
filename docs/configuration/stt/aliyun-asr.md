@@ -3,15 +3,19 @@ title: Aliyun ASR Configuration
 sidebar_label: Aliyun ASR
 ---
 
-可配置参数列表
 
-| 参数名称 | 参数说明 | 默认值 |
+Configurable parameters:
+
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-|  access_key_id    | 获取请参考：https://help.aliyun.com/document_detail/450514.html     | | 
-|  access_key_secret    |  获取请参考：https://help.aliyun.com/document_detail/450514.html    |  | 
-|  region_id    |  区域代码    |  cn-shanghai | 
-|  app_key    |  获取请参考 https://help.aliyun.com/document_detail/72214.html    |  | 
-配置示例
+|  access_key_id    |  For more information, refer to: [Access Key Id](https://help.aliyun.com/document_detail/450514.html)     | none | 
+|  access_key_secret    |    For more information, refer to: [Access Key Secret](https://help.aliyun.com/document_detail/450514.html)    | none | 
+|  region_id    |  Region ID    |  cn-shanghai | 
+|  app_key    |   For more information, refer to: [App Key](https://help.aliyun.com/document_detail/72214.html)    | none | 
+
+Configuration example:
+
+
 
    ```yml title="roles.json"
    {

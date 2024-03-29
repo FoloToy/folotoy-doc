@@ -3,13 +3,13 @@ title: MS Edge Text to Sound Configuration
 sidebar_label: MS Edge TTS
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-|  voice_name    |  Voice Name, 点击这里查看声音列表 https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices    |   zh-CN-YunyangNeural    |
+|  voice_name    |  Voice Name, For more information, refer to: [Voice Name](https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices)  |   zh-CN-YunyangNeural    |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {

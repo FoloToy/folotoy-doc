@@ -3,17 +3,17 @@ title: Anthropic Configuration
 sidebar_label: Anthropic
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 | api_base    | api base url  |  "https://api.anthropic.com | 
 | key | api_key | sk-ant-api03-Vq-W2wQHS21qAAAAAAAAAAA |
-| model | The model name https://www.anthropic.com/api |  |
+| model | The model name https://www.anthropic.com/api | none |
 | max_tokens | max output token count | 1024 |
-| temperature | | 0.7 |
+| temperature |  What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. | 0.7 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {

@@ -3,15 +3,15 @@ title: Xiaodu Configuration
 sidebar_label: Xiaodu
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 | client_id | app client id | TESTAAAAAAAAAAAAA |
-| secret | app secret |  |
+| secret | app secret | none |
 | max_tokens | max output token count | 400 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {
