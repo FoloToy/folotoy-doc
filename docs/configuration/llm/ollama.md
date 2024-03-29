@@ -3,14 +3,14 @@ title: Ollama Configuration
 sidebar_label: Ollama
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 | api_base    | api base url  |  http://localhost:11434 | 
-| model | The model name, such as gemma:2b, more at https://ollama.com/library |  |
+| model | The model name, such as gemma:2b, more at https://ollama.com/library | none |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {

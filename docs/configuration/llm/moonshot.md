@@ -3,17 +3,17 @@ title: Moonshot Configuration
 sidebar_label: Moonshot
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 | api_base    | api base url  |  https://api.moonshot.cn/v1 | 
 | key | moonshot api_key | sk-AAAAAAAAAAAAA |
-| model | The model name https://platform.moonshot.cn/docs/pricing |  |
+| model | The model name https://platform.moonshot.cn/docs/pricing | none |
 | max_tokens | max output token count | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {

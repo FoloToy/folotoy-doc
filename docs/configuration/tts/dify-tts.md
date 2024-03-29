@@ -3,14 +3,14 @@ title: Dify Text to Sound Configuration
 sidebar_label: Dify TTS
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  | https://api.dify.ai/v1 | 
 |  key    | app key     | app-AAAA      |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {

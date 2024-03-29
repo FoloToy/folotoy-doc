@@ -3,9 +3,9 @@ title: OpenAI Text to Sound Configuration
 sidebar_label: OpenAI TTS
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  | https://api.openai.com/v1 | 
 |  key    | openai api key     | sk-AAAA      |
@@ -13,7 +13,7 @@ sidebar_label: OpenAI TTS
 |  speed    |  The speed of the generated audio. Select a value from 0.25 to 4.0    |  1.0     |
 |  voice_name    |  The voice to use when generating the audio. Supported voices are alloy, echo, fable, onyx, nova, and shimmer.    |  alloy     |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
     {

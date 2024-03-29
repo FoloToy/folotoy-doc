@@ -8,19 +8,19 @@ sidebar_label: Azure OpenAI TTS
 azure-openai-tts 的还是预览状态，参考文档：https://learn.microsoft.com/en-us/azure/ai-services/openai/text-to-speech-quickstart?tabs=command-line
 :::
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
-| :--     | :--     |  :--     |
-|  api_base    | 接口地址     |  | 
-|  key    |  接口密钥    |  | 
-|  deployment_name    | 模型部署名称，不要填模型名称     |  | 
-|  api_version    | 接口版本     | 2024-02-15-preview | 
-|  model    | 模型名称     | tts-1 | 
-|  speed    | 播放语速     | 1 | 
-|  voice_name    | 声音名称     | alloy, echo, fable, onyx, nova, shimmer | 
+| Parameter Name | Parameter Description | Default Value |
+| :-- | :-- | :-- |
+| api_base | API endpoint | none |
+| key | API key | none |
+| deployment_name | Deployment name, do not fill in the model name | none |
+| api_version | API version | 2024-02-15-preview |
+| model | Model name | tts-1 |
+| speed | Playback speed | 1 |
+| voice_name | Voice name | alloy, echo, fable, onyx, nova, shimmer |
 
-配置示例
+Configuration example:
 
 ```yml title="roles.json"
    {

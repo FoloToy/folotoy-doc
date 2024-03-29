@@ -3,20 +3,20 @@ title: OpenAI Configuration
 sidebar_label: OpenAI
 ---
 
-可配置参数列表
+Configurable parameters:
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  |  https://api.openai.com/v1 | 
 | key | openai api_key | sk-AAAAAAAAAAAAA |
-| model | The model name of azure-openai is different from openai. Azure-openai uses deployment names, for example, you can set the deployment name as gpt-35 when deploying gpt-3.5-turbo. |  |
+| model | The model name of azure-openai is different from openai. Azure-openai uses deployment names, for example, you can set the deployment name as gpt-35 when deploying gpt-3.5-turbo. | none |
 | max_tokens |https://platform.openai.com/docs/api-reference/chat/create#chat-create-model | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 | top_p | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 0.95 |
 | frequency_penalty |  | 0 |
 | presence_penalty | Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. | 0 |
 
-配置示例
+Configuration example:
 
    ```yml title="roles.json"
   {
