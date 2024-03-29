@@ -29,7 +29,7 @@ values={[
 ]}>
 <TabItem value="docker-compose">
 
-[docker.compose.yml](../configuration/environment_variables). This file is used to configure global parameters such as the global use of `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, `STT (Speech-to-Text)`, server address, and port configuration. The latest version of the file is available here: [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
+[docker-compose.yml](../configuration/environment_variables). This file is used to configure global parameters such as the global use of `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, `STT (Speech-to-Text)`, server address, and port configuration. The latest version of the file is available here: [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
 
 
 :::caution
@@ -49,7 +49,7 @@ values={[
 
 <TabItem value="roles">
 
-[roles.json](../configuration/roles_config). This file is used to configure parameters for each role, such as `startup prompt voice`, `definition of role prompts`, and individual `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, and `STT (Speech-to-Text)` for each role. **If TTS, LLM, STT are not configured, the system will use the corresponding parameters configured in `docker.compose.yml`**. The latest version of the file is available here: [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles-minimal.json)
+[roles.json](../configuration/roles_config). This file is used to configure parameters for each role, such as `startup prompt voice`, `definition of role prompts`, and individual `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, and `STT (Speech-to-Text)` for each role. **If TTS, LLM, STT are not configured, the system will use the corresponding parameters configured in `docker-compose.yml`**. The latest version of the file is available here: [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles-minimal.json)
 
 :::caution
 
