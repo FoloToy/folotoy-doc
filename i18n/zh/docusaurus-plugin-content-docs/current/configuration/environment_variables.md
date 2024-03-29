@@ -1,7 +1,7 @@
 ---
 id: environment_variables
 title: 环境变量
-sidebar_label: 环境变量
+sidebar_label: 环境变量(docker-compose.yml)
 ---
 
 FoloToy 服务器接受以下环境变量以进行运行时配置：

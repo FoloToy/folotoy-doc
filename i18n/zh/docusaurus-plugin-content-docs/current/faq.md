@@ -23,6 +23,11 @@ folotoy-server-self-hosting 默认的配置 docker-compose.yml 中，使用了 1
 * 18083/tcp: **可选**, EMQX 的 Web 管理后台的 HTTP 端口
 * 8083/tcp: **可选**, EMQX 的 Websocket 端口
 
+## 切换角色有语音，对话却没有反应？
+
+1. 8085/udp 端口没有打开，请确保打开成功，并且类型是 **UDP**。
+2. 大模型配置错误，在`roles.json`中定义了错误的`model`。`roles.json`的优先级大于 `docker-compose.yml`，请确保`roles.json`中定义的`model`是正确的。每种大模型的`model`名称不同，请仔细查看文档的`LLM（大型语言模型）配置`
+
 ## 连接刷机 USB 线后，Chrome/Edge 浏览器看不到串口设备?
 
 **请确认玩具是否已经开机，刷机需要在通电开机状态下进行，单独的电路板连接 USB 线是不行的**

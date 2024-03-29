@@ -9,11 +9,28 @@ module.exports = {
           type: "category",
           label: "Server Installation",
           items: [
-            "installation/docker",
-            "installation/1panel",
-            "installation/synology-nas",
-            "installation/flyio",
-            "installation/windows-wsl2",
+            {
+              type: "category",
+              label: "Server Installation File",
+              items: [
+                "installation/serverFile",
+                "configuration/environment_variables",
+                "configuration/roles_config",
+                "configuration/advanced_roles_config",
+              ]
+            },
+    
+              {
+                type: "category",
+                label: "Server Installation Method",
+                items: [
+                  "installation/docker",
+                  "installation/1panel",
+                  "installation/synology-nas",
+                  "installation/flyio",
+                  "installation/windows-wsl2",
+                ]
+              }
           ],
         },
         {
@@ -30,60 +47,57 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Advanced Configuration",
+      label: "Roles Detailed Settings",
       items: [
-        "configuration/environment_variables",
-        "configuration/roles_config",
-        "configuration/advanced_roles_config",
+        {
+          type: "category",
+          label: "STT Configuration",
+          items: [
+            "configuration/stt/openai-whisper",
+            "configuration/stt/azure-whisper",
+            "configuration/stt/azure-stt",
+            "configuration/stt/dify-stt",
+            "configuration/stt/aliyun-asr",
+          ],
+        },
+        {
+          type: "category",
+          label: "LLM Configuration",
+          items: [
+            "configuration/llm/openai",
+            "configuration/llm/azure-openai",
+            "configuration/llm/gemini",
+            "configuration/llm/dify",
+            "configuration/llm/qianfan",
+            "configuration/llm/xiaodu",
+            "configuration/llm/moonshot",
+            "configuration/llm/groq",
+            "configuration/llm/ollama",
+            "configuration/llm/anthropic",
+            "configuration/llm/zhipu",
+            "configuration/llm/lingyiwanwu",
+            "configuration/llm/dashscope",
+            "configuration/llm/spark-desk",
+            "configuration/llm/minimax",
+            "configuration/llm/aws-bedrock",
+          ],
+        },
+        {
+          type: "category",
+          label: "TTS Configuration",
+          items: [
+            "configuration/tts/openai-tts",
+            "configuration/tts/azure-tts",
+            "configuration/tts/azure-openai-tts",
+            "configuration/tts/elevenlabs",
+            "configuration/tts/edge-tts",
+            "configuration/tts/aliyun-tts",
+            "configuration/tts/dify-tts",
+          ],
+        },
       ],
     },
-    {
-      type: "category",
-      label: "STT Configuration",
-      items: [
-        "configuration/stt/openai-whisper",
-        "configuration/stt/azure-whisper",
-        "configuration/stt/azure-stt",
-        "configuration/stt/dify-stt",
-        "configuration/stt/aliyun-asr",
-      ],
-    },
-    {
-      type: "category",
-      label: "LLM Configuration",
-      items: [
-        "configuration/llm/openai",
-        "configuration/llm/azure-openai",
-        "configuration/llm/gemini",
-        "configuration/llm/dify",
-        "configuration/llm/fastgpt",
-        "configuration/llm/qianfan",
-        "configuration/llm/xiaodu",
-        "configuration/llm/moonshot",
-        "configuration/llm/groq",
-        "configuration/llm/ollama",
-        "configuration/llm/anthropic",
-        "configuration/llm/zhipu",
-        "configuration/llm/lingyiwanwu",
-        "configuration/llm/dashscope",
-        "configuration/llm/spark-desk",
-        "configuration/llm/minimax",
-        "configuration/llm/aws-bedrock",
-      ],
-    },
-    {
-      type: "category",
-      label: "TTS Configuration",
-      items: [
-        "configuration/tts/openai-tts",
-        "configuration/tts/azure-tts",
-        "configuration/tts/azure-openai-tts",
-        "configuration/tts/elevenlabs",
-        "configuration/tts/edge-tts",
-        "configuration/tts/aliyun-tts",
-        "configuration/tts/dify-tts",
-      ],
-    },
+  
     {
       type: "category",
       label: "Octopus Dev Suit",
