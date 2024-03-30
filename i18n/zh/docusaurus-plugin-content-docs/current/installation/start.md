@@ -29,8 +29,9 @@ values={[
 ]}>
 <TabItem value="docker-compose">
 
-[docker-compose.yml](../configuration/environment_variables)。该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
+该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
 
+查看参数详情介绍：[docker-compose.yml](../configuration/environment_variables)
 
 :::caution
 
@@ -42,6 +43,9 @@ values={[
     ```bash
     docker compose up -d
     ```
+
+- **您只需要填入你自己设置的 TTS， LLM， STT， 相应的参数。**例如：STT_TYPE 选择了`openai-whisper`，则需要填入对应的 `OPENAI_WHISPER_KEY`,`OPENAI_WHISPER_MODEL`,`OPENAI_WHISPER_API_BASE`。
+
 - 该文件中的 `TTS`， `LLM`， `STT` 都优先级低于 `roles.json`，如果在 `role.json` 中定义了 `TTS`， `LLM`， `STT`，该文件中的定义将不会生效。搭建完成后如果测试发现与这里定义的服务有冲突，请检查 `roles.json`。
 :::
 
@@ -49,7 +53,10 @@ values={[
 
 <TabItem value="roles">
 
-[roles.json](../configuration/roles_config)。该文件用于配置每个角色的参数。例如：`开机提示语音`，`角色的提示词定义`以及每个角色各自的 `TTS（语音转文本）`，`LLM（大型语言模型）`和 `STT（语音转文字）`。**如果未配置 TTS，LLM，STT，系统会选择 `docker-compose.yml`中配置的相应参数**。最新版的文件在这里：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
+该文件用于配置每个角色的参数。例如：`开机提示语音`，`角色的提示词定义`以及每个角色各自的 `TTS（语音转文本）`，`LLM（大型语言模型）`和 `STT（语音转文字）`。**如果未配置 TTS，LLM，STT，系统会选择 `docker-compose.yml`中配置的相应参数**。最新版的文件在这里：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
+
+查看参数详情介绍：[roles.json](../configuration/roles_config)
+
 
 :::caution
 

@@ -3,7 +3,7 @@ id: environment_variables
 title: 环境变量
 sidebar_label: 环境变量(docker-compose.yml)
 ---
-最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)。
+最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)，**请复制最新的文档来并修改其中的参数**。
 
 该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
 
@@ -24,6 +24,8 @@ sidebar_label: 环境变量(docker-compose.yml)
 - 请注意将`your_vps_ip`为自己的 ip。将各种服务的 Key 修改为 自己的 Key。**特别注意`AUDIO_DOWNLOAD_URL`带有`http://`，`SPEECH_UDP_SERVER_HOST`不带**。
 
 - 确保所有使用了的端口都打开，`1883/tcp`，`8082/tcp`，`18083/tcp`，`8083/tcp`，`8085/udp`，尤其注意 `8085`端口是 `UDP`。对于一些 VPS，可能需要去安全组打开，**请一定确保打开成功，特别是确保 `8085` 是`UDP`**。
+
+- **您只需要填入你自己设置的 TTS， LLM， STT， 相应的参数。**例如：STT_TYPE 选择了`openai-whisper`，则需要填入对应的 `OPENAI_WHISPER_KEY`,`OPENAI_WHISPER_MODEL`,`OPENAI_WHISPER_API_BASE`。
 
 - 每次修改后，都需要重编，执行以下命令：
     ```bash
