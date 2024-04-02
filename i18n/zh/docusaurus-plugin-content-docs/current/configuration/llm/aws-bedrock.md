@@ -3,8 +3,12 @@ title: AWS Bedrock 配置
 sidebar_label: AWS Bedrock
 ---
 
+## AWS Bedrock
 
-可配置参数列表
+https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html
+
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -15,7 +19,7 @@ sidebar_label: AWS Bedrock
 | max_tokens | 最大输入 token| 1024 |
 | temperature | | 0.7 |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

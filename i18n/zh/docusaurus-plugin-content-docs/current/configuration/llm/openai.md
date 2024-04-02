@@ -3,7 +3,11 @@ title: OpenAI Configuration
 sidebar_label: OpenAI
 ---
 
-可配置参数列表
+## OpenAI
+
+https://platform.openai.com
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -16,7 +20,7 @@ sidebar_label: OpenAI
 | frequency_penalty | - | 0 |
 | presence_penalty | 这是数值范围为 -2.0 到 2.0 的数字，用于控制文本生成过程中的新颖性。数值越高，模型就越倾向于讨论新主题，生成的句子也会更加新颖和独特 | 0 |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {
