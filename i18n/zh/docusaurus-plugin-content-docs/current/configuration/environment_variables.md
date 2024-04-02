@@ -17,7 +17,7 @@ sidebar_label: 环境变量(docker-compose.yml)
 - ALIYUN_TTS_APP_KEY([App Key](https://help.aliyun.com/document_detail/72214.html))
 - DIFY_TTS_KEY
 
-**如果您想要给每个角色设置特定的 STT，请查看[角色配置](./roles_config.mdx#高级配置)**
+**如果您想要给每个角色设置特定的 TTS，请查看[角色配置](./roles_config.mdx#高级配置)**
 
 :::caution
 
