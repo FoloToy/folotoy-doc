@@ -9,12 +9,47 @@ import TabItem from "@theme/TabItem";
 :::caution
 在您着手准备搭建服务器前，请仔细阅读这篇文章，文章中列举的需要注意的地方，请多留意。
 
+
 无论是配置还是使用过程中的问题，请首先前往 [常见问题](../faq.md) 查看问题。如无法解决，请联系我们。
 
 您可以先根据 [设备各种灯的颜色代表了什么意思？](../faq.md#各种灯的颜色代表了什么意思) 来判断问题。
 
-
 :::
+
+## 支持的服务
+**自建服务器需要自己配置 `sst`, `llm`, `tts`**
+
+### STT（语音转文本）
+- openai-whisper
+- azure-stt
+- azure-whisper
+- dify-stt
+- aliyun-asr
+### LLM（大型语言模型）
+- openai
+- azure-openai
+- gemini
+- dify
+- qianfan
+- xiaodu
+- moonshot
+- groq
+- ollama
+- anthropic
+- dashscope
+- spark-desk
+- minimax
+- aws-bedrock
+- zhipu
+- lingyiwanwu
+### TSS（文本转语音）
+- openai-tts
+- azure-tts
+- azure-openai-tts
+- elevenlabs
+- edge-tts
+- aliyun-tts
+- dify-tts
 
 ## 服务器准备工作
 
@@ -22,6 +57,7 @@ import TabItem from "@theme/TabItem";
 - 机器上至少需要 512 MB 的内存才能成功安装
 - 推荐使用 Linux x86_64/ARM64，Debian 10-11/Ubuntu 20.04-22.04/Armbian
 - 需要互联网访问权限 **（如果使用的是 OpenAI 或者 Azure 等服务，请确保服务器能够与 openai.com 或 azure.com 等进行通信）**
+
 
 ## 文件准备工作
 
@@ -58,6 +94,8 @@ values={[
 
 - 该文件中的 `TTS`， `LLM`， `STT` 都优先级低于 `roles.json`，如果在 `role.json` 中定义了 `TTS`， `LLM`， `STT`，该文件中的定义将不会生效。搭建完成后如果测试发现与这里定义的服务有冲突，请检查 `roles.json`。
 :::
+
+- `ROLES_FILE_PATH` 字段配置的是 `roles.json` 的路径，请确保该路径是正确的。
 
 </TabItem>
 
