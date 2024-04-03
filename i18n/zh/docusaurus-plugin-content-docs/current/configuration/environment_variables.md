@@ -32,6 +32,8 @@ sidebar_label: 环境变量(docker-compose.yml)
     docker compose up -d
     ```
 - 该文件中的 `TTS`， `LLM`， `STT` 都优先级低于 `roles.json`，如果在 `role.json` 中定义了 `TTS`， `LLM`， `STT`，该文件中的定义将不会生效。搭建完成后如果测试发现与这里定义的服务有冲突，请检查 `roles.json`。
+
+- `ROLES_FILE_PATH` 字段配置的是 `roles.json` 的路径，请确保该路径是正确的。
 :::
 
 
