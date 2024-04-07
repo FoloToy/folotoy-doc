@@ -128,7 +128,7 @@ values={[
 
 我们提供了多种方式，您根据您的需求选择：
 
-- [docker - 适用于熟悉 docker 的人使用](./docker)
+- [docker - 适用于熟悉 docker 的人使用](./docker.md)
 - [1 panel - 强烈推荐，在可视化的页面操作](./1panel.md)
 - [群晖 NAS](./synology-nas.md)
 - [Fly.io](./flyio.md)
@@ -138,7 +138,7 @@ values={[
 
 
 
-部署好服务器后，将设备[配置网络](../manual/wifi-connect)，即可开始享受快乐时光～
+部署好服务器后，将设备[配置网络](../manual/wifi-connect.md)，即可开始享受快乐时光～
 
 在使用的过程中，遇到的问题，您可以在[常见问题(FAQ)](../faq.md)中找到，如果未找到相应解决方案，请联系我们。
 
