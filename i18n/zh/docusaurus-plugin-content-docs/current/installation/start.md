@@ -77,7 +77,7 @@ values={[
 
 点击查看最新版的文件：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
 
-点击查看参数详情介绍：[环境变量(docker-compose.yml)](../configuration/environment_variables)
+点击查看参数详情介绍：[环境变量(docker-compose.yml)](https://docs.folotoy.com/zh/docs/configuration/environment_variables)
 
 :::caution
 
@@ -105,7 +105,7 @@ values={[
 
 点击查看最新版的文件：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
 
-点击查看参数详情介绍：[角色配置(roles.json)](../configuration/roles_config)
+点击查看参数详情介绍：[角色配置(roles.json)](https://docs.folotoy.com/zh/docs/configuration/roles_config)
 
 
 :::caution
@@ -128,11 +128,11 @@ values={[
 
 我们提供了多种方式，您根据您的需求选择：
 
-- [docker - 适用于熟悉 docker 的人使用](../installation/docker)
-- [1 panel - 强烈推荐，在可视化的页面操作](../installation/1panel.md)
-- [群晖 NAS](../installation/synology-nas.md)
-- [Fly.io](../installation/flyio.md)
-- [Windows WSL2](../installation/windows-wsl2.md)
+- [docker - 适用于熟悉 docker 的人使用](./docker)
+- [1 panel - 强烈推荐，在可视化的页面操作](./1panel.md)
+- [群晖 NAS](./synology-nas.md)
+- [Fly.io](./flyio.md)
+- [Windows WSL2](./windows-wsl2.md)
 
 ## 使用
 
