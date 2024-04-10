@@ -61,9 +61,8 @@ import TabItem from "@theme/TabItem";
 
 ## 文件准备工作
 
-Folotoy 服务器需要您准备两个文件，我们都准备好了这两个文件，您只需要修改成其中的一些参数即可。
 
-**请您务必先准备好以下两个文件，并且仔细阅读注意事项**
+**我们为您提供了方便生成的工具，您只需前往：[自建服务器文件在线生成工具](https://self-hoseting-file-generator.vercel.app/) 生成后，直接复制粘贴即可。在您生成之前，也请您仔细阅读本篇文章后再前往生成**
 
 <Tabs
 defaultValue="docker-compose"
@@ -75,13 +74,9 @@ values={[
 
 该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
 
-点击查看最新版的文件：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
-
 点击查看参数详情介绍：[环境变量(docker-compose.yml)](https://docs.folotoy.com/zh/docs/configuration/environment_variables)
 
 :::caution
-
-- 请注意将`your_vps_ip`为自己的 ip。将各种服务的 Key 修改为 自己的 Key。**特别注意`AUDIO_DOWNLOAD_URL`带有`http://`，`SPEECH_UDP_SERVER_HOST`不带**。
 
 - 确保所有使用了的端口都打开，`1883/tcp`，`8082/tcp`，`18083/tcp`，`8083/tcp`，`8085/udp`，尤其注意 `8085`端口是 `UDP`。对于一些 VPS，可能需要去安全组打开，**请一定确保打开成功，特别是确保 `8085` 是`UDP`**。
 
@@ -90,12 +85,10 @@ values={[
     docker compose up -d
     ```
 
-- **您只需要填入你自己设置的 TTS， LLM， STT， 相应的参数。**例如：STT_TYPE 选择了`openai-whisper`，则需要填入对应的 `OPENAI_WHISPER_KEY`,`OPENAI_WHISPER_MODEL`,`OPENAI_WHISPER_API_BASE`。
-
 - 该文件中的 `TTS`， `LLM`， `STT` 都优先级低于 `roles.json`，如果在 `role.json` 中定义了 `TTS`， `LLM`， `STT`，该文件中的定义将不会生效。搭建完成后如果测试发现与这里定义的服务有冲突，请检查 `roles.json`。
-:::
 
 - `ROLES_FILE_PATH` 字段配置的是 `roles.json` 的路径，请确保该路径是正确的。
+:::
 
 </TabItem>
 
@@ -103,7 +96,6 @@ values={[
 
 该文件用于配置每个角色的参数。例如：`开机提示语音`，`角色的提示词定义`以及每个角色各自的 `TTS（语音转文本）`，`LLM（大型语言模型）`和 `STT（语音转文字）`。**如果未配置 TTS，LLM，STT，系统会选择 `docker-compose.yml`中配置的相应参数**。
 
-点击查看最新版的文件：[roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
 
 点击查看参数详情介绍：[角色配置(roles.json)](https://docs.folotoy.com/zh/docs/configuration/roles_config)
 

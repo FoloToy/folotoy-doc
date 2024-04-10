@@ -3,6 +3,9 @@ id: environment_variables
 title: 环境变量
 sidebar_label: 环境变量(docker-compose.yml)
 ---
+
+[自建服务器文件在线生成工具](https://self-hoseting-file-generator.vercel.app/)
+
 最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)，**请复制最新的文档来并修改其中的参数**。
 
 该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
