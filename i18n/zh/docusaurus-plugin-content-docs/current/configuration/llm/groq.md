@@ -3,14 +3,18 @@ title: Groq 配置
 sidebar_label: Groq
 ---
 
-可配置参数列表
+## Groq
+
+https://console.groq.com/docs
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
 | api_base    | api base 地址  |  https://api.groq.com/openai/v1 | 
 | model | 大模型名称, 例如： `mixtral-8x7b-32768`,  获取请参考：[Model](https://console.groq.com/docs/models) |  |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

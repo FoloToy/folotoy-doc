@@ -3,7 +3,11 @@ title: Moonshot Configuration
 sidebar_label: Moonshot
 ---
 
-Configurable parameters:
+## Moonshot
+
+https://platform.moonshot.cn/
+
+## Configurable parameters:
 
 | Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
@@ -13,7 +17,7 @@ Configurable parameters:
 | max_tokens | max output token count | 400 |
 | temperature | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 
-Configuration example:
+## Configuration example:
 
    ```yml title="roles.json"
   {
@@ -25,7 +29,7 @@ Configuration example:
             "api_base": "https://api.moonshot.cn/v1",
             "key": "sk-TESTAAAAAAAAAAAAa",
             "model": "moonshot-v1-8k",
-            "momax_tokens": 1024,
+            "max_tokens": 1024,
             "temperature": 0.7
         }
     }

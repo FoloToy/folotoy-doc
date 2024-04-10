@@ -3,7 +3,11 @@ title: Anthropic 配置
 sidebar_label: Anthropic
 ---
 
-可配置参数列表
+## Anthropic
+
+https://anthropic.com
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -13,7 +17,7 @@ sidebar_label: Anthropic
 | max_tokens | 最大输入 token | 1024 |
 | temperature | 使用采样温度 (sampling temperature) 来控制输出的随机性。该值介于 0 到 2 之间。较高的温度 (例如 0.8) 会使输出更加随机，生成意想不到的结果。较低的温度 (例如 0.2) 会使输出更加集中，更贴近于给定的输入内容 | 0.7 |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

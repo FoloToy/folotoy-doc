@@ -1,285 +1,125 @@
 ---
-title: Role Configuration
-sidebar_label: Role Configuration (roles.json)
+id: environment_variables
+title: Environment Variables
+sidebar_label: Environment Variables (docker-compose.yml)
 ---
-:::caution
-The `roles.json` file must define 7 roles.
-:::
 
-[Online tool for generating self-hosted server files](https://self-hoseting-file-generator.vercel.app/)
+[Self-hosting Server File Online Generator](https://self-hoseting-file-generator.vercel.app/)
 
-This document explains the configuration of `roles.json` and provides some examples for reference. The latest version of the file is available here: [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
+The latest version of the file is available here: [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml). **Please copy the latest document and modify the parameters as needed.**
 
-## Basic Configuration
+This file is used to configure global parameters, such as the global use of `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, `STT (Speech-to-Text)`, as well as `server address`, `port`, and other configurations.
 
-List of configurable parameters:
+If you want to set the voice type for TTS globally, you can add the following fields (please add the corresponding fields based on your TTS type):
 
-| Parameter Name | Description | Default Value |
-| --------- | ---- | --------- |
-| start_text | The startup prompt that will be automatically converted into a speech file and sent to the toy (required) | None |
-| prompt | Definition of the role's prompts (required) | None |
-| max_message_count | Set to a value greater than 0, e.g., change it to 10, to indicate support for 10 dialogues in context. Setting it to 0 means no support for context. Each model has its own limit on the size of context tokens. If exceeded, you can clear the context by pressing the current role button again. You can also roughly limit the context size by adjusting `max_message_count` and `max_tokens` values. | 0 |
+- OPENAI_TTS_VOICE_NAME (alloy, echo, fable, onyx, nova, shimmer)
+- AZURE_OPENAI_TTS_VOICE_NAME (alloy, echo, fable, onyx, nova, shimmer)
+- AZURE_TTS_VOICE_NAME ([Voice List](https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/language-support?tabs=tts))
+- EDGE_TTS_VOICE_NAME ([Voice List](https://github.com/FoloToy/folotoy-server-self-hosting/wiki/Edge%E2%80%90TTS%E2%80%90Voices))
+- ELEVENLABS_TTS_VOICE_ID ([Voice List](https://elevenlabs.io/api))
+- ALIYUN_TTS_APP_KEY ([App Key](https://help.aliyun.com/document_detail/72214.html))
+- DIFY_TTS_KEY
 
-### Configuration Example
-
-:::caution
-
-The following configurations can be directly copied and pasted for use.
-
-If you want to remember the context, you can adjust `max_message_count` to the desired number, but it is not recommended to set it too large to exceed the size limit of the large model.
-
-:::
-
-```json title="roles.json"
-{
-   "1": {
-      "start_text": "Hello, I'm Companion Bunny. Is there anything I can help you with?",
-      "prompt": "You play the role of a child's companion named Companion Bunny. You have a friendly and lively personality, full of love for children. You often praise and encourage children, providing interesting and innovative answers in language that 5-year-old children can easily understand. Each response should ask for her opinion on the chat topic to stimulate her thinking and curiosity.",
-      "max_message_count": 0
-   },
-   "2": {
-      "start_text": "Hello, I'm Northeast Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Northeast Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 0
-   },
-   "3": {
-      "start_text": "Hi, I'm Wimi. Nice to meet you.",
-      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-      "max_message_count": 0
-   },
-   "4": {
-      "start_text": "Hello, I'm Compliment Bunny. Is there anything I can help you with?",
-      "prompt": "Compliment me",
-      "max_message_count": 0
-   },
-   "5": {
-      "start_text": "Hello, I'm Mental Arithmetic Bunny. Shall we play a mental arithmetic game together?",
-      "prompt": "I'm a 6-year-old child, and you're playing a mental arithmetic game with me. You ask questions, and I'll answer them. If I answer correctly, you say 'Great!' If I answer incorrectly, you tell me the correct answer and encourage me. You ask one question at a time, and I'll answer them one by one. Do you understand?",
-      "max_message_count": 0
-   },
-   "6": {
-      "start_text": "Hello, I'm Taiwan Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Taiwan Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 0
-   },
-   "7": {
-      "start_text": "Hello, I'm Little Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Little Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 0
-   }
-}
-```
-
-## Advanced Configuration
+**If you want to set specific TTS for each role, please refer to [Role Configuration](./roles_config.mdx#advanced-configuration)**
 
 :::caution
 
-The following is advanced configuration. Please follow the tutorial step by step.
+- Make sure to replace `your_vps_ip` with your own IP address. Modify the keys of various services to your own keys. **Especially note that `AUDIO_DOWNLOAD_URL` starts with `http://`, and `SPEECH_UDP_SERVER_HOST` does not**.
 
-**Note: The following configurations take precedence over those in `docker-compose.yml`.**
+- Make sure all used ports are open, `1883/tcp`, `8082/tcp`, `18083/tcp`, `8083/tcp`, `8085/udp`, especially note that port `8085` is `UDP`. For some VPS, you may need to open them in the security group. **Please ensure that the opening is successful, especially ensure that `8085` is `UDP`.**
 
-The following configurations are for individually configuring STT, LLM, and TTS for each role. They only apply to the configured roles.
+- **You only need to fill in your own set of TTS, LLM, STT, and the corresponding parameters.** For example: If you choose `openai-whisper` for STT_TYPE, then you need to fill in the corresponding `OPENAI_WHISPER_KEY`, `OPENAI_WHISPER_MODEL`, `OPENAI_WHISPER_API_BASE`.
 
+- After each modification, a rebuild is required, execute the following command:
+    ```bash
+    docker compose up -d
+    ```
+
+- The definitions of `TTS`, `LLM`, `STT` in this file have lower priority than those in `roles.json`. If `TTS`, `LLM`, `STT` are defined in `roles.json`, the definitions in this file will not take effect. After the setup is completed, if conflicts with the services defined here are found during testing, please check `roles.json`.
+
+- The `ROLES_FILE_PATH` field configures the path of `roles.json`. Please ensure that the path is correct.
 :::
 
-| Parameter Name | Description | Default Value |
-| --------- | ---- | --------- |
-| stt_type | Type of speech-to-text engine | openai-whisper |
-| stt_config | Specific configuration of the speech-to-text engine. Different engine types have different configuration parameters. | Depends on the selected `stt_type` |
-| llm_type | Type of large language model. You can also use [one-api](https://github.com/songquanpeng/one-api) to convert large model interfaces to openai-compatible ones to support more large models. | openai |
-| llm_config | Configuration of the large model | Depends on the selected `llm_type` |
-| tts_type | Type of text-to-speech engine | openai-tts |
-| tts_config | Configuration of the text-to-speech engine | Depends on the selected `tts_type` |
+FoloToy server accepts the following environment variables for runtime configuration:
 
-:::caution
-**The following is an example configuration for one role. Do not copy and paste directly. It is only for demonstrating the hierarchy of each configuration.**
-:::
+| Variable Name     | Description          | Default Value |
+| --------------------------------- | ---------------------------- | ----------------------------- |
+| **ROLES_FILE_PATH**| Role configuration file|     roles.json          |
+| **STT_TYPE** | Speech-to-Text Engine Type: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr              |   openai-whisper            |
+| **OPENAI_WHISPER_API_BASE** | OpenAI Whisper API Base Url         |    https://api.openai.com/v1           |
+| **OPENAI_WHISPER_KEY** |  OpenAI Whisper API Key|   sk-AAAAAAAAA            |
+| **OPENAI_WHISPER_MODEL** | OpenAI Whipser Model          |   whisper-1            |
+| **AZURE_WHISPER_API_BASE** |      Azure Whisper API Base Url，Regions availability: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability     |           |
+| **AZURE_WHISPER_KEY**            |       Azure Whisper API Key  |             |
+| **AZURE_WHISPER_DEPLOYMENT_NAME**              |       Deploy Name               |          |
+| **AZURE_WHISPER_API_VERSION**  |     API Version, Details: https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#request-a-speech-to-text-transcription   |       2023-09-01-preview   |
+| **AZURE_STT_KEY**     |    Azure Speech Services Key, Details: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview  |               |
+| **AZURE_STT_SERVICE_REGION** |    Azure Speech Services Region     |          |
+| **DIFY_STT_API_BASE**  |  Dify Sound-to-Text API Base Url. You need to enable sound-to-text feature in Dify configurations        | http://192.168.52.164/v1
+| **DIFY_STT_KEY**          |  Dify Sound-to-Text API Key    |     sk-AAAAAAAA      |
+| **ALIYUN_ASR_ACCESS_KEY_ID**    | Aliyun Access Key ID     |   For token retrieval, refer: https://help.aliyun.com/document_detail/450514.html   |
+| **ALIYUN_ASR_ACCESS_KEY_SECRET**    | Aliyun Access Secret Key     |  For token retrieval, refer: https://help.aliyun.com/document_detail/450514.html  |
+| **ALIYUN_ASR_APP_KEY**    | Aliyun App Key      |   For app key retrieval, refer: https://help.aliyun.com/document_detail/72214.html   |
+| **LLM_TYPE**  |   Large Language Model Type: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic  |       openai               |
+| **OPENAI_OPENAI_API_BASE**  |  OpenAI API Base Url        | https://api.openai.com/v1
+| **OPENAI_OPENAI_KEY**          |  OpenAI API Key    |     sk-AAAAAAAA      |
+| **OPENAI_OPENAI_MODEL**          |  OpenAI Model     |     gpt-3.5-turbo      |
+| **AZURE_OPENAI_KEY**          |   Azure OpenAI API Key            |               |
+| **AZURE_OPENAI_ENDPOINT**  |  Azure OpenAI API Endpoint |          |
+| **AZURE_OPENAI_API_VERSION**     |   Azure OpenAI API Version, ，Available versions: https://learn
 
-```json
-{
-   "start_text": "Hello, I'm Wimi. Nice to meet you.",
-   "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-   "max_message_count": 20,
-   "stt_type": "openai-whisper",
-   "stt_config": {
-      // Configuration varies depending on the selected stt_type. Below is an example for openai-whisper.
-      "language": "en",
-      "api_base": "https://api.openai.com/v1",
-      "key": "sk-AAAAAAAAAAAAAAAAAAa",
-      "model": "whisper-1"
-   },
-   "tts_type": "openai-tts",
-   "tts_config": {
-      // Configuration varies depending on the selected tts_type. Below is an example for openai-tts.
-      "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-      "api_base": "https://api.openai.com/v1",
-      "model": "tts-1",
-      "speed": 1.0,
-      "voice_name": "alloy"
-   },
-   "llm_type": "openai",
-   "llm_config": {
-      // Configuration varies depending
+.microsoft.com/en-us/azure/ai-services/openai/reference#completions   |  2023-05-15             |
+| **AZURE_OPENAI_MODEL**          |  OpenAI Model     |     gpt-35-turbo      |
+| **DIFY_API_BASE**  |  Dify API Base Url        | http://192.168.52.164/v1
+| **DIFY_KEY**          |  Dify API Key    |     sk-AAAAAAAA      |
+| **GEMINI_API_BASE**  |  Gemini API Base Url        | https://generativelanguage.googleapis.com
+| **GEMINI_KEY**          |  Gemini API Key    |     sk-AAAAAAAA      |
+| **QIANFAN_CLIENT_ID**  |  Qianfan API Key        | 13rBTgx*****************e03XE
+| **QIANFAN_SECRET**          |  Qianfan Secret Key Key    |     zYxtMI***************QLerLgQ2W5e      |
+| **QIANFAN_MODEL**          |  Qianfan Model Key    |     yi_34b_chat      |
+| **MOONSHOT_API_BASE** | Moonshot API Base Url | https://api.moonshot.cn/v1 |
+| **MOONSHOT_KEY** |  | sk-xxxxx |
+| **MOONSHOT_MODEL** |  | moonshot-v1-8k |
+| **OLLAMA_API_BASE** | Ollama API Base Url | http://localhost:11434 |
+| **OLLAMA_MODEL** |  | gemma:2b |
+| **GROQ_API_BASE** | Groq API Base Url | https://api.groq.com/openai/v1 |
+| **GROQ_MODEL** | Groq Model | mixtral-8x7b-32768 |
+| **GROQ_KEY** | Groq API Key |  |
+| **ANTHROPIC_API_BASE** |  | https://api.anthropic.com |
+| **ANTHROPIC_KEY** |  | sk-ant-api03-xx |
+| **ANTHROPIC_MODEL** |  | claude-3-sonnet-20240229 |
+| **ANTHROPIC_MAX_TOKENS** |  | 1024  |
+| **VOICE_EXECUTOR_MAX_WORKERS**     |   Voice task thread pool max size | 2 |
+| **TTS_TYPE** |      Text-to-Speech Engine Type: openai-tts, azure-tts, azure-openai-tts, aliyun-tts, elevenlabs, edge-tts        |     edge-tts          |
+| **AZURE_TTS_KEY** |  Azure Speech Services Key            |               |
+| **AZURE_TTS_SERVICE_REGION**      |  Azure Speech Services Region              |          |
+| **ELEVENLABS_TTS_KEY** |   elevenlabs.io API Key           |          |
+| **ELEVENLABS_TTS_MODEL**     |    elevenlabs.io Model     |       eleven_multilingual_v2   |
+| **OPENAI_TTS_API_BASE**|     OpenAI API Base Url  |        https://api.openai.com/v1       |
+| **OPENAI_TTS_KEY**    |       OpenAI API Key|   sk-AAAAAA   |
+| **OPENAI_TTS_MODEL**    | OpenAI Text to speech model     |   tts-1   |
+| **ALIYUN_TTS_ACCESS_KEY_ID**    | Aliyun Access Key ID     |   For token retrieval, refer: https://help.aliyun.com/document_detail/450514.html   |
+| **ALIYUN_TTS_ACCESS_KEY_SECRET**    | Aliyun Access Secret Key     |  For token retrieval, refer: https://help.aliyun.com/document_detail/450514.html  |
+| **ALIYUN_TTS_APP_KEY**    | Aliyun App Key      |   For app key retrieval, refer: https://help.aliyun.com/document_detail/72214.html   |
+| **DIFY_TTS_API_BASE** |  Dify Base Url            |    https://api.dify.ai/v1           |
+| **DIFY_TTS_KEY**      |  Dify App key              |          |
+| **AZURE_OPENAI_TTS_API_BASE**      |  |    https://xxx.openai.azure.com/      |
+| **AZURE_OPENAI_TTS_API_VERSION**      |  |    2024-02-15-preview      |
+| **AZURE_OPENAI_TTS_DEPLOYMENT_NAME**      |  |    tts      |
+| **AZURE_OPENAI_TTS_KEY**      | Details: https://learn.microsoft.com/en-us/azure/ai-services/openai/text-to-speech-quickstart?tabs=command-line#rest-api  |         |
+| **AZURE_OPENAI_TTS_MODEL**      |  |   tts-1       |
+| **AUDIO_DOWNLOAD_URL**    |  Directory for downloading recordings and generated voices        |       |
+| **AUDIO_SAVE_PATH**    |     Directory for saving recordings and generated voices     |     |
+| **MQTT_BROKER_HOST**    |    MQTT Broker Host      |     |
+| **MQTT_BROKER_PORT**    |   MQTT Broker Port       |   1883  |
+| **MQTT_CLIENT_ID**    |   MQTT Client ID for user server login       |     folotoy |
+| **MQTT_USERNAME**    |    MQTT Username for user server login      |     folotoy  |
+| **MQTT_PASSWORD**    |      MQTT Password for user server login    |    folotoy |
+| **SPEECH_UDP_SERVER_HOST**    |      Host address of the UDP server that receives speech data    |      |
+| **SPEECH_UDP_SERVER_PORT**    |   Port of the UDP server that receives speech data        |     8085 |
+| **LOG_LEVEL**    |    Log Level: INFO,DEBUG,WARNING      |   DEBUG   |
+| **INTEGRATION_MQTT**    |    Whether to enable MQTT integration interface      |   false   |
+| **SENTENCE_SEPARATORS**    |    Punctuation marks used for sentence separation       |   ，！。？,!.?   |
+| **TZ**            | Used to establish local timezone, for example, to use local time in logs. Check [List of Timezone Codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).   |  Asia/Shanghai     |
 
- on the selected llm_type. Below is an example for openai.
-      "api_base": "https://xxxx.ccc/v1",
-      "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-      "model": "gpt-3.5-turbo",
-      "temperature": 0.7,
-      "max_tokens": 800,
-      "top_p": 0.95,
-      "frequency_penalty": 0,
-      "presence_penalty": 0
-   }
-}
-```
-
-### Speech-to-Text (STT) Role-level Configuration
-
-stt_type can be set to: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
-
-Detailed configuration:
-
-* [openai-whisper](./stt/openai-whisper.md)
-* [azure-stt](./stt/azure-stt.md)
-* [azure-whisper](./stt/azure-whisper.md)
-* [dify-stt](./stt/dify-stt.md)
-* [aliyun-asr](./stt/aliyun-asr.md)
-
-### Large Language Model (LLM) Role-level Configuration
-
-llm_type can be set to: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic, dashscope, spark-desk, minimax, aws-bedrock, zhipu, lingyiwanwu
-
-Detailed configuration:
-
-* [openai](./llm/openai.md)
-* [azure-openai](./llm/azure-openai.md)
-* [gemini](./llm/gemini.md)
-* [dify](./llm/dify.md)
-* [qianfan](./llm/qianfan.md)
-* [xiaodu](./llm/xiaodu.md)
-* [moonshot](./llm/moonshot.md)
-* [groq](./llm/groq.md)
-* [ollama](./llm/ollama.md)
-* [anthropic](./llm/anthropic.md)
-* [dashscope](./llm/dashscope.md)
-* [spark-desk](./llm/spark-desk.md)
-* [minimax](./llm/minimax.md)
-* [aws-bedrock](./llm/aws-bedrock.md)
-* [zhipu](./llm/zhipu.md)
-* [lingyiwanwu](./llm/lingyiwanwu.md)
-* [fastgpt](./llm/fastgpt.md)
-
-### Text-to-Speech (TTS) Role-level Configuration
-
-tts_type can be set to: openai-tts, azure-tts, azure-openai-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
-
-Detailed configuration:
-
-* [openai-tts](./tts/openai-tts.md)
-* [azure-tts](./tts/azure-tts.md)
-* [azure-openai-tts](./tts/azure-openai-tts.md)
-* [elevenlabs](./tts/elevenlabs.md)
-* [edge-tts](./tts/edge-tts.md)
-* [aliyun-tts](./tts/aliyun-tts.md)
-* [dify-tts](./tts/dify-tts.md)
-
-### Configuration Example
-
-Configuration example. Modify the following configuration according to your needs:
-
-:::caution
-The following configuration takes precedence over `docker-compose.yml`.
-
-** The following is just an example for demonstration purposes. Please configure your own configuration step by step according to the instructions in [Advanced Configuration](#advanced-configuration).**
-:::
-
- ```json title="roles.json"
-{
-   "1": {
-      "start_text": "Hello, I'm Wimi. Nice to meet you.",
-      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-      "max_message_count": 20,
-      "stt_type": "openai-whisper",
-      "stt_config": {
-         "language": "en"
-      },
-      "tts_type": "openai-tts",
-      "tts_config": {
-         "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-         "voice_name": "alloy"
-      },
-      "llm_type": "openai",
-      "llm_config": {
-         "api_base": "https://xxxx.ccc/v1",
-         "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-         "model": "gpt-3.5-turbo",
-         "temperature": 0.7,
-         "max_tokens": 800,
-         "top_p": 0.95,
-         "frequency_penalty": 0,
-         "presence_penalty": 0
-      }
-   },
-   "2": {
-      "model": "gpt-35-turbo",
-      "start_text": "Hello, I'm Northeast Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Northeast Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 20,
-      "voice_name": "zh-CN-liaoning-XiaobeiNeural"
-   },
-   "3": {
-      "model": "gpt-3.5-turbo",
-      "start_text": "Hi, I'm Wimi. Nice to meet you.",
-      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-      "max_message_count": 20,
-      "voice_name": "c8Vkv3mdER2fkhJdEIPK",
-      "language": "en",
-      "tts_type": "elevenlabs"
-   },
-   "4": {
-      "model": "gpt-3.5-turbo",
-      "start_text": "Hello, I'm Compliment Bunny. Is there anything I can help you with?",
-      "prompt": "Compliment me",
-      "max_message_count": 20,
-      "voice_name": "zh-CN-shaanxi-XiaoniNeural",
-      "language": "zh",
-      "tts_type": "azure-tts"
-   },
-   "5": {
-      "model": "gpt-3.5-turbo",
-      "start_text": "Hello, I'm Mental Arithmetic Bunny. Shall we play a mental arithmetic game together?",
-      "prompt": "I'm a 6-year-old child, and you're playing a mental arithmetic game with me. You ask questions, and I'll answer them. If I answer correctly, you say 'Great!' If I answer incorrectly, you tell me the correct answer and encourage me. You ask one question at a time, and I'll answer them one by one. Do you understand?",
-      "max_message_count": 20,
-      "stt_type": "azure-st
-
-t",
-      "llm_type": "azure-openai",
-      "tts_type": "azure-tts",
-      "voice_name": "zh-CN-YunxiaNeural",
-      "language": "zh-CN",
-      "llm_config": {
-         "model": "gpt-35-turbo"
-      }
-   },
-   "6": {
-      "model": "gpt-3.5-turbo",
-      "start_text": "Hello, I'm Taiwan Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Taiwan Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 20,
-      "voice_name": "zh-TW-HsiaoChenNeural",
-      "language": "zh-CN",
-      "stt_type": "azure-stt",
-      "tts_type": "azure-tts"
-   },
-   "7": {
-      "model": "gpt-3.5-turbo",
-      "start_text": "Hello, I'm Little Bunny. Is there anything I can help you with?",
-      "prompt": "You are a knowledgeable and helpful AI named Little Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
-      "max_message_count": 20,
-      "voice_name": "zh-CN-YunyangNeural",
-      "language": "zh",
-      "tts_type": "edge-tts"
-   }
-}
-   ```
+Translated directly into English.

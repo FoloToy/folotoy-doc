@@ -3,9 +3,11 @@ title: FastGPT 配置
 sidebar_label: FastGPT
 ---
 
-FastGPT 文档说明：https://fastgpt.in/en
+## FastGPT 
 
-可配置参数列表
+文档说明：https://fastgpt.in/en
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -15,7 +17,7 @@ FastGPT 文档说明：https://fastgpt.in/en
 | send_initial_messages | 是否向大模型发送初始消息 | false |
 | variables | 模块变量，一个对象，会替换模块中，输入框内容里的{{key}}, 参考这里：https://doc.fastgpt.in/docs/development/openapi/chat/ | {} |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {
