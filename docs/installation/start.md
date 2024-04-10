@@ -7,19 +7,61 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 :::caution
-Before you start setting up the server, please read this article carefully and pay attention to the points mentioned in the article.
+Before you start setting up the server, please read this article carefully. Pay close attention to the points mentioned in the article.
+
+For any issues during configuration or usage, please visit the [FAQ](../faq.md) first. If you cannot resolve the issue, please contact us.
+
+You can determine the problem based on [What do the various colors of the lights on the device represent?](../faq.md#what-do-the-various-colors-of-the-lights-represent).
+
 :::
+
+## Supported Services
+**Self-built servers require configuration of `STT`, `LLM`, `TTS`.**
+
+### STT (Speech to Text)
+- openai-whisper
+- azure-stt
+- azure-whisper
+- dify-stt
+- aliyun-asr
+
+### LLM (Large Language Model)
+- openai
+- azure-openai
+- gemini
+- dify
+- qianfan
+- xiaodu
+- moonshot
+- groq
+- ollama
+- anthropic
+- dashscope
+- spark-desk
+- minimax
+- aws-bedrock
+- zhipu
+- lingyiwanwu
+
+### TSS (Text to Speech)
+- openai-tts
+- azure-tts
+- azure-openai-tts
+- elevenlabs
+- edge-tts
+- aliyun-tts
+- dify-tts
 
 ## Server Preparation
 
-- A machine that is always online to ensure FoloToy server can continuously serve your toys
-- The machine needs at least 512 MB of memory for successful installation
-- Recommended to use Linux x86_64/ARM64, Debian 10-11/Ubuntu 20.04-22.04/Armbian
-- Internet access is required **(If using services like OpenAI or Azure, ensure the server can communicate with openai.com or azure.com)**
+- A machine that is always online so that the FoloToy server can continuously serve your toys.
+- The machine needs at least 512 MB of memory to be successfully installed.
+- Linux x86_64/ARM64 is recommended, with Debian 10-11/Ubuntu 20.04-22.04/Armbian.
+- Internet access is required **(If you are using services like OpenAI or Azure, ensure that the server can communicate with domains like openai.com or azure.com)**.
 
 ## File Preparation
 
-Folotoy server requires you to prepare two files, and we have prepared these two files for you. You just need to modify some parameters in them.
+**We provide a convenient tool for you to generate the files. Simply go to: [Self-hosting server file online generator](https://self-hoseting-file-generator.vercel.app/), generate, and copy-paste directly. Before generating, please read this article carefully.**
 
 <Tabs
 defaultValue="docker-compose"
@@ -29,53 +71,60 @@ values={[
 ]}>
 <TabItem value="docker-compose">
 
-[docker-compose.yml](../configuration/environment_variables). This file is used to configure global parameters such as the global use of `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, `STT (Speech-to-Text)`, server address, and port configuration. The latest version of the file is available here: [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)
+This file is used to configure global parameters such as the global use of `TTS`, `LLM`, `STT`, server address, port, and configuration.
 
+Click to see details about parameters: [Environment Variables (docker-compose.yml)](https://docs.folotoy.com/en/docs/configuration/environment_variables)
 
 :::caution
 
-- Make sure to replace `your_vps_ip` with your own IP. Modify the keys for various services to your own keys. **Pay special attention that `AUDIO_DOWNLOAD_URL` should have `http://`, and `SPEECH_UDP_SERVER_HOST` should not have it**.
+- Make sure all used ports are open, `1883/tcp`, `8082/tcp`, `18083/tcp`, `8083/tcp`, `8085/udp`, especially note that port `8085` is `UDP`. For some VPS, you may need to open them in the security group. **Please ensure that the opening is successful, especially ensure that `8085` is `UDP`.**
 
-- Ensure that all ports being used are open, `1883/tcp`, `8082/tcp`, `18083/tcp`, `8083/tcp`, `8085/udp`, especially note that port `8085` is `UDP`. For some VPS, you may need to open these ports in the security group, **make sure they are successfully opened, especially ensure that `8085` is `UDP`**.
-
-- After each modification, you need to rebuild by executing the following command:
+- After each modification, a rebuild is required, execute the following command:
     ```bash
     docker compose up -d
     ```
-- The definitions of `TTS`, `LLM`, `STT` in this file take lower priority than those in `roles.json`. If there are conflicts with the services defined here after deployment, please check `roles.json`.
+
+- The definitions of `TTS`, `LLM`, `STT` in this file have lower priority than those in `roles.json`. If `TTS`, `LLM`, `STT` are defined in `roles.json`, the definitions in this file will not take effect. After the setup is completed, if conflicts with the services defined here are found during testing, please check `roles.json`.
+
+- The `ROLES_FILE_PATH` field configures the path of `roles.json`. Please ensure that the path is correct.
 :::
 
 </TabItem>
 
 <TabItem value="roles">
 
-[roles.json](../configuration/roles_config). This file is used to configure parameters for each role, such as `startup prompt voice`, `definition of role prompts`, and individual `TTS (Text-to-Speech)`, `LLM (Large Language Model)`, and `STT (Speech-to-Text)` for each role. **If TTS, LLM, STT are not configured, the system will use the corresponding parameters configured in `docker-compose.yml`**. The latest version of the file is available here: [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles-minimal.json)
+This file is used to configure parameters for each role. For example, the `boot-up prompt audio`, `definition of prompt words for roles`, and the `TTS`, `LLM`, and `STT` for each role respectively. **If TTS, LLM, STT are not configured, the system will use the corresponding parameters configured in `docker-compose.yml`.**
+
+Click to see details about parameters: [Role Configuration (roles.json)](https://docs.folotoy.com/en/docs/configuration/roles_config)
+
 
 :::caution
 
-1. The configurations in `roles.json` will override the configurations in `docker-compose.yml`, achieving role-level configuration. If `TTS`, `LLM`, `STT` are defined in `role.json`, the system will automatically use those defined in `roles.json`. **For initial use, we recommend not defining `TTS`, `LLM`, `STT` in `roles.json`**.
+1. Configuration in `roles.json` will override the configuration in `docker-compose.yml`, achieving configuration at the role level. If `TTS`, `LLM`, `STT` are defined in `roles.json`, the system will automatically use those defined in `roles.json`. **For first-time users, we recommend not defining `TTS`, `LLM`, `STT` in `roles.json`.**
 
-2. If you want to define different `TTS`, `LLM`, `STT` for different roles, you can check the details in `Role Detailed Settings`.
+2. If you want to define different `TTS`, `LLM`, `STT` for different roles, click to view [Role Configuration - Advanced Configuration](../configuration/roles_config.mdx#advanced-configuration) for details. **Please configure step by step according to the instructions.**
 
-3. After each modification, you need to restart the Folotoy server.
+3. If you want the conversation to remember context, you can set the `max_message_count` parameter. Click to see details: [Role Configuration - Basic Configuration](../configuration/roles_config#basic-configuration).
 
+4. After each modification, the Folotoy server needs to be restarted.
 :::
+
 
 </TabItem>
 </Tabs>
 
 ## Deploying Services
 
-We provide multiple ways for deployment based on your requirements:
+We provide multiple deployment methods. Choose according to your needs:
 
-- [docker - For those familiar with docker](../installation/docker)
-- [1 panel - Highly recommended for visual page operations](../installation/1panel.md)
-- [Synology NAS](../installation/synology-nas.md)
-- [Fly.io](../installation/flyio.md)
-- [Windows WSL2](../installation/windows-wsl2.md)
+- [docker - for those familiar with docker](./docker.md)
+- [1 panel - highly recommended, operate in a visual page](./1panel.md)
+- [Synology NAS](./synology-nas.md)
+- [Fly.io](./flyio.md)
+- [Windows WSL2](./windows-wsl2.md)
 
 ## Usage
 
-Once the server is deployed, configure the network for the device [here](../manual/wifi-connect), and you can start enjoying happy times~
+Once the server is deployed, [configure the network](../manual/wifi-connect.md) for the device, and you can start enjoying your happy time~
 
-If you encounter any issues during usage, you can find solutions in the [FAQ](../faq.md). If you do not find a solution, please contact us.
+During usage, if you encounter any problems, you can find solutions in the [FAQ](../faq.md). If you cannot find a solution, please contact us.

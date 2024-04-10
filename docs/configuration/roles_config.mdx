@@ -1,202 +1,144 @@
 ---
-title: Roles Configuration
-sidebar_label: Roles Configuration
+title: Role Configuration
+sidebar_label: Role Configuration (roles.json)
 ---
+:::caution
+The `roles.json` file must define 7 roles.
+:::
 
-This document provides an explanation of the configuration for roles.json and offers some configuration examples for reference.
+[Online tool for generating self-hosted server files](https://self-hoseting-file-generator.vercel.app/)
 
-## Overview of Configuration
-
-The FoloToy server program can achieve custom effects by modifying a series of configurations. You can make modifications in the following ways:
-
-* Environment Variables: Modify the passed environment variables directly or modify the environment variables defined in the `docker-compose.yml` file.
-* Role Configuration File: Modify the `roles.json` file, which must define 7 roles.
-
-## Configuration Priority
-
-The configurations defined in `docker-compose.yml` have lower priority than the definitions in the role configuration file `roles.json`. This means that the settings in `roles.json` will override the configurations in `docker-compose.yml`, achieving role-level configuration.
-
-Here are a few examples to illustrate:
-
-1. If `STT_TYPE` is defined as `openai-whisper` in `docker-compose.yml` and no roles in `roles.json` set `stt_type`, then the `stt_type` for all roles will be automatically set to `openai-whisper`.
-2. If the role with key 4 in `roles.json` sets `stt_type` to `azure-stt`, then except for role 4, the `stt_type` for other roles will be automatically set to `openai-whisper`.
-
-Please note that these examples are for reference purposes, and you can customize the configurations according to your specific requirements.
-
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+This document explains the configuration of `roles.json` and provides some examples for reference. The latest version of the file is available here: [roles.json](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/config/roles.json)
 
 ## Basic Configuration
 
-Configurable parameters:
+List of configurable parameters:
 
 | Parameter Name | Description | Default Value |
-| -------------- | ----------- | ------------- |
-| start_text | Startup prompt text, automatically converted to audio and sent to the toy (required) | None |
-| prompt | Definition of the role's prompt (required) | None |
-| max_message_count | Set to a value greater than 0, e.g., 10, to enable context support for up to 10 conversations. Set to 0 to disable context. Each model has its own limit on the size of context tokens. If the limit is exceeded, press the role button again to clear the context. You can also adjust the values of `max_message_count` and `max_tokens` to limit the context size. | 0 |
-| stt_type | Sound-to-text engine type| openai-whisper |
-| stt_config | Sound-to-text engine specific configuration. Configuration parameters vary for different engine types. | None |
-| llm_type | Large language model type. You can also use [one-api](https://github.com/songquanpeng/one-api) to proxy the interface of larger models to be openai-compatible, thereby supporting more large models. | openai |
-| llm_config | Configuration for the large language model. | None |
-| tts_type | Text-to-sound engine type | openai-tts |
-| tts_config | Configuration for the text-to-sound engine. | None |
+| --------- | ---- | --------- |
+| start_text | The startup prompt that will be automatically converted into a speech file and sent to the toy (required) | None |
+| prompt | Definition of the role's prompts (required) | None |
+| max_message_count | Set to a value greater than 0, e.g., change it to 10, to indicate support for 10 dialogues in context. Setting it to 0 means no support for context. Each model has its own limit on the size of context tokens. If exceeded, you can clear the context by pressing the current role button again. You can also roughly limit the context size by adjusting `max_message_count` and `max_tokens` values. | 0 |
 
-<Tabs
-defaultValue="roles-minimal.json"
-values={[
-{ label: 'Minimum roles.json configuration.', value: 'roles-minimal.json', },
-{ label: 'Full roles.json configuration', value: 'roles-full.json', },
-]}>
-<TabItem value="roles-minimal.json">
+### Configuration Example
 
-Configuration example:
+:::caution
 
-   ```yml title="roles.json"
-   {
-       "1": {
-         "start_text": "你好，我是陪伴兔，请问有什么我可以帮助你的吗？",
-         "prompt": "你扮演一个孩子的小伙伴，名字叫陪伴兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心。"
-       },
-       "2": {
-         "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
-         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
-       },
-       "3": {
-         "start_text": "Hi, I'm Wimi. Nice to meet you.",
-         "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!"
-       },
-       "4": {
-         "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
-         "prompt": "夸夸我"
-       },
-       "5": {
-         "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
-         "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？"
-       },
-       "6": {
-         "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
-         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
-       },
-       "7": {
-         "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
-         "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！"
-       }
+The following configurations can be directly copied and pasted for use.
+
+If you want to remember the context, you can adjust `max_message_count` to the desired number, but it is not recommended to set it too large to exceed the size limit of the large model.
+
+:::
+
+```json title="roles.json"
+{
+   "1": {
+      "start_text": "Hello, I'm Companion Bunny. Is there anything I can help you with?",
+      "prompt": "You play the role of a child's companion named Companion Bunny. You have a friendly and lively personality, full of love for children. You often praise and encourage children, providing interesting and innovative answers in language that 5-year-old children can easily understand. Each response should ask for her opinion on the chat topic to stimulate her thinking and curiosity.",
+      "max_message_count": 0
+   },
+   "2": {
+      "start_text": "Hello, I'm Northeast Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Northeast Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 0
+   },
+   "3": {
+      "start_text": "Hi, I'm Wimi. Nice to meet you.",
+      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
+      "max_message_count": 0
+   },
+   "4": {
+      "start_text": "Hello, I'm Compliment Bunny. Is there anything I can help you with?",
+      "prompt": "Compliment me",
+      "max_message_count": 0
+   },
+   "5": {
+      "start_text": "Hello, I'm Mental Arithmetic Bunny. Shall we play a mental arithmetic game together?",
+      "prompt": "I'm a 6-year-old child, and you're playing a mental arithmetic game with me. You ask questions, and I'll answer them. If I answer correctly, you say 'Great!' If I answer incorrectly, you tell me the correct answer and encourage me. You ask one question at a time, and I'll answer them one by one. Do you understand?",
+      "max_message_count": 0
+   },
+   "6": {
+      "start_text": "Hello, I'm Taiwan Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Taiwan Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 0
+   },
+   "7": {
+      "start_text": "Hello, I'm Little Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Little Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 0
    }
-   ```
-</TabItem>
-
-<TabItem value="roles-full.json">
-
-Configuration example:
-
-   ```yml title="roles.json"
-   {
-      "1": {
-        "start_text": "你好，我是微眯，请问有什么我可以帮助你的吗？",
-        "prompt": "你扮演一个孩子的小伙伴，名字叫微眯，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
-        "max_message_count": 5,
-        "stt_type": "openai-whisper",
-        "stt_config": {
-          "language": "zh"
-        },
-        "tts_type": "openai-tts",
-        "tts_config": {
-          "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-          "voice_name": "alloy"
-        },
-        "llm_type": "openai",
-        "llm_config": {
-          "api_base": "https://xxxx.ccc/v1",
-          "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-          "model": "gpt-3.5-turbo",
-          "temperature": 0.7,
-          "max_tokens": 800,
-          "top_p": 0.95,
-          "frequency_penalty": 0,
-          "presence_penalty": 0
-        }
-      },
-      "2": {
-        "model": "gpt-35-turbo",
-        "start_text": "你好，俺是东北兔，请问有什么俺可以帮助你的吗？",
-        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“东北兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-        "max_message_count": 20,
-        "voice_name": "zh-CN-liaoning-XiaobeiNeural"
-      },
-      "3": {
-        "model": "gpt-3.5-turbo",
-        "start_text": "Hi, I'm Wimi. Nice to meet you.",
-        "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
-        "max_message_count": 20,
-        "voice_name": "c8Vkv3mdER2fkhJdEIPK",
-        "language": "en",
-        "tts_type": "elevenlabs"
-      },
-      "4": {
-        "model": "gpt-3.5-turbo",
-        "start_text": "你好，额是夸夸兔，请问有什么额可以帮助你的吗？ ",
-        "prompt": "夸夸我",
-        "max_message_count": 20,
-        "voice_name": "zh-CN-shaanxi-XiaoniNeural",
-        "language": "zh",
-        "tts_type": "azure-tts"
-      },
-      "5": {
-        "model": "gpt-3.5-turbo",
-        "start_text": "你好，我是口算兔，我们一起来玩玩口算游戏吧？",
-        "prompt": "我是一个6岁小朋友，你陪我玩口算游戏。你出题，我回答结果。如果答对了你就说好棒，答错了你就告诉我正确答案，并且鼓励我。你一题一题的出，我一个个回答。不要有太多的解释说明。明白了吗？",
-        "max_message_count": 20,
-        "stt_type": "azure-stt",
-        "llm_type": "azure-openai",
-        "tts_type": "azure-tts",
-        "voice_name": "zh-CN-YunxiaNeural",
-        "language": "zh-CN",
-        "llm_config": {
-          "model": "gpt-35-turbo"
-        }
-      },
-      "6": {
-        "model": "gpt-3.5-turbo",
-        "start_text": "你好，我是台湾兔，请问有什么我可以帮助你的吗？",
-        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“台湾兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-        "max_message_count": 20,
-        "voice_name": "zh-TW-HsiaoChenNeural",
-        "language": "zh-CN",
-        "stt_type": "azure-stt",
-        "tts_type": "azure-tts"
-      },
-      "7": {
-        "model": "gpt-3.5-turbo",
-        "start_text": "你好，我是小兔，请问有什么我可以帮助你的吗？",
-        "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-        "max_message_count": 20,
-        "voice_name": "zh-CN-YunyangNeural",
-        "language": "zh",
-        "tts_type": "edge-tts"
-      },
-      "toys": {
-        "08d1f9c6a310": {
-          "2": {
-            "model": "gpt-3.5-turbo",
-            "start_text": "哈哈哈哈哈，我是一个超快可爱的大小兔，请问有什么我可以帮助你的吗？",
-            "prompt": "你是一个知识渊博，乐于助人的智能机器人,你的名字叫“小兔”，你的任务是陪我聊天，请用简短的对话方式，用中文讲一段话，每次回答不超过50个字！",
-            "max_message_count": 5,
-            "voice_name": "zh-TW-HsiaoChenNeural"
-          }
-        }
-      }
 }
-   ```
-</TabItem>
-</Tabs>
+```
 
+## Advanced Configuration
 
+:::caution
 
-## Sound-to-Text (STT) Role Level Configuration Instructions
+The following is advanced configuration. Please follow the tutorial step by step.
 
-The `stt_type` can be set to: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
+**Note: The following configurations take precedence over those in `docker-compose.yml`.**
+
+The following configurations are for individually configuring STT, LLM, and TTS for each role. They only apply to the configured roles.
+
+:::
+
+| Parameter Name | Description | Default Value |
+| --------- | ---- | --------- |
+| stt_type | Type of speech-to-text engine | openai-whisper |
+| stt_config | Specific configuration of the speech-to-text engine. Different engine types have different configuration parameters. | Depends on the selected `stt_type` |
+| llm_type | Type of large language model. You can also use [one-api](https://github.com/songquanpeng/one-api) to convert large model interfaces to openai-compatible ones to support more large models. | openai |
+| llm_config | Configuration of the large model | Depends on the selected `llm_type` |
+| tts_type | Type of text-to-speech engine | openai-tts |
+| tts_config | Configuration of the text-to-speech engine | Depends on the selected `tts_type` |
+
+:::caution
+**The following is an example configuration for one role. Do not copy and paste directly. It is only for demonstrating the hierarchy of each configuration.**
+:::
+
+```json
+{
+   "start_text": "Hello, I'm Wimi. Nice to meet you.",
+   "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
+   "max_message_count": 20,
+   "stt_type": "openai-whisper",
+   "stt_config": {
+      // Configuration varies depending on the selected stt_type. Below is an example for openai-whisper.
+      "language": "en",
+      "api_base": "https://api.openai.com/v1",
+      "key": "sk-AAAAAAAAAAAAAAAAAAa",
+      "model": "whisper-1"
+   },
+   "tts_type": "openai-tts",
+   "tts_config": {
+      // Configuration varies depending on the selected tts_type. Below is an example for openai-tts.
+      "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "api_base": "https://api.openai.com/v1",
+      "model": "tts-1",
+      "speed": 1.0,
+      "voice_name": "alloy"
+   },
+   "llm_type": "openai",
+   "llm_config": {
+      // Configuration varies depending
+
+ on the selected llm_type. Below is an example for openai.
+      "api_base": "https://xxxx.ccc/v1",
+      "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 800,
+      "top_p": 0.95,
+      "frequency_penalty": 0,
+      "presence_penalty": 0
+   }
+}
+```
+
+### Speech-to-Text (STT) Role-level Configuration
+
+stt_type can be set to: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr
+
+Detailed configuration:
 
 * [openai-whisper](./stt/openai-whisper.md)
 * [azure-stt](./stt/azure-stt.md)
@@ -204,10 +146,11 @@ The `stt_type` can be set to: openai-whisper, azure-stt, azure-whisper, dify-stt
 * [dify-stt](./stt/dify-stt.md)
 * [aliyun-asr](./stt/aliyun-asr.md)
 
+### Large Language Model (LLM) Role-level Configuration
 
-## The configuration instructions for the role level of the AI large language model (LLM) 
+llm_type can be set to: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic, dashscope, spark-desk, minimax, aws-bedrock, zhipu, lingyiwanwu
 
-The `llm_type` parameter can be set to one of the following values: openai, azure-openai, gemini, dify, qianfan, xiaodu, moonshot, groq, ollama, anthropic, dashscope, spark-desk, minimax, aws-bedrock, zhipu, lingyiwanwu
+Detailed configuration:
 
 * [openai](./llm/openai.md)
 * [azure-openai](./llm/azure-openai.md)
@@ -227,9 +170,11 @@ The `llm_type` parameter can be set to one of the following values: openai, azur
 * [lingyiwanwu](./llm/lingyiwanwu.md)
 * [fastgpt](./llm/fastgpt.md)
 
-## Explanation of Role-Level Configuration for Text-to-Speech (TTS)
+### Text-to-Speech (TTS) Role-level Configuration
 
-The "tts_type" parameter can be set to: openai-tts, azure-tts, azure-openai-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
+tts_type can be set to: openai-tts, azure-tts, azure-openai-tts, elevenlabs, edge-tts, aliyun-tts, dify-tts
+
+Detailed configuration:
 
 * [openai-tts](./tts/openai-tts.md)
 * [azure-tts](./tts/azure-tts.md)
@@ -238,3 +183,103 @@ The "tts_type" parameter can be set to: openai-tts, azure-tts, azure-openai-tts,
 * [edge-tts](./tts/edge-tts.md)
 * [aliyun-tts](./tts/aliyun-tts.md)
 * [dify-tts](./tts/dify-tts.md)
+
+### Configuration Example
+
+Configuration example. Modify the following configuration according to your needs:
+
+:::caution
+The following configuration takes precedence over `docker-compose.yml`.
+
+** The following is just an example for demonstration purposes. Please configure your own configuration step by step according to the instructions in [Advanced Configuration](#advanced-configuration).**
+:::
+
+ ```json title="roles.json"
+{
+   "1": {
+      "start_text": "Hello, I'm Wimi. Nice to meet you.",
+      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
+      "max_message_count": 20,
+      "stt_type": "openai-whisper",
+      "stt_config": {
+         "language": "en"
+      },
+      "tts_type": "openai-tts",
+      "tts_config": {
+         "key": "sk-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+         "voice_name": "alloy"
+      },
+      "llm_type": "openai",
+      "llm_config": {
+         "api_base": "https://xxxx.ccc/v1",
+         "key": "sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+         "model": "gpt-3.5-turbo",
+         "temperature": 0.7,
+         "max_tokens": 800,
+         "top_p": 0.95,
+         "frequency_penalty": 0,
+         "presence_penalty": 0
+      }
+   },
+   "2": {
+      "model": "gpt-35-turbo",
+      "start_text": "Hello, I'm Northeast Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Northeast Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 20,
+      "voice_name": "zh-CN-liaoning-XiaobeiNeural"
+   },
+   "3": {
+      "model": "gpt-3.5-turbo",
+      "start_text": "Hi, I'm Wimi. Nice to meet you.",
+      "prompt": "You're a knowledgeable and helpful AI named \"Wimi\". Your task is to chat with me. Please respond in English, keeping your answers brief – no more than 50 words each time!",
+      "max_message_count": 20,
+      "voice_name": "c8Vkv3mdER2fkhJdEIPK",
+      "language": "en",
+      "tts_type": "elevenlabs"
+   },
+   "4": {
+      "model": "gpt-3.5-turbo",
+      "start_text": "Hello, I'm Compliment Bunny. Is there anything I can help you with?",
+      "prompt": "Compliment me",
+      "max_message_count": 20,
+      "voice_name": "zh-CN-shaanxi-XiaoniNeural",
+      "language": "zh",
+      "tts_type": "azure-tts"
+   },
+   "5": {
+      "model": "gpt-3.5-turbo",
+      "start_text": "Hello, I'm Mental Arithmetic Bunny. Shall we play a mental arithmetic game together?",
+      "prompt": "I'm a 6-year-old child, and you're playing a mental arithmetic game with me. You ask questions, and I'll answer them. If I answer correctly, you say 'Great!' If I answer incorrectly, you tell me the correct answer and encourage me. You ask one question at a time, and I'll answer them one by one. Do you understand?",
+      "max_message_count": 20,
+      "stt_type": "azure-st
+
+t",
+      "llm_type": "azure-openai",
+      "tts_type": "azure-tts",
+      "voice_name": "zh-CN-YunxiaNeural",
+      "language": "zh-CN",
+      "llm_config": {
+         "model": "gpt-35-turbo"
+      }
+   },
+   "6": {
+      "model": "gpt-3.5-turbo",
+      "start_text": "Hello, I'm Taiwan Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Taiwan Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 20,
+      "voice_name": "zh-TW-HsiaoChenNeural",
+      "language": "zh-CN",
+      "stt_type": "azure-stt",
+      "tts_type": "azure-tts"
+   },
+   "7": {
+      "model": "gpt-3.5-turbo",
+      "start_text": "Hello, I'm Little Bunny. Is there anything I can help you with?",
+      "prompt": "You are a knowledgeable and helpful AI named Little Bunny. Your task is to chat with me. Please use brief dialogue in Chinese to speak a sentence. Each response should not exceed 50 characters!",
+      "max_message_count": 20,
+      "voice_name": "zh-CN-YunyangNeural",
+      "language": "zh",
+      "tts_type": "edge-tts"
+   }
+}
+   ```
