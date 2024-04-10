@@ -3,7 +3,11 @@ title: Gemini 配置
 sidebar_label: Gemini
 ---
 
-可配置参数列表
+## Gemini
+
+https://ai.google.dev/docs
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -17,7 +21,7 @@ sidebar_label: Gemini
 | top_k | 获取请参考： [Top_K](https://ai.google.dev/models/gemini#model_metadata) | 1 |
 | safety_settings | 填写 gemini 文档中定义的格式。获取请参考： [Safety Settings](https://ai.google.dev/docs/safety_setting_gemini )| [] |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
 {

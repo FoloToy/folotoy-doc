@@ -3,16 +3,18 @@ title: Dify 配置
 sidebar_label: Dify
 ---
 
+## Dify
+
 dify 可以自行部署 https://github.com/langgenius/dify 或者直接使用 cloud 版本 https://cloud.dify.ai/
 
-可配置参数列表
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
 |  api_base    | api base url  |  https://api.dify.ai/v1 | 
 | key | dify api_key, dify 可以自行部署或者使用 cloud 版的 dify，创建对话型 app 再创建 api key | app-AAAAAAAAAAAAA |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

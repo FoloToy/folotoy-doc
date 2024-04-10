@@ -3,14 +3,18 @@ title: Ollama 配置
 sidebar_label: Ollama
 ---
 
-可配置参数列表
+## Ollama
+
+https://ollama.com
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
 | api_base    | api base 地址  |  http://localhost:11434 | 
 | model | 大模型名称, 例如： gemma:2b， 获取请参考：[Model](https://ollama.com/library) |  |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

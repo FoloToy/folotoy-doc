@@ -3,7 +3,11 @@ title: 小度配置
 sidebar_label: 小度
 ---
 
-可配置参数列表
+## 小度
+
+暂未开放
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -11,7 +15,7 @@ sidebar_label: 小度
 | secret | app secret |  |
 | max_tokens | 最大输入 token | 400 |
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
   {

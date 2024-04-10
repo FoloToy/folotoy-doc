@@ -2,8 +2,11 @@
 title: Minimax 配置
 sidebar_label: Minimax
 ---
+## Minimax
 
-可配置参数列表
+https://www.minimaxi.com/
+
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |

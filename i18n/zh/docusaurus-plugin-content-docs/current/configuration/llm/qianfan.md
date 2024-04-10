@@ -3,6 +3,10 @@ title: 百度千帆配置
 sidebar_label: 百度千帆
 ---
 
+## 百度千帆
+
+访问地址：https://cloud.baidu.com
+
 支持百度千帆大模型平台中的大模型，点击这里查看支持列表：[对话模型列表](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Nlks5zkzu#%E5%AF%B9%E8%AF%9Dchat)，包括不限于以下大模型：
 
 - ERNIE-Bot 4.0
@@ -18,7 +22,7 @@ sidebar_label: 百度千帆
 - Dolly-12B
 - Falcon-40B-Instruc
 
-可配置参数列表
+## 可配置参数列表
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
@@ -32,7 +36,7 @@ sidebar_label: 百度千帆
 model 字段的填写填写大模型对应的模型代码，例如 `ERNIE-Bot 4.0`，打开它的[API文档](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/clntwmv7t), 可以看到请求的 URL 是 https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro ，
 那么它的模型代码是 `completions_pro`，也就是说 URL 是这样模式  https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/{model} ，那么模型代码就是 {model} 定义的字段。
 
-配置示例
+## 配置示例
 
    ```yml title="roles.json"
 {
