@@ -4,7 +4,7 @@ title: Environment Variables
 sidebar_label: Environment Variables (docker-compose.yml)
 ---
 
-[Self-hosting Server File Online Generator](https://self-hoseting-file-generator.vercel.app/)
+[Self-hosting Server File Online Generator](https://self-hosting-file-generator.vercel.app/)
 
 The latest version of the file is available here: [docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml). **Please copy the latest document and modify the parameters as needed.**
 
