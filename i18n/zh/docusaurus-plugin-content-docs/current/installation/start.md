@@ -62,7 +62,7 @@ import TabItem from "@theme/TabItem";
 ## 文件准备工作
 
 
-**我们为您提供了方便生成的工具，您只需前往：[自建服务器文件在线生成工具](https://self-hoseting-file-generator.vercel.app/) 生成后，直接复制粘贴即可。在您生成之前，也请您仔细阅读本篇文章后再前往生成**
+**我们为您提供了方便生成的工具，您只需前往：[自建服务器文件在线生成工具](https://self-hosting-file-generator.vercel.app/) 生成后，直接复制粘贴即可。在您生成之前，也请您仔细阅读本篇文章后再前往生成**
 
 <Tabs
 defaultValue="docker-compose"

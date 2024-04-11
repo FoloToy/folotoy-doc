@@ -61,7 +61,7 @@ You can determine the problem based on [What do the various colors of the lights
 
 ## File Preparation
 
-**We provide a convenient tool for you to generate the files. Simply go to: [Self-hosting server file online generator](https://self-hoseting-file-generator.vercel.app/), generate, and copy-paste directly. Before generating, please read this article carefully.**
+**We provide a convenient tool for you to generate the files. Simply go to: [Self-hosting server file online generator](https://self-hosting-file-generator.vercel.app/), generate, and copy-paste directly. Before generating, please read this article carefully.**
 
 <Tabs
 defaultValue="docker-compose"

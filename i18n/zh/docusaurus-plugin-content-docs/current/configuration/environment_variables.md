@@ -4,7 +4,7 @@ title: 环境变量
 sidebar_label: 环境变量(docker-compose.yml)
 ---
 
-[自建服务器文件在线生成工具](https://self-hoseting-file-generator.vercel.app/)
+[自建服务器文件在线生成工具](https://self-hosting-file-generator.vercel.app/)
 
 最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)，**请复制最新的文档来并修改其中的参数**。
 
