@@ -43,7 +43,7 @@ module.exports = {
                 "configuration/stt/azure-stt",
                 "configuration/stt/dify-stt",
                 "configuration/stt/aliyun-asr",
-                "configuration/stt/cf=workers-ai-asr",
+                "configuration/stt/cf-workers-ai-asr",
               ],
             },
             {
