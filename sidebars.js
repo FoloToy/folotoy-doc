@@ -85,7 +85,7 @@ module.exports = {
                 "configuration/tts/aliyun-tts",
                 "configuration/tts/dify-tts",
                 "configuration/tts/minimax-tts",
-                "configuration/tts/volcegine-tts",
+                "configuration/tts/volcengine-tts",
               ],
             },
           ],
