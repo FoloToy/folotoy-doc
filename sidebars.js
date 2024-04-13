@@ -43,6 +43,7 @@ module.exports = {
                 "configuration/stt/azure-stt",
                 "configuration/stt/dify-stt",
                 "configuration/stt/aliyun-asr",
+                "configuration/stt/cf=workers-ai-asr",
               ],
             },
             {
@@ -66,6 +67,9 @@ module.exports = {
                 "configuration/llm/minimax",
                 "configuration/llm/aws-bedrock",
                 "configuration/llm/fastgpt",
+                "configuration/llm/coze",
+                "configuration/llm/cf-workers-ai",
+                "configuration/llm/volcengine",
     
               ],
             },
@@ -80,6 +84,8 @@ module.exports = {
                 "configuration/tts/edge-tts",
                 "configuration/tts/aliyun-tts",
                 "configuration/tts/dify-tts",
+                "configuration/tts/minimax-tts",
+                "configuration/tts/volcegine-tts",
               ],
             },
           ],
