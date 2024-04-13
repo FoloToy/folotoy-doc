@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 :::
 
 ## 支持的服务
-**自建服务器需要自己配置 `sst`, `llm`, `tts`**
+**自建服务器需要自己配置 `stt`, `llm`, `tts`**
 
 ### STT（语音转文本）
 - openai-whisper
@@ -25,6 +25,7 @@ import TabItem from "@theme/TabItem";
 - azure-whisper
 - dify-stt
 - aliyun-asr
+- cf-workers-ai-asr (Cloudfalre Workers AI)
 ### LLM（大型语言模型）
 - openai
 - azure-openai
@@ -42,7 +43,11 @@ import TabItem from "@theme/TabItem";
 - aws-bedrock
 - zhipu
 - lingyiwanwu
-### TSS（文本转语音）
+- cf-workers-ai  (Cloudfalre Workers AI)
+- volcengine（豆包同款云雀大模型 Skylark-chat，https://www.volcengine.com/docs/82379/1133387）
+- coze (https://coze.com/open/docs/coze_api_overview)
+
+### TTS（文本转语音）
 - openai-tts
 - azure-tts
 - azure-openai-tts
@@ -50,6 +55,8 @@ import TabItem from "@theme/TabItem";
 - edge-tts
 - aliyun-tts
 - dify-tts
+- minimax-tts （https://www.minimaxi.com/）
+- volcengine-tts (https://www.volcengine.com/docs/6561/97465)
 
 ## 服务器准备工作
 

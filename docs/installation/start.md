@@ -24,6 +24,7 @@ You can determine the problem based on [What do the various colors of the lights
 - azure-whisper
 - dify-stt
 - aliyun-asr
+- cf-workers-ai-asr (Cloudfalre Workers AI)
 
 ### LLM (Large Language Model)
 - openai
@@ -42,8 +43,11 @@ You can determine the problem based on [What do the various colors of the lights
 - aws-bedrock
 - zhipu
 - lingyiwanwu
+- cf-workers-ai  (Cloudfalre Workers AI)
+- volcengine（Skylark-chat，https://www.volcengine.com/docs/82379/1133387）
+- coze (https://coze.com/open/docs/coze_api_overview)
 
-### TSS (Text to Speech)
+### TTS (Text to Speech)
 - openai-tts
 - azure-tts
 - azure-openai-tts
@@ -51,6 +55,8 @@ You can determine the problem based on [What do the various colors of the lights
 - edge-tts
 - aliyun-tts
 - dify-tts
+- minimax-tts （https://www.minimaxi.com/）
+- volcengine-tts (https://www.volcengine.com/docs/6561/97465)
 
 ## Server Preparation
 
