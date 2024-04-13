@@ -54,13 +54,7 @@ The MagicBox server is already configured. Just connect to the network and you'r
 
 - Here is an introduction to the seven roles:
 
-  1. 你好，我是火火兔，请问有什么我可以帮助你的吗？
-  2. 你好，俺是东北兔，请问有什么俺可以帮助你的吗？
-  3. Hi, I'm Fofo. Nice to meet you.
-  4. 你好，额是夸夸兔，请问有什么额可以帮助你的吗？
-  5. 你好，我是山东兔，请问有什么我可以帮助你的吗？
-  6. 你好，我是台湾兔，请问有什么我可以帮助你的吗？
-  7. 你好，我是红小兔，请问有什么我可以帮助你的吗？
+- MagicBox supports two roles
 
 <img src="https://github.com/FoloToy/folotoy-doc/assets/41461127/2d91229c-b205-48d5-92fa-10a27f2db349" />
 
