@@ -195,3 +195,17 @@ sidebar_label: AT 指令
   ```json
   at+config=common,volume,100
   ```
+
+### 录音开始提示音配置
+
+    at+config=common,record_begin_audio_type,<value> // 0-禁用，1-启用
+
+
+### 对话结束判断时长配置
+
+    at+config=common,no_sound_duration,<millis> // 单位：ms
+
+
+### 电量上报周期配置
+
+    at+config=common,send_battery_msg_time,<seconds> // 单位：s
