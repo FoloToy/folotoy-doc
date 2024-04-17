@@ -201,3 +201,17 @@ sidebar_label: AT Command
   ```json
   at+config=common,volume,100
   ```
+
+### Recording start prompt sound configuration
+
+    at+config=common,record_begin_audio_type,<value> // 0-disable，1-enable
+
+
+### Dialogue end judgment duration configuration
+
+    at+config=common,no_sound_duration,<millis> // Unit：ms
+
+
+### Power reporting cycle configuration
+
+    at+config=common,send_battery_msg_time,<seconds> // Unit：s
