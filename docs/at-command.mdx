@@ -215,3 +215,8 @@ sidebar_label: AT Command
 ### Power reporting cycle configuration
 
     at+config=common,send_battery_msg_time,<seconds> // Unit：s
+
+### Configure whether the cactus twists while speaking
+
+    at+command=io_output,true // Twisting
+    at+command=io_output,false // Not twisting
