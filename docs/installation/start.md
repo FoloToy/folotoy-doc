@@ -25,6 +25,7 @@ You can determine the problem based on [What do the various colors of the lights
 - dify-stt
 - aliyun-asr
 - cf-workers-ai-asr (Cloudfalre Workers AI)
+- volcengine-asr
 
 ### LLM (Large Language Model)
 - openai
