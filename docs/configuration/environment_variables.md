@@ -66,9 +66,7 @@ FoloToy server accepts the following environment variables for runtime configura
 | **OPENAI_OPENAI_MODEL**          |  OpenAI Model     |     gpt-3.5-turbo      |
 | **AZURE_OPENAI_KEY**          |   Azure OpenAI API Key            |               |
 | **AZURE_OPENAI_ENDPOINT**  |  Azure OpenAI API Endpoint |          |
-| **AZURE_OPENAI_API_VERSION**     |   Azure OpenAI API Version, ，Available versions: https://learn
-
-.microsoft.com/en-us/azure/ai-services/openai/reference#completions   |  2023-05-15             |
+| **AZURE_OPENAI_API_VERSION**     |   Azure OpenAI API Version, ，Available versions: https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#completions   |  2023-05-15             |
 | **AZURE_OPENAI_MODEL**          |  OpenAI Model     |     gpt-35-turbo      |
 | **DIFY_API_BASE**  |  Dify API Base Url        | http://192.168.52.164/v1
 | **DIFY_KEY**          |  Dify API Key    |     sk-AAAAAAAA      |
