@@ -122,7 +122,7 @@ module.exports = {
     {
       type: "category",
       label: "Octopus Dev Suit",
-      items: ["dev-suit/quickstart", "dev-suit/partsinfo", "dev-suit/configure_keys"],
+      items: ["dev-suit/quickstart", "dev-suit/partsinfo", "dev-suit/configure_keys", "dev-suit/wake_up"],
     },
     {
       type: "category",

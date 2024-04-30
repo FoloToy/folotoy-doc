@@ -32,6 +32,10 @@
     "message": "集成",
     "description": "The label for category Integrations in sidebar docs"
   },
+  "sidebar.docs.category.Wake Up": {
+    "message": "语音唤醒模块",
+    "description": "The label for category Wake Up in sidebar docs"
+  },
   "sidebar.docs.category.Advanced Configuration": {
     "message": "服务器高级配置",
     "description": "The label for category Advanced Configuration in sidebar docs"

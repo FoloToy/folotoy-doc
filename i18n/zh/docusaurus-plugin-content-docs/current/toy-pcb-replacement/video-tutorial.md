@@ -11,5 +11,5 @@ sidebar_label: 视频教程
 
 ## 更换米兔 C1 电路板
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
