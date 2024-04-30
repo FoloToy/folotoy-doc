@@ -5,7 +5,7 @@ sidebar_label: 米兔 C1
 
 本文提供了米兔 C1 更换的必要步骤。如果您不打算阅读下面的文档，也可以参考下面的视频。
 
-<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" src="//player.bilibili.com/player.html?aid=959871024&bvid=BV1Qp4y1T71J&cid=1303264940&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 准备

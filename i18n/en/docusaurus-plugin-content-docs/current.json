@@ -23,6 +23,10 @@
     "message": "Advanced Configuration",
     "description": "The label for category Advanced Configuration in sidebar docs"
   },
+  "sidebar.docs.category.Wake Up": {
+    "message": "Wake Up",
+    "description": "The label for category Wake Up in sidebar docs"
+  },
   "sidebar.docs.category.Maintenance": {
     "message": "Maintenance",
     "description": "The label for category Maintenance in sidebar docs"

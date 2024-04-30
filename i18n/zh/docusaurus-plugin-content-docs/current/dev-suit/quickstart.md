@@ -39,7 +39,7 @@ Folotoy 八爪鱼 AI 开发套件包括以下组件：
 
 * [圣诞老人也会用 ChatGPT 了](https://www.bilibili.com/video/BV15N4y147Fm)
 
-<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=880093245&bvid=BV15N4y147Fm&cid=1373634475&p=1autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="100%" height="600" iframe src="//player.bilibili.com/player.html?aid=880093245&bvid=BV15N4y147Fm&cid=1373634475&p=1&autoplay=0" scrolling="no" border="0" frameBorder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ### 在 YouTube 观看 
 
