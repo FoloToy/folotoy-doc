@@ -122,14 +122,22 @@ sidebar_label: AT 指令
     at+config=wifi,ssid,<ssid>;password,<password> // at+config=wifi,ssid,test-wifi;password,123456
     ```
 
-### 修改配置中连续对话的声音阈值
+### 配置声音阈值
 
-    at+config=common,voice,<value> // at+config=common,voice, 默认60dB，取值范围 50dB-80dB
+- `at+config=common,voice_start_threshold,<value>`：配置开始阈值，取值范围 50dB-80dB
 
-  - 例：修改声音阈值为 60dB
+    例：修改声音触发阈值为 60dB
 
     ```json
-    at+config=common,voice,60
+    at+config=common,voice_start_threshold,60
+    ```
+
+- `at+config=common,voice_end_threshold,<value>`：配置结束阈值，默认为 开始阈值 - 5
+
+    例：修改声音结束阈值为 55dB
+
+    ```json
+    at+config=common,voice_end_threshold,55
     ```
 
 ### 修改设备等待服务器回复的超时时长
@@ -218,4 +226,12 @@ sidebar_label: AT 指令
 
 ### 唤醒词模式配置（目前仅八爪鱼MiniPro版本支持）
 
-    at+config=common,wake_up_mode,<value> // 0-禁用，1-启用
+    at+command=wake_up_mode,open //启用
+    at+command=wake_up_mode,close //禁用
+
+
+### 待机模式（适用于固件版本为 24.20.4.31 及以上的魔匣和仙人掌）
+
+    at+config=common,standby_mode,open //启用
+    at+config=common,standby_mode,close //禁用
+    at+config=common,standby_time,<seconds> //单位：s

@@ -130,15 +130,24 @@ sidebar_label: AT Command
     at+config=wifi,ssid,<ssid>;password,<password> // at+config=wifi,ssid,test-wifi;password,123456
     ```
 
-### Modify voice threshold in continuous dialogue mode:
+### Configure Sound Thresholds
 
-    at+config=common,voice,<threshold> // default to 60dB, with a range of values ranging from 50dB to 80dB
+- **Command:** `at+config=common,voice_start_threshold,<value>`
+  - **Description:** Configure the start threshold, with a range of 50dB-80dB.
+  - **Example:** Modify the sound trigger threshold to 60dB
 
-- Example: Modify voice threshold to 60dB
-
+    ```json
+    at+config=common,voice_start_threshold,60
     ```
-    at+config=common,voice,60
+
+- **Command:** `at+config=common,voice_end_threshold,<value>`
+  - **Description:** Configure the end threshold, default is the start threshold - 5.
+  - **Example:** Modify the sound end threshold to 55dB
+  
+    ```json
+    at+config=common,voice_end_threshold,55
     ```
+
 ### Modify the timeout for waiting the server response
 
 - Example: Modify timeout to 50 seconds
@@ -224,4 +233,11 @@ sidebar_label: AT Command
 
 ### Wake up mode configuration (currently only supported in the Octopus MiniPro version)
 
-    at+config=common,wake_up_mode,<value> // 0-disable，1-enable
+    at+command=wake_up_mode,open // turn on the wake up mode
+    at+command=wake_up_mode,close // turn off the wake up mode
+
+### Standby mode (Applicable to Magic Box and Cactus Firmware Version 24.20.4.31 and Above)
+
+    at+command=standby_mode,open // turn on the standby mode
+    at+command=standby_mode,close // turn off the standby mode
+    at+config=common,standby_time,<seconds> // Unit：s
