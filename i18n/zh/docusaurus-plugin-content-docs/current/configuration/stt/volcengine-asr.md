@@ -38,8 +38,8 @@ https://www.volcengine.com/docs/6561/80816
 可以在 docker-compose.yml 中添加以下环境变量作为默认值
 
 ```yml
-VOLCENGINE_ASR_ACCESS_TOKEN=U5joq1ow-Goyxxxxxxxxxxxxxx
-VOLCENGINE_ASR_APP_ID=4556821315
-VOLCENGINE_ASR_CLUSTER_ID=volcengine_input_common
+VOLCENGINE_ASR_ACCESS_TOKEN: U5joq1ow-Goyxxxxxxxxxxxxxx
+VOLCENGINE_ASR_APP_ID: 4556821315
+VOLCENGINE_ASR_CLUSTER_ID: volcengine_input_common
 
 ```
