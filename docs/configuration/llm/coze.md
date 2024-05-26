@@ -11,7 +11,7 @@ https://coze.com/open/docs/coze_api_overview
 
 | Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.coze.com/open_api/v2 | 
+| api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
 | custom_variables | custom_variables | {} |
@@ -27,7 +27,8 @@ https://coze.com/open/docs/coze_api_overview
         "llm_config": {
           "personal_access_token": "aaaaaaaaaaa",
           "bot_id": "xxxxxx",
-          "custom_variables": {}
+          "custom_variables": {},
+          "api_base": "https://api.coze.cn/open_api/v2"
         }
     }
   }
