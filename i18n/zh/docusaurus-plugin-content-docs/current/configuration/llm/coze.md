@@ -37,7 +37,7 @@ https://coze.com/open/docs/coze_api_overview
 ## 环境变量
 
 ```yml
-COZE_API_BASE: https://api.coze.com/open_api/v2
+COZE_API_BASE: https://api.coze.cn/open_api/v2
 COZE_PERSONAL_ACCESS_TOKEN: pat_Vl3CaNcFgf67wx
 COZE_BOT_ID: 73568618000000060037
 ```
