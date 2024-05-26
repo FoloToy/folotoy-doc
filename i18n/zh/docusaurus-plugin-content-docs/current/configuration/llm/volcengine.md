@@ -11,6 +11,7 @@ https://www.volcengine.com/docs/82379/1133387
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
+|  api_version | api version     |   v2   |
 |  host    | host     |    maas-api.ml-platform-cn-beijing.volces.com   |
 |  region    | region     |   cn-beijing   |
 |  access_key    | access key     |      |
@@ -41,7 +42,21 @@ https://www.volcengine.com/docs/82379/1133387
 
 ## 环境变量
 
+
+v3 支持豆包大模型
+
 ```yml
+VOLCENGINE_API_VERSION: v3
+VOLCENGINE_MODEL: ep-20240522143915-k7mb7
+VOLCENGINE_ACCESS_KEY: AKLTNDRkNzBmYxxxxxxxxxxxxxxxxxxx
+VOLCENGINE_SECRET_KEY: "Tm1JMFkyUTFaRE5qTm00000000000000000000000000000"
+```
+
+v2 支持原有的大模型
+
+```yml
+VOLCENGINE_API_VERSION: v2
+VOLCENGINE_MODEL: skylark-chat
 VOLCENGINE_HOST: maas-api.ml-platform-cn-beijing.volces.com
 VOLCENGINE_REGION: cn-beijing
 VOLCENGINE_ACCESS_KEY: AKLTNDRkNzBmYxxxxxxxxxxxxxxxxxxx
