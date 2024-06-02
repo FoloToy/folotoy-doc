@@ -12,6 +12,6 @@ Telegram
 
 微信群
 
-<img style={{width:  '20em'}}  src="https://statics.lewangdev.com/folotoy-com/wechat.tijid08541s.webp" />
+<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/wechat5.png" />
 
 
