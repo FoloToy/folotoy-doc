@@ -12,5 +12,5 @@ Telegram
 
 Wechat
 
-<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/wechat5.png" />
+<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/wecom-longterm.jpeg" />
 
