@@ -10,7 +10,7 @@ sidebar_label: 改进建议
 
 - https://github.com/FoloToy/folotoy-server-self-hosting/issues?q=is%3Aissue+is%3Aclosed
 
-如果不能找解决问题的方法，请在这里发 issue，发 issue 的时候把服务器的日志和详细的配置（隐藏掉key和ip）都发出来：
+如果找不到解决问题的方法，请在这里发 issue，发 issue 的时候把服务器的日志和详细的配置（隐藏掉key和ip）都发出来：
 
 - https://github.com/FoloToy/folotoy-server-self-hosting/issues
 
