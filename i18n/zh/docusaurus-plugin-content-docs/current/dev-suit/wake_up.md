@@ -1,6 +1,6 @@
 ---
 title: 语音唤醒模块
-sidebar_label: 语音唤醒模块
+sidebar_label: 语音唤醒模块(焊接版)
 ---
 
 # 唤醒模块
