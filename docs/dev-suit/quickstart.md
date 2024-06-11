@@ -1,6 +1,6 @@
 ---
-title: Quick Start
-sidebar_label: Quick Start
+title: Octupus Standard Version
+sidebar_label: Octupus Standard Version
 ---
 
 This guide aims to introduce users to the features, configuration options, and how to get started with the Folotoy Octopus AI Development Kit. The Folotoy Octopus AI Development Kit is designed for AI voice conversation applications and educational purposes. To purchase the development kit, please visit our Taobao store [AI Toy Transformation Factory](https://folotoy.taobao.com) or [Bilibili Workshop](https://gf.bilibili.com/item/detail/1104863005).
