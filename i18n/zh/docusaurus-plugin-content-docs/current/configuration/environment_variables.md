@@ -44,6 +44,8 @@ FoloToy 服务器接受以下环境变量以进行运行时配置：
 
 | 变量名     | 描述          | 默认值 |
 | --------------------------------- | ---------------------------- | ----------------------------- |
+| **HTTPX_TIMEOUT**| 请求超时时间 |     5          |
+
 | **ROLES_FILE_PATH**| 角色配置文件|     roles.json          |
 | **STT_TYPE** | 声音转文字引擎类别: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr              |   openai-whisper            |
 | **OPENAI_WHISPER_API_BASE** | OpenAI Whisper API Base Url         |    https://api.openai.com/v1           |
