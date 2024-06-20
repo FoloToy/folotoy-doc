@@ -45,7 +45,6 @@ FoloToy server accepts the following environment variables for runtime configura
 | Variable Name     | Description          | Default Value |
 | --------------------------------- | ---------------------------- | ----------------------------- |
 | **HTTPX_TIMEOUT**| Http Timeout|     5          |
-
 | **ROLES_FILE_PATH**| Role configuration file|     roles.json          |
 | **STT_TYPE** | Speech-to-Text Engine Type: openai-whisper, azure-stt, azure-whisper, dify-stt, aliyun-asr              |   openai-whisper            |
 | **OPENAI_WHISPER_API_BASE** | OpenAI Whisper API Base Url         |    https://api.openai.com/v1           |
