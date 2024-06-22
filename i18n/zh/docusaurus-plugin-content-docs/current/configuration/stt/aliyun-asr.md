@@ -21,7 +21,7 @@ sidebar_label: 阿里云 ASR
         "stt_type": "aliyun-asr",
         "stt_config": {
           "app_key": "7xxxxxxxx904N7CNG",
-          "access_key_secret": "xxxx",
+          "access_key_id": "xxxx",
           "access_key_secret": "xxxx"
         }
     }
