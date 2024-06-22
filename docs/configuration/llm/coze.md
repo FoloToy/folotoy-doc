@@ -29,7 +29,8 @@ https://coze.com/open/docs/coze_api_overview
           "personal_access_token": "aaaaaaaaaaa",
           "bot_id": "xxxxxx",
           "custom_variables": {},
-          "api_base": "https://api.coze.cn/open_api/v2"
+          "api_base": "https://api.coze.cn/open_api/v2",
+          "timeout": 15
         }
     }
   }
