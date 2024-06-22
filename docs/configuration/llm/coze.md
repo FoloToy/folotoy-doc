@@ -14,6 +14,7 @@ https://coze.com/open/docs/coze_api_overview
 | api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
+| timeout | HTTP request timeout (in seconds). When using the Coze plugin, it is recommended to set this number higher. | 5 |
 | custom_variables | custom_variables | {} |
 
 ## 配置示例
@@ -28,7 +29,8 @@ https://coze.com/open/docs/coze_api_overview
           "personal_access_token": "aaaaaaaaaaa",
           "bot_id": "xxxxxx",
           "custom_variables": {},
-          "api_base": "https://api.coze.cn/open_api/v2"
+          "api_base": "https://api.coze.cn/open_api/v2",
+          "timeout": 15
         }
     }
   }

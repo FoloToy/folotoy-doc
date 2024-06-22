@@ -14,7 +14,7 @@ https://coze.com/open/docs/coze_api_overview
 | api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
-| httpx_timeout | Http 请求超时（单位：秒）,使用扣子尤其添加了插件，建议将这个数字设大一点 | 5 |
+| timeout | Http 请求超时（单位：秒）,使用扣子尤其添加了插件，建议将这个数字设大一点 | 5 |
 | custom_variables | custom_variables | {} |
 
 ## 配置示例
@@ -30,7 +30,7 @@ https://coze.com/open/docs/coze_api_overview
           "bot_id": "xxxxxx",
           "custom_variables": {},
           "api_base": "https://api.coze.cn/open_api/v2",
-          "httpx_timeout": 15
+          "timeout": 15
         }
     }
   }
