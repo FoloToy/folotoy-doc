@@ -16,7 +16,6 @@ https://coze.com/open/docs/coze_api_overview
 | bot_id | bot id |11111112222222221 |
 | timeout | HTTP request timeout (in seconds). When using the Coze plugin, it is recommended to set this number higher. | 5 |
 | custom_variables | custom_variables | {} |
-| conversation_id | Identification of each conversation instance must be maintained by the user. No need for configuration if there is no requirement for memory. | Not configured |
 
 ## 配置示例
 
