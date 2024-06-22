@@ -14,7 +14,9 @@ https://coze.com/open/docs/coze_api_overview
 | api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
+| timeout | HTTP request timeout (in seconds). When using the Coze plugin, it is recommended to set this number higher. | 5 |
 | custom_variables | custom_variables | {} |
+| conversation_id | Identification of each conversation instance must be maintained by the user. No need for configuration if there is no requirement for memory. | Not configured |
 
 ## 配置示例
 
