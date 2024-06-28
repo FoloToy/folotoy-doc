@@ -28,7 +28,7 @@ sidebar_label: 阿里云 TTS
         "tts_type": "aliyun-tts",
         "tts_config": {
           "app_key": "Lxxxxxxxx904N7XJN",
-          "access_key_secret": "xxxx",
+          "access_key_id": "xxxx",
           "access_key_secret": "xxxx"
         }
     }
