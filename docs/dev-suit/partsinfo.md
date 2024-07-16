@@ -4,7 +4,7 @@ sidebar_label: Components
 ---
 
 # Component Introduction
-![Image](https://user-images.githubusercontent.com/26705239/282209063-b3f1707e-3499-4f1f-b353-b29a30814e51.png)
+![Image](https://doc-img.folotoy.com/images/26705239/282209063-b3f1707e-3499-4f1f-b353-b29a30814e51.png)
 
 ### Core Board
 The Core board (Folotoy Core) connects to the interface expansion board via two 20Pin 2.0mm pitch headers. Enthusiasts can design their own expansion boards.

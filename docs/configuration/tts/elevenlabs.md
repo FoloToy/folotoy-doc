@@ -11,7 +11,7 @@ Configurable parameters:
 | model | elevenlabs model | eleven_multilingual_v2  |
 | voice_id | elevenlabs voice id voice id, Voice ID to be used, you can use https://api.elevenlabs.io/v1/voices to list all the available voices. Or as shown in the image below | none |
 
-<img src="https://user-images.githubusercontent.com/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
 
 Configuration example:
 

@@ -96,12 +96,12 @@ sidebar_label: 配置按键
 1. 通过套件附带的 Type C 数据线，将接口扩展板和 PC 电脑连接
 2. 打开 [网页工具](https://tool.folotoy.com/index) 中的日志
 
-    <img src="https://user-images.githubusercontent.com/41461127/281996998-de76550b-5701-40dd-a115-38988f78a1c8.png" />
+    <img src="https://doc-img.folotoy.com/images/41461127/281996998-de76550b-5701-40dd-a115-38988f78a1c8.png" />
 
 3. 选择套件的串口，点击连接
 
-    <img src="https://user-images.githubusercontent.com/69997928/284497170-75123ed9-5d84-42a2-989e-440ad5f95441.jpeg" />
+    <img src="https://doc-img.folotoy.com/images/69997928/284497170-75123ed9-5d84-42a2-989e-440ad5f95441.jpeg" />
 
 4. 在弹出的日志框中输入 AT 指令
 
-    <img src="https://user-images.githubusercontent.com/69997928/284499336-8dec6867-3410-4fe1-a706-e955f7ef202c.png" />
+    <img src="https://doc-img.folotoy.com/images/69997928/284499336-8dec6867-3410-4fe1-a706-e955f7ef202c.png" />

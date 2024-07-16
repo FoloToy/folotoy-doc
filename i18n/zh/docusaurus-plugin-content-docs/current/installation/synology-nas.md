@@ -32,9 +32,9 @@ sidebar_label: 群晖 NAS
   - AZURE_OPENAI_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   - 保存文件
 - 上传文件项目文件到 File Station 的 docker 目录下，如图
-    <img src="https://user-images.githubusercontent.com/1455685/281663729-436f18ee-30f2-4204-a1a7-927ff041b71f.png" />
+    <img src="https://doc-img.folotoy.com/images/1455685/281663729-436f18ee-30f2-4204-a1a7-927ff041b71f.png" />
 - 打开 Container Manager 创建项目，如图：
-    <img src="https://user-images.githubusercontent.com/1455685/281663767-058e0b4d-56f6-434a-9f08-2d84f700c0be.png" />
+    <img src="https://doc-img.folotoy.com/images/1455685/281663767-058e0b4d-56f6-434a-9f08-2d84f700c0be.png" />
 
 ## 更新配置
 

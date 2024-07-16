@@ -12,7 +12,7 @@ sidebar_label: 火火兔 G6/G6s
 
 :::caution
 在购买 G6 的时候，不要买错了型号，替换电路板只支持右边 MicroUSB 接口的 G6
-<img src="https://user-images.githubusercontent.com/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
 :::
 
 - 直径为2.5毫米，长度超过5厘米的十字螺丝刀。
@@ -20,7 +20,7 @@ sidebar_label: 火火兔 G6/G6s
 - 可在主要电商网站购买到功能正常的火火兔 G6。
 - FoloToy生产的G6替换电路板可在以下链接购买：https://gf.bilibili.com/item/detail/1104222005 。
 
-<img src="https://user-images.githubusercontent.com/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
 
 ## 步骤
 
@@ -41,14 +41,14 @@ sidebar_label: 火火兔 G6/G6s
 
 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
 
 
 <!-- 1. 打开玩具背面的开关以供电。蓝色闪烁的灯光表示玩具已进入配对模式。
 
 2. 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
 
 3. 连接到玩具的热点。
 
@@ -72,5 +72,5 @@ sidebar_label: 火火兔 G6/G6s
 
 在装配好玩具并且配置完成网络并且连接上服务器之后，按住中间大圆按键进行对话，松开结束对话，周边的 7 个圆形小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
 
-<img src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

@@ -12,7 +12,7 @@ sidebar_label: Elevenlabs TTS
 | model | elevenlabs 模型名称 | eleven_multilingual_v2  |
 | voice_id | Elevenlas 语音 ID  - 要使用的语音 ID，您可以使用 https://elevenlabs.io/api 列出所有可用语音。 也可以参考下图查找 |  |
 
-<img src="https://user-images.githubusercontent.com/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281985484-7fa3e816-c384-4cb9-bf92-448b4e23fc9d.png" />
 
 配置示例
 

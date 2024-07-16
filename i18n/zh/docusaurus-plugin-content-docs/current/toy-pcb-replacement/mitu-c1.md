@@ -14,7 +14,7 @@ sidebar_label: 米兔 C1
 - 可在主要电商网站购买到功能正常的米兔 C1
 - FoloToy 生产的 C1 替换电路板可在以下链接购买：https://gf.bilibili.com/item/detail/1104222005
 
-<img src="https://user-images.githubusercontent.com/1455685/281623396-41fd475c-39c8-44b1-b994-df8e5ae5dd0b.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281623396-41fd475c-39c8-44b1-b994-df8e5ae5dd0b.png" />
 
 ## 步骤
 
@@ -37,13 +37,13 @@ sidebar_label: 米兔 C1
 
 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
 <!-- 
 1. 打开玩具背面的开关以供电。蓝色闪烁的灯光表示玩具已进入配对模式。
 
 2. 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
 
 3. 连接到玩具的热点。
 
@@ -67,5 +67,5 @@ sidebar_label: 米兔 C1
 
 在装配好玩具并且配置完成网络并且连接上服务器之后，按住图示的录音按键进行对话，松开结束对话，其他小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
 
-<img src="https://user-images.githubusercontent.com/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

@@ -8,7 +8,7 @@ sidebar_label: Community
 
 Telegram
 
-<img style={{width:  '20em'}}  src="https://user-images.githubusercontent.com/1455685/272765491-57b7b972-18a6-403a-8ab3-535292178172.png" />
+<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/images/1455685/272765491-57b7b972-18a6-403a-8ab3-535292178172.png" />
 
 Wechat
 

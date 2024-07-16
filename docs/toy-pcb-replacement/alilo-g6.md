@@ -13,7 +13,7 @@ This document provides the necessary steps for PCB replacement of Alilo G6/G6s. 
 
 :::caution
 When purchasing the G6, make sure not to buy the wrong model. The replacement circuit board only supports the G6 with a MicroUSB interface on the right side.
-<img src="https://user-images.githubusercontent.com/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281634732-af6d9f5e-a11d-42d7-9d6f-3a296a4aac42.png" />
 :::
 
 - A cross screwdriver with a diameter of 2.5mm and a length of over 5cm.
@@ -21,7 +21,7 @@ When purchasing the G6, make sure not to buy the wrong model. The replacement ci
 - A functioning Alilo G6 can be purchased on major e-commerce websites.
 - A replacement circuit board for the G6, produced by FoloToy, can be purchased at: https://gf.bilibili.com/item/detail/1104222005.
 
-<img src="https://user-images.githubusercontent.com/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
 
 ## Instructions
 
@@ -44,7 +44,7 @@ When purchasing the G6, make sure not to buy the wrong model. The replacement ci
 
 imultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
 
 
 <!-- ## Wi-Fi Configure
@@ -53,7 +53,7 @@ imultaneously press and hold the previous/next button for more than 5 seconds to
 
 2. Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281584076-b5234f63-f7b5-4e8e-a710-6eedf19b8997.jpg)
 
 3. Connect to the hotspot of the toy.
 
@@ -77,5 +77,5 @@ imultaneously press and hold the previous/next button for more than 5 seconds to
 
 After assembling the toy, completing the network configuration, and connecting to the server, hold down the large circular button in the middle for conversation. Release it to end the conversation. The 7 small circular buttons around it are character switch buttons. Clicking on them will activate character switching, and the numerical values on these buttons correspond to the keys in roles.json.
 
-<img src="https://user-images.githubusercontent.com/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/278226434-d732ea4b-f4de-4f91-920b-f5bcc17e779f.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

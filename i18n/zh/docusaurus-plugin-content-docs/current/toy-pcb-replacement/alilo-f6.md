@@ -12,13 +12,13 @@ sidebar_label: 火火兔 F6/F6s
 - 在主要电商网站上可以购买到功能正常的火火兔 F6。
 - FoloToy 生产的 F6 替换电路板可在以下链接购买：https://gf.bilibili.com/item/detail/1104222005
 
-<img src="https://user-images.githubusercontent.com/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
 
 ## 步骤
 
 :::caution
 如果是 F6s 这个型号，原主板为 Type-C 接口，直接替换存在 MIC 和扬声器接口不适配的情况，目前可通过转接线实现正常连接
-<img src="https://user-images.githubusercontent.com/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
 :::
 
 
@@ -38,13 +38,13 @@ sidebar_label: 火火兔 F6/F6s
 ### 如何进入配网模式
 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
 
 <!-- 1. 打开玩具背面的开关以供电。蓝色闪烁的灯光表示玩具已进入配对模式。
 
 2. 同时按住上一个/下一个按钮超过5秒钟，进入配置模式。此时，灯光将逐渐变为蓝色。
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
 
 3. 连接到玩具的热点。
 
@@ -68,5 +68,5 @@ sidebar_label: 火火兔 F6/F6s
 
 在装配好玩具并且配置完成网络并且连接上服务器之后，按住图示录音按键进行对话，松开结束对话，小按键为切换角色按键，点击后切换角色生效，角色小按键上数值与 roles.json 的 key 是对应着的。
 
-<img src="https://user-images.githubusercontent.com/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

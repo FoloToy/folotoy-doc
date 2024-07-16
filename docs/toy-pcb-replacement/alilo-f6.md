@@ -13,13 +13,13 @@ This document provides the necessary steps for PCB replacement of Alilo F6/F6s. 
 - A functioning Alilo F6 can be purchased on major e-commerce websites.
 - A replacement circuit board for the F6, produced by FoloToy, can be purchased at: https://gf.bilibili.com/item/detail/1104222005.
 
-<img src="https://user-images.githubusercontent.com/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/281617149-782ee59a-1c4a-4a80-8516-1a2946c477cc.jpg" />
 
 ## Instructions
 
 :::caution
 If it is the F6s model, the original motherboard has a Type-C interface. Direct replacement may result in an incompatible situation with the MIC and speaker interfaces. Currently, normal connection can be achieved through an adapter cable.
-<img src="https://user-images.githubusercontent.com/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281634362-5b038713-dc3e-4430-a698-b9c32318f12a.png" />
 :::
 
 
@@ -41,7 +41,7 @@ If it is the F6s model, the original motherboard has a Type-C interface. Direct 
 
 Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
 
 <!-- ## Wi-Fi Configure
 
@@ -49,7 +49,7 @@ Simultaneously press and hold the previous/next button for more than 5 seconds t
 
 2. Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622340-7a607890-38d3-46f5-80e5-3168ee99a2e0.jpg)
 
 3. Connect to the hotspot of the toy.
 
@@ -73,5 +73,5 @@ Simultaneously press and hold the previous/next button for more than 5 seconds t
 
 After assembling the toy, completing the network configuration, and connecting to the server, press and hold the indicated recording button to start a conversation. Release it to end the conversation. The small button is used for switching characters. Clicking on it will activate the character switch. The numerical values on the character buttons correspond to the keys in roles.json file.
 
-<img src="https://user-images.githubusercontent.com/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281640268-d7032dc1-af4f-4eb4-becc-094c96005ffa.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />

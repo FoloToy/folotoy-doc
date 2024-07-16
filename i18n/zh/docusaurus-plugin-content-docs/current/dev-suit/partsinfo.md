@@ -5,7 +5,7 @@ sidebar_label: 组件
 
 # 组件介绍
 
-![图片](https://user-images.githubusercontent.com/26705239/282209063-b3f1707e-3499-4f1f-b353-b29a30814e51.png)
+![图片](https://doc-img.folotoy.com/images/26705239/282209063-b3f1707e-3499-4f1f-b353-b29a30814e51.png)
 
 
 ### 核心板

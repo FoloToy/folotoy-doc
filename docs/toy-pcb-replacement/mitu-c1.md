@@ -16,7 +16,7 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 - A functioning Mitu C1 can be purchased on major e-commerce websites.
 - A replacement circuit board for the C1, produced by FoloToy, can be purchased at: https://gf.bilibili.com/item/detail/1104222005.
 
-<img src="https://user-images.githubusercontent.com/1455685/281623396-41fd475c-39c8-44b1-b994-df8e5ae5dd0b.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281623396-41fd475c-39c8-44b1-b994-df8e5ae5dd0b.png" />
 
 ## Instructions
 
@@ -41,7 +41,7 @@ This document provides the necessary steps for PCB replacement of Mitu C1. If yo
 
 Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
 
 <!-- ## Wi-Fi Configure
 
@@ -49,7 +49,7 @@ Simultaneously press and hold the previous/next button for more than 5 seconds t
 
 2. Simultaneously press and hold the previous/next button for more than 5 seconds to enter configuration mode. At this time, the light will gradually change to blue.
 
-   ![config](https://user-images.githubusercontent.com/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
+   ![config](https://doc-img.folotoy.com/images/1455685/281622358-88c91980-212e-4d39-a54c-7575e788e843.jpg)
 
 3. Connect to the hotspot of the toy.
 
@@ -73,5 +73,5 @@ Simultaneously press and hold the previous/next button for more than 5 seconds t
 
 After assembling the toy, completing the network configuration, and connecting to the server, hold down the designated recording button to start a conversation. Release it to end the conversation. The other small buttons are for switching characters. Clicking on them will activate the character switch. The numerical values on these character buttons correspond to the keys in roles.json file.
 
-<img src="https://user-images.githubusercontent.com/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
-<img src="https://user-images.githubusercontent.com/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
+<img src="https://doc-img.folotoy.com/images/1455685/281640312-8e8b57b6-9c77-440f-9e1c-0279ddc87588.jpg" />
+<img src="https://doc-img.folotoy.com/images/1455685/272765538-a9bcdf56-300a-4bae-a10f-ce7554a072fe.png" />
