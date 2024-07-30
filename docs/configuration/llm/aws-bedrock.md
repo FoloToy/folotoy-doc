@@ -11,7 +11,7 @@ Configurable parameters:
 | region_name    | region name  |  ap-northeast-1 | 
 | aws_access_key_id | aws access key id | HS21qAAAAAAAAAAA |
 | aws_secret_access_key | aws access secret key | HS21qAAAAAAAAAAA |
-| model | https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html | anthropic.claude-v2.1 |
+| model | https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html | anthropic.claude-v2:1 |
 | max_tokens | max output token count | 1024 |
 | temperature |  What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.We generally recommend altering this or top_p but not both. | 0.7 |
 
@@ -27,7 +27,7 @@ Configuration example:
             "region_name": "ap-northeast-1",
             "aws_access_key_id": "TAAAAAAAAAAAAa",
             "aws_secret_access_key": "TAAAAAAAAAAAAa",
-            "model": "anthropic.claude-v2.1",
+            "model": "anthropic.claude-v2:1",
             "max_tokens": 1024,
             "temperature": 0.7
         }
