@@ -28,17 +28,17 @@ sidebar_label: AT Command
    at+config=?
    ```
 
-### View all AT commands:
+### View all supported AT commands:
    ```
    at+command=?
    ```
 
-### View key configuration:
+### View key configuration(Only supports Octopus):
    ```
    at+keys=?
    ```
 
-### Configure talk key:
+### Configure talk key(Only supports Octopus):
 
   - Example: Define talk key as GPIO 27
 
@@ -46,7 +46,7 @@ sidebar_label: AT Command
     at+keys=talk,<GPIO> // at+keys=talk,27
     ```
 
-### Configure WIFI reset key:
+### Configure WIFI reset key(Only supports Octopus):
 
 - Example: Define WIFI reset key as GPIO 29 and GPIO 30
 
@@ -55,13 +55,13 @@ sidebar_label: AT Command
     ```
 
 
-### Reboot configuration (changes take effect after reboot):
+### Reboot device:
 
    ```
    at+reboot
    ```
 
-### Configure role:
+### Configure role(Only supports Octopus):
 
 - If not configured, the default role ID is 1.
 
@@ -77,7 +77,7 @@ sidebar_label: AT Command
     at+keys=role_idx,<index>,<GPIO> // at+keys=role_idx,1,0
     ```
 
-### Configure switch role key:
+### Configure switch role key(Only supports Octopus):
 
 - Example: Configure GPIO 27 to switch to the previous role
 
@@ -203,7 +203,7 @@ sidebar_label: AT Command
 
     at+config=common,volume,<value> // Set the volume level, default to 100, with a range of values ranging from 0 to 100
     at+command=volume_control_type,knob // Set to control volume through a knob
-    at+command=volume_control_type,at // Set to control volume through at command or mqtt command
+    at+command=volume_control_type,config // Set to control volume through at command or mqtt command
 
 - Example: Changing the volume level to 100
 
@@ -231,7 +231,7 @@ sidebar_label: AT Command
     at+command=io_output,false // Not twisting
 
 
-### Wake up mode configuration (currently only supported in the Octopus MiniPro version)
+### Wake word mode configuration
 
     at+command=wake_up_mode,open // turn on the wake up mode
     at+command=wake_up_mode,close // turn off the wake up mode
@@ -241,3 +241,8 @@ sidebar_label: AT Command
     at+command=standby_mode,open // turn on the standby mode
     at+command=standby_mode,close // turn off the standby mode
     at+config=common,standby_time,<seconds> // Unit：s
+
+### Configure speech recognition(Only supports magicbox-pro):
+
+    at+command=asr_mode,open // turn on
+    at+command=asr_mode,close // turn off
