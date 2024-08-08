@@ -36,6 +36,10 @@
     "message": "mini 版",
     "description": "The label for category Wake Up in sidebar docs"
   },
+  "sidebar.docs.category.ultra": {
+    "message": "ultra 版",
+    "description": "The label for category Wake Up in sidebar docs"
+  },
   "sidebar.docs.category.Wake Up": {
     "message": "语音唤醒模块",
     "description": "The label for category Wake Up in sidebar docs"
