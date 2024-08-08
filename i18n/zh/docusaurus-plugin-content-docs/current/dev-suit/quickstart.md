@@ -3,7 +3,7 @@ title: 八爪鱼标准版
 sidebar_label: 八爪鱼标准版
 ---
 
-本指南旨在向用户介绍 Folotoy 八爪鱼 AI 开发套件的功能、配置选项以及如何快速入门。Folotoy 八爪鱼 AI 开发套件面向 AI 语音对话应用与教育领域。如需购开发套件，请访问我们的淘宝网店[「AI 玩具改造总厂」](https://folotoy.taobao.com) 或 [「B站工坊」](https://gf.bilibili.com/item/detail/1104863005)。
+本指南旨在向用户介绍 Folotoy 八爪鱼 AI 开发套件的功能、配置选项以及如何快速入门。Folotoy 八爪鱼 AI 开发套件面向 AI 语音对话应用与教育领域。如需购开发套件，请访问我们的淘宝网店[「FoloToy 官方店」](https://folotoy.taobao.com) 或 [「B站工坊」](https://gf.bilibili.com/item/detail/1104863005)。
 
 ## 概述
 
