@@ -35,7 +35,7 @@ According to the English labels on the board, connect the components as follows:
 | Volume, Power switch | Volume Control and Switch Knob Module |
 | Speaker | Speaker |
 | Battery | Battery |
-| W52812 | RGB Light Module (Connect from the board's RGB interface to the module's IN port, then from the module's OUT port to the IN port of another module) |
+| WS2812 | RGB Light Module (Connect from the board's RGB interface to the module's IN port, then from the module's OUT port to the IN port of another module) |
 | BTN_A | Dialogue Button (color optional) |
 | BTN_B | Role Switch Button (color optional) |
 | Voice wakeup | Voice Wakeup Module |
