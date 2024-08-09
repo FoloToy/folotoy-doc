@@ -35,7 +35,7 @@ Folotoy 八爪鱼 Ultra AI 开发套件包括以下组件：
 | Volume, Power switch | 音量调节与开关旋钮模块 |
 | Speaker | 扬声器 |
 | Battery | 电池 |
-| W52812 | RGB灯模块（从板子的RGB接口接到模块的 IN 口，再从模块的 OUT 口接到另一个模块的 IN 口） |
+| WS2812 | RGB灯模块（从板子的RGB接口接到模块的 IN 口，再从模块的 OUT 口接到另一个模块的 IN 口） |
 | BTN_A | 对话按键（颜色随意） |
 | BTN_B | 切换角色按键（颜色随意） |
 | Voice wakeup | 语音唤醒模块 |
