@@ -79,7 +79,7 @@ values={[
 ]}>
 <TabItem value="docker-compose">
 
-该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
+该文件用于配置全局参数，例如：全局使用的`TTS（文本转语音）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
 
 点击查看参数详情介绍：[环境变量(docker-compose.yml)](https://docs.folotoy.com/zh/docs/configuration/environment_variables)
 

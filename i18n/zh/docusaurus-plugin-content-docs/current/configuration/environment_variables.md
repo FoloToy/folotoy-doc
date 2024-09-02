@@ -8,7 +8,7 @@ sidebar_label: 环境变量(docker-compose.yml)
 
 最新版的文件在这里：[docker-compose.yml](https://github.com/FoloToy/folotoy-server-self-hosting/blob/main/docker-compose.yml)，**请复制最新的文档来并修改其中的参数**。
 
-该文件用于配置全局参数，例如：全局使用的`TTS（语音转文本）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
+该文件用于配置全局参数，例如：全局使用的`TTS（文本转语音）`，`LLM（大型语言模型）`，`STT（语音转文字）`以及`服务器地址`和`端口`和配置。
 
 如果您想要在全局设置 TTS 的语音类型，您可以添加以下字段（请根据您的 TTS 类型 选择添加相应的字段）：
 
