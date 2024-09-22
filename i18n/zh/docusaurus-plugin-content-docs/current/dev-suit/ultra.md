@@ -24,7 +24,7 @@ Folotoy 八爪鱼 Ultra AI 开发套件包括以下组件：
 
 ### 连接组件
 
-![IMG_8052](https://r2-uploader.lewang.workers.dev/IMG_3108.png)
+![IMG_8052](https://doc-img.folotoy.com/IMG_3108.png)
 
 #### 接口对应关系
 
@@ -45,7 +45,7 @@ Folotoy 八爪鱼 Ultra AI 开发套件包括以下组件：
 连接好所有的组件后，旋转开关开发板就会开机进入配网状态，这时 LED 灯会呈「🔵蓝色呼吸效果」。如果发现旋转开关不起作用，而且开发板会自动开机，可以通过调整核心板的的小开关来改变配置。
 
 
-![IMG_8057](https://r2-uploader.lewang.workers.dev/IMG_3113.png)
+![IMG_8057](https://doc-img.folotoy.com/IMG_3113.png)
 
 恭喜你，到这里就完成了 Folotoy 八爪鱼 AI 开发套件的组装。
 
