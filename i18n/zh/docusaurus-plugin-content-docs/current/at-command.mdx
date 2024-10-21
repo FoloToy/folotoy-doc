@@ -232,8 +232,8 @@ sidebar_label: AT 指令
 
 ### 待机模式（适用于固件版本为 24.20.4.31 及以上的魔匣和仙人掌）
 
-    at+config=common,standby_mode,open //启用
-    at+config=common,standby_mode,close //禁用
+    at+command=standby_mode,open //启用
+    at+command=standby_mode,close //禁用
     at+config=common,standby_time,<seconds> //单位：s
 
 
