@@ -11,7 +11,7 @@ https://coze.com/open/docs/coze_api_overview
 
 | Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
+| api_base    | api base url  |  https://api.coze.cn/v3/chat | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
 | timeout | HTTP request timeout (in seconds). When using the Coze plugin, it is recommended to set this number higher. | 5 |
