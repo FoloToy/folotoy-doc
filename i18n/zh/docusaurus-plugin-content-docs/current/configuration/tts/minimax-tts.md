@@ -11,16 +11,21 @@ https://www.minimaxi.com
 
 | 参数名称 | 参数说明 | 默认值 |
 | :--     | :--     |  :--     |
+|  version    | api 版本  | T2A 或者 T2A_V2，不填默认为T2A |
 |  api_base    | api base 地址  | https://api.minimax.chat/v1 | 
 |  key    | api key     |       |
 |  group_id    | group id     |      |
 |  model    |  TTS模型    |   speech-01   |
-|  voice_id |  音色    |  male-qn-qingse   |
-|  vol    | 语音音量   |  1.0     |
-|  speed    | 语音速度   |  1.0     |
-|  pitch    | 语音音调   |  0     |
-|  char_to_pitch    |    |  []     |
-|  timber_weights    |   |  []     |
+|  voice_id |  音色    |  male-qn-qingse（仅T2A版本生效）   |
+|  vol    | 语音音量   |  1.0（仅T2A版本生效）     |
+|  speed    | 语音速度   |  1.0（仅T2A版本生效）     |
+|  pitch    | 语音音调   |  0（仅T2A版本生效）     |
+|  char_to_pitch    |  请参考官方文档  |  []（仅T2A版本生效）    |
+|  timber_weights    | 请参考官方文档  |  []     |
+|  voice_setting    | 请参考官方文档  |  {}（仅T2A_V2版本生效）    |
+|  audio_setting    | 请参考官方文档  |  {}（仅T2A_V2版本生效）    |
+|  pronunciation_dict    | 请参考官方文档  |  {}（仅T2A_V2版本生效）    |
+|  language_boost    | 请参考官方文档  |    默认为空（仅T2A_V2版本生效）  |
 
 
 ## 配置示例

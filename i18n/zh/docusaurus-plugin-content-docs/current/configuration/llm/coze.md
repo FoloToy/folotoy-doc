@@ -11,7 +11,7 @@ https://coze.com/open/docs/coze_api_overview
 
 | Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.coze.cn/open_api/v2 | 
+| api_base    | api base url  |  https://api.coze.cn/v3/chat | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
 | timeout | Http 请求超时（单位：秒）,使用扣子尤其添加了插件，建议将这个数字设大一点 | 5 |
