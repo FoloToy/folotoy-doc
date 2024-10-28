@@ -23,7 +23,7 @@ module.exports = {
       title: "FoloToy",
       logo: {
         alt: "FoloyToy Logo",
-        src: "img/logo.svg",
+        src: "img/folotoy-logo.svg",
       },
       items: [
         {
