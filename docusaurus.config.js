@@ -1,7 +1,7 @@
 module.exports = {
   title: "FoloToy Docs",
   tagline: "Documents for your FoloToy",
-  url: "https://docs.folotoy.com",
+  url: "https://folotoy.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "folotoy",

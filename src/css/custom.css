@@ -14,13 +14,13 @@
   /* --ifm-color-primary-light: rgb(70, 203, 174); */
   /* --ifm-color-primary-lighter: rgb(102, 212, 189); */
   /* --ifm-color-primary-lightest: rgb(146, 224, 208); */
-  --ifm-color-primary: #33cc99;
-  --ifm-color-primary-dark: #2eb88a;
-  --ifm-color-primary-darker: #2bad82;
-  --ifm-color-primary-darkest: #248f6b;
-  --ifm-color-primary-light: #47d1a3;
-  --ifm-color-primary-lighter: #52d4a8;
-  --ifm-color-primary-lightest: #70dbb8;
+  --ifm-color-primary: #DB2777;
+  --ifm-color-primary-dark: #F472B6;
+  --ifm-color-primary-darker: #EC4899;
+  --ifm-color-primary-darkest: #DB2777;
+  --ifm-color-primary-light: #EC4899;
+  --ifm-color-primary-lighter: #F472B6;
+  --ifm-color-primary-lightest: #F9A8D4;
   --ifm-code-font-size: 95%;
 }
 
