@@ -87,6 +87,7 @@ module.exports = {
                 "configuration/tts/dify-tts",
                 "configuration/tts/minimax-tts",
                 "configuration/tts/volcengine-tts",
+                "configuration/tts/siliconflow-tts",
               ],
             },
           ],
