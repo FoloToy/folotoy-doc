@@ -6,6 +6,13 @@ sidebar_label: Getting Started
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+## About the FoloToy AI Conversation Program
+This program is designed to provide users with an easy way to deploy the FoloToy AI conversation program. Used in conjunction with the FoloToy AI toy, it brings toys to life with engaging and interactive experiences. With this program, users can quickly enable the voice interaction feature of FoloToy AI toys, transforming them from simple companions into interactive partners.
+
+The official service offers a convenient option for users who want to experience intelligent conversation features right away. For developers and enthusiasts, we also provide a self-deployment service, allowing you to configure and optimize the system according to your needs, unlocking more possibilities.
+
+#### To enjoy the full functionality, please ensure you have a FoloToy AI toy. If you haven’t purchased one yet, feel free to visit our [official store](https://folotoy.com) to explore product details and choose your intelligent interactive toy!
+
 :::caution
 Before you start setting up the server, please read this article carefully. Pay close attention to the points mentioned in the article.
 
