@@ -11,7 +11,7 @@ https://coze.com/open/docs/coze_api_overview
 
 | Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
-| api_base    | api base url  |  https://api.coze.cn/v3/chat | 
+| api_base    | api base url  |  https://api.coze.cn/v3 | 
 | personal_access_token | personal access token | pat-AAAAAAAAAAAAA |
 | bot_id | bot id |11111112222222221 |
 | timeout | Http 请求超时（单位：秒）,使用扣子尤其添加了插件，建议将这个数字设大一点 | 5 |
@@ -29,7 +29,7 @@ https://coze.com/open/docs/coze_api_overview
           "personal_access_token": "aaaaaaaaaaa",
           "bot_id": "xxxxxx",
           "custom_variables": {},
-          "api_base": "https://api.coze.cn/open_api/v2",
+          "api_base": "https://api.coze.cn/v3",
           "timeout": 15
         }
     }
@@ -39,7 +39,7 @@ https://coze.com/open/docs/coze_api_overview
 ## 环境变量
 
 ```yml
-COZE_API_BASE: https://api.coze.cn/open_api/v2
+COZE_API_BASE: https://api.coze.cn/v3
 COZE_PERSONAL_ACCESS_TOKEN: pat_Vl3CaNcFgf67wx
 COZE_BOT_ID: 73568618000000060037
 ```
