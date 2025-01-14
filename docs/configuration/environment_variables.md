@@ -117,6 +117,7 @@ FoloToy server accepts the following environment variables for runtime configura
 | **SPEECH_UDP_SERVER_HOST**    |      Host address of the UDP server that receives speech data    |      |
 | **SPEECH_UDP_SERVER_PORT**    |   Port of the UDP server that receives speech data        |     8085 |
 | **LOG_LEVEL**    |    Log Level: INFO,DEBUG,WARNING      |   DEBUG   |
+| **LOG_OUTPUT**    |    Log Output: stderr, [your-log-file-path]      |   stderr   |
 | **INTEGRATION_MQTT**    |    Whether to enable MQTT integration interface      |   false   |
 | **SENTENCE_SEPARATORS**    |    Punctuation marks used for sentence separation       |   ，！。？,!.?   |
 | **TZ**            | Used to establish local timezone, for example, to use local time in logs. Check [List of Timezone Codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).   |  Asia/Shanghai     |

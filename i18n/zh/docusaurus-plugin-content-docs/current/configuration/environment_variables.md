@@ -117,6 +117,7 @@ FoloToy 服务器接受以下环境变量以进行运行时配置：
 | **SPEECH_UDP_SERVER_HOST**    |      接受语音数据的 udp 服务主机地址    |      |
 | **SPEECH_UDP_SERVER_PORT**    |   接受语音数据的 udp 服务端口        |     8085 |
 | **LOG_LEVEL**    |    日志级别: INFO,DEBUG,WARNING      |   DEBUG   |
+| **LOG_OUTPUT**    |    日志输出: stderr, [your-log-file-path]      |   stderr   |
 | **INTEGRATION_MQTT**    |    是否开启 MQTT 集成接口      |   false   |
 | **SENTENCE_SEPARATORS**    |    用于分句的标点符号       |   ，！。？,!.?   |
 | **TZ**            | 用于建立本地时区，例如在日志中使用本地时间。 查看 [时区代码列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).   |  Asia/Shanghai     |
