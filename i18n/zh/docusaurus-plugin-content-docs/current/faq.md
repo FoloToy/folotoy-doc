@@ -262,18 +262,20 @@ sudo docker ps
     - 您可以通过重新配网的方式来修改 MQTT 服务器地址和端口。进入配网模式：[火火兔G6/G6s](./toy-pcb-replacement/alilo-g6.md#wi-fi配置)， [火火兔F6/F6s](./toy-pcb-replacement/alilo-f6.md#wi-fi配置)， [米兔C1](./toy-pcb-replacement/mitu-c1.md#wi-fi配置)。或者通过[AT 指令](./at-command.mdx#重置-wifi-并进入配网模式)进入配网模式
     - 您可以通过[AT 指令](./at-command.mdx#修改配置中的-mqtt)来重新配置 MQTT Broker 和 Port
 
-## 如何修改服务程序日志级别为 DEBUG 或者 INFO？
+## 如何修改服务程序的日志配置？
 
 修改 `docker-compose.yml` 配置，修改之后需要参考前面步骤重启容器：
 
 把
 ```
 LOG_LEVEL: INFO
+LOG_OUTPUT: stderr
 ```
 改为
 
 ```
 LOG_LEVEL: DEBUG
+LOG_OUTPUT: [your-log-file-path]
 ```
 
 ## 为什么我的 Docker 时间戳日志与我的机器不同？

@@ -246,7 +246,7 @@ sudo docker ps
 
 [Firmware upgrade and FAQ](web-tool.mdx)
 
-## How to modify the log level of the service program to DEBUG or INFO?
+## How to modify the log configuration of the service program?
 
 Modify the `docker-compose.yml` configuration, and after modification, refer to the previous steps to restart the container:
 
@@ -254,11 +254,13 @@ Change
 
 ```
 LOG_LEVEL: INFO
+LOG_OUTPUT: stderr
 ```
 to
 
 ```
 LOG_LEVEL: DEBUG
+LOG_OUTPUT: [your-log-file-path]
 ```
 
 ## The server logs show that the messages have been successfully pushed, but the device is not playing them?
