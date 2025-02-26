@@ -12,6 +12,6 @@ Telegram
 
 微信群
 
-<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/wecom-longterm1.jpeg" />
+<img style={{width:  '20em'}}  src="https://doc-img.folotoy.com/WechatIMG269.jpg" />
 
 
