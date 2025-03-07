@@ -35,6 +35,7 @@ You can determine the problem based on [What do the various colors of the lights
 - volcengine-asr
 
 ### LLM (Large Language Model)
+- deepseek
 - openai
 - azure-openai
 - gemini

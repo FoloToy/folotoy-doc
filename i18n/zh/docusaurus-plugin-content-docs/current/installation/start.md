@@ -33,6 +33,7 @@ import TabItem from "@theme/TabItem";
 - aliyun-asr
 - cf-workers-ai-asr (Cloudfalre Workers AI)
 ### LLM（大型语言模型）
+- deepseek
 - openai
 - azure-openai
 - gemini
