@@ -51,6 +51,7 @@ module.exports = {
               type: "category",
               label: "LLM Configuration",
               items: [
+                "configuration/llm/deepseek",
                 "configuration/llm/openai",
                 "configuration/llm/azure-openai",
                 "configuration/llm/gemini",
