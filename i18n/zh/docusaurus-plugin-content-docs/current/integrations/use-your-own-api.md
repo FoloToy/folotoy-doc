@@ -18,6 +18,8 @@ FoloToy 出品的所有玩具（包括电路板）作为客户端连接玩具服
 
 `folotoy-server` 主要由 3 个部分组成：
 
+![folotoy-community-server-arch](https://doc-img.folotoy.com/documents/folotoy-community-server-arch.jpg)
+
 ---
 
 ### **① 语音转文本（STT）**

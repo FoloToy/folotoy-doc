@@ -17,6 +17,8 @@ We provide the `folotoy-server` **self-hosted Docker image**, which can be deplo
 
 The `folotoy-server` mainly consists of the following three components:
 
+![folotoy-community-server-arch](https://doc-img.folotoy.com/documents/folotoy-community-server-arch.jpg)
+
 ---
 
 ### **① Speech-to-Text (STT)**
