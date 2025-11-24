@@ -16,6 +16,7 @@ module.exports = {
             "configuration/environment_variables",
             "configuration/roles_config",
             "configuration/advanced_roles_config",
+            "configuration/change-system-prompt",
           ]
         },
 
@@ -101,7 +102,10 @@ module.exports = {
         {
           type: "category",
           label: "Integrations",
-          items: ["integrations/mqtt"],
+          items: [
+            "integrations/mqtt",
+            "integrations/use-your-own-api"
+          ],
         },
         {
           type: "category",
