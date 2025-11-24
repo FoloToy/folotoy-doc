@@ -74,7 +74,7 @@ Supported TTS providers include:
 All interfaces used by FoloToy toys are **fully compatible with the OpenAI API specification**.
 Therefore, once you understand the workflow, you only need to provide **OpenAI-style RESTful STT/LLM/TTS interfaces**, and the toy will be able to use your customized services.
 
-(A diagram was included in the original document.)
+![folotoy-community-server-arch](https://doc-img.folotoy.com/documents/folotoy-community-server-arch.jpg)
 
 ---
 
