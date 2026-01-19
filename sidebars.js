@@ -90,6 +90,7 @@ module.exports = {
                 "configuration/tts/minimax-tts",
                 "configuration/tts/volcengine-tts",
                 "configuration/tts/siliconflow-tts",
+                "configuration/tts/inworld-tts",
               ],
             },
           ],

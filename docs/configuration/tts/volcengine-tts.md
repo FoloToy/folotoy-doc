@@ -1,34 +1,34 @@
 ---
-title: 火山引擎文本转语音配置
-sidebar_label: 火山引擎 TTS
+title: Volcengine Text-to-Speech Configuration
+sidebar_label: Volcengine TTS
 ---
 
-## 火山引擎
+## Volcengine
 
 https://www.volcengine.com/docs/6561/97465
 
-## 可配置参数列表
+## Configurable Parameters List
 
-| 参数名称 | 参数说明 | 默认值 |
+| Parameter Name | Parameter Description | Default Value |
 | :--     | :--     |  :--     |
 |  access_token    | access_token     |       |
 |  app_id    | app id     |      |
 |  cluster_id    | cluster id     |      |
-|  voice_type |  音色    |    |
-|  volume_ratio    | 语音音量   |  1.0     |
-|  speed_ratio    | 语音速度   |  1.0     |
-|  pitch_ratio    | 语音音调   |  1.0     |
-|  emotion    |  风格  |       |
-|  language    | 语种，包括方言  |       |
+|  voice_type |  Voice type    |    |
+|  volume_ratio    | Volume   |  1.0     |
+|  speed_ratio    | Speech speed   |  1.0     |
+|  pitch_ratio    | Pitch   |  1.0     |
+|  emotion    |  Style  |       |
+|  language    | Language, including dialects  |       |
 
 
-## 配置示例
+## Configuration Example
 
    ```yml title="roles.json"
     {
     "1": {  
-        "start_text": "你好，我是小兔兔，请问有什么我可以帮助你的吗？",
-        "prompt": "你扮演一个孩子的小伙伴，名字叫小兔兔，性格和善，说话活泼可爱，对孩子充满爱心，经常赞赏和鼓励孩子，用5岁孩子容易理解语言提供有趣和创新的回答，每次回复根据聊天主题询问她的看法以激发她的思考和好奇心，现在她来到了你身边问了第一个问题:[你是谁]",
+        "start_text": "Hello, I am Little Rabbit, how can I help you?",
+        "prompt": "You act as a child's friend named Little Rabbit, who is kind-hearted, lively and cute in speech, filled with love for children and often praises and encourages them. Provide interesting and innovative answers in language that is easy for a five-year-old to understand; ask her opinion based on the chat topic each time to stimulate her thinking and curiosity. Now she has come to you asking the first question:[Who are you]",
         "tts_type": "volcengine-tts",
         "tts_config": {
           "app_id": "4556821315",
@@ -40,7 +40,7 @@ https://www.volcengine.com/docs/6561/97465
   }
    ```
 
-## 环境变量
+## Environment Variables
 
 ```yml
 VOLCENGINE_TTS_ACCESS_TOKEN: U5joq1ow-xxxxxxxxxxxx
