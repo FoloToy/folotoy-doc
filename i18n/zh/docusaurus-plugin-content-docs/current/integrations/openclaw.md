@@ -92,3 +92,11 @@ curl https://raw.githubusercontent.com/FoloToy/folotoy-openclaw-plugin/refs/head
 用微信扫描以下二维码，打开小程序：
 
 <img src="/img/openclaw/image1.jpeg" width="300" />
+
+## 在 self-hosting folotoy-server 中使用 OpenClaw 作为 LLM
+
+OpenClaw 也支持提供 OpenAI 兼容的 HTTP 接口，详见官方文档：[OpenAI HTTP API](https://docs.openclaw.ai/zh-CN/gateway/openai-http-api)。
+
+这意味着如果您自己部署了 folotoy-server，可以直接将 OpenClaw 的 OpenAI 兼容接口配置为 LLM 使用，无需额外接入其他大模型服务。
+
+在 folotoy-server 的角色配置中，按照 [OpenAI LLM](../configuration/llm/openai) 的方式配置，将 `base_url` 指向您的 OpenClaw OpenAI 兼容接口地址，`api_key` 和 `model` 按照 OpenClaw 文档的要求填写即可。

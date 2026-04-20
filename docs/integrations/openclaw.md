@@ -92,3 +92,11 @@ Each OpenClaw Agent can bind a maximum of 1 toy.
 Scan the QR code below with WeChat to open the mini program:
 
 <img src="/img/openclaw/image1.jpeg" width="300" />
+
+## Use OpenClaw as the LLM in a self-hosted folotoy-server
+
+OpenClaw also provides an OpenAI-compatible HTTP API. See the official documentation: [OpenAI HTTP API](https://docs.openclaw.ai/zh-CN/gateway/openai-http-api).
+
+This means that if you are running a self-hosted folotoy-server, you can use OpenClaw's OpenAI-compatible endpoint directly as your LLM backend, without integrating any additional large model service.
+
+In your folotoy-server role configuration, configure it as an [OpenAI LLM](../configuration/llm/openai), and point `base_url` to your OpenClaw OpenAI-compatible endpoint. Fill in `api_key` and `model` according to the OpenClaw documentation.
