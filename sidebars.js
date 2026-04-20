@@ -105,7 +105,8 @@ module.exports = {
           label: "Integrations",
           items: [
             "integrations/mqtt",
-            "integrations/use-your-own-api"
+            "integrations/use-your-own-api",
+            "integrations/openclaw"
           ],
         },
         {
