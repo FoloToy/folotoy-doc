@@ -246,3 +246,24 @@ sidebar_label: AT Command
 
     at+command=asr_mode,open // turn on
     at+command=asr_mode,close // turn off
+
+### Recording encoding issue on self-hosted servers (Firmware version >= v25.51.5.60)
+
+If your toy's firmware version is >= v25.51.5.60 and you encounter an error message similar to the following when using a self-hosted server:
+
+```
+Wrong record event b'\x00' found
+```
+
+Please configure your toy's working mode via our webtool (https://tool.folotoy.com, or if you are in China, you can use our service in China at https://tool.folotoy.cn):
+
+```
+at+config=common,use_record_enc,false
+at+config=mqtt,port,1883
+```
+
+After completing the configuration, please restart your toy. You can use the following command to restart:
+
+```
+at+command=restart,now
+```

@@ -241,3 +241,24 @@ sidebar_label: AT 指令
 
     at+command=asr_mode,open //打开
     at+command=asr_mode,close //关闭
+
+### 自建服务器录音编码问题处理（固件版本 >= v25.51.5.60）
+
+如果您的玩具固件版本 >= v25.51.5.60，在使用自建服务器的过程中遇到类似以下的错误信息
+
+```
+Wrong record event b'\x00' found
+```
+
+请尝试通过我们的 webtool（https://tool.folotoy.com，如果您在中国，可以使用我们在中国的服务 https://tool.folotoy.cn）中设置玩具的工作模式：
+
+```
+at+config=common,use_record_enc,false
+at+config=mqtt,port,1883
+```
+
+完成设置之后，请重启您的玩具，可以通过以下的命令来重启
+
+```
+at+command=restart,now
+```
