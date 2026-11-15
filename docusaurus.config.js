@@ -1,7 +1,8 @@
 module.exports = {
   title: "FoloToy Docs",
-  tagline: "Documents for your FoloToy",
-  url: "https://folotoy.com",
+  tagline: "Guides for FoloToy AI toys: manuals, self-hosted server, DIY AI toy kits and PCB replacement",
+  // Must be the docs host: canonical, hreflang, og:url and sitemap URLs are built from it.
+  url: "https://docs.folotoy.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "folotoy",
@@ -19,6 +20,10 @@ module.exports = {
     },
   },
   themeConfig: {
+    image: "img/og-docs.jpg",
+    metadata: [
+      { name: "keywords", content: "FoloToy, AI toys, AI toy, AI teddy bear, DIY AI toy, MagicBox, ESP32 AI, self-hosted AI toy server, AI玩具, 说明书" },
+    ],
     navbar: {
       title: "FoloToy",
       logo: {
@@ -48,6 +53,28 @@ module.exports = {
           position: "right",
         },
       ],
+    },
+    footer: {
+      style: "dark",
+      links: [
+        { title: "FoloToy", items: [
+          { label: "folotoy.com", href: "https://folotoy.com/" },
+          { label: "AI toys & products", href: "https://folotoy.com/products/" },
+          { label: "Official store", href: "https://store.folotoy.com/" },
+          { label: "folotoy.cn (中国)", href: "https://folotoy.cn/" },
+        ]},
+        { title: "AI Passport", items: [
+          { label: "AI Passport", href: "https://ai-passport.folotoy.cn/en/" },
+          { label: "Community apps", href: "https://ai-passport.folotoy.cn/en/plays/" },
+          { label: "Guides", href: "https://ai-passport.folotoy.cn/en/guides/" },
+        ]},
+        { title: "Developers", items: [
+          { label: "GitHub", href: "https://github.com/FoloToy" },
+          { label: "Web flasher", href: "https://tool.folotoy.com/" },
+          { label: "Edit these docs", href: "https://github.com/FoloToy/folotoy-doc" },
+        ]},
+      ],
+      copyright: `© ${new Date().getFullYear()} FoloToy`,
     },
     // footer: {
     //   style: "dark",

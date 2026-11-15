@@ -269,5 +269,56 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "home.manuals": {
+    "message": "AI 玩具说明书"
+  },
+  "home.manuals.body": {
+    "message": "设置 FoloToy AI 玩具、连接 Wi-Fi，开始对话。"
+  },
+  "home.diy": {
+    "message": "DIY AI 玩具套件"
+  },
+  "home.diy.body": {
+    "message": "MagicBox 与开发套件：让任何玩具开口说话。"
+  },
+  "home.pcb": {
+    "message": "玩具电路板替换"
+  },
+  "home.pcb.body": {
+    "message": "把火火兔 G6、F6 和米兔变成 AI 玩具。"
+  },
+  "home.server": {
+    "message": "自部署服务器"
+  },
+  "home.server.body": {
+    "message": "搭建自己的 AI 玩具服务器，自选 STT、LLM 和 TTS。"
+  },
+  "home.integrations": {
+    "message": "集成"
+  },
+  "home.integrations.body": {
+    "message": "MQTT、OpenClaw 与自定义 API。"
+  },
+  "home.faq": {
+    "message": "常见问题"
+  },
+  "home.faq.body": {
+    "message": "关于 FoloToy AI 玩具的常见问题与故障排查。"
+  },
+  "home.title": {
+    "message": "AI 玩具说明书、DIY 套件与自部署"
+  },
+  "home.description": {
+    "message": "FoloToy AI 玩具官方文档：产品说明书、MagicBox 等 DIY AI 玩具套件、玩具电路板替换和自部署 AI 玩具服务器。"
+  },
+  "home.h1": {
+    "message": "FoloToy 文档"
+  },
+  "home.subtitle": {
+    "message": "FoloToy AI 玩具、DIY AI 玩具套件与自部署服务器的说明书和教程。"
+  },
+  "home.cta": {
+    "message": "开始使用"
   }
 }
